@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 3 - Bài tập 1</title>
+</head>
+
+<body>
+    <form action="">
+        <h2>Thanh toán</h2>
+        <p>
+            <label for="fullName">Tên đầy đủ</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Nhập tên đầy đủ người mua hàng" style="width: 400px;" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Nhập password" style="width: 150px;" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Nhập email" style="width: 150px;" required>
+        </p>
+
+        <p>
+            <label for="birthDay">Ngày sinh</label>
+            <input type="date" id="birthDay" name="birthDay" style="width: 150px;" required>
+        </p>
+
+        <p>
+            <label for="produceName">Mặt hàng mua</label>
+            <input list="produceNameList" type="text" id="produceName" name="produceName">
+            <datalist id="produceNameList" style="width: 150px;">
+                <option value="Shoes"></option>
+                <option value="Shocks"></option>
+                <option value="Shirt"></option>
+                <option value="Sandals"></option>
+                <option value="Trousers"></option>
+            </datalist>
+            
+        </p>
+        <p>
+            <label for="produceQuantity">Mặt hàng mua</label>
+            <input type="number" id="produceQuantity" name="produceQuantity" style="width: 50px;" min="1" max="5">
+        </p>
+        <p>
+            <label for="shipRange">Bán kinh vận chuyển</label>
+            <input type="range" id="shipRange" min="10" max="20" name="shipRange">
+        </p>
+        <input type="submit" id="submitBtn" value="Đăng kí">
+    </form>
+</body>
+
+</html>

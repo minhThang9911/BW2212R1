@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 3 - Bài tập 3</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <h1>Application for permission to date my daughter</h1>
+            <p><b>Note:</b> Form is to be completed at least 21 days prior to date</p>
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter name here"><br>
+                <label for="address">Address: </label>
+                <input type="text" id="address" name="address" placeholder="Enter address here"><br>
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" placeholder="Enter email here"><br>
+                <label for="phone-num">Phone Number: </label>
+                <input type="text" id="phone-num" name="phone-num" placeholder="Enter 10 digit number"> <br>
+                <label for="iq-point">IQ: </label>
+                <input type="number" id="iq-point" name="iq-point" placeholder="Enter IQ here"><br>
+                <span>Gender</span>
+                <p>
+                    <label><input type="radio" name="gender" value="male" checked>Male</label><br>
+                    <label><input type="radio" name="gender" value="female">Female</label><br>
+                    <label><input type="radio" name="gender" value="other">Other</label><br>
+                </p>
+                <label>Date of Proposed Outing: <input type="date" name="dateOuting"></label>
+            </fieldset>
+            <fieldset>
+                <span>Check All That Apply</span>
+                <p>
+                    <label><input type="checkbox" name="tattoos"> I have tattoos and/or piercings</label><br>
+                    <label><input type="checkbox" name="older"> I am more than 2 years older than your daughter</label><br>
+                    <label><input type="checkbox" name="own-vehicle"> I own a panel van or V8 ute</label><br>
+                    <label><input type="checkbox" name="work-time" checked> I work full-time</label><br>
+                    <label><input type="checkbox" name="rich" checked> My parents are rich</label><br>
+                    <label><input type="checkbox" name="date-location" checked> Is the date at a well lit public location</label><br>
+                </p>
+            </fieldset>
+            <fieldset>
+                <label>Political Pesuasion: <input type="text" name="political" list="political-datalist"></label>
+                <datalist id="political-datalist">
+                    <option value="Left Wing"></option>
+                    <option value="Right Wing"></option>
+                    <option value="Conservative"></option>
+                    <option value="Nazi"></option>
+                </datalist>
+                <label>Education Level Completed: <input type="text" name="education" list="education-list"></label>
+                <datalist id="education-list">
+                    <option value="University"></option>
+                    <option value="College"></option>
+                    <option value="High School"></option>
+                    <option value="None"></option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Essay Section</legend>
+                <p>In 50 words or more explain why you want to date my daughter</p>
+                <textarea name="reason-date" cols="60" rows="5" placeholder="Enter Text Here"></textarea><br>
+                <span>Please upload contact details for 2 references</span><br>
+                <textarea name="contact-details" cols="60" rows="5" placeholder="Enter Text Here"></textarea>
+                <p>Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:  <input type="file" name="certificates" id="certificates-upload" multiple></p>
+            </fieldset>
+            <input type="submit" value="Send your application">
+        </form>
+    </main>
+</body>
+</html>
