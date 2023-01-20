@@ -20,7 +20,6 @@
             src: url(materials/OpenSans.ttf);
         }
 
-
         header {
             position: relative;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3),  rgba(0, 0, 0, 0.3)),url('materials/background.jpg');
@@ -108,24 +107,79 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: auto;
+            padding: 100px 0;
         }
+
+        .content {
+            margin-bottom: 125px;
+            text-align: center;
+        }
+
+        .content__title {
+            font-size: 28px;
+            line-height: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .content__text {
+            width: 60%;
+            margin: 16px auto 0;
+            font-size: 24px;
+            color: #9b9b9b;
+            line-height: 36px;
+        }
+
 
         .info {
-
-        }
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 0 -20px;
+            max-width: 1140px;
+        }   
 
         .info__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+        }
 
+        .info__item--img{
+            width: 100%;
         }
 
         .info__item--title {
-
+            margin: 24px 0;
+            color: rgb(61, 153, 145);
+            letter-spacing: 4px;
         }
 
         .info__item-detail {
-
+        color: #3b3b3b;
+        line-height: 36px;
         }
 
+        footer{
+            background-color: #1d1f1f;
+        }
+
+        .footer__wrap {
+            padding: 75px;
+            text-align: center;
+        }
+
+        .footer__title {
+            color: #cfcfcf;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .footer__creadit {
+            color: #5a5b5b;
+        }
 
     </style>
 
@@ -155,16 +209,22 @@
         </div>
         <div class="info">
             <div class="info__item">
-                <img src="https://thuthuatphanmem.vn/uploads/2018/09/11/hinh-anh-dep-6_044127357.jpg" alt="About">
+                <img src="https://thuthuatphanmem.vn/uploads/2018/09/11/hinh-anh-dep-6_044127357.jpg" alt="About" class="info__item--img">
                 <p class="info__item--title">About</p>
                 <p class="info__item-detail">Find out about our organization, mission, methods, and the results of our decades of advocary.</p>
             </div>
             <div class="info__item">
-                <img src="https://www.invert.vn/media/uploads/uploads/2022/12/03143813-13-hinh-anh-dep.jpeg" alt="Take actions">
+                <img src="https://www.invert.vn/media/uploads/uploads/2022/12/03143813-13-hinh-anh-dep.jpeg" alt="Take actions" class="info__item--img">
                 <p class="info__item--title">Take actions</p>
                 <p class="info__item-detail">Ready to take the next step? You can become a contributor to our cause, or participate yourself.</p>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer__wrap">
+            <p class="footer__title">CS193X, SHRIRAM CENTER 104</p>
+            <p class="footer__creadit">Powered by competence</p>
+        </div>
+    </footer>
 </body>
 </html>
