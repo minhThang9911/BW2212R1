@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 5 - Bài tập 4</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <h1>Survey Form</h1>
+            <p>Let us know how we can improve freeCodeCamp</p>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <label for="name">* Name</label>
+                </div>
+                <div class="form__field-input">
+                <input type="text" placeholder="Enter your name" class="input-form" id="name" name="name">
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <label for="email">* Email</label>
+                </div>
+                <div class="form__field-input">
+                <input type="text" placeholder="Enter your email" class="input-form" id="email" name="email">
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <label for="age">* Age</label>
+                </div>
+                <div class="form__field-input">
+                <input type="text" placeholder="Enter your age" class="input-form" id="age" name="age">
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <label for="role">Which option best describes your current role:</label>
+                </div>
+                <div class="form__field-input">
+                <input type="text" class="input-form" id="role" name="role" list="role-list">
+                <datalist id="role-list">
+                    <option value="Student"></option>
+                    <option value="Teacher"></option>
+                    <option value="Worker"></option>
+                </datalist>
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
+                </div>
+                <div class="form__field-input">
+                    <label> <input type="radio" class="input-form" name="recommend" value="1"> Definitely</label>
+                    <label> <input type="radio" class="input-form" name="recommend" value="2"> Maybe</label>
+                    <label> <input type="radio" class="input-form" name="recommend" value="3"> Not sure</label>
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <label for="like-most">What do you like most in FCC: </label>
+                </div>
+                <div class="form__field-input">
+                <input type="text" class="input-form" id="like-most" name="like-most" placeholder="Select an option" list="like-most-list">
+                <datalist id="like-most-list">
+                    <option value="Easy to access"></option>
+                    <option value="Free"></option>
+                </datalist>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
