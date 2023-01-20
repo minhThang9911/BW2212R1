@@ -5,12 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập buổi 5 - Bài tập 4</title>
+
+    <style>
+        body {
+            font-family: Helvetica, sans-serif
+        }
+
+        main {
+            background-color: #a9d7d1;
+            padding-bottom: 5px;
+            margin: auto;
+            max-width: 900px;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 16px;
+        }
+
+        form {
+            background-color: white;
+            margin: 10px 20px;
+            padding-bottom: 10px;
+            color: #6c6f6f;
+        }
+
+        .form__title {
+            text-align: center;
+            padding-top: 26px;
+            padding-bottom: 20px;
+        }
+
+        .form__field {
+            display: flex;
+            padding-bottom: 20px;
+        }
+
+        .form__field-title {
+            flex: 1;
+            text-align: right;
+            padding-right: 5px;
+            margin-top: 4px;
+        }
+
+        .form__field-input {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-left: 5px;
+        }
+
+        .input-form{
+            width: 180px;
+            padding: 4px;
+        }
+
+        p {
+            margin: -4px 0 0 0;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-left: 0;
+            margin-bottom: 4px;
+        }
+
+        textarea{
+            width: 60%;
+            padding: 4px;
+            margin: 0;
+        }
+
+        .submit-btn {
+            display: block;
+            margin: auto;
+            padding: 5px 10px;
+            color: white;
+            background-color: #59ace0;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
     <main>
+        <h1>Survey Form</h1>
         <form action="">
-            <h1>Survey Form</h1>
-            <p>Let us know how we can improve freeCodeCamp</p>
+            <p class="form__title">Let us know how we can improve freeCodeCamp</p>
             <div class="form__field">
                 <div class="form__field-title">
                     <label for="name">* Name</label>
@@ -40,7 +122,7 @@
                     <label for="role">Which option best describes your current role:</label>
                 </div>
                 <div class="form__field-input">
-                <input type="text" class="input-form" id="role" name="role" list="role-list">
+                <input type="text" class="input-form" id="role" name="role" list="role-list" style="width: 80px;">
                 <datalist id="role-list">
                     <option value="Student"></option>
                     <option value="Teacher"></option>
@@ -48,14 +130,14 @@
                 </datalist>
                 </div>
             </div>
-            <div class="form__field">
+            <div class="form__field" style="align-self: baseline;">
                 <div class="form__field-title">
                     <p>How likely is that you would recommend freeCodeCamp to a friend?</p>
                 </div>
                 <div class="form__field-input">
-                    <label> <input type="radio" class="input-form" name="recommend" value="1"> Definitely</label>
-                    <label> <input type="radio" class="input-form" name="recommend" value="2"> Maybe</label>
-                    <label> <input type="radio" class="input-form" name="recommend" value="3"> Not sure</label>
+                    <label> <input type="radio" name="recommend" value="1"> Definitely</label>
+                    <label> <input type="radio" name="recommend" value="2"> Maybe</label>
+                    <label> <input type="radio" name="recommend" value="3"> Not sure</label>
                 </div>
             </div>
             <div class="form__field">
@@ -63,13 +145,40 @@
                     <label for="like-most">What do you like most in FCC: </label>
                 </div>
                 <div class="form__field-input">
-                <input type="text" class="input-form" id="like-most" name="like-most" placeholder="Select an option" list="like-most-list">
+                <input type="text" class="input-form" id="like-most" name="like-most" placeholder="Select an option" list="like-most-list" style="width: 150px;">
                 <datalist id="like-most-list">
                     <option value="Easy to access"></option>
                     <option value="Free"></option>
                 </datalist>
                 </div>
             </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <p>Things that should be improved in the future<br>(Check all that apply)</p>
+                </div>
+                <div class="form__field-input">
+                    <label><input type="checkbox" name="things-improve" value="1"> Front-end Projects</label>
+                    <label><input type="checkbox" name="things-improve" value="2"> Back-end Projects</label>
+                    <label><input type="checkbox" name="things-improve" value="3"> Data visualization</label>
+                    <label><input type="checkbox" name="things-improve" value="4"> Challengers</label>
+                    <label><input type="checkbox" name="things-improve" value="5"> Open Source Community</label>
+                    <label><input type="checkbox" name="things-improve" value="6"> Gitter help roams</label>
+                    <label><input type="checkbox" name="things-improve" value="7"> Videos</label>
+                    <label><input type="checkbox" name="things-improve" value="8"> City meetups</label>
+                    <label><input type="checkbox" name="things-improve" value="9"> Wiki</label>
+                    <label><input type="checkbox" name="things-improve" value="10"> Forum</label>
+                    <label><input type="checkbox" name="things-improve" value="11"> Additional Courses</label>
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__field-title">
+                    <label for="suggestion">Any comments or Suggestion?</label>
+                </div>
+                <div class="form__field-input">
+                <textarea name="suggestion" id="suggestion" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+            <input type="submit" value="Submit" class="submit-btn">
         </form>
     </main>
 </body>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 5 - Bài tập 5</title>
+
+    <style>
+        /* Reset CSS */
+        a {
+            color: #d28e57;
+            text-decoration: none;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* -------------------------- */
+
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: #333333;
+        }
+
+
+        .header__title {
+            display: flex;
+            color: white;
+            font-size: 30px;
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        .header__title-5 {
+            color: #ef7e1c;
+            font-size: 90px;
+            padding-left: 5px;
+        }
+
+        .header_nav {
+            background-color: #666666;
+        }
+
+        .menu__list {
+            display: flex;
+        }
+
+        .menu__list-item {
+            display: block;
+            padding: 16px;
+            border-right: 1px solid #333333;
+            color: white;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .contents{
+            flex: 0 0 70%;
+        }
+
+        .acticle {
+            display: flex;
+            border-bottom: 1px solid #d5d5d5;
+            margin: 0 20px;
+            padding: 30px 0;
+        }
+
+        .acticle__img {
+            width: 200px;
+            height: 200px;
+        }
+
+
+        .acticle__text {
+            color: #666666;
+        }
+
+        .acticle__more {
+            font-weight: bold;
+        }
+
+
+
+        .sidebar{
+            flex: 0 0 30%;
+            background-color: #e5e5e5;
+        }
+
+        .sidebar__item {
+            margin: 20px;
+        }
+
+        .sidebar__title {
+            border-bottom: 2px solid #bebebe;
+            padding: 20px 0;
+        }
+
+        .sidebar__contents {
+            color: #666666;
+        }
+
+        .sidebar__contents-link {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .footer__text {
+            line-height: 50px;
+            background-color: #333333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <div class="header__title">
+                <h1>HTML </h1>
+                <h1 class="header__title-5">5</h1>
+            </div>
+            <nav class="header_nav">
+                <ul class="menu__list">
+                    <li><a href="" class="menu__list-item">Link 1</a></li>
+                    <li><a href="" class="menu__list-item">Link 2</a></li>
+                    <li><a href="" class="menu__list-item">Link 3</a></li>
+                    <li><a href="" class="menu__list-item">Link 4</a></li>
+                    <li><a href="" class="menu__list-item">Link 5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contents">
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+            <div class="acticle">
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/01/hinh-anh-cute-de-thuong.jpg" alt="Acticle Img" class="acticle__img">
+                <div class="acticle__contents">
+                    <h2 class="acticle__title">This is a Heading</h2>
+                    <p class="acticle__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut repudiandae necessitatibus, quaerat eum commodi quidem, sapiente omnis saepe reprehenderit dolorum expedita, rerum est quisquam natus voluptatibus optio voluptates repellendus molestiae.</p>
+                    <a href="" class="acticle__more">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar__item">
+                <h2 class="sidebar__title">Sidebar Links</h2>
+                <div class="sidebar__contents">
+                    <a href="" class="sidebar__contents-link">Link 1</a>
+                    <a href="" class="sidebar__contents-link">Link 2</a>
+                    <a href="" class="sidebar__contents-link">Link 3</a>
+                    <a href="" class="sidebar__contents-link">Link 4</a>
+                </div>
+            </div>
+            <div class="sidebar__item">
+                <h2 class="sidebar__title">Other Widgets</h2>
+                <div class="sidebar__contents">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt sequi vitae accusamus ipsam veritatis sapiente non commodi minima, recusandae quos aliquam odit odio ducimus voluptate beatae necessitatibus cum natus?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer__text">Copyright <span style="color: #ef7e1c;">YourSite</span>. All rights reserved</p>
+    </footer>
+</body>
+</html>
