@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 4 - Bài tập 5</title>
+
+    <style>
+        body {
+            background-color: #F6F3E5;
+        }
+
+        main {
+            background-color: white;
+            width: 85%;
+            margin: 10px auto;
+        }
+
+        .article {
+            display: flex;
+            padding: 12px 5px;
+        }
+
+        .article+.article {
+            border-top: 2px solid #989898;
+        }
+
+        .article__contents {
+            flex: 1;
+        }
+
+        .article__sidebar {
+            flex: 0 0 30%
+        }
+
+        .article:nth-child(n) .article__sidebar {
+            background-color: #ffffcc;
+        }
+
+        .article:nth-child(2n) .article__sidebar {
+            background-color: #ffeeee;
+        }
+
+        .article:nth-child(3n) .article__sidebar {
+            background-color: #ccffff;
+        }
+
+        .article__sidebar--title {
+            margin: 0 7px;
+            padding: 12px 0;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="article">
+            <div class="article__contents">
+                <h2 class="article__title">Article 1</h2>
+                <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores animi
+                    iste, ullam iusto quasi magni delectus natus, corporis illum numquam sed! Voluptates porro facilis
+                    ut? Cupiditate repellendus molestiae asperiores!</p>
+            </div>
+            <div class="article__sidebar">
+                <h2 class="article__sidebar--title">Sidebar 1</h2>
+                <div class="article__sidebar--menu">
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article__contents">
+                <h2 class="article__title">Article 2</h2>
+                <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores animi
+                    iste, ullam iusto quasi magni delectus natus, corporis illum numquam sed! Voluptates porro facilis
+                    ut? Cupiditate repellendus molestiae asperiores!</p>
+            </div>
+            <div class="article__sidebar">
+                <h2 class="article__sidebar--title">Sidebar 2</h2>
+                <div class="article__sidebar--menu">
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article__contents">
+                <h2 class="article__title">Article 3</h2>
+                <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores animi
+                    iste, ullam iusto quasi magni delectus natus, corporis illum numquam sed! Voluptates porro facilis
+                    ut? Cupiditate repellendus molestiae asperiores!</p>
+            </div>
+            <div class="article__sidebar">
+                <h2 class="article__sidebar--title">Sidebar 3</h2>
+                <div class="article__sidebar--menu">
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article__contents">
+                <h2 class="article__title">Article 4</h2>
+                <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores animi
+                    iste, ullam iusto quasi magni delectus natus, corporis illum numquam sed! Voluptates porro facilis
+                    ut? Cupiditate repellendus molestiae asperiores!</p>
+            </div>
+            <div class="article__sidebar">
+                <h2 class="article__sidebar--title">Sidebar 4</h2>
+                <div class="article__sidebar--menu">
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article__contents">
+                <h2 class="article__title">Article 5</h2>
+                <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores animi
+                    iste, ullam iusto quasi magni delectus natus, corporis illum numquam sed! Voluptates porro facilis
+                    ut? Cupiditate repellendus molestiae asperiores!</p>
+            </div>
+            <div class="article__sidebar">
+                <h2 class="article__sidebar--title">Sidebar 5</h2>
+                <div class="article__sidebar--menu">
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="article__contents">
+                <h2 class="article__title">Article 6</h2>
+                <p class="article__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores animi
+                    iste, ullam iusto quasi magni delectus natus, corporis illum numquam sed! Voluptates porro facilis
+                    ut? Cupiditate repellendus molestiae asperiores!</p>
+            </div>
+            <div class="article__sidebar">
+                <h2 class="article__sidebar--title">Sidebar 6</h2>
+                <div class="article__sidebar--menu">
+                    <ul>
+                        <li>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
