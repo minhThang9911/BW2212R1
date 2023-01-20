@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        tr td:first-child {
+            text-align: right;
+        }
+
+        td {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="">
+            <h1 style="text-align: center;">PHIẾU ĐĂNG KÝ</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Họ và tên:</td>
+                        <td><input type="text" name="fullname" size="30">(*)</td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ:</td>
+                        <td><input type="text" name="address" size="50">(*)</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="email" size="30">(*)</td>
+                    </tr>
+                    <tr>
+                        <td>Giới tính:</td>
+                        <td>
+                            <label><input type="radio" name="gender" value="0"> Nam</label>
+                            <label><input type="radio" name="gender" value="1"> Nữ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tuổi:</td>
+                        <td><input type="text" name="old" size="10">(*)</td>
+                    </tr>
+                    <tr>
+                        <td>Sở thích:</td>
+                        <td>
+                            <label><input type="checkbox" name="sport"> Thể thao</label><br>
+                            <label><input type="checkbox" name="literature"> Văn học</label><br>
+                            <label><input type="checkbox" name="infotech"> Công nghệ thông tin</label><br>
+                            <label><input type="checkbox" name="history"> Lịch sử</label><br>
+                            <label><input type="checkbox" name="game"> Game</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Chuyên ngành:</td>
+                        <td>
+                            <select name="specialized">
+                                <option value="1">Đồ họa</option>
+                                <option value="2">Kỹ thuật máy tính</option>
+                                <option value="3" selected>Lập trình</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gởi hình:</td>
+                        <td>
+                            <input type="text" size="25"> <input type="file" name="avartar">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yêu cầu:</td>
+                        <td>
+                            <textarea name="request" cols="40" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>
+                            <input type="submit" value="Gởi thông tin" style="width: 120px;">
+                            <input type="reset" value="Nhập lại" style="width: 80px;">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+</body>
+</html>
