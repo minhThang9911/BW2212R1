@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 2 - Bài tập 5</title>
+
+    <style>
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .btn {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form__input">
+        <h2>Simple form with name and age</h2>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" id="name" size="30"></td>
+            </tr>
+            <tr>
+                <td>Age: </td>
+                <td><input type="number" id="age" size="30"></td>
+                <td><input type="button" id="add-btn" value="Add" onclick="addData()"></td>
+            </tr>
+        </table>
+    </div>
+
+    
+    <h2>Current data in the system</h2>
+    <div class="form__output"></div>
+    <p><input type="button" value="Click here" onclick="addSampleData()" class="btn"> to create a Table and some data using Javascript</p>
+    <script>
+        const $=document.querySelector.bind(document)
+        let tableWrap = $('.form__output')
+        function createTable() {
+            let table = $('#table__output')
+            if(tableWrap && !table){
+                tableWrap.innerHTML = `
+                <table border="1" cellpadding="5" id="table__output">
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>`
+            }
+        }
+
+        function addSampleData(){
+            let table = $('#table__output')
+            
+            if(table){
+                let tbody = table.querySelector('tbody')
+                if(tbody){
+                    tbody.innerHTML = `
+                    <tr>
+                        <td><input type="button" value="Delete" onclick="deleteData(this)" class="btn"></td>
+                        <td>John</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Delete" onclick="deleteData(this)" class="btn"></td>
+                        <td>Mike</td>
+                        <td>55</td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Delete" onclick="deleteData(this)" class="btn"></td>
+                        <td>Albert</td>
+                        <td>39</td>
+                    </tr>`
+                }
+            } else {
+                createTable();
+                addSampleData();
+            }
+        }
+
+        function addData(){
+            if (!$('#table__output')){
+                createTable();
+            }
+            let tbody = $('#table__output').querySelector('tbody')
+            if(tbody){
+                let name = $('#name').value
+                let age = $('#age').value
+                let newRow = document.createElement('tr')
+                newRow.innerHTML = `
+                <tr>
+                    <td><input type="button" value="Delete" onclick="deleteData(this)" class="btn"></td>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                </tr>`
+                tbody.appendChild(newRow)
+            }
+        }
+
+        function deleteData(e){
+            let tbody = $('#table__output').querySelector('tbody')
+            tbody.removeChild(e.parentNode.parentNode)
+        }
+
+    </script>
+</body>
+</html>

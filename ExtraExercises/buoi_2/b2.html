@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 2 - Bài tập 2</title>
+
+    <style>
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number]{
+            -moz-appearance: textfield;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <h1 style="color: purple;">A Simple Form</h1>
+            <h2 style="color: #FF4E5D;">Form fundamental</h2>
+            <fieldset>
+                <legend>Customer Info</legend>
+                <p>Name: <input type="text" name="customer-name" placeholder="Enter your name" autofocus size="50"></p>
+                <p>Telephone: <input type="tel" name="customer-phone" placeholder="Pattern: 1-234-567-8910"  size="50"></p>
+                <p>E-mail address: <input type="email" name="customer-address" placeholder="Enter your email address" size="50"></p>
+                <p>Gender: 
+                    <label><input type="radio" name="customer-gender" value="0"> Male</label> 
+                    <label><input type="radio" name="customer-gender" value="1"> Female</label>
+                </p>
+                <p>Hobbiles: 
+                    <label><input type="checkbox" name="basketball">Basketball</label> 
+                    <label><input type="checkbox" name="football">Football</label>
+                    <label><input type="checkbox" name="badminton">Badminton</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Books</legend>
+                <p>Name: <input type="text" name="book-name"> Quantity (Maximum 5): <input type="number" name="book-quantity" min="1" max="5" size="2"></p>
+            </fieldset>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+</body>
+
+</html>

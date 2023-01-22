@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập buổi 2 - Bài tập 3</title>
+
+    <style>
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="">
+            <h1>Travel reservation form</h1>
+            <h2>* denotes mandotory</h2>
+            <p>Full name*:</p>
+            <p><input type="text" placeholder="FirstName Lastname" name="name"></p>
+            <p>Email address*:</p>
+            <p><input type="text" placeholder="FirstName Lastname" name="email"></p>
+            <p>Select Tour Package*:</p>
+            <p><select name="tour">
+                <option value="1">Goa</option>
+            </select></p>
+            <p>Arrival date*:</p>
+            <p><input type="text" placeholder="m/d/y" name="arrival-date"></p>
+            <p>Number of persons*:</p>
+            <p><input type="number" name="number-persons"></p>
+            <p>What would you want to avail?*</p>
+            <p><label>Boarding <input type="checkbox" name="boarding"></label></p>
+            <p><label>Fooding <input type="checkbox" name="fooding"></label></p>
+            <p><label>Sight seeing <input type="checkbox" name="sight-seeing"></label></p>
+            <p>Discount Coupon code:</p>
+            <p><input type="text" name="coupon"></p>
+            <p>Terms and conditions*</p>
+            <p>
+                <label><input type="radio" name="terms" value="0"> I agree</label>
+                <label><input type="radio" name="terms" value="1"> I disagree</label>
+            </p>
+            <input type="submit" value="Complete reservation">
+        </form>
+    </main>
+</body>
+</html>

@@ -23,6 +23,12 @@
             display: block;
             margin: 20px;
         }
+
+        #output {
+            color: white;
+            padding: 20px 10px;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
@@ -32,17 +38,34 @@
     </header>
     <main>
         <form action="">
-            <label>First Name <input type="text" style="width: 150px;"></label>
-            <label>Last Name <input type="text" style="width: 150px;"></label>
-            <label>Background <input type="text" style="width: 50px;" list="background-list"></label>
+            <label>First Name <input type="text" style="width: 150px;" id="first-name"></label>
+            <label>Last Name <input type="text" style="width: 150px;" id="last-name"></label>
+            <label>Background <select name="bg-color" id="bgcolor">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                </select>
+            </label>
             <input type="submit" value="Submit">
-            <datalist id="background-list">
-                <option value="Red"></option>
-                <option value="Yellow"></option>
-                <option value="Blue"></option>
-                <option value="Green"></option>
-            </datalist>
         </form>
+
+        <div id="output">
+            
+        </div>
     </main>
+
+    <script>
+        document.querySelector('input[type=submit]').onclick = function(e){
+            e.preventDefault()
+            let out = document.getElementById('output')
+            out.style.backgroundColor = document.getElementById('bgcolor').value
+            out.innerHTML = `
+            <h1>First Name: ${document.getElementById('first-name').value}</h1>
+            <h1>Last Name: ${document.getElementById('last-name').value}</h1>
+            `
+        }
+
+    </script>
 </body>
 </html>

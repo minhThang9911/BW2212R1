@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập buổi 3 - Bài tập 3</title>
+
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -43,20 +55,19 @@
                 </p>
             </fieldset>
             <fieldset>
-                <label>Political Pesuasion: <input type="text" name="political" list="political-datalist"></label>
-                <datalist id="political-datalist">
-                    <option value="Left Wing"></option>
-                    <option value="Right Wing"></option>
-                    <option value="Conservative"></option>
-                    <option value="Nazi"></option>
-                </datalist>
-                <label>Education Level Completed: <input type="text" name="education" list="education-list"></label>
-                <datalist id="education-list">
-                    <option value="University"></option>
-                    <option value="College"></option>
-                    <option value="High School"></option>
-                    <option value="None"></option>
-                </datalist>
+                <label>Political Pesuasion: <select name="political">
+                    <option value="1">Left Wing</option>
+                    <option value="2">Right Wing</option>
+                    <option value="3">Conservative</option>
+                    <option value="4">Nazi</option>
+                </select></label>
+                <label>Education Level Completed: <select name="education">
+                    <option value="1">University</option>
+                    <option value="2">College</option>
+                    <option value="3">High School</option>
+                    <option value="4">None</option>
+                    </select>
+                </label>
             </fieldset>
             <fieldset>
                 <legend>Essay Section</legend>
