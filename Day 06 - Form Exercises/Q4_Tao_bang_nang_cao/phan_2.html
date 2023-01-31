@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo bảng nâng cao Phần 2 - Tạo lịch của một tháng</title>
+
+    <style>
+        main {
+            width: 500px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            font-size: 20px;
+        }
+
+        th {
+            color: white;
+        }
+
+        th.bg-sun{
+            background-color: red;
+        }
+
+        th.bg-workday {
+            background-color: orange;
+        }
+
+        th.bg-saturday {
+            background-color: blue;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        td.t-sun {
+            color: red;
+        }
+
+        td.t-sat {
+            color: blue;
+        }
+
+        td.t-day {
+            border: 2px groove #bfbfbf;
+        }
+
+        sub {
+            color: black;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Tháng 10 - October</h2>
+        <table>
+            <tr>
+                <th class="bg-sun">C.Nhật</th>
+                <th class="bg-workday">T.Hai</th>
+                <th class="bg-workday">T.Ba</th>
+                <th class="bg-workday">T.Tư</th>
+                <th class="bg-workday">T.Năm</th>
+                <th class="bg-workday">T.Sáu</th>
+                <th class="bg-saturday">T.Bảy</th>
+            </tr>
+            <tr>
+                <td class="t-sun en-name">Sun</td>
+                <td class="en-name">Mon</td>
+                <td class="en-name">Tue</td>
+                <td class="en-name">Wed</td>
+                <td class="en-name">Thu</td>
+                <td class="en-name">Fri</td>
+                <td class="t-sat en-name">Sat</td>
+            </tr>
+            <tr>
+                <td class="t-sun t-day"></td>
+                <td class="t-day"></td>
+                <td class="t-day"></td>
+                <td class="t-day"></td>
+                <td class="t-day">1<sub>13</sub></td>
+                <td class="t-day">2<sub>14</sub></td>
+                <td class="t-sat t-day">3<sub>15</sub></td>
+            </tr>
+            <tr>
+                <td class="t-sun t-day">4<sub>16</sub></td>
+                <td class="t-day">5<sub>17</sub></td>
+                <td class="t-day">6<sub>18</sub></td>
+                <td class="t-day">7<sub>19</sub></td>
+                <td class="t-day">8<sub>20</sub></td>
+                <td class="t-day">9<sub>21</sub></td>
+                <td class="t-sat t-day">10<sub>22</sub></td>
+            </tr>
+            <tr>
+                <td class="t-sun t-day">11<sub>23</sub></td>
+                <td class="t-day">12<sub>24</sub></td>
+                <td class="t-day">13<sub>25</sub></td>
+                <td class="t-day">14<sub>26</sub></td>
+                <td class="t-day">15<sub>27</sub></td>
+                <td class="t-day">16<sub>28</sub></td>
+                <td class="t-sat t-day">17<sub>29</sub></td>
+            </tr>
+            <tr>
+                <td class="t-sun t-day">18<sub>1.9</sub></td>
+                <td class="t-day">19<sub>2</sub></td>
+                <td class="t-day">20<sub>3</sub></td>
+                <td class="t-day">21<sub>4</sub></td>
+                <td class="t-day">22<sub>5</sub></td>
+                <td class="t-day">23<sub>6</sub></td>
+                <td class="t-sat t-day">24<sub>7</sub></td>
+            </tr>
+            <tr>
+                <td class="t-sun t-day">25<sub>8</sub></td>
+                <td class="t-day">26<sub>9</sub></td>
+                <td class="t-day">27<sub>10</sub></td>
+                <td class="t-day">28<sub>11</sub></td>
+                <td class="t-day">29<sub>12</sub></td>
+                <td class="t-day">30<sub>13</sub></td>
+                <td class="t-sat t-day">31<sub>14</sub></td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>

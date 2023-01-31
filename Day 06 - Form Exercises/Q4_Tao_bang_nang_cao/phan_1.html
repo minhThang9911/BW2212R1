@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo bảng nâng cao Phần 1 - Bàng cờ vua</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        main {
+            background-color: #ffb228;
+            padding-right: 50px;
+            padding-bottom: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        td {
+            width: 10%;
+            position: relative;
+        }
+
+        td::after {
+            content: "";
+            display: block;
+            margin-top: 100%;
+        }
+
+        td.bg-white {
+            background-color: white;
+        }
+
+        td.bg-black {
+            background-color: black;
+        }
+
+        .v-title {
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .h-title {
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <table>
+            <tr>
+                <td></td>
+                <td><p class="h-title">1</p></td>
+                <td><p class="h-title">2</p></td>
+                <td><p class="h-title">3</p></td>
+                <td><p class="h-title">4</p></td>
+                <td><p class="h-title">5</p></td>
+                <td><p class="h-title">6</p></td>
+                <td><p class="h-title">7</p></td>
+                <td><p class="h-title">8</p></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">A</p></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">B</p></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">C</p></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">D</p></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">E</p></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">F</p></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">G</p></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+            </tr>
+            <tr>
+                <td><p class="v-title">H</p></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+                <td class="bg-black"></td>
+                <td class="bg-white"></td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
