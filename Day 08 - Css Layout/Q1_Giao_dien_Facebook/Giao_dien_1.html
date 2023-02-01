@@ -8,27 +8,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+        }
+
         .main-wraper {
             width: 600px;
             margin: auto;
         }
 
         .header {
-
+            display: flex;
+            text-align: center;
+            background-color: #4666b0;
+            padding: 20px 26px;
+            font-size: 24px;
+            color: #fff;
         }
 
+        .header__chat,
         .header__send {
-
+            padding: 10px 0;
         }
-
+        
         .header__search {
-
+            flex-grow: 1;
+            background-color: #34518a;
+            border-radius: 50px;
+            padding: 10px 0;
+            margin: 0 20px;
         }
-
-        .header__chat {
-
-        }
-
+        
     </style>
 
 </head>
@@ -40,6 +56,7 @@
             </div>
             <div class="header__search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
             </div>
             <div class="header__chat">
                 <i class="fa-brands fa-facebook-messenger"></i>
@@ -48,7 +65,7 @@
         <div class="content">
             <div class="content__header">
                 <div class="content-header__avartar">
-                    <img src="https://img.freepik.com/premium-photo/3d-facebook-logo-background-facebook-famous-social-media-platform_73903-697.jpg?w=200" alt="">
+                    <img src="asset/img/facebook.jpg" alt="Avartar">
                 </div>
                 <div class="content-header__info">
 
@@ -58,7 +75,7 @@
                 </div>
             </div>
             <div class="content__picture">
-                <img src="https://img.freepik.com/premium-photo/3d-facebook-logo-background-facebook-famous-social-media-platform_73903-697.jpg?w=600" alt="">
+                <img src="asset/img/facebook.jpg" alt="Picture">
             </div>
             <div class="content__footer">
 
