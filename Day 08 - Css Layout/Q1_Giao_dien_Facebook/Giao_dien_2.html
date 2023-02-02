@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo giao diện giản lược của trang chủ Facebook - Giao diện 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wraper {
+            max-width: 1200px;
+        }
+
+        body {
+            font-family:  Helvetica, Arial, sans-serif;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="wraper">
+            <div class="hearder-left">
+                <img src="" alt="" class="facebook-icon">
+                <div class="header-search-wraper">
+                    <input type="text" class="header-search__input" name="q">
+                    <div class="header-search__icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+            <ul class="header-right">
+                <li><div class="avartar--header"></div></li>
+                <li><a href="#" class="header__menu">Name</a></li>
+                <li><a href="#" class="header__menu">Home</a></li>
+                <li>
+                    <a href="#" class="header__menu">Find Friends</a>
+                    <a href="#" class="header__menu-icon"><i class="fa-solid fa-people-group"></i></a>
+                    <a href="#" class="header__menu-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    <a href="#" class="header__menu-icon"><i class="fa-solid fa-circle"></i></a>
+                </li>
+                <li><a href="#" class="header__menu-icon"><i class="fa-solid fa-circle-question"></i><i class="fa-solid fa-caret-down"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="wraper">
+            <div class="side-bar-left">
+                <div class="side-bar-left__header">
+                    <div class="avartar--left"></div>
+                    <p class="left-header-name">Name Surname</p>
+                </div>
+                <ul class="nav-quick-access">
+                    <li><a href="#"><i class="fa-regular fa-newspaper"></i> News Feeds</a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-messenger"></i> Messager</a></li>
+                    <li><a href="#"><i class="fa-solid fa-shop"></i> Marketplace</a></li>
+                </ul>
+                <ul class="nav-group">
+                    <li><a href="#"><i class="fa-solid fa-people-line"></i>Lorem ipsum</a></li>
+                    <li><a href="#"><i class="fa-solid fa-people-line"></i>Lorem ipsum</a></li>
+                    <li><a href="#"><i class="fa-solid fa-people-line"></i>Lorem ipsum</a></li>
+                    <li><a href="#"><i class="fa-solid fa-people-line"></i>Lorem ipsum</a></li>
+                    <li><a href="#"><i class="fa-solid fa-people-line"></i>Lorem ipsum</a></li>
+                    <li><a href="#"><i class="fa-solid fa-people-line"></i>Lorem ipsum</a></li>
+                </ul>
+                <ui class="nav-left-menu">
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Groups</a></li>
+                    <li><a href="#">Friend Lists</a></li>
+                    <li><a href="#">On This Day</a></li>
+                    <li><a href="#">Pages Feed</a></li>
+                    <li><a href="#">Find Friends</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Game</a></li>
+                    <li><a href="#" class="menu--more">See more...</a></li>
+                </ui>
+                <div class="side-bar-left-footer">
+                    <p class="side-bar-left-footer__title">Create</p>
+                    <div class="side-bar-left-footer__menu">
+                        <a href="#">Add</a>
+                        <a href="#">Page</a>
+                        <a href="#">Group</a>
+                        <a href="#">Event</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="new-post">
+                    <ul class="new-post__header">
+                        <li>Make Post</li>
+                        <li>Photo/Video Album</li>
+                        <li>Live Video</li>
+                    </ul>
+                    <div class="new-post__body">
+                        <div class="avartar--new-post"></div>
+                        <textarea name="new-post" class="new-post__input"></textarea>
+                    </div>
+                    <ul class="new-post__footer">
+                        <li>Photo/Video</li>
+                        <li>Feeling/Activity</li>
+                        <li><i class="fa-solid fa-ellipsis"></i></li>
+                    </ul>
+                </div>
+                <div class="post">
+                    <div class="post__header">
+                        <div class="avartar--post"></div>
+                        <div class="post-header-text">
+                            <p class="post-header-text__name">Name Surname <span class="post-header-text__feel">Lorem, ipsum</span></p>
+                            <p class="post-header-text__tiem">Yesterday at 12:12pm</p>
+                        </div>
+                    </div>
+                    <div class="post__content">
+                        <p class="post-content__text">Lorem, ipsum.</p>
+                        <div class="post-content__img"></div>
+                        <div class="post-content__react">
+                            <p class="react--like"><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                            <p class="react--comment"><i class="fa-regular fa-comment"></i></p>
+                        </div>
+                    </div>
+                    <div class="post__footer">
+                        <i class="emo-heart fa-solid fa-heart"></i>
+                        <i class="emo-like fa-regular fa-thumbs-up"></i>
+                        <i class="emo-suprise fa-regular fa-face-surprise"></i>
+                        <span class="emo-text">Lorem, ipsum and 291 others</span>
+                    </div>
+                </div>
+            </div>
+            <div class="side-bar-right">
+                <div class="stories">
+                    <div class="component__header">
+                        <p class="component-header__text">Stories</p>
+                        <p class="component-header__more"><i class="fa-solid fa-ellipsis"></i</p>
+                    </div>
+                    <div class="stories__body">
+                        <div class="story-item">
+                            <div class="avartar--story"></div>
+                            <div class="story-item__text">
+                                <p class="story-item__name">Name Surname</p>
+                                <p class="story-item__time">13 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="story-item">
+                            <div class="avartar--story"></div>
+                            <div class="story-item__text">
+                                <p class="story-item__name">Name Surname</p>
+                                <p class="story-item__time">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="story-item">
+                            <div class="avartar--story"></div>
+                            <div class="story-item__text">
+                                <p class="story-item__name">Name Surname</p>
+                                <p class="story-item__time">12 minutes ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stories__footer">
+                        <a href="#" class="menu--more"></a>
+                    </div>
+                </div>
+                <div class="page-control">
+                    <div class="component__header">
+                        <p class="component-header__text">Your page</p>
+                        <p class="component-header__more"><i class="fa-solid fa-ellipsis"></i</p>
+                    </div>
+                    <div class="page__info">
+                        <div class="page-info__avartar"></div>
+                        <div class="page-info__text">
+                            <p class="page-info__name">Site name</p>
+                            <p class="page-info__messager"><a href="#"><i class="fa-solid fa-comments"></i> Messagers</a></p>
+                            <p class="page-info__messager"><a href="#"><i class="fa-solid fa-earth-africa"></i> Notifications</a></p>
+                        </div>
+                    </div>
+                    <ul class="page__menu">
+                        <li><i class="fa-solid fa-arrow-up-right-from-square"></i><p>Publish</p></li>
+                        <li><i class="fa-solid fa-camera"></i><p>Photo</p></li>
+                        <li><i class="fa-solid fa-users-between-lines"></i><p>Live</p></li>
+                        <li><i class="fa-solid fa-user-plus"></i><p>Invite</p></li>
+                    </ul>
+                    <div class="page__count">
+                        <ul class="page-count__menu">
+                            <li>Likes</li>
+                            <li>Views</li>
+                            <li>Post</li>
+                        </ul>
+                        <p class="page-count__num">350</p>
+                        <p class="page-count__week-num">160 likes this week</p>
+                    </div>
+                    <div class="page__recent">
+                        <p class="page-recent__title">Recent Posts</p>
+                        <div class="page-recent__container">
+                            <div class="page-recent-item">
+                                <div class="page-recent-item__info">
+                                    <div class="page-recent-item-info__avatar"></div>
+                                    <div class="page-recent-item-info__content">
+                                        <p class="name">Work</p>
+                                        <p class="detail">Lorem, ipsum.</p>
+                                    </div>
+                                </div>
+                                <div class="page-recent-item__footer">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

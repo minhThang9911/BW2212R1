@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
+
         * {
             padding: 0;
             margin: 0;
@@ -16,11 +17,19 @@
 
         body {
             font-family: Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        main {
+            width: 600px;
+            margin: auto;
+            border: 1px solid #000;
+            padding: 10px;
+            background-color: #f0ebf0;
         }
 
         .main-wraper {
-            width: 600px;
-            margin: auto;
+            background-color: #fff;
         }
 
         .header {
@@ -44,54 +53,157 @@
             padding: 10px 0;
             margin: 0 20px;
         }
+
+        .content__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .content-header__info {
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        .content-header-info__username {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        .content-header-info__time {
+            color: #878889;
+        }
+
+        .content-header__avartar {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 5% 5%;
+        }
+
+        .content-header__menu {
+            padding: 20px;
+            font-size: 40px;
+            color: #878889;
+        }
+
+        .content__text {
+            padding-bottom: 30px;
+            padding-left: 20px;
+        }
+
+        .content__picture {
+            width: 100%;
+        }
+
+        .content__footer {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 10px;
+            padding: 16px 0;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .emo-heart {
+            color: #ed3f5b;
+        }
+
+        .emo-like {
+            color: #1f83f6;
+        }
+
+        .emo-suprise {
+            color: #fbdf56;
+        }
+
+        .emo-text {
+            padding-left: 4px;
+        }
+
+        .content-footer__comment-count {
+            padding-right: 6px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 0 30px;
+        }
+
+        .footer-text {
+            font-size: 20px;
+            padding: 0 20px;
+        }
         
+        .footer__react {
+            padding: 20px 10px;
+            font-size: 40px;
+            position: relative;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
     </style>
 
 </head>
 <body>
-    <div class="main-wraper">
-        <div class="header">
-            <div class="header__send">
-                <i class="fa-solid fa-paper-plane"></i>
-            </div>
-            <div class="header__search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Search</span>
-            </div>
-            <div class="header__chat">
-                <i class="fa-brands fa-facebook-messenger"></i>
-            </div>
-        </div>
-        <div class="content">
-            <div class="content__header">
-                <div class="content-header__avartar">
-                    <img src="asset/img/facebook.jpg" alt="Avartar">
+    <main>
+        <div class="main-wraper">
+            <div class="header">
+                <div class="header__send">
+                    <i class="fa-solid fa-paper-plane"></i>
                 </div>
-                <div class="content-header__info">
-
+                <div class="header__search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
                 </div>
-                <div class="content-header__menu">
-
+                <div class="header__chat">
+                    <i class="fa-brands fa-facebook-messenger"></i>
                 </div>
             </div>
-            <div class="content__picture">
-                <img src="asset/img/facebook.jpg" alt="Picture">
+            <div class="content">
+                <div class="content__header">
+                    <img src="asset/img/facebook.jpg" alt="Avartar" class="content-header__avartar">
+                    <div class="content-header__info">
+                        <p class="content-header-info__username">My user name</p>
+                        <p class="content-header-info__time">Monday at 11:00 AM <i class="fa-solid fa-earth-americas"></i></p>
+                    </div>
+                    <div class="content-header__menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="content__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <img src="asset/img/facebook.jpg" alt="Picture" class="content__picture">
+                <div class="content__footer">
+                    <div class="content-footer__emo">
+                        <i class="emo-heart fa-solid fa-heart"></i>
+                        <i class="emo-like fa-regular fa-thumbs-up"></i>
+                        <i class="emo-suprise fa-regular fa-face-surprise"></i>
+                        <span class="emo-text">Lorem, ipsum and 291 others</span>
+                    </div>
+                    <div class="content-footer__comment-count">55 comments</div>
+                </div>
             </div>
-            <div class="content__footer">
-
+            <div class="footer">
+                <div class="footer__react">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <span class="footer-text">Like</span>
+                </div>
+                <div class="footer__react">
+                    <i class="fa-regular fa-message"></i>
+                    <span class="footer-text">Comment</span>
+                </div>
+                <div class="footer__react">
+                    <i class="fa-solid fa-share"></i>
+                    <span class="footer-text">Share</span>
+                </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="footer__like">
-
-            </div>
-            <div class="footer__comment">
-
-            </div>
-            <div class="footer__share">
-
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 </html>
