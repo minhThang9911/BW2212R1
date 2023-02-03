@@ -6,38 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Bài tập] Tạo giao diện giản lược của trang chủ Facebook - Giao diện 2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        .wraper {
-            max-width: 1200px;
-        }
-
-        body {
-            font-family:  Helvetica, Arial, sans-serif;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
     <header>
-        <div class="wraper">
-            <div class="hearder-left">
-                <img src="" alt="" class="facebook-icon">
-                <div class="header-search-wraper">
-                    <input type="text" class="header-search__input" name="q">
+        <div class="wraper flex-space-center">
+            <div class="header-left flex-start-center">
+                <div class="facebook-icon"><i class="fa-brands fa-square-facebook"></i></div>
+                <div class="header-search-wraper flex-space-center">
+                    <input type="text" class="header-search__input" name="q" placeholder="Search">
                     <div class="header-search__icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
             </div>
-            <ul class="header-right">
+            <ul class="header-right flex-space-center">
                 <li><div class="avartar--header"></div></li>
                 <li><a href="#" class="header__menu">Name</a></li>
                 <li><a href="#" class="header__menu">Home</a></li>
@@ -47,12 +30,12 @@
                     <a href="#" class="header__menu-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
                     <a href="#" class="header__menu-icon"><i class="fa-solid fa-circle"></i></a>
                 </li>
-                <li><a href="#" class="header__menu-icon"><i class="fa-solid fa-circle-question"></i><i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#" class="header__menu-icon"><i class="fa-solid fa-circle-question"></i> <i class="fa-solid fa-caret-down"></i></a></li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="wraper">
+        <div class="wraper flex-space">
             <div class="side-bar-left">
                 <div class="side-bar-left__header">
                     <div class="avartar--left"></div>
@@ -208,11 +191,19 @@
                                 </div>
                                 <div class="page-recent-item__footer">
                                     <ul>
-                                        <li></li>
+                                        <li><i class="emo-heart fa-solid fa-heart"></i></li>
+                                        <li><i class="emo-like fa-regular fa-thumbs-up"></i></li>
+                                        <li><i class="emo-suprise fa-regular fa-face-surprise"></i></li>
+                                        <li><span class="emo-text">66</span></li>
                                     </ul>
+                                    <input type="button" value="Boost Post" class="btn">
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="page-promotion">
+                        <p><i class="fa-solid fa-volume-low"></i> Create Promotion</p>
+                        <p><i class="fa-solid fa-caret-down"></i></p>
                     </div>
                 </div>
             </div>
