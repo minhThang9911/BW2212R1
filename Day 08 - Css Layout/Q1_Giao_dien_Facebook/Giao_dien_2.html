@@ -37,7 +37,7 @@
     <main>
         <div class="wraper flex-space">
             <div class="side-bar-left">
-                <div class="side-bar-left__header">
+                <div class="side-bar-left__header flex-start-center">
                     <div class="avartar--left"></div>
                     <p class="left-header-name">Name Surname</p>
                 </div>
@@ -78,23 +78,23 @@
             </div>
             <div class="content">
                 <div class="new-post">
-                    <ul class="new-post__header">
-                        <li>Make Post</li>
-                        <li>Photo/Video Album</li>
-                        <li>Live Video</li>
+                    <ul class="new-post__header flex-start-center">
+                        <li><i class="fa-solid fa-pencil"></i>Make Post</li>
+                        <li><i class="fa-solid fa-images"></i>Photo/Video Album</li>
+                        <li><i class="fa-solid fa-video"></i>Live Video</li>
                     </ul>
-                    <div class="new-post__body">
+                    <div class="new-post__body flex-start-center">
                         <div class="avartar--new-post"></div>
-                        <textarea name="new-post" class="new-post__input"></textarea>
+                        <div name="new-post" class="new-post__input" contenteditable="true"></div>
                     </div>
-                    <ul class="new-post__footer">
-                        <li>Photo/Video</li>
-                        <li>Feeling/Activity</li>
+                    <ul class="new-post__footer flex-start-center">
+                        <li><i class="fa-regular fa-image"></i>Photo/Video</li>
+                        <li><i class="fa-solid fa-face-laugh-beam"></i>Feeling/Activity</li>
                         <li><i class="fa-solid fa-ellipsis"></i></li>
                     </ul>
                 </div>
                 <div class="post">
-                    <div class="post__header">
+                    <div class="post__header flex-start-center">
                         <div class="avartar--post"></div>
                         <div class="post-header-text">
                             <p class="post-header-text__name">Name Surname <span class="post-header-text__feel">Lorem, ipsum</span></p>
@@ -104,7 +104,7 @@
                     <div class="post__content">
                         <p class="post-content__text">Lorem, ipsum.</p>
                         <div class="post-content__img"></div>
-                        <div class="post-content__react">
+                        <div class="post-content__react flex-space-center">
                             <p class="react--like"><i class="fa-regular fa-thumbs-up"></i> Like</p>
                             <p class="react--comment"><i class="fa-regular fa-comment"></i></p>
                         </div>

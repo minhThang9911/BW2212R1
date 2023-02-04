@@ -71,7 +71,7 @@ body {
     background-color: #1c2843;
 }
 
-
+/* ----------- HEADER START ----------- */
 
 header {
     background-color: #4165b0;
@@ -135,22 +135,119 @@ header .header-right a{
     padding: 0 4px;
 }
 
+/* ----------- HEADER END ----------- */
+
+/* ----------- SIDE BAR LEFT START ----------- */
+
 main .side-bar-left {
     flex-basis: 20%;
     margin-top: 6px;
 }
 
+main .side-bar-left .left-header-name {
+    padding-left: 16px;
+}
+
+main .side-bar-left .nav-left-menu li,
+main .side-bar-left .nav-quick-access li {
+    padding: 4px 0;
+    margin: 2px 0;
+}
+
+main .side-bar-left .nav-left-menu li i,
+main .side-bar-left .nav-quick-access li i {
+    font-size: 1.6em;
+}
+
+main .side-bar-left .nav-left-menu,
+main .side-bar-left .nav-group {
+    margin-top: 16px;
+    list-style: none;
+}
+
+main .side-bar-left .nav-group li {
+    padding: 2px 0;
+    margin: 2px 0;
+}
+
+main .side-bar-left .nav-group li i{
+    font-size: 1.4em;
+    border-radius: 50%;
+    background-color: #4165b0;
+    color: #fff;
+    line-height: 2em;
+    padding: 0 4px;
+    margin-right: 6px;
+}
+
+main .side-bar-left .side-bar-left-footer {
+    margin-top: 10px;
+}
+
+main .side-bar-left .side-bar-left-footer__title {
+    margin-bottom: 4px;
+}
+
+main .side-bar-left .side-bar-left-footer__menu a{
+    color: #4165b0;
+}
+/* ----------- SIDE BAR LEFT END ----------- */
+
+
+/* ----------- CONTENT START ----------- */
+
 main .content {
     flex-grow: 1;
-    background-color: #fff;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-    margin: 8px;
-    padding: 6px;
 }
+
+main .content .new-post {
+    border-radius: 6px;
+    margin: 8px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+main .content .new-post__header {
+    background-color: #f4f6f8;
+}
+
+main .content .new-post__header li {
+    color: #4165b0;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+main .content .new-post__header li i {
+    color: #000;
+    font-size: 1.4em;
+    padding-right: 4px;
+}
+
+main .content .new-post__header li:not(main .content .new-post__header li:first-child) {
+    border-left: 1px solid #ccc;
+}
+
+main .content .new-post__footer,
+main .content .new-post__body {
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+main .content .new-post__body {
+    border-bottom: 1px solid #ccc;
+}
+
+main .content .new-post__input {
+    /* border: none; */
+    padding: 4px;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+
+/* ----------- CONTENT END ----------- */
+
+/* ----------- SIDE BAR RIGHT START ----------- */
 
 main .side-bar-right {
     flex-basis: 26%;
@@ -162,3 +259,6 @@ main .side-bar-right {
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
 }
+
+/* ----------- SIDE BAR RIGHT END ----------- */
+
