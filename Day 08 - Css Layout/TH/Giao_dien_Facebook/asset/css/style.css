@@ -58,6 +58,14 @@ body {
     justify-content: space-between;
 }
 
+.btn {
+    border: none;
+    background-color: #4165af;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
 /* ---------------------------------- */
 .avartar--outsite,
 .avartar--header,
