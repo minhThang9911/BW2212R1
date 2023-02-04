@@ -64,7 +64,7 @@
                     <li><a href="#">Find Friends</a></li>
                     <li><a href="#">Photos</a></li>
                     <li><a href="#">Game</a></li>
-                    <li><a href="#" class="menu--more">See more...</a></li>
+                    <li><a href="#" class="menu--more"><i class="fa-solid fa-caret-down"></i> See more...</a></li>
                 </ui>
                 <div class="side-bar-left-footer">
                     <p class="side-bar-left-footer__title">Create</p>
@@ -85,7 +85,7 @@
                     </ul>
                     <div class="new-post__body flex-start-center">
                         <div class="avartar--new-post"></div>
-                        <div name="new-post" class="new-post__input" contenteditable="true"></div>
+                        <div name="new-post" class="new-post__input" contenteditable="true" placeholder="What's on your mind, Name Surname?"></div>
                     </div>
                     <ul class="new-post__footer flex-start-center">
                         <li><i class="fa-regular fa-image"></i>Photo/Video</li>
@@ -97,7 +97,7 @@
                     <div class="post__header flex-start-center">
                         <div class="avartar--post"></div>
                         <div class="post-header-text">
-                            <p class="post-header-text__name">Name Surname <span class="post-header-text__feel">Lorem, ipsum</span></p>
+                            <p><span class="post-header-text__name">Name Surname</span> Lorem, ipsum</p>
                             <p class="post-header-text__tiem">Yesterday at 12:12pm</p>
                         </div>
                     </div>
@@ -105,57 +105,57 @@
                         <p class="post-content__text">Lorem, ipsum.</p>
                         <div class="post-content__img"></div>
                         <div class="post-content__react flex-space-center">
-                            <p class="react--like"><i class="fa-regular fa-thumbs-up"></i> Like</p>
-                            <p class="react--comment"><i class="fa-regular fa-comment"></i></p>
+                            <p><i class="fa-regular fa-thumbs-up"></i> Like</p>
+                            <p><i class="fa-regular fa-comment"></i></p>
                         </div>
                     </div>
                     <div class="post__footer">
                         <i class="emo-heart fa-solid fa-heart"></i>
                         <i class="emo-like fa-regular fa-thumbs-up"></i>
                         <i class="emo-suprise fa-regular fa-face-surprise"></i>
-                        <span class="emo-text">Lorem, ipsum and 291 others</span>
+                        <span>Lorem, ipsum</span>
                     </div>
                 </div>
             </div>
             <div class="side-bar-right">
                 <div class="stories">
-                    <div class="component__header">
+                    <div class="component__header flex-space-center">
                         <p class="component-header__text">Stories</p>
-                        <p class="component-header__more"><i class="fa-solid fa-ellipsis"></i</p>
+                        <p class="component-header__more"><i class="fa-solid fa-ellipsis"></i></p>
                     </div>
                     <div class="stories__body">
-                        <div class="story-item">
-                            <div class="avartar--story"></div>
-                            <div class="story-item__text">
-                                <p class="story-item__name">Name Surname</p>
-                                <p class="story-item__time">13 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="story-item">
-                            <div class="avartar--story"></div>
+                        <div class="story-item flex-start-center">
+                            <div class="avartar--outsite"><div class="avartar--story"></div></div>
                             <div class="story-item__text">
                                 <p class="story-item__name">Name Surname</p>
                                 <p class="story-item__time">2 hours ago</p>
                             </div>
                         </div>
-                        <div class="story-item">
-                            <div class="avartar--story"></div>
+                        <div class="story-item flex-start-center">
+                            <div class="avartar--outsite"><div class="avartar--story"></div></div>
                             <div class="story-item__text">
                                 <p class="story-item__name">Name Surname</p>
-                                <p class="story-item__time">12 minutes ago</p>
+                                <p class="story-item__time">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="story-item flex-start-center">
+                            <div class="avartar--outsite"><div class="avartar--story"></div></div>
+                            <div class="story-item__text">
+                                <p class="story-item__name">Name Surname</p>
+                                <p class="story-item__time">2 hours ago</p>
                             </div>
                         </div>
                     </div>
                     <div class="stories__footer">
-                        <a href="#" class="menu--more"></a>
+                        <a href="#" class="menu--more"><i class="fa-solid fa-caret-down"></i> See more...</a>
                     </div>
                 </div>
                 <div class="page-control">
-                    <div class="component__header">
+                    <div class="component__header flex-space-center">
                         <p class="component-header__text">Your page</p>
-                        <p class="component-header__more"><i class="fa-solid fa-ellipsis"></i</p>
+                        <p class="component-header__more"><i class="fa-solid fa-ellipsis"></i></p>
                     </div>
-                    <div class="page__info">
+                    <div class="page__info flex-start-center">
                         <div class="page-info__avartar"></div>
                         <div class="page-info__text">
                             <p class="page-info__name">Site name</p>
@@ -163,15 +163,15 @@
                             <p class="page-info__messager"><a href="#"><i class="fa-solid fa-earth-africa"></i> Notifications</a></p>
                         </div>
                     </div>
-                    <ul class="page__menu">
+                    <ul class="page__menu flex-space-center">
                         <li><i class="fa-solid fa-arrow-up-right-from-square"></i><p>Publish</p></li>
                         <li><i class="fa-solid fa-camera"></i><p>Photo</p></li>
                         <li><i class="fa-solid fa-users-between-lines"></i><p>Live</p></li>
                         <li><i class="fa-solid fa-user-plus"></i><p>Invite</p></li>
                     </ul>
                     <div class="page__count">
-                        <ul class="page-count__menu">
-                            <li>Likes</li>
+                        <ul class="page-count__menu flex-space-center">
+                            <li class="active">Likes</li>
                             <li>Views</li>
                             <li>Post</li>
                         </ul>
@@ -182,15 +182,15 @@
                         <p class="page-recent__title">Recent Posts</p>
                         <div class="page-recent__container">
                             <div class="page-recent-item">
-                                <div class="page-recent-item__info">
-                                    <div class="page-recent-item-info__avatar"></div>
+                                <div class="page-recent-item__info flex-start-center">
+                                    <div class="page-recent-item-info__avartar"></div>
                                     <div class="page-recent-item-info__content">
                                         <p class="name">Work</p>
                                         <p class="detail">Lorem, ipsum.</p>
                                     </div>
                                 </div>
-                                <div class="page-recent-item__footer">
-                                    <ul>
+                                <div class="page-recent-item__footer flex-space-center">
+                                    <ul class="flex-start-center">
                                         <li><i class="emo-heart fa-solid fa-heart"></i></li>
                                         <li><i class="emo-like fa-regular fa-thumbs-up"></i></li>
                                         <li><i class="emo-suprise fa-regular fa-face-surprise"></i></li>
@@ -201,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page-promotion">
+                    <div class="page-promotion flex-start-center">
                         <p><i class="fa-solid fa-volume-low"></i> Create Promotion</p>
                         <p><i class="fa-solid fa-caret-down"></i></p>
                     </div>
