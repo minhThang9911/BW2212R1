@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Phát triển trang web xem hoạt hình trực tuyến</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .left-content,
+        nav,
+        header {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 4em;
+            z-index: 1;
+        }
+
+        nav.header-link {
+            margin: 4.5em 0 0.5em;
+        }
+
+        nav.header-link ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0.5em 0;
+        }
+
+        nav.header-link ul li {
+            padding: 0 1em;
+        }
+
+        nav.header-link ul li:hover {
+            font-weight: bold;
+            color: red;
+        }
+
+        nav.header-link ul li:not(li:first-child) {
+            border-left: 1px solid #000;
+        }
+
+        main {
+            display: flex;
+            margin: 0.5em;
+        }
+
+        main p {
+            margin-top: 0.3em;
+        }
+
+        main section.left-content .cartoon {
+            cursor: pointer;
+        }
+
+        main .cartoon__channel,
+        main .cartoon__title {
+            font-weight: bold;
+        }
+
+        main .cartoon__channel {
+            color: #868886;
+            margin-bottom: 0.6em;
+        }
+
+        main section.left-content {
+            flex: 0 0 35%;
+            padding: 1em;
+        }
+
+        main section.left-content img {
+            width: 100%;
+        }
+
+        main section.left-content
+
+        main section.right-content {
+            flex-grow: 1;
+            padding: 0 3em;
+        }
+
+        main section.right-content .cartoon__des p {
+            margin-bottom: 1em;
+        }
+
+        main section.right-content .cartoon__video {
+            position: relative;
+            padding-top: 56.25%;
+        }
+
+        main section.right-content .cartoon__video iframe {
+            position: absolute;
+            top: 0;
+        }
+
+        footer p{
+            background-color: #f5f5f5;
+            text-align: center;
+            line-height: 3em;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 740px){
+            main {
+                flex-direction: column-reverse;
+            }
+
+            main section.right-content .cartoon__des {
+                height: 5em;
+                overflow: scroll;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logo.png" alt="" class="header__logo">
+        </header>
+        <nav class="header-link">
+            <ul>
+                <li>
+                    <a href="#">Phim hoạt hình</a>
+                </li>
+                <li><a href="#">Phim hoạt hình yêu thích</a>
+                </li>
+                <li> <a href="#">Nhân vật hoạt hình</a>
+                </li>
+                <li><a href="#">Góp ý</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section class="left-content">
+                <div class="cartoon">
+                    <img src="img/video1.png" alt="Video1" class="cartoon__img">
+                    <p><span class="cartoon__title">[S10] Doraemon - Tập 491 - Tôm Chiên Của Nobita, Mọi Người Ơi! Cứu Mình Với!</span> - 1.934.846 lượt xem  24 thg 1, 2023</p>
+                    <p class="cartoon__channel">
+                        POPS Kids
+                        </p>
+                </div>
+                <div class="cartoon">
+                    <img src="img/video2.jpg" alt="Video2" class="cartoon__img">
+                    <p><span class="cartoon__title">[S8] Doraemon Tập 375 - Cùng Tắm Suối Nước Nóng Với Shizuka, Doraemon Cũng Muốn Có Mẹ</span> - 3.184.142 lượt xem  15 thg 12, 2022 </p>
+                    <p class="cartoon__channel">POPS Kids</p>
+                </div>
+                <div class="cartoon">
+                    <img src="img/video3.jpg" alt="Video3" class="cartoon__img">
+                    <p><span class="cartoon__title">[S10] Doraemon - Tập 473 - Halloween Là Ngày Gì?, Muỗng Nếm Thử Hương Vị</span> - 3.835.845 lượt xem  29 thg 11, 2022 </p>
+                    <p class="cartoon__channel">POPS Kids</p>
+                </div>
+                <div class="cartoon">
+                    <img src="img/video4.jpg" alt="Video4" class="cartoon__img">
+                    <p><span class="cartoon__title">[S10] Doraemon - Tập 478 - Ngôi Nhà Vui Nhộn, Ngôi Nhà Đáng Sợi</span> -  3.646.522 lượt xem  16 thg 12, 2022 </p>
+                    <p class="cartoon__channel">POPS Kids</p>
+                </div>
+            </section>
+            <section class="right-content">
+                <div class="cartoon__video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aiEzbK3YszI" title="[S10] Doraemon - Tập 491 - Tôm Chiên Của Nobita, Mọi Người Ơi! Cứu Mình Với! - Hoạt Hình Tiếng Viêt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <p><span class="cartoon__title">[S10] Doraemon - Tập 491 - Tôm Chiên Của Nobita, Mọi Người Ơi! Cứu Mình Với!</span> -  1.952.018 lượt xem  24 thg 1, 2023</p>
+                <p class="cartoon__channel">
+                    POPS Kids
+                    </p>
+                <div class="cartoon__des">
+                    <p><b>Doraemon</b> là tác phẩm của Fujiko Fujio, bút danh chung của hai họa sĩ manga Fujimoto Hiroshi và Abiko Motoo. Bộ truyện ra mắt lần đầu tiên vào tháng 12 năm 1969 dành cho độc giả là các kodomo (thiếu nhi). Theo như lời tác giả Hiroshi thì trong lúc đang bí đề tài cho nhân vật truyện tranh mới thì ông bỗng thấy con gái của mình đang chơi với một con lật đật, khi đó ông bỗng nảy ra ý tưởng tạo ra nhân vật mới có hình dáng kết hợp của một con mèo với lật đật, đó chính là hình dáng của nhân vật <b>Doraemon</b> sau này.</p>
+                    <p>Ban đầu các câu chuyện lẻ <b>Doraemon</b> được nhà xuất bản Shogakukan phát hành đồng loạt trên sáu tập san dành cho trẻ em. Các tạp chí này được đặt tên theo các cấp học của trẻ nhỏ, đó là Yoiko (nhà trẻ), Yōchien (mẫu giáo), và từ Shogaku Ichinensei (lớp Một) cho đến Shogaku Yonnensei (lớp Bốn). Từ năm 1973, bộ truyện được phát hành thêm trên hai tạp chí Shogaku Gogensei (lớp Năm) và Shogaku Rokunensei (lớp Sáu). Các câu chuyện trên mỗi tạp chí là khác nhau, đồng nghĩa với việc tác giả phải sáng tác ít nhất là 6 câu chuyện mỗi tháng. Từ năm 1974, các câu chuyện nhỏ của <b>Doraemon</b> bắt đầu được tập hợp trong các tập truyện dày, từ năm 1974 đến năm 1996 đã có tổng cộng 45 tập truyện như vậy ra đời[4]. Năm 1977, tạp chí truyện tranh CoroCoro Comic đã ra đời như một tạp chí chuyên về <b>Doraemon</b>. Các manga gốc của các bộ phim <b>Doraemon</b> cũng được phát hành trên CoroCoro Comic. Năm 2005 Shogakukan đã phát hành chuỗi năm tập manga với tên Đội quân <b>Doraemon</b> (tên cũ: Đôrêmon thêm) với những câu chuyện không có trong 45 tập xuất bản gốc. Từ năm 1987 hai tác giả Hiroshi và Motoo không còn dùng chung bút danh Fujiko F. Fujio, khi đó chỉ còn ông Fujimoto là người sáng tác Đôrêmon với bút danh "Fujiko F. Fujio" (bút danh của ông Motoo khi này là "Fujiko Fujio (A)"). Ngay cả sau khi ông Fujimoto qua đời năm 1996, các tập truyện, phim ngắn và phim dài của Đôrêmon vẫn tiếp tục được phát hành và tiêu thụ mạnh tại Nhật Bản. Tính cho đến năm 1999 đã có khoảng 100 triệu tập <b>Doraemon</b> được tiêu thụ tính riêng ở Nhật (khoảng 1,5 đến 2 triệu bản được bán hết mỗi năm), bên cạnh đó là 2000 tập phim ngắn được phát sóng (kể từ năm 1979) và 33 tập phim dài được phát hành (kể từ năm 1980) với lượng khán giả đến rạp lên tới 63 triệu lượt</p>
+                    <p>Sau Nhật Bản, <b>Doraemon</b> đã được phát hành tại nhiều quốc gia khác trên thế giới và đều trở thành nhân vật truyện tranh được hâm mộ, đặc biệt là tại châu Á. Phần lớn các nước bắt đầu phát hành <b>Doraemon</b> bằng tiếng bản ngữ từ đầu thập niên 1990. Ở một số nước như Thái Lan, Hồng Kông, Hàn Quốc hay Việt Nam, bộ truyện này được hâm mộ ngay từ khi còn phát hành ở dạng chưa có bản quyền[3][5]. Cuối tháng 5, 2010, tên Đôrêmon được Nhà xuất bản Kim Đồng đổi tên thành tên gốc <b>Doraemon</b> theo công ước Bern.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>@ 2017 - Thiết kế web bởi trang hoathinhvn.net</p>
+        </footer>
+    </div>
+</body>
+</html>
