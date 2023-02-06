@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo xung hướng tròn</title>
+    <style>
+		.pulse {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 100px;
+			background: #33ff00;
+			border: 2px solid #33ff00;
+			border-radius: 50%;
+			box-sizing: border-box;
+			box-shadow: 0 0 0 36px #45237a,
+					0 0 0 40px #56ff00;
+		}
+
+		.pulse:before,
+		.pulse:after {
+			content: '';
+			position: absolute;
+			left: -30px;
+			top: -30px;
+			right: -30px;
+			bottom: -30px;
+			border: 2px solid #33ff00;
+			border-radius: 50%;
+			animation: animate 2s linear infinite
+		}
+
+		.pulse:after {
+			animation-delay: 1s;
+		}
+
+		@keyframes animate {
+			0% {
+				transform: scale(2.0);
+			}
+
+			100% {
+				transform: scale(0.7);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="pulse"></div>
+</body>
+
+</html>

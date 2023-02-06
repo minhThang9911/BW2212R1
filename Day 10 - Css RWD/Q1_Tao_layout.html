@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo layout với RWD</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+
+    .header-wrap {
+        background-color: #222222;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .logo {
+
+    }
+
+    .header ul.header-menu {
+        list-style-type: none;
+        color: #959491;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .header ul.header-menu li {  
+        /* height: 100%;
+        width: 100%; */
+    }
+
+    .header ul.header-menu li a{
+        text-decoration: none;
+        color: inherit;
+        line-height: 1.8em;
+        padding: 0.5em;
+        display: block;
+        margin: auto;
+    }
+
+    .header ul.header-menu li a:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .header ul.header-menu li a.logo {
+        font-size: 1.3em;
+    }
+
+    .main {
+        margin-top: 30px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header-wrap">
+            <div class="header">
+                <div class="header-left">
+                    <ul class="header-menu">
+                        <li><a href="/" class="logo">Logo</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <p class="login-menu">Login</p>
+            </div>
+        </div>
+        <div class="main row">
+            <div class="sidebar-left col-2 col-t-2 col-m-0">
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <div class="content col-8 col-t-8 col-m-0">
+                <div class="content__header">
+                    <h1>Welcome</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis tempora excepturi, veritatis ex corporis quos suscipit nesciunt nam placeat rerum quae dolor aspernatur veniam id minima culpa mollitia praesentium, unde eius ullam obcaecati adipisci repudiandae repellat. Alias nam assumenda iure quo neque porro commodi, autem vel facilis impedit laborum! Quam possimus assumenda, perferendis consequatur voluptatibus blanditiis, facere omnis ut molestias distinctio repellendus nihil esse maiores velit ratione laboriosam, tempora ex in sit ad itaque fugiat animi eveniet dolorum! Necessitatibus vitae repudiandae, accusantium quas unde vel corporis voluptate distinctio alias, nobis dicta sed, voluptas odio culpa fugit. Reiciendis error quam velit.</p>
+                </div>
+                <div class="content__item">
+                    <h2>Test</h2>
+                    <p>Lorem, ipsum...</p>
+                </div>
+            </div>
+            <div class="sidebar-right col-2 col-t-2 col-m-0">
+                <div class="ads-block">
+                    <p>ADS</p>
+                </div>
+                <div class="ads-block">
+                    <p>ADS</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="footer-text">Footer text</p>
+        </div>
+    </div>
+</body>
+</html>
