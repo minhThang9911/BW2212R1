@@ -11,7 +11,8 @@
 .row {
     display: flex;
     margin-left: calc(0 - var(--gutter-haft-width));
-    margin-right: calc(0 - var(--gutter-haft-width));;
+    margin-right: calc(0 - var(--gutter-haft-width));
+    flex-wrap: wrap;
 }
 
 [class*="col-"] {
