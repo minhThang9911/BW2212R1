@@ -7,72 +7,50 @@
     <title>[Thực hành] Tạo bố cục cơ bản</title>
 
     <style>
-        #main,
-        #head,
-        #head-link,
-        #left,
-        #content,
-        #right,
-        #footer {
+        #container, #head, #head-link, #left, #content, #right, #footer {
             border: 2px solid #ccc;
             box-sizing: border-box;
             text-align: center;
         }
 
-
-        #main {
+        #left, #content, #right {
+            float: left;
+            height: 400px;
+        }
+        #container {
             max-width: 900px;
             margin: auto;
         }
-
         #head {
             height: 100px;
         }
-
         #head-link {
             height: 60px;
         }
-
         #left {
-            float: left;
-            width: 30%;
-            height: 400px;
+            width: 10%;
         }
-
         #content {
-            float: left;
-            width: 50%;
-            height: 400px;
+            width: 70%;
         }
-
         #right {
-            float: right;
             width: 20%;
-            height: 400px;
         }
-
         #footer {
             clear: both;
             height: 50px;
         }
-
     </style>
 
 </head>
 <body>
-    <div id="main">
-        <div id="head">head
-        </div>
-        <div id="head-link">head-link
-        </div>
-        <div id="left">left
-        </div>
-        <div id="content">content
-        </div>
-        <div id="right">right
-        </div>
-        <div id="footer">footer
-        </div>
+    <div id="container">
+        <div id="head">head</div>
+        <div id="head-link">head-link</div>
+        <div id="left">left</div>
+        <div id="content">content</div>
+        <div id="right">right</div>
+        <div id="footer">footer</div>
     </div>
 </body>
 </html>
