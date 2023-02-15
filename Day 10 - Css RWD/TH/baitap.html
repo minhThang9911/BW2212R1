@@ -16,34 +16,46 @@
 
         body {
             background-color: #f3f5f6;
+            font-family: Helvetica, Arial, sans-serif;
         }
 
         .blog-list,
         .left-content,
         .recent-new {
             background-color: #fff;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 10px;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 0.2em;
+            border: 1px solid #ccc;
         }
 
-        .thumbnail-small,
         .thumbnail {
-            width: 100px;
-            height: 100px;
-            background-color: rgb(165, 116, 42);
+            flex: 0 0 30%;
+            padding-top: 20%;
             margin-right: 20px;
+            background-size: cover;
         }
 
-        .thumbnail-small {
-            width: 50px;
-            height: 50px;
+        .thumb1 {
+            background-image: url(img/hinh1.webp);
+        }
+
+        .thumb2 {
+            background-image: url(img/hinh2.webp);
+        }
+
+        .thumb3 {
+            background-image: url(img/hinh3.webp);
         }
 
         ul li {
             list-style-type: none;
-            padding: 10px 0;
-            border-bottom: 1px solid black;
+            padding: 1em 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
         }
 
         .flex {
@@ -55,31 +67,36 @@
             color: #8cc4fb;
         }
 
-        main {
-            max-width: 1200px;
-            margin: auto;
-        }
-
         .left-content {
             flex-grow: 1;   
         }
 
         .news-item {
-            margin: 10px 0;
+            margin: 2em 0;
+        }
+
+        .time {
+            color: #ccc;
+            margin: 0.5em 0;
         }
         
         .right-content {
-            width: 30%;
+            flex: 0 0 30%;
         }
 
         .right-content h2 {
             border-bottom: 3px solid black;
-            padding: 6px 0;
+            padding-bottom: 0.5em;
+            text-align: center;
         }
 
         .recent-new-item {
-            margin: 10px 0;
-            
+            margin: 1em 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .recent-new-item:last-child {
+            border-bottom: none;
         }
 
         @media screen and (max-width: 768px) {
@@ -97,27 +114,27 @@
         <div class="left-content">
             <h2>Tin Tức</h2>
             <div class="news-item flex">
-                <div class="thumbnail"></div>
+                <div class="thumbnail thumb1"></div>
                 <div class="news_item-text">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="time">Lorem ipsum dolor sit amet.</p>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste?</p>
+                    <h3>Apple Watch Đã Cứu Mạng Một Người Đàn Ông Ở Long Island Như Thế Nào?</h3>
+                    <p class="time">Th 5 12/08/2021</p>
+                    <p class="text">Đây không phải lần đầu tiên Apple Watch giúp cứu sống người dùng. Gần đây một người đàn ông ở Long Island đã ghi công Apple... </p>
                 </div>
             </div>
             <div class="news-item flex">
-                <div class="thumbnail"></div>
+                <div class="thumbnail thumb2"></div>
                 <div class="news_item-text">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="time">Lorem ipsum dolor sit amet.</p>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste?</p>
+                    <h3>Facebook Vẫn Đạt Doanh Thu Cao Kỷ Lục Dù Bị IOS 14 "Làm Khó"</h3>
+                    <p class="time">Th 6 30/07/2021</p>
+                    <p class="text">Mặc dù Apple đã ra mắt tính năng quyền riêng tư mới trên iOS từ tháng 4 nhưng Facebook vẫn đạt kỷ lục doanh thu mới.</p>
                 </div>
             </div>
             <div class="news-item flex">
-                <div class="thumbnail"></div>
+                <div class="thumbnail thumb3"></div>
                 <div class="news_item-text">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p class="time">Lorem ipsum dolor sit amet.</p>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste?</p>
+                    <h3>Có Nên Mua Apple Watch Series 3 Ở Thời Điểm Hiện Tại Hay Không?</h3>
+                    <p class="time">Th 3 06/07/2021</p>
+                    <p class="text">Hiện nay Apple đã cho ra mắt đến dòng Apple Watch series 6 với nhiều tính năng hỗ trợ cực độc đáo. Vậy liệu đến thời... </p>
                 </div>
             </div>
         </div>
@@ -125,24 +142,24 @@
             <div class="recent-new">
                 <h2>Bài viết mới nhất</h2>
                 <div class="recent-new-item flex">
-                    <div class="thumbnail-small"></div>
+                    <div class="thumbnail thumb1"></div>
                     <div class="recent-new-text">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p class="time">Lorem ipsum dolor sit amet.</p>
+                        <h3>Apple Watch Đã Cứu Mạng Một Người Đàn Ông Ở Long Island Như Thế Nào?</h3>
+                        <p class="time">Th 5 12/08/2021</p>
                     </div>
                 </div>
                 <div class="recent-new-item flex">
-                    <div class="thumbnail-small"></div>
+                    <div class="thumbnail thumb2"></div>
                     <div class="recent-new-text">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p class="time">Lorem ipsum dolor sit amet.</p>
+                        <h3>Facebook Vẫn Đạt Doanh Thu Cao Kỷ Lục Dù Bị IOS 14 "Làm Khó"</h3>
+                        <p class="time">Th 6 30/07/2021</p>
                     </div>
                 </div>
                 <div class="recent-new-item flex">
-                    <div class="thumbnail-small"></div>
+                    <div class="thumbnail thumb3"></div>
                     <div class="recent-new-text">
-                        <h3>Lorem, ipsum dolor.</h3>
-                        <p class="time">Lorem ipsum dolor sit amet.</p>
+                        <h3>Có Nên Mua Apple Watch Series 3 Ở Thời Điểm Hiện Tại Hay Không?</h3>
+                        <p class="time">Th 3 06/07/2021</p>
                     </div>
                 </div>
             </div>
@@ -151,11 +168,10 @@
                 <ul>
                     <li>Trang chủ</li>
                     <li>Sản phẩm</li>
-                    <li>Sản phẩm</li>
-                    <li>Sản phẩm</li>
-                    <li>Sản phẩm</li>
-                    <li>Sản phẩm</li>
-                    <li>Sản phẩm</li>
+                    <li>Product view</li>
+                    <li>Blog</li>
+                    <li>Giới thiệu</li>
+                    <li>Liên hệ</li>
                 </ul>
             </div>
         </div>
