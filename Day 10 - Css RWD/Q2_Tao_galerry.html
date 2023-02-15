@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo gallery đơn giản sử dụng RWD</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        main,
+        .header {
+            margin: 15px;
+        }
+
+        .picture {
+            margin: 5px;
+        }
+
+        .picture__img{
+            width: 100%;
+            display: block;
+        }
+
+        .picture__des {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 15px 0;
+        }
+
+        /* -------------- Responsive -------------- */
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5px;
+        }
+
+        .col {
+            padding: 0 5px;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        @media screen and (min-width: 700px) {
+            .col {
+                flex-basis: 25%;
+            }
+        }
+
+        @media screen and (min-width: 500px) and (max-width: 699px) {
+            .col {
+                flex-basis: 50%;
+            }
+        }
+
+        @media screen and (max-width: 499px) {
+            .col {
+                flex-basis: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <head>
+        <div class="header">
+            <h1>Responsive Image Gallery</h1>
+            <h2>Resize the browser window to see the effect.</h2>
+        </div>
+    </head>
+    <main>
+        <div class="row wraper">
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="picture">
+                    <img src="https://sites.google.com/site/hinhanhdep24h/_/rsrc/1436687439788/home/hinh%20anh%20thien%20nhien%20dep%202015%20%281%29.jpeg" alt="Hình 1" class="picture__img">
+                    <p class="picture__des">Description of the image</p>
+                </div>
+            </div>
+        </div>
+        <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+    </main>
+</body>
+</html>
