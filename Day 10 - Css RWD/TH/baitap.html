@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh tức</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f3f5f6;
+        }
+
+        .blog-list,
+        .left-content,
+        .recent-new {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .thumbnail-small,
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(165, 116, 42);
+            margin-right: 20px;
+        }
+
+        .thumbnail-small {
+            width: 50px;
+            height: 50px;
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 10px 0;
+            border-bottom: 1px solid black;
+        }
+
+        .flex {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        h2,h3 {
+            color: #8cc4fb;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .left-content {
+            flex-grow: 1;   
+        }
+
+        .news-item {
+            margin: 10px 0;
+        }
+        
+        .right-content {
+            width: 30%;
+        }
+
+        .right-content h2 {
+            border-bottom: 3px solid black;
+            padding: 6px 0;
+        }
+
+        .recent-new-item {
+            margin: 10px 0;
+            
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .right-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="flex">
+        <div class="left-content">
+            <h2>Tin Tức</h2>
+            <div class="news-item flex">
+                <div class="thumbnail"></div>
+                <div class="news_item-text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p class="time">Lorem ipsum dolor sit amet.</p>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste?</p>
+                </div>
+            </div>
+            <div class="news-item flex">
+                <div class="thumbnail"></div>
+                <div class="news_item-text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p class="time">Lorem ipsum dolor sit amet.</p>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste?</p>
+                </div>
+            </div>
+            <div class="news-item flex">
+                <div class="thumbnail"></div>
+                <div class="news_item-text">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p class="time">Lorem ipsum dolor sit amet.</p>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste?</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="recent-new">
+                <h2>Bài viết mới nhất</h2>
+                <div class="recent-new-item flex">
+                    <div class="thumbnail-small"></div>
+                    <div class="recent-new-text">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="time">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="recent-new-item flex">
+                    <div class="thumbnail-small"></div>
+                    <div class="recent-new-text">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="time">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="recent-new-item flex">
+                    <div class="thumbnail-small"></div>
+                    <div class="recent-new-text">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p class="time">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-list">
+                <h2>Danh mục blog</h2>
+                <ul>
+                    <li>Trang chủ</li>
+                    <li>Sản phẩm</li>
+                    <li>Sản phẩm</li>
+                    <li>Sản phẩm</li>
+                    <li>Sản phẩm</li>
+                    <li>Sản phẩm</li>
+                    <li>Sản phẩm</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
