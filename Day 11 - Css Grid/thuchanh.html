@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+        }
+        .container > div:first-child {
+            grid-column: 1/4;
+            height: 50px;
+        }
+        .container > div:last-child {
+            grid-column: 1/4;
+            height: 50px;
+        }
+
+        .container > div {
+            text-align: center;
+            border: 1px solid #000;
+            margin: 0.1em;
+            background: #ccc;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Header</div>
+        <div>Link</div>
+        <div>Main</div>
+        <div>Aside</div>
+        <div>Footer</div>
+    </div>
+</body>
+</html>
