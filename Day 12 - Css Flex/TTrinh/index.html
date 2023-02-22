@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wraper">
+            <h1>CSS Flex</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wraper">
+            <section class="why-flex">
+                <h2>Khái niệm Flexbox Layout</h2>
+                <p><strong>Flexbox Layout (hay còn gọi là Flexible Box)</strong> là một
+                    kiểu bố cục trang có khả năng tự cân đối kích thước, thay đổi chiều rộng/chiều cao và thứ tự phần tử
+                    bên trong để phù hợp với tất cả các loại thiết bị hiển thị và kích thước màn hình.</p>
+                <p>Với bố cục thông thường, bạn cần phải thiết lập kích thước của phần tử,
+                    thiết lập hiển thị dạng block hay inline, cho nó float, còn với Flexbox bạn chỉ cần thiết lập phần
+                    hiển thị theo chiều ngang hay chiều dọc, lúc đó các phần tử bên trong có thể hiển thị theo ý muốn..
+                </p>
+                <p><strong>Lưu ý</strong>: Flexbox Layout phù hợp nhất để thiết lập bố cục
+                    ở quy mô nhỏ, còn thiết lập bố cục với phạm vi lớn hơn thì vẫn nên sử dụng kiểu thông thường là dàn
+                    trang theo dạng lưới (grid layout)</p>
+            </section>
+            <section class="flex-strengths-and-weakness">
+            </section>
+            <h2>Các khái niệm cơ bản và
+                thuật ngữ</h2>
+            <p><strong>Bố cục Flex</strong>&nbsp;được thiết lập từ một khung lớn
+                (parent container) đóng vai trò là khung linh hoạt (flex containter) và các thẻ con ngay trong nó
+                (immediate children) đóng vai trò các mục nhỏ linh hoạt (flex item).</p>
+            <p>Dưới đây là sơ đồ cấu trúc Flexbox:</p>
+            <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1-300x130.jpg 300w"
+                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1.jpg"
+                    data-sizes="(max-width: 650px) 100vw, 650px"
+                    class="alignnone size-full wp-image-30187 ls-is-cached lazyloaded"
+                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1.jpg" loading="lazy"
+                    sizes="(max-width: 650px) 100vw, 650px"
+                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1-300x130.jpg 300w"
+                    width="650" height="281"><noscript><img decoding="async" class="alignnone size-full wp-image-30187"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1.jpg"
+                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="650" height="281"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-1-300x130.jpg 300w"
+                        sizes="(max-width: 650px) 100vw, 650px" /></noscript></p>
+            <p>Thành phần quan trọng nhất của Flexbox là</p>
+            <ul>
+                <li><strong>container:</strong>&nbsp;là thành phần lớn bao quanh các phần tử bên trong, các item bên
+                    trong sẽ hiển thị dựa trên thiết lập của container này.</li>
+                <li><strong>item:</strong>&nbsp;là phần tử con của container, bạn có thể thiết lập nó sẽ sử dụng bao
+                    nhiêu cột trong một container, hoặc thiết lập thứ tự hiển thị của nó.</li>
+            </ul>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2.jpg 318w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2-300x135.jpg 300w"
+                                data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2.jpg"
+                                data-sizes="(max-width: 318px) 100vw, 318px"
+                                class="alignnone size-full wp-image-30188 ls-is-cached lazyloaded"
+                                src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2.jpg" loading="lazy"
+                                sizes="(max-width: 318px) 100vw, 318px"
+                                srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2.jpg 318w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2-300x135.jpg 300w"
+                                width="318" height="143"><noscript><img decoding="async"
+                                    class="alignnone size-full wp-image-30188"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2.jpg"
+                                    alt="Sử dụng bố cục trang Flexbox trong CSS" width="318" height="143"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2.jpg 318w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-2-300x135.jpg 300w"
+                                    sizes="(max-width: 318px) 100vw, 318px" /></noscript></td>
+                        <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3.jpg 320w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3-300x134.jpg 300w"
+                                data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3.jpg"
+                                data-sizes="(max-width: 320px) 100vw, 320px"
+                                class="alignnone size-full wp-image-30189 ls-is-cached lazyloaded"
+                                src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3.jpg" loading="lazy"
+                                sizes="(max-width: 320px) 100vw, 320px"
+                                srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3.jpg 320w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3-300x134.jpg 300w"
+                                width="320" height="143"><noscript><img decoding="async"
+                                    class="alignnone size-full wp-image-30189"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3.jpg"
+                                    alt="Sử dụng bố cục trang Flexbox trong CSS" width="320" height="143"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3.jpg 320w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3-300x134.jpg 300w"
+                                    sizes="(max-width: 320px) 100vw, 320px" /></noscript></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Các item sẽ được bố trí theo trục main axis (bắt đầu từ main-start, kết
+                thúc ở main-end) hoặc theo trục cross axis (bắt đầu từ cross-start, kết thúc ở cross-end).</p>
+            <ul>
+                <li><strong>main axis:</strong>&nbsp;đây là trục chính để điều khiển hướng mà các item sẽ hiển
+                    thị.&nbsp;<strong>Lưu ý</strong>, main axis không phải lúc nào cũng nằm ngang như sơ đồ trên,
+                    bạn có thể sử dụng thuộc tính flex-direction để thay đổi hướng của trục và lúc đó các item sẽ
+                    hiển thị theo nó.</li>
+                <li><strong>main-start | main-end:</strong>&nbsp;khi thiết lập flexbox, các item nằm trong container
+                    hiển thị từ điểm bắt đầu gọi là main-start tới điểm kết thúc gọi là main-end.</li>
+                <li><strong>main size:</strong>&nbsp;kích thước (chiều rộng hoặc chiều cao) của các item, tùy thuộc
+                    vào hướng của main axis.</li>
+                <li><strong>cross axis</strong>: cross axis luôn là trục vuông góc của main axis. Hướng của nó phụ
+                    thuộc vào hướng của main axis.</li>
+                <li><strong>cross-start | cross-end:</strong>&nbsp;có ý nghĩa tương tự nhưng luôn vuông góc với main
+                    start, main end.</li>
+                <li><strong>cross size:</strong>&nbsp;kích thước (chiều rộng hoặc chiều cao) của các item dựa trên
+                    trục cross axis, tùy thuộc vào hướng của main axis.</li>
+            </ul>
+            <div style="clear:both; margin-top:0em; margin-bottom:1em;"><a
+                    href="https://topdev.vn/blog/3-dieu-ban-co-the-khong-biet-ve-bien-trong-css/" target="_blank"
+                    rel="dofollow" class="u65c2445763c848cd57d60a25efdf9d4b">
+                    <style>
+                        .u65c2445763c848cd57d60a25efdf9d4b {
+                            padding: 0px;
+                            margin: 0;
+                            padding-top: 1em !important;
+                            padding-bottom: 1em !important;
+                            width: 100%;
+                            display: block;
+                            font-weight: bold;
+                            background-color: #ECF0F1;
+                            border: 0 !important;
+                            border-left: 4px solid #95A5A6 !important;
+                            text-decoration: none;
+                        }
+
+                        .u65c2445763c848cd57d60a25efdf9d4b:active,
+                        .u65c2445763c848cd57d60a25efdf9d4b:hover {
+                            opacity: 1;
+                            transition: opacity 250ms;
+                            webkit-transition: opacity 250ms;
+                            text-decoration: none;
+                        }
+
+                        .u65c2445763c848cd57d60a25efdf9d4b {
+                            transition: background-color 250ms;
+                            webkit-transition: background-color 250ms;
+                            opacity: 1;
+                            transition: opacity 250ms;
+                            webkit-transition: opacity 250ms;
+                        }
+
+                        .u65c2445763c848cd57d60a25efdf9d4b .ctaText {
+                            font-weight: bold;
+                            color: inherit;
+                            text-decoration: none;
+                            font-size: 16px;
+                        }
+
+                        .u65c2445763c848cd57d60a25efdf9d4b .postTitle {
+                            color: #000000;
+                            text-decoration: underline !important;
+                            font-size: 16px;
+                        }
+
+                        .u65c2445763c848cd57d60a25efdf9d4b:hover .postTitle {
+                            text-decoration: underline !important;
+                        }
+                    </style>
+                    <div style="padding-left:1em; padding-right:1em;"><span class="ctaText"></span>&nbsp; <span
+                            class="postTitle">3 điều bạn có thể không biết về biến trong CSS</span></div>
+                </a></div>
+            <div style="clear:both; margin-top:0em; margin-bottom:1em;"><a
+                    href="https://topdev.vn/blog/5-dieu-phien-toai-nhat-cua-css/" target="_blank" rel="dofollow"
+                    class="u3c411a50ad1fe8c1db2d9a8359894f06">
+                    <style>
+                        .u3c411a50ad1fe8c1db2d9a8359894f06 {
+                            padding: 0px;
+                            margin: 0;
+                            padding-top: 1em !important;
+                            padding-bottom: 1em !important;
+                            width: 100%;
+                            display: block;
+                            font-weight: bold;
+                            background-color: #ECF0F1;
+                            border: 0 !important;
+                            border-left: 4px solid #95A5A6 !important;
+                            text-decoration: none;
+                        }
+
+                        .u3c411a50ad1fe8c1db2d9a8359894f06:active,
+                        .u3c411a50ad1fe8c1db2d9a8359894f06:hover {
+                            opacity: 1;
+                            transition: opacity 250ms;
+                            webkit-transition: opacity 250ms;
+                            text-decoration: none;
+                        }
+
+                        .u3c411a50ad1fe8c1db2d9a8359894f06 {
+                            transition: background-color 250ms;
+                            webkit-transition: background-color 250ms;
+                            opacity: 1;
+                            transition: opacity 250ms;
+                            webkit-transition: opacity 250ms;
+                        }
+
+                        .u3c411a50ad1fe8c1db2d9a8359894f06 .ctaText {
+                            font-weight: bold;
+                            color: inherit;
+                            text-decoration: none;
+                            font-size: 16px;
+                        }
+
+                        .u3c411a50ad1fe8c1db2d9a8359894f06 .postTitle {
+                            color: #000000;
+                            text-decoration: underline !important;
+                            font-size: 16px;
+                        }
+
+                        .u3c411a50ad1fe8c1db2d9a8359894f06:hover .postTitle {
+                            text-decoration: underline !important;
+                        }
+                    </style>
+                    <div style="padding-left:1em; padding-right:1em;"><span class="ctaText"></span>&nbsp; <span
+                            class="postTitle">5 điều phiền toái nhất của CSS</span></div>
+                </a></div>
+            <h2 id="mcetoc_1davnsdfk2" class="ftwp-heading">Các thuộc tính của Flex
+                Container</h2>
+            <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4.jpg 560w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4-300x119.jpg 300w"
+                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4.jpg"
+                    data-sizes="(max-width: 560px) 100vw, 560px"
+                    class="alignnone size-full wp-image-30190 ls-is-cached lazyloaded"
+                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4.jpg" loading="lazy"
+                    sizes="(max-width: 560px) 100vw, 560px"
+                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4.jpg 560w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4-300x119.jpg 300w"
+                    width="560" height="222"><noscript><img decoding="async" class="alignnone size-full wp-image-30190"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4.jpg"
+                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="560" height="222"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4.jpg 560w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-4-300x119.jpg 300w"
+                        sizes="(max-width: 560px) 100vw, 560px" /></noscript></p>
+            <h3 id="mcetoc_1davnsdfk3" class="ftwp-heading">display</h3>
+            <p>Để sử dụng flex trong css thì đơn giản là chúng ta chỉ cần khai
+                báo&nbsp;<strong>thuộc tính display: flex</strong></p>
+            <pre id="pre0"
+                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span> <span class="com">/* hoặc inline-flex */</span></code> <code><span class="pun">}</span></code></pre>
+            <p><strong>Lưu ý:</strong>&nbsp;các cột CSS thông thường không sử dụng được
+                trong flex container.</p>
+            <h3 id="mcetoc_1davnsdfk4" class="ftwp-heading">flex-direction</h3>
+            <p><strong>Thuộc tính flex-direction</strong>&nbsp;xác định hướng của
+                main-axis để container sắp xếp các item.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5.jpg 398w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5-300x188.jpg 300w"
+                                data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5.jpg"
+                                data-sizes="(max-width: 398px) 100vw, 398px"
+                                class="alignnone size-full wp-image-30191 ls-is-cached lazyloaded"
+                                src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5.jpg" loading="lazy"
+                                sizes="(max-width: 398px) 100vw, 398px"
+                                srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5.jpg 398w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5-300x188.jpg 300w"
+                                width="398" height="249"><noscript><img decoding="async"
+                                    class="alignnone size-full wp-image-30191"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5.jpg"
+                                    alt="Sử dụng bố cục trang Flexbox trong CSS" width="398" height="249"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5.jpg 398w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-5-300x188.jpg 300w"
+                                    sizes="(max-width: 398px) 100vw, 398px" /></noscript></td>
+                        <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6.jpg 250w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6-237x300.jpg 237w"
+                                data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6.jpg"
+                                data-sizes="(max-width: 250px) 100vw, 250px"
+                                class="alignnone size-full wp-image-30192 ls-is-cached lazyloaded"
+                                src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6.jpg" loading="lazy"
+                                sizes="(max-width: 250px) 100vw, 250px"
+                                srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6.jpg 250w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6-237x300.jpg 237w"
+                                width="250" height="316"><noscript><img decoding="async"
+                                    class="alignnone size-full wp-image-30192"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6.jpg"
+                                    alt="Sử dụng bố cục trang Flexbox trong CSS" width="250" height="316"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6.jpg 250w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-6-237x300.jpg 237w"
+                                    sizes="(max-width: 250px) 100vw, 250px" /></noscript></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Cú pháp:</strong></p>
+            <pre id="pre1"
+                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">container </span><span class="pun">{</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln"> row </span><span class="pun">|</span><span class="pln"> row</span><span class="pun">-</span><span class="pln">reverse </span><span class="pun">|</span><span class="pln"> column </span><span class="pun">|</span><span class="pln"> column</span><span class="pun">-</span><span class="pln">reverse</span><span class="pun">;</span> </code> <code><span class="pun">}</span></code></pre>
+            <p><strong>Các tham số:</strong></p>
+            <ul>
+                <li><strong>row</strong>: mặc định, flex item được sắp xếp theo chiều ngang,&nbsp;<strong>từ trái
+                        qua phải</strong>&nbsp;(main axis nằm ngang).</li>
+                <li><strong>row-reverse:</strong>&nbsp;flex item được sắp xếp theo chiều ngang,&nbsp;<strong>từ phải
+                        qua trái</strong>&nbsp;(main axis nằm ngang).</li>
+                <li><strong>column:</strong>&nbsp;flex item được sắp xếp theo chiều dọc,<strong>&nbsp;từ trên xuống
+                        dưới</strong>&nbsp;(main axis đứng dọc).</li>
+                <li><strong>column-reverse:</strong>&nbsp;flex item được sắp xếp theo chiều dọc,&nbsp;<strong>từ
+                        dưới lên trên</strong>&nbsp;(main axis đứng dọc).</li>
+            </ul>
+            <p><strong>Ví dụ:</strong></p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre2"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <strong><code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln"> row</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-8.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-8.jpg" data-i="7"
+                                data-was-processed="true" width="400" height="61"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre3"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln"> row</span><span class="pun">-</span><span class="pln">reverse</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-9.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-9.jpg" data-i="8"
+                                data-was-processed="true" width="400" height="61"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre4"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln"> column</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-11.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-11.jpg" data-i="9"
+                                data-was-processed="true" width="400" height="180"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre5"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln"> column</span><span class="pun">-</span><span class="pln">reverse</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-10.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-10.jpg" data-i="10"
+                                data-was-processed="true" width="400" height="179"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Code đầy đủ:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;style&gt;</code> <code>.flex-container {</code> <code>  display: flex;</code> <code>  flex-direction: column;</code> <code>  background-color: #e9d8f4;</code> <code>}</code> <code>.flex-container &gt; div {</code> <code>  background-color: #58257b;</code> <code>  width: 100px;</code> <code>  margin: 10px;</code> <code>  color: white;</code> <code>  text-align: center;</code> <code>  line-height: 75px;</code> <code>  font-size: 30px;</code> <code>}</code> <code>&lt;/style&gt;</code> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;h1&gt;Thuộc tính flex-direction&lt;/h1&gt;</code> <code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div&gt;1&lt;/div&gt;</code> <code>  &lt;div&gt;2&lt;/div&gt;</code> <code>  &lt;div&gt;3&lt;/div&gt; </code> <code>&lt;/div&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+            <h3></h3>
+            <h3 class="ftwp-heading">flex-wrap</h3>
+            <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7-300x139.jpg 300w"
+                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7.jpg"
+                    data-sizes="(max-width: 400px) 100vw, 400px"
+                    class="alignnone size-full wp-image-30193 ls-is-cached lazyloaded"
+                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7.jpg" loading="lazy"
+                    sizes="(max-width: 400px) 100vw, 400px"
+                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7-300x139.jpg 300w"
+                    width="400" height="185"><noscript><img decoding="async" class="alignnone size-full wp-image-30193"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7.jpg"
+                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="400" height="185"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-7-300x139.jpg 300w"
+                        sizes="(max-width: 400px) 100vw, 400px" /></noscript></p>
+            <p>Theo mặc định, item sẽ tự động thay đổi kích thước phần tử để nó luôn
+                hiển thị trên cùng một dòng dù bạn có resize trình duyệt theo kích thước nào, điều này dễ làm cho
+                nội dung bên trong (nếu có) bị giãn hay ép nhỏ lại, có thể gây xấu giao diện.</p>
+            <p>Vì vậy, ta có&nbsp;<strong>thuộc tính flex-wrap</strong>&nbsp;cho phép
+                item tự động xuống dòng khi kích thước container thay đổi.</p>
+            <p><strong>Cú pháp:</strong></p>
+            <pre id="pre7"
+                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">container</span><span class="pun">{</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> nowrap </span><span class="pun">|</span><span class="pln"> wrap </span><span class="pun">|</span><span class="pln"> wrap</span><span class="pun">-</span><span class="pln">reverse</span><span class="pun">;</span> </code> <code><span class="pun">}</span></code></pre>
+            <p><strong>Tham số:</strong></p>
+            <ul>
+                <li><strong>nowrap:&nbsp;</strong>mặc định, tất cả các item sẽ nằm trên một dòng.</li>
+                <li><strong>wrap:&nbsp;</strong>khi kích thước container thay đổi và tổng chiều rộng các item cộng
+                    lại lớn hơn chiều rộng của container thì item sẽ tự động xuống dòng.</li>
+                <li><strong>wrap-reverse:&nbsp;</strong>tương tự như&nbsp;<strong>wrap,</strong>&nbsp;nhưng thay vì
+                    xuống dòng thì item sẽ tự động nhảy lên trên.</li>
+            </ul>
+            <p><strong>Ví dụ:</strong></p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre8"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> nowrap</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-15.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-15.jpg" data-i="12"
+                                data-was-processed="true" width="394" height="97"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre9"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-12.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-12.jpg" data-i="13"
+                                data-was-processed="true" width="395" height="194"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="codebar"></div>
+                            <pre id="pre10"
+                                class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">-</span><span class="pln">reverse</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                        </td>
+                        <td><img decoding="async" class="lazy lightbox loaded"
+                                src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-14.jpg" alt=""
+                                data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-14.jpg" data-i="14"
+                                data-was-processed="true" width="392" height="194"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Chạy code sau rồi thử resize trình duyệt để thấy rõ hơn sự khác biệt
+                nhé:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;style&gt;</code> <code>.flex-container {</code> <code>  display: flex;</code> <code>  flex-wrap: wrap-reverse;</code> <code>  background-color: #e9d8f4;</code> <code>}</code> <code>.flex-container &gt; div {</code> <code>  background-color: #58257b;</code> <code>  width: 100px;</code> <code>  margin: 10px;</code> <code>  color: white;</code> <code>  text-align: center;</code> <code>  line-height: 75px;</code> <code>  font-size: 30px;</code> <code>}</code> <code>&lt;/style&gt;</code> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;h1&gt;Thuộc tính flex-wrap&lt;/h1&gt;</code> <code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div&gt;1&lt;/div&gt;</code> <code>  &lt;div&gt;2&lt;/div&gt;</code> <code>  &lt;div&gt;3&lt;/div&gt; </code> <code>  &lt;div&gt;4&lt;/div&gt; </code> <code>  &lt;div&gt;5&lt;/div&gt; </code> <code>&lt;/div&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+            <div class="adbox in-article">
+                <h3 id="mcetoc_1davnsdfk6" class="ftwp-heading">flex-flow</h3>
+                <p><strong>Thuộc tính flex-flow</strong>&nbsp;sử dụng để gộp chung hai
+                    thuộc tính flex-direction và flex-wrap.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre12"
+                    class="prettyprint prettyprinted"><code><span class="pln">flex</span><span class="pun">-</span><span class="pln">flow</span><span class="pun">:</span> <span class="pun">&lt;</span><span class="str">'flex-direction'</span><span class="pun">&gt;</span> <span class="pun">||</span> <span class="pun">&lt;</span><span class="str">'flex-wrap'</span><span class="pun">&gt;</span></code></pre>
+                <p><strong>Ví dụ:</strong></p>
+                <pre id="pre13"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <strong><code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">flow</span><span class="pun">:</span><span class="pln"> row wrap</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                <h3 id="mcetoc_1davnsdfk7" class="ftwp-heading">justify-content</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13-300x73.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13.jpg"
+                                    data-sizes="(max-width: 310px) 100vw, 310px"
+                                    class="alignnone size-full wp-image-30194 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13.jpg"
+                                    loading="lazy" sizes="(max-width: 310px) 100vw, 310px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13-300x73.jpg 300w"
+                                    width="310" height="75"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30194"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="310" height="75"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-13-300x73.jpg 300w"
+                                        sizes="(max-width: 310px) 100vw, 310px" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16-300x76.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16.jpg"
+                                    data-sizes="(max-width: 310px) 100vw, 310px"
+                                    class="alignnone wp-image-30195 size-full lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16.jpg"
+                                    loading="lazy" sizes="(max-width: 310px) 100vw, 310px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16-300x76.jpg 300w"
+                                    width="310" height="79"><noscript><img decoding="async"
+                                        class="alignnone wp-image-30195 size-full"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="310" height="79"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-16-300x76.jpg 300w"
+                                        sizes="(max-width: 310px) 100vw, 310px" /></noscript></td>
+                        </tr>
+                        <tr>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17-300x75.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17.jpg"
+                                    data-sizes="(max-width: 310px) 100vw, 310px"
+                                    class="alignnone size-full wp-image-30196 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17.jpg"
+                                    loading="lazy" sizes="(max-width: 310px) 100vw, 310px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17-300x75.jpg 300w"
+                                    width="310" height="78"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30196"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="310" height="78"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-17-300x75.jpg 300w"
+                                        sizes="(max-width: 310px) 100vw, 310px" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18-300x77.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18.jpg"
+                                    data-sizes="(max-width: 310px) 100vw, 310px"
+                                    class="alignnone size-full wp-image-30197 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18.jpg"
+                                    loading="lazy" sizes="(max-width: 310px) 100vw, 310px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18-300x77.jpg 300w"
+                                    width="310" height="80"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30197"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="310" height="80"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-18-300x77.jpg 300w"
+                                        sizes="(max-width: 310px) 100vw, 310px" /></noscript></td>
+                        </tr>
+                        <tr>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19-300x81.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19.jpg"
+                                    data-sizes="(max-width: 310px) 100vw, 310px"
+                                    class="alignnone size-full wp-image-30201 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19.jpg"
+                                    loading="lazy" sizes="(max-width: 310px) 100vw, 310px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19-300x81.jpg 300w"
+                                    width="310" height="84"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30201"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="310" height="84"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-19-300x81.jpg 300w"
+                                        sizes="(max-width: 310px) 100vw, 310px" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20-300x75.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20.jpg"
+                                    data-sizes="(max-width: 310px) 100vw, 310px"
+                                    class="alignnone size-full wp-image-30200 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20.jpg"
+                                    loading="lazy" sizes="(max-width: 310px) 100vw, 310px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20-300x75.jpg 300w"
+                                    width="310" height="78"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30200"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="310" height="78"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20.jpg 310w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-20-300x75.jpg 300w"
+                                        sizes="(max-width: 310px) 100vw, 310px" /></noscript></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Theo mặc định, các item bên trong sẽ bắt đầu từ main start đến main
+                    end, tuy nhiên, đôi khi container vẫn còn khoảng trống. Vì vậy, bạn có thể sử
+                    dụng&nbsp;<strong>thuộc tính justify-content</strong>&nbsp;để điều chỉnh vị trí bắt đầu và căn
+                    chỉnh các item bên trong container theo&nbsp;<strong>dọc theo trục main axis</strong>, chiều
+                    ngang hoặc chiều dọc tùy thuộc vào flex-direction.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre14"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="pln">start </span><span class="pun">|</span><span class="pln"> flex</span><span class="pun">-</span><span class="kwd">end</span> <span class="pun">|</span><span class="pln"> center </span><span class="pun">|</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">between </span><span class="pun">|</span>
+<span class="pln">                   space</span><span class="pun">-</span><span class="pln">around </span><span class="pun">|</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">evenly</span><span class="pun">;</span> </code> <code><span class="pun">}</span></code></pre>
+                <p><strong>Các tham số:</strong></p>
+                <ul>
+                    <li><strong>flex-start:&nbsp;</strong>giá trị mặc định, item sẽ bắt đầu từ lề
+                        chính<strong>&nbsp;main-start</strong>&nbsp;của container.</li>
+                    <li><strong>flex-end:</strong>&nbsp;item sẽ bắt đầu từ lề
+                        chính<strong>&nbsp;main-end</strong>&nbsp;của container (khác với row-reverse là đổi hướng
+                        hiển thị).</li>
+                    <li><strong>center:</strong>&nbsp;item sẽ nằm giữa container.</li>
+                    <li><strong>space-between:</strong>&nbsp;các item sẽ có khoảng cách giữa các phần tử bằng nhau
+                        do container sẽ tự động căn khoảng cách, item đầu tiên sát lề chứa điểm main-start, item
+                        cuối cùng sát lề chứa điểm main-end.</li>
+                    <li><strong>space-around:</strong>&nbsp;tương tự space-between, nhưng khác ở chỗ là mỗi item có
+                        khoảng cách 2 bên cạnh và những khoảng cách này bằng nhau.</li>
+                    <li><strong>space-evenly:</strong>&nbsp;các item được phân phối sao cho khoảng cách giữa hai
+                        item bất kỳ, giữa item và các lề là bằng nhau.</li>
+                </ul>
+                <p><strong>Ví dụ: Ở đây main axis nằm ngang</strong></p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="codebar"></div>
+                                <pre id="pre15"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="pln">start</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-21.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-21.jpg"
+                                    data-i="21" data-was-processed="true" width="386" height="98"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="codebar"></div>
+                                <pre id="pre16"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="kwd">end</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-22.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-22.jpg"
+                                    data-i="22" data-was-processed="true"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="codebar"></div>
+                                <pre id="pre17"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-23.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-23.jpg"
+                                    data-i="23" data-was-processed="true"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="codebar"></div>
+                                <pre id="pre18"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">between</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-24.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-24.jpg"
+                                    data-i="24" data-was-processed="true"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="codebar"></div>
+                                <pre id="pre19"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">evenly</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-25.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-25.jpg"
+                                    data-i="25" data-was-processed="true"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="codebar"></div>
+                                <pre id="pre20"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> justify</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">around</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-26.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/14/flexbox-26.jpg"
+                                    data-i="26" data-was-processed="true"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Thay các giá trị vào code để thấy sự khác biệt nhé:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;style&gt;</code> <code>.flex-container {</code> <code>  display: flex;</code> <code>  justify-content: space-evenly;</code> <code>  background-color: #e9d8f4;</code> <code>}</code> <code>.flex-container &gt; div {</code> <code>  background-color: #58257b;</code> <code>  width: 60px;</code> <code>  margin: 10px;</code> <code>  color: white;</code> <code>  text-align: center;</code> <code>  line-height: 75px;</code> <code>  font-size: 30px;</code> <code>}</code> <code>&lt;/style&gt;</code> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;h1&gt;Thuộc tính justify-content&lt;/h1&gt;</code> <code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div&gt;1&lt;/div&gt;</code> <code>  &lt;div&gt;2&lt;/div&gt;</code> <code>  &lt;div&gt;3&lt;/div&gt; </code> <code>&lt;/div&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+                <h3 id="mcetoc_1davnsdfk8" class="ftwp-heading">align-items</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-27-1.jpg"
+                                    class="alignnone size-full wp-image-30199 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-27-1.jpg"
+                                    loading="lazy" width="300" height="135"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30199"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-27-1.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="300"
+                                        height="135" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-28-1.jpg"
+                                    class="alignnone size-full wp-image-30198 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-28-1.jpg"
+                                    loading="lazy" width="149" height="134"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30198"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-28-1.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="149"
+                                        height="134" /></noscript></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-28-1-1.jpg"
+                                    class="alignnone size-full wp-image-30202 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-28-1-1.jpg"
+                                    loading="lazy" width="149" height="134"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30202"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-28-1-1.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="149"
+                                        height="134" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3-1.jpg"
+                                    class="alignnone size-full wp-image-30203 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3-1.jpg"
+                                    loading="lazy" width="300" height="124"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30203"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-3-1.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="300"
+                                        height="124" /></noscript></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Thuộc tính align-items</strong>&nbsp;sử dụng để điều chỉnh
+                    vị trí bắt đầu và căn chỉnh các item bên trong container theo dọc theo trục cross axis, chiều
+                    ngang hoặc chiều dọc tùy thuộc vào flex-direction.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre><code>.container { </code> <code>  align-items: stretch | flex-start | flex-end | center | baseline; </code> <code>}</code></pre>
+                <p><strong>Các tham số và ví dụ minh họa</strong></p>
+                <p><strong>stretch:&nbsp;</strong>giá trị mặc định, các phần tử sẽ được
+                    kéo dài để lấp đầy container chứa nó, nhưng sẽ ưu tiên giá trị height/width nếu có, khi đó item
+                    sẽ không cao full mà chỉ lấy giá trị height/width mà bạn set.</p>
+                <pre id="pre23"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln"> stretch</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1.jpg 647w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1-300x95.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1.jpg"
+                        data-sizes="(max-width: 647px) 100vw, 647px"
+                        class="alignnone size-full wp-image-30205 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1.jpg" loading="lazy"
+                        sizes="(max-width: 647px) 100vw, 647px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1.jpg 647w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1-300x95.jpg 300w"
+                        width="647" height="204"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30205"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="647" height="204"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1.jpg 647w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-31-1-300x95.jpg 300w"
+                            sizes="(max-width: 647px) 100vw, 647px" /></noscript></p>
+                <p><strong>flex-start:</strong>&nbsp;item sẽ bắt đầu từ
+                    lề&nbsp;<strong>cross-start</strong>&nbsp;của container.</p>
+                <p>Ví dụ&nbsp;<strong>trường hợp mặc định</strong>&nbsp;với main axis
+                    nằm ngang, cross axis đứng dọc, flex-direction: row thì các item sẽ bắt đầu từ trên.</p>
+                <pre id="pre24"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="pln">start</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32.jpg 646w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32-300x95.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32.jpg"
+                        data-sizes="(max-width: 646px) 100vw, 646px"
+                        class="alignnone size-full wp-image-30206 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32.jpg" loading="lazy"
+                        sizes="(max-width: 646px) 100vw, 646px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32.jpg 646w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32-300x95.jpg 300w"
+                        width="646" height="205"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30206"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="646" height="205"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32.jpg 646w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-32-300x95.jpg 300w"
+                            sizes="(max-width: 646px) 100vw, 646px" /></noscript></p>
+                <p><strong>flex-end:&nbsp;</strong>item sẽ bắt đầu từ lề cross-end của
+                    container. Trường hợp mặc định với cross axis đứng dọc, flex-direction: row thì các item sẽ dồn
+                    xuống dưới.</p>
+                <pre id="pre25"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="kwd">end</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33.jpg 645w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33-300x95.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33.jpg"
+                        data-sizes="(max-width: 645px) 100vw, 645px"
+                        class="alignnone size-full wp-image-30207 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33.jpg" loading="lazy"
+                        sizes="(max-width: 645px) 100vw, 645px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33.jpg 645w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33-300x95.jpg 300w"
+                        width="645" height="204"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30207"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="645" height="204"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33.jpg 645w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-33-300x95.jpg 300w"
+                            sizes="(max-width: 645px) 100vw, 645px" /></noscript></p>
+                <p><strong>center:&nbsp;</strong>item sẽ căn giữa theo chiều của cross
+                    axis.</p>
+                <pre id="pre26"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34.jpg 646w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34-300x95.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34.jpg"
+                        data-sizes="(max-width: 646px) 100vw, 646px"
+                        class="alignnone size-full wp-image-30208 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34.jpg" loading="lazy"
+                        sizes="(max-width: 646px) 100vw, 646px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34.jpg 646w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34-300x95.jpg 300w"
+                        width="646" height="205"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30208"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="646" height="205"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34.jpg 646w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-34-300x95.jpg 300w"
+                            sizes="(max-width: 646px) 100vw, 646px" /></noscript></p>
+                <p><strong>baseline:&nbsp;</strong>item được căn chỉnh theo đường cơ sở
+                    của chúng.</p>
+                <p>Đường cơ sở là đường mà tất cả các chữ cái sẽ “ngồi lên”. Bạn có thể
+                    sử dụng kích thước font chữ khác nhau để thấy rằng các mục được căn chỉnh theo đường cơ sở
+                    baseline:</p>
+                <pre id="pre27"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><strong><span class="pln"> align</span><span class="pun">-</span><span class="pln">items</span><span class="pun">:</span><span class="pln"> baseline</span><span class="pun">;</span></strong></code> <code><span class="pun">}</span></code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35.jpg 641w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35-300x95.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35.jpg"
+                        data-sizes="(max-width: 641px) 100vw, 641px"
+                        class="alignnone size-full wp-image-30209 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35.jpg" loading="lazy"
+                        sizes="(max-width: 641px) 100vw, 641px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35.jpg 641w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35-300x95.jpg 300w"
+                        width="641" height="204"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30209"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="641" height="204"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35.jpg 641w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-35-300x95.jpg 300w"
+                            sizes="(max-width: 641px) 100vw, 641px" /></noscript></p>
+                <p>Code đầy đủ, thay các giá trị để thấy rõ hơn.</p>
+                <pre><code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;style&gt;</code> <code>body { font-family: arial; }</code> <code>.flex-container {</code> <code>  display: flex;</code> <code>  height: 200px;</code> <code>  align-items: center;</code> <code>  background-color: #e9d8f4;</code> <code>}</code> <code>.flex-container &gt; div {</code> <code>  background-color: #58257b;</code> <code>  width: 100px;</code> <code>  margin: 10px;</code> <code>  color: white;</code> <code>  text-align: center;</code> <code>  line-height: 75px;</code> <code>  font-size: 30px;</code> <code>}</code> <code>&lt;/style&gt;</code> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;h1&gt;Thuộc tính align-items&lt;/h1&gt;</code> <code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div&gt;1&lt;/div&gt;</code> <code>  &lt;div&gt;2&lt;/div&gt;</code> <code>  &lt;div&gt;3&lt;/div&gt; </code> <code>  &lt;div&gt;4&lt;/div&gt; </code> <code>  &lt;/div&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+                <h3 id="mcetoc_1davnsdfk9" class="ftwp-heading">align-content</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img decoding="async" alt=""
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36-300x127.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36.jpg"
+                                    data-sizes="(max-width: 350px) 100vw, 350px"
+                                    class="alignnone size-full wp-image-30210 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36.jpg"
+                                    loading="lazy" sizes="(max-width: 350px) 100vw, 350px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36-300x127.jpg 300w"
+                                    width="350" height="148"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30210"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36.jpg" alt=""
+                                        width="350" height="148"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-36-300x127.jpg 300w"
+                                        sizes="(max-width: 350px) 100vw, 350px" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-37.jpg"
+                                    class="alignnone size-full wp-image-30211 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-37.jpg"
+                                    loading="lazy" width="177" height="149"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30211"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-37.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="177"
+                                        height="149" /></noscript></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-38.jpg"
+                                    class="alignnone size-full wp-image-30212 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-38.jpg"
+                                    loading="lazy" width="173" height="148"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30212"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-38.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="173"
+                                        height="148" /></noscript></td>
+                            <td><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                                    data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39-300x123.jpg 300w"
+                                    data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39.jpg"
+                                    data-sizes="(max-width: 350px) 100vw, 350px"
+                                    class="alignnone size-full wp-image-30213 lazyloading"
+                                    src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39.jpg"
+                                    loading="lazy" sizes="(max-width: 350px) 100vw, 350px"
+                                    srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39-300x123.jpg 300w"
+                                    width="350" height="144"><noscript><img decoding="async"
+                                        class="alignnone size-full wp-image-30213"
+                                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39.jpg"
+                                        alt="Sử dụng bố cục trang Flexbox trong CSS" width="350" height="144"
+                                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-39-300x123.jpg 300w"
+                                        sizes="(max-width: 350px) 100vw, 350px" /></noscript></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Thuộc tính align-content</strong>&nbsp;sử dụng
+                    để<strong>&nbsp;căn chỉnh khoảng cách</strong>&nbsp;các item bên trong container theo dọc theo
+                    trục cross axis, chiều ngang hoặc chiều dọc tùy thuộc vào flex-direction.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre29"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">container </span><span class="pun">{</span> </code> <code><span class="pln"> align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="pln">start </span><span class="pun">|</span><span class="pln"> flex</span><span class="pun">-</span><span class="kwd">end</span> <span class="pun">|</span><span class="pln"> center </span><span class="pun">|</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">between </span><span class="pun">|</span> 
+<span class="pln">                 space</span><span class="pun">-</span><span class="pln">around </span><span class="pun">|</span><span class="pln"> stretch</span><span class="pun">;</span> </code> <code><span class="pun">}</span></code></pre>
+                <p><strong>Các tham số:</strong></p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>flex-start:</strong>&nbsp;item sẽ bắt đầu từ lề chứa cross-start của
+                                container.<p></p>
+                                <div class="codebar"></div>
+                                <pre id="pre30"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <strong><code><span class="pln">  align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="pln">start</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-4-3.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-4-3.jpg"
+                                    data-i="40" data-was-processed="true" width="300" height="225"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>flex-end:</strong>&nbsp;item sẽ bắt đầu từ lề chứa cross-end của container.
+                                <p></p>
+                                <div class="codebar"></div>
+                                <pre id="pre31"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <strong><code><span class="pln">  align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">-</span><span class="kwd">end</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-41.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-41.jpg"
+                                    data-i="41" data-was-processed="true" width="300" height="226"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>center:&nbsp;</strong>item sẽ nằm giữa container căn theo cross-axis.<p></p>
+                                <div class="codebar"></div>
+                                <pre id="pre32"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <strong><code><span class="pln">  align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-42.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-42.jpg"
+                                    data-i="42" data-was-processed="true" width="300" height="226"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>space-between:</strong>&nbsp;các item sẽ có khoảng cách giữa các phần tử
+                                bằng nhau do container tự động căn khoảng cách, item đầu tiên sát lề chứa
+                                cross-start, item cuối cùng sát lề chứa cross-end.<p></p>
+                                <div class="codebar"></div>
+                                <pre id="pre33"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <strong><code><span class="pln">  align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">between</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-43.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-43.jpg"
+                                    data-i="43" data-was-processed="true" width="300" height="225"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>space-around:&nbsp;</strong>tương tự space-between, nhưng khác ở chỗ là mỗi
+                                item có khoảng cách 2 bên cạnh và những khoảng cách này bằng nhau.<p></p>
+                                <div class="codebar"></div>
+                                <pre id="pre34"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <strong><code><span class="pln">  align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> space</span><span class="pun">-</span><span class="pln">around</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-44.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-44.jpg"
+                                    data-i="44" data-was-processed="true" width="300" height="225"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><strong>stretch</strong>: giá trị mặc định, các phần tử sẽ được kéo dài, căn chỉnh
+                                sao cho lấp đầy container chứa nó (vẫn ưu tiên giá trị height/width nếu có).<p></p>
+                                <div class="codebar"></div>
+                                <pre id="pre35"
+                                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">flex</span><span class="pun">-</span><span class="pln">container </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <strong><code><span class="pln">  align</span><span class="pun">-</span><span class="pln">content</span><span class="pun">:</span><span class="pln"> stretch</span><span class="pun">;</span></code></strong> <code><span class="pun">}</span></code></pre>
+                            </td>
+                            <td><img decoding="async" class="lazy lightbox loaded"
+                                    src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-45.jpg" alt=""
+                                    data-src="https://st.quantrimang.com/photos/image/2019/05/15/flexbox-45.jpg"
+                                    data-i="45" data-was-processed="true" width="300" height="227"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Code đầy đủ:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;</code> <code>&lt;head&gt;</code> <code>&lt;style&gt;</code> <code>.flex-container {</code> <code>  display: flex;</code> <code>  height: 320px;</code> <code>  flex-wrap: wrap;</code> <code>  align-content: stretch;</code> <code>  background-color: #e9d8f4;</code> <code>}</code> <code>.flex-container &gt; div {</code> <code>  background-color: #58257b;</code> <code>  width: 90px;</code> <code>  margin: 5px;</code> <code>  color: white;</code> <code>  text-align: center;</code> <code>  line-height: 75px;</code> <code>  font-size: 30px;</code> <code>}</code> <code>&lt;/style&gt;</code> <code>&lt;/head&gt;</code> <code>&lt;body&gt;</code> <code>&lt;h1&gt;Thuộc tính align-content&lt;/h1&gt;</code> <code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div&gt;1&lt;/div&gt;</code> <code>  &lt;div&gt;2&lt;/div&gt;</code> <code>  &lt;div&gt;3&lt;/div&gt; </code> <code>  &lt;div&gt;4&lt;/div&gt;</code> <code>  &lt;div&gt;5&lt;/div&gt;</code> <code>  &lt;div&gt;6&lt;/div&gt; </code> <code>  &lt;div&gt;7&lt;/div&gt;</code> <code>  &lt;div&gt;8&lt;/div&gt; </code> <code>  &lt;div&gt;9&lt;/div&gt;</code> <code>  &lt;div&gt;10&lt;/div&gt;</code> <code>&lt;/div&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code></pre>
+                <h2 id="mcetoc_1davnsdfka" class="ftwp-heading">Các thuộc tính của Flex
+                    Item</h2>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46.jpg 560w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46-300x124.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46.jpg"
+                        data-sizes="(max-width: 560px) 100vw, 560px"
+                        class="alignnone size-full wp-image-30214 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46.jpg" loading="lazy"
+                        sizes="(max-width: 560px) 100vw, 560px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46.jpg 560w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46-300x124.jpg 300w"
+                        width="560" height="232"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30214"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="560" height="232"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46.jpg 560w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-46-300x124.jpg 300w"
+                            sizes="(max-width: 560px) 100vw, 560px" /></noscript></p>
+                <h3 id="mcetoc_1davnsdfkb" class="ftwp-heading">order</h3>
+                <p>Theo mặc định, các item sẽ hiển thị theo thứ tự xuất hiện trong
+                    HTML, nhưng với&nbsp;<strong>thuộc tính order</strong>, bạn có thể sắp xếp lại vị trí sắp xếp
+                    của các item.</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47-300x258.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47.jpg"
+                        data-sizes="(max-width: 400px) 100vw, 400px"
+                        class="alignnone size-full wp-image-30215 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47.jpg" loading="lazy"
+                        sizes="(max-width: 400px) 100vw, 400px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47-300x258.jpg 300w"
+                        width="400" height="344"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30215"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="400" height="344"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-47-300x258.jpg 300w"
+                            sizes="(max-width: 400px) 100vw, 400px" /></noscript></p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre37"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">item </span><span class="pun">{</span> </code> <code><span class="pln">  order</span><span class="pun">:</span> <span class="str">&lt;integer&gt;</span><span class="pun">;</span> <span class="com">/* mặc định là 0 */</span> </code> <code><span class="pun">}</span></code></pre>
+                <p><strong>Ví dụ:</strong></p>
+                <pre><code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div style="order: 3"&gt;1&lt;/div&gt;</code> <code>  &lt;div style="order: 2"&gt;2&lt;/div&gt;</code> <code>  &lt;div style="order: 4"&gt;3&lt;/div&gt; </code> <code>  &lt;div style="order: 1"&gt;4&lt;/div&gt;</code> <code>&lt;/div&gt;</code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48.jpg 636w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48-300x47.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48.jpg"
+                        data-sizes="(max-width: 636px) 100vw, 636px"
+                        class="alignnone size-full wp-image-30216 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48.jpg" loading="lazy"
+                        sizes="(max-width: 636px) 100vw, 636px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48.jpg 636w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48-300x47.jpg 300w"
+                        width="636" height="99"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30216"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="636" height="99"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48.jpg 636w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-48-300x47.jpg 300w"
+                            sizes="(max-width: 636px) 100vw, 636px" /></noscript></p>
+                <h3 id="mcetoc_1davnsdfkc" class="ftwp-heading">flex-grow</h3>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49-300x119.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49.jpg"
+                        data-sizes="(max-width: 400px) 100vw, 400px"
+                        class="alignnone size-full wp-image-30217 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49.jpg" loading="lazy"
+                        sizes="(max-width: 400px) 100vw, 400px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49-300x119.jpg 300w"
+                        width="400" height="158"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30217"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="400" height="158"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49.jpg 400w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-49-300x119.jpg 300w"
+                            sizes="(max-width: 400px) 100vw, 400px" /></noscript></p>
+                <p><strong>Thuộc tính flex-grow</strong>&nbsp;cho phép các phần tử giãn
+                    theo độ rộng của container.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre39"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">item </span><span class="pun">{</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">grow</span><span class="pun">:</span> <span class="str">&lt;number&gt;</span><span class="pun">;</span> <span class="com">/* mặc định là 0 */</span> </code> <code><span class="pun">}</span></code></pre>
+                <p>Thuộc tính này hơi phức tạp, Quantrimang sẽ minh họa một số trường
+                    hợp hay gặp cho bạn dễ hình dung hơn. Ví dụ ta set các item có độ rộng là 100px.</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50-300x81.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50.jpg"
+                        data-sizes="(max-width: 650px) 100vw, 650px"
+                        class="alignnone size-full wp-image-30218 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50.jpg" loading="lazy"
+                        sizes="(max-width: 650px) 100vw, 650px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50-300x81.jpg 300w"
+                        width="650" height="175"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30218"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="650" height="175"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-50-300x81.jpg 300w"
+                            sizes="(max-width: 650px) 100vw, 650px" /></noscript></p>
+                <p>Giá trị mặc định của thuộc tính&nbsp;<strong>flex-grow là
+                        0</strong>, các item sẽ không tự động co giãn kích thước, để lại nhiều khoảng trống trong
+                    container.</p>
+                <p>Khi ta tăng&nbsp;<strong>flex-grow = 1,</strong>&nbsp;item sẽ tự
+                    động giãn ra đều nhau sao cho vừa với khung container.</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51.jpg 649w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51-300x80.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51.jpg"
+                        data-sizes="(max-width: 649px) 100vw, 649px"
+                        class="alignnone size-full wp-image-30219 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51.jpg" loading="lazy"
+                        sizes="(max-width: 649px) 100vw, 649px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51.jpg 649w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51-300x80.jpg 300w"
+                        width="649" height="172"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30219"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="649" height="172"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51.jpg 649w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-51-300x80.jpg 300w"
+                            sizes="(max-width: 649px) 100vw, 649px" /></noscript></p>
+                <p>Giá trị của flex-grow rất linh động, khi set thuộc tính này
+                    cho&nbsp;<strong>tất cả các item với cùng một giá trị</strong>&nbsp;thì các item
+                    sẽ&nbsp;<strong>có tỉ lệ như nhau</strong>&nbsp;và được dàn đều lấp đầy container. Ví dụ set tất
+                    cả các phần tử flex-grow là 1 thì tất cả đều như nhau tỉ lệ 1:1, mà set flex-grow là 100 thì kết
+                    qua vẫn sẽ ra tương tự với tỉ lệ 1:1.</p>
+                <p>Nhưng điều thú vị hơn ở flex-grow là áp dụng nó cho từng item. Ta có
+                    giá trị mặc định ở tất cả phần tử là flex-grow = 0, thay đổi riêng giá trị của item2 thành 1,
+                    kết quả như sau:</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52.jpg 648w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52-300x80.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52.jpg"
+                        data-sizes="(max-width: 648px) 100vw, 648px"
+                        class="alignnone size-full wp-image-30220 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52.jpg" loading="lazy"
+                        sizes="(max-width: 648px) 100vw, 648px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52.jpg 648w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52-300x80.jpg 300w"
+                        width="648" height="173"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30220"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="648" height="173"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52.jpg 648w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-52-300x80.jpg 300w"
+                            sizes="(max-width: 648px) 100vw, 648px" /></noscript></p>
+                <p>Vậy là ở đây, thiết lập flex-grow là 1 thì item2 sẽ lấy phần trống
+                    còn lại của container đắp vào chính nó.</p>
+                <p>Bây giờ hãy thử cho các phần tử đều là<strong>&nbsp;flex-grow:
+                        1</strong>, nhưng set riêng phần tử thứ 3 giá trị khác:</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1.jpg 648w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1-300x77.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1.jpg"
+                        data-sizes="(max-width: 648px) 100vw, 648px"
+                        class="alignnone size-full wp-image-30222 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1.jpg" loading="lazy"
+                        sizes="(max-width: 648px) 100vw, 648px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1.jpg 648w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1-300x77.jpg 300w"
+                        width="648" height="166"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30222"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="648" height="166"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1.jpg 648w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-53-1-300x77.jpg 300w"
+                            sizes="(max-width: 648px) 100vw, 648px" /></noscript></p>
+                <p>Lúc này thì tất cả các item đều được giãn ra lấp đầy phần trống của
+                    container, nhưng item3 có flex-grow: 3 sẽ được thừa hưởng nhiều phần trống hơn các item còn lại
+                    chỉ có flex-grow: 1, cụ thể là hơn khoảng 3 lần. Và như đã đề cập ở trên, thuộc tính flex-grow
+                    làm cho các phần tử tỉ lệ với nhau. Giả sử các item đều có flex-grow: 4 và item3 có thuộc tính
+                    flex-grow: 12 thì nó cũng tương tự như là 1 với 3.</p>
+                <p>Bạn tự thay đổi các giá trị để hiểu rõ hơn nhé.</p>
+                <pre>
+                    <code>  display: flex;</code> 
+                    <code>  align-items: stretch;</code> 
+                    <code>  background-color: #58257b;</code> 
+                    <code>}</code>
+                    <code>.flex-container&gt;div {</code>
+                    <code>  background-color: #e9d8f4;</code>
+                    <code>  color: #58257b;</code> 
+                    <code>  margin: 5px;</code> 
+                    <code>  text-align: center;</code> 
+                    <code>  line-height: 75px;</code> 
+                    <code>  font-size: 30px;</code> 
+                    <code>}</code> 
+                    <code>&lt;/style&gt;</code> 
+                    <code>&lt;/head&gt;</code> 
+                    <code>&lt;body&gt;</code> 
+                    <code></code> 
+                    <code>&lt;div class="flex-container"&gt;</code> 
+                    <code>  &lt;div style="flex-grow: 1"&gt;1&lt;/div&gt;</code> 
+                    <code>  &lt;div style="flex-grow: 1"&gt;2&lt;/div&gt;</code> 
+                    <code>  &lt;div style="flex-grow: 3"&gt;3&lt;/div&gt;</code> 
+                    <code>  &lt;div style="flex-grow: 1"&gt;4&lt;/div&gt;</code> 
+                    <code>&lt;/div&gt;</code> <code>&lt;/body&gt;</code> <code>&lt;/html&gt;</code>
+                </pre>
+                <h3 id="mcetoc_1davnsdfkd" class="ftwp-heading">flex-shrink</h3>
+                <p><strong>Thuộc tính flex-shrink</strong>&nbsp;ngược lại với thuộc
+                    tính flex-grow ở trên, nó không giãn ra mà lại co lại khi chúng ta thay đổi độ rộng của
+                    container.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre41"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">item </span><span class="pun">{</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">shrink</span><span class="pun">:</span> <span class="str">&lt;number&gt;</span><span class="pun">;</span> <span class="com">/* mặc định là 1 */</span> </code> <code><span class="pun">}</span></code></pre>
+                <p>Giá trị mặc định trong flex-shrink là 1, cho phép các phần
+                    tử&nbsp;<strong>co lại bằng nhau</strong>&nbsp;khi độ rộng container giảm xuống. Nếu
+                    flex-shrink: 0 thì item sẽ&nbsp;<strong>không co giãn</strong>&nbsp;mà lấy nguyên giá trị của
+                    thuộc tính width/height.</p>
+                <p>Nếu muốn item3 nó co lại nhiều hơn so với các item khác thì tăng giá
+                    trị flex-shrink của nó lên.</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54.jpg 581w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54-300x87.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54.jpg"
+                        data-sizes="(max-width: 581px) 100vw, 581px"
+                        class="alignnone size-full wp-image-30223 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54.jpg" loading="lazy"
+                        sizes="(max-width: 581px) 100vw, 581px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54.jpg 581w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54-300x87.jpg 300w"
+                        width="581" height="169"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30223"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="581" height="169"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54.jpg 581w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-54-300x87.jpg 300w"
+                            sizes="(max-width: 581px) 100vw, 581px" /></noscript></p>
+                <p>Resize cửa sổ trình duyệt nhỏ lại thì item3 co lại nhiều hơn:</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55.jpg 437w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55-300x116.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55.jpg"
+                        data-sizes="(max-width: 437px) 100vw, 437px"
+                        class="alignnone size-full wp-image-30224 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55.jpg" loading="lazy"
+                        sizes="(max-width: 437px) 100vw, 437px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55.jpg 437w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55-300x116.jpg 300w"
+                        width="437" height="169"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30224"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="437" height="169"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55.jpg 437w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-55-300x116.jpg 300w"
+                            sizes="(max-width: 437px) 100vw, 437px" /></noscript></p>
+                <h3 id="mcetoc_1davnsdfke" class="ftwp-heading">flex-basis</h3>
+                <p><strong>Thuộc tính flex-basis</strong>&nbsp;sử dụng để xác định độ
+                    dài ban đầu của một item.</p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre42"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">item </span><span class="pun">{</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">basis</span><span class="pun">:</span> <span class="str">&lt;length&gt;</span> <span class="pun">|</span> <span class="kwd">auto</span><span class="pun">;</span> <span class="com">/* mặc định là auto */</span> </code> <code><span class="pun">}</span></code></pre>
+                <p>Nếu bạn xác định độ dài chung của class item là 100px nhưng tùy
+                    chỉnh item3 với flex-basis: 250px thì ta sẽ được như sau:</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56-300x81.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56.jpg"
+                        data-sizes="(max-width: 650px) 100vw, 650px"
+                        class="alignnone size-full wp-image-30225 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56.jpg" loading="lazy"
+                        sizes="(max-width: 650px) 100vw, 650px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56-300x81.jpg 300w"
+                        width="650" height="175"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30225"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="650" height="175"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56.jpg 650w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-56-300x81.jpg 300w"
+                            sizes="(max-width: 650px) 100vw, 650px" /></noscript></p>
+                <h3 id="mcetoc_1davnsdfkf" class="ftwp-heading">flex</h3>
+                <p><strong>Thuộc tính flex</strong>&nbsp;sử dụng để gộp chung ba thuộc
+                    tính&nbsp;<strong>flex-grow, flex-shrink và flex-basis.</strong></p>
+                <p><strong>Cú pháp:</strong></p>
+                <pre id="pre43"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">item </span><span class="pun">{</span> </code> <code><span class="pln">  flex</span><span class="pun">:</span><span class="pln"> none </span><span class="pun">|</span> <span class="pun">[</span> <span class="pun">&lt;</span><span class="str">'flex-grow'</span><span class="pun">&gt;</span> <span class="pun">&lt;</span><span class="str">'flex-shrink'</span><span class="pun">&gt;</span> <span class="pun">||</span> <span class="pun">&lt;</span><span class="str">'flex-basis'</span><span class="pun">&gt;</span> <span class="pun">]</span> </code> <code><span class="pun">}</span></code></pre>
+                <p>Thay vì phải sử dụng cả 3 thuộc tính:</p>
+                <pre id="pre44"
+                    class="prettyprint prettyprinted"><code><span class="pun">.</span><span class="pln">item </span><span class="pun">{</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">grow</span><span class="pun">:</span> <span class="lit">1</span><span class="pun">;</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">shrink</span><span class="pun">:</span> <span class="lit">3</span><span class="pun">;</span> </code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">basis</span><span class="pun">:</span> <span class="lit">250px</span><span class="pun">;</span> </code> <code><span class="pun">}</span></code></pre>
+                <p>Thì bạn có thể sử dụng thuộc tính flex một cách ngắn gọn:</p>
+                <pre id="pre45"
+                    class="prettyprint prettyprinted"><code><span class="pln">flex</span><span class="pun">:</span> <span class="lit">1</span> <span class="lit">3</span> <span class="lit">250px</span><span class="pun">;</span></code></pre>
+                <p>Giá trị mặc định của flex là:</p>
+                <pre id="pre46"
+                    class="prettyprint prettyprinted"><code><span class="pln">flex</span><span class="pun">:</span> <span class="lit">0</span> <span class="lit">1</span> <span class="kwd">auto</span><span class="pun">;</span></code></pre>
+                <p><strong>Lưu ý</strong><strong>:</strong></p>
+                <ul>
+                    <li>Nếu thuộc tính chỉ có một tham số thế này:&nbsp;<em>flex: 1</em>; thì ta hiểu đó
+                        là<strong>&nbsp;flex-grow.</strong></li>
+                    <li>Nếu thuộc tính chỉ có một tham số có đơn vị độ dài như thế này:&nbsp;<em>flex:
+                            250px;</em>&nbsp;thì ta hiểu đó là&nbsp;<strong>flex-basis</strong>.</li>
+                    <li>Nếu thuộc tính có hai tham số thế này:<em>&nbsp;flex: 1 250px;</em>&nbsp;thì ta hiểu đó
+                        là<strong>&nbsp;flex-grow và flex-basis.</strong></li>
+                    <li>Nếu thuộc tính có hai tham số thế này:&nbsp;<em>flex: 1 2;</em>&nbsp;thì ta hiểu đó
+                        là&nbsp;<strong>flex-grow và flex-shrink.</strong></li>
+                </ul>
+                <h3 id="mcetoc_1davnsdfkg" class="ftwp-heading">align-self</h3>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57-300x154.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57.jpg"
+                        data-sizes="(max-width: 350px) 100vw, 350px"
+                        class="alignnone size-full wp-image-30226 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57.jpg" loading="lazy"
+                        sizes="(max-width: 350px) 100vw, 350px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57-300x154.jpg 300w"
+                        width="350" height="180"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30226"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="350" height="180"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57.jpg 350w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-57-300x154.jpg 300w"
+                            sizes="(max-width: 350px) 100vw, 350px" /></noscript></p>
+                <p><strong>Thuộc tính align-self</strong>&nbsp;có tác dụng tương tự như
+                    align-items của phần container nhưng sử dụng riêng cho từng item, bạn có thể dùng nó để đặt lại
+                    vị trí cho một số item mà align-items đã quy định.</p>
+                <pre><code>.item { </code> <code>  align-self: auto | flex-start | flex-end | center | baseline | stretch; </code> <code>}</code></pre>
+                <p>Align-self cũng có các giá trị giống như align-items đó
+                    là:&nbsp;<strong>flex-start, flex-end, center, stretch và baseline.</strong></p>
+                <p><strong>Ví dụ:</strong>&nbsp;Ta có 5 item đã được căn ra giữa nhờ
+                    align-items:center như sau:</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59.jpg 613w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59-300x101.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59.jpg"
+                        data-sizes="(max-width: 613px) 100vw, 613px"
+                        class="alignnone size-full wp-image-30227 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59.jpg" loading="lazy"
+                        sizes="(max-width: 613px) 100vw, 613px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59.jpg 613w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59-300x101.jpg 300w"
+                        width="613" height="206"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30227"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="613" height="206"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59.jpg 613w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-59-300x101.jpg 300w"
+                            sizes="(max-width: 613px) 100vw, 613px" /></noscript></p>
+                <p>Bạn có thể căn chỉnh các item theo ý thích, item1 nằm ở trên cùng,
+                    item3 thì phải kéo giãn dài ra và item5 thì phải nằm dưới cùng, hãy dùng align-self để đặt lại
+                    các vị trí.</p>
+                <pre><code>&lt;div class="flex-container"&gt;</code> <code>  &lt;div style="align-self: flex-start"&gt;1&lt;/div&gt;</code> <code>  &lt;div&gt;2&lt;/div&gt;</code> <code>  &lt;div style="align-self: stretch"&gt;3&lt;/div&gt;</code> <code>  &lt;div&gt;4&lt;/div&gt;</code> <code>  &lt;div style="align-self: flex-end"&gt;5&lt;/div&gt;</code> <code>&lt;/div&gt;</code></pre>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58.jpg 634w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58-300x98.jpg 300w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58.jpg"
+                        data-sizes="(max-width: 634px) 100vw, 634px"
+                        class="alignnone size-full wp-image-30228 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58.jpg" loading="lazy"
+                        sizes="(max-width: 634px) 100vw, 634px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58.jpg 634w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58-300x98.jpg 300w"
+                        width="634" height="207"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30228"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="634" height="207"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58.jpg 634w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-58-300x98.jpg 300w"
+                            sizes="(max-width: 634px) 100vw, 634px" /></noscript></p>
+                <h2 id="mcetoc_1davnsdfkh" class="ftwp-heading">Tạo thư viện ảnh sử
+                    dụng Flexbox</h2>
+                <p>Sử dụng flexbox để tạo một bộ sưu tập ảnh hiển thị bố cục khác nhau
+                    tùy thuộc vào kích thước màn hình:</p>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-591x1024.jpg 591w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-173x300.jpg 173w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-242x420.jpg 242w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60.jpg 650w"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-591x1024.jpg"
+                        data-sizes="(max-width: 591px) 100vw, 591px"
+                        class="alignnone size-large wp-image-30229 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-591x1024.jpg" loading="lazy"
+                        sizes="(max-width: 591px) 100vw, 591px"
+                        srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-591x1024.jpg 591w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-173x300.jpg 173w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-242x420.jpg 242w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60.jpg 650w"
+                        width="591" height="1024"><noscript><img decoding="async"
+                            class="alignnone size-large wp-image-30229"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-591x1024.jpg"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="591" height="1024"
+                            srcset="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-591x1024.jpg 591w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-173x300.jpg 173w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60-242x420.jpg 242w, https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-60.jpg 650w"
+                            sizes="(max-width: 591px) 100vw, 591px" /></noscript></p>
+                <p>Bạn tự chạy code, resize màn hình để xem kết quả nhé:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;</code> <code>&lt;style&gt;</code> <code>* {</code> <code>  box-sizing: border-box;</code> <code>}</code> <code>body {</code> <code>  margin: 0;</code> <code>  font-family: Arial;</code> <code>}</code> <code>.header {</code> <code>  text-align: center;</code> <code>  padding: 32px;</code> <code>}</code> <code>.row {</code> <code>  display: flex;</code> <code>  flex-wrap: wrap;</code> <code>  padding: 0 4px;</code> <code>}</code> <code>/* Tạo bốn cột bằng nhau nằm cạnh nhau */</code> <code>.column {</code> <code>  flex: 25%;</code> <code>  max-width: 25%;</code> <code>  padding: 0 4px;</code> <code>}</code> <code>.column img {</code> <code>  margin-top: 8px;</code> <code>  vertical-align: middle;</code> <code>}</code> <code>/* Bố cục linh hoạt: tạo bố cục 2 cột */</code> <code>@media (max-width: 800px) {</code> <code>.column {</code> <code>  flex: 50%;</code> <code>  max-width: 50%;</code> <code>}</code> <code>}</code> <code>/* Bố cục linh hoạt: làm cho hai cột xếp chồng lên nhau thay vì cạnh nhau */</code> <code>@media (max-width: 600px) {</code> <code>.column {</code> <code>  flex: 100%;</code> <code>  max-width: 100%;</code> <code>}</code> <code>}</code> <code>&lt;/style&gt;</code> <code>&lt;body&gt;</code> <code>&lt;!-- Header --&gt;</code> <code>&lt;div class="header"&gt;</code> <code>&lt;h1&gt;Responsive Image Grid&lt;/h1&gt;</code> <code>&lt;p&gt;Resize the browser window to see the responsive effect.&lt;/p&gt;</code> <code>&lt;/div&gt;</code> <code>&lt;!-- Photo Grid --&gt;</code> <code>&lt;div class="row"&gt; </code> <code>  &lt;div class="column"&gt;</code> <code>    &lt;img src="flower-1.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-1.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-2.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-2.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-3.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-3.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-4.jpg" style="width:100%"&gt;</code> <code>  &lt;/div&gt;</code> <code>  &lt;div class="column"&gt;</code> <code>    &lt;img src="wedding-cake.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-4.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-5.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-5.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-6.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-6.jpg" style="width:100%"&gt;</code> <code>  &lt;/div&gt; </code> <code>  &lt;div class="column"&gt;</code> <code>    &lt;img src="flower-1.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-1.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-2.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-2.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-3.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-3.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-4.jpg" style="width:100%"&gt;</code> <code>  &lt;/div&gt;</code> <code>  &lt;div class="column"&gt;</code> <code>    &lt;img src="wedding-cake.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-4.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-5.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-5.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="flower-6.jpg" style="width:100%"&gt;</code> <code>    &lt;img src="wedding-6.jpg" style="width:100%"&gt;</code> <code>  &lt;/div&gt;</code> &lt;/div&gt; <code>&lt;/body&gt;</code></pre>
+                <h2 id="mcetoc_1davnsdfki" class="ftwp-heading">Flexbox Layout website
+                    kiểu mẫu</h2>
+                <p><img decoding="async" alt="Sử dụng bố cục trang Flexbox trong CSS"
+                        data-src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-61.gif"
+                        class="alignnone size-full wp-image-30231 lazyloading"
+                        src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-61.gif" loading="lazy"
+                        width="648" height="469"><noscript><img decoding="async"
+                            class="alignnone size-full wp-image-30231"
+                            src="https://topdev.vn/blog/wp-content/uploads/2020/10/flexbox-61.gif"
+                            alt="Sử dụng bố cục trang Flexbox trong CSS" width="648" height="469" /></noscript></p>
+                <pre id="pre50"
+                    class="prettyprint prettyprinted"><code><span class="dec">&lt;!DOCTYPE html&gt;</span></code> <code><span class="tag">&lt;html&gt;</span></code> <code><span class="tag">&lt;head&gt;</span></code> <code><span class="tag">&lt;title&gt;</span><span class="pln">Page Title</span><span class="tag">&lt;/title&gt;</span></code> <code><span class="tag">&lt;meta</span> <span class="atn">charset</span><span class="pun">=</span><span class="atv">"UTF-8"</span><span class="tag">&gt;</span></code> <code><span class="tag">&lt;meta</span> <span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span> <span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1"</span><span class="tag">&gt;</span></code> <code><span class="tag">&lt;style&gt;</span></code> <code><span class="pun">*</span> <span class="pun">{</span></code> <code><span class="pln">  box</span><span class="pun">-</span><span class="pln">sizing</span><span class="pun">:</span><span class="pln"> border</span><span class="pun">-</span><span class="pln">box</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Style the body */</span></code> <code><span class="pln">body </span><span class="pun">{</span></code> <code><span class="pln">  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span> <span class="typ">Arial</span><span class="pun">;</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">10px</span><span class="pun">;</span></code> <code><span class="pln">  background</span><span class="pun">:</span> <span class="com">#e9d8f4;</span></code> <code><span class="pln">  margin</span><span class="pun">:</span> <span class="lit">0</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Header/logo Title */</span></code> <code><span class="pun">.</span><span class="pln">header </span><span class="pun">{</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">10px</span><span class="pun">;</span></code> <code><span class="pln">  text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span></code> <code><span class="pln">  background</span><span class="pun">:</span><span class="pln"> white</span><span class="pun">;</span></code> <code><span class="pln">  color</span><span class="pun">:</span> <span class="com">#58257b;</span></code> <code><span class="pun">}</span></code> <code><span class="pun">.</span><span class="pln">header h1 </span><span class="pun">{</span></code> <code><span class="pln">  font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span> <span class="lit">40px</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="pun">.</span><span class="pln">header p </span><span class="pun">{</span></code> <code><span class="pln">  font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span> <span class="lit">20px</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Định dạng navigation bar */</span></code> <code><span class="pun">.</span><span class="pln">navbar </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span> <span class="com">#58257b;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Định dạng link điều hướng */</span></code> <code><span class="pun">.</span><span class="pln">navbar a </span><span class="pun">{</span></code> <code><span class="pln">  color</span><span class="pun">:</span> <span class="com">#f2f2f2;</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">14px</span> <span class="lit">20px</span><span class="pun">;</span></code> <code><span class="pln">  text</span><span class="pun">-</span><span class="pln">decoration</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span></code> <code><span class="pln">  text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Thay đổi màu liên kết khi di chuột qua */</span></code> <code><span class="pun">.</span><span class="pln">navbar a</span><span class="pun">:</span><span class="pln">hover </span><span class="pun">{</span></code> <code><span class="pln">  background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span> <span class="com">#db7093;</span></code> <code><span class="pln">  color</span><span class="pun">:</span><span class="pln"> white</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Column container */</span></code> <code><span class="pun">.</span><span class="pln">row </span><span class="pun">{</span></code> <code><span class="pln">  display</span><span class="pun">:</span><span class="pln"> flex</span><span class="pun">;</span></code> <code><span class="pln">  flex</span><span class="pun">-</span><span class="pln">wrap</span><span class="pun">:</span><span class="pln"> wrap</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Tạo hai cột không bằng nhau nằm cạnh nhau */</span></code> <code><span class="com">/* Sidebar/Cột trái */</span></code> <code><span class="pun">.</span><span class="pln">side </span><span class="pun">{</span></code> <code><span class="pln">  flex</span><span class="pun">:</span> <span class="lit">30</span><span class="pun">%;</span></code> <code><span class="pln">  background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span> <span class="com">#f1f1f1;</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">20px</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Cột chính */</span></code> <code><span class="pun">.</span><span class="pln">main </span><span class="pun">{</span></code> <code><span class="pln">  flex</span><span class="pun">:</span> <span class="lit">70</span><span class="pun">%;</span></code> <code><span class="pln">  background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> white</span><span class="pun">;</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">20px</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Hình ảnh tượng trưng */</span></code> <code><span class="pun">.</span><span class="pln">fakeimg </span><span class="pun">{</span></code> <code><span class="pln">  background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span> <span class="com">#baa1cc;</span></code> <code><span class="pln">  width</span><span class="pun">:</span> <span class="lit">100</span><span class="pun">%;</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">20px</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Footer */</span></code> <code><span class="pun">.</span><span class="pln">footer </span><span class="pun">{</span></code> <code><span class="pln">  padding</span><span class="pun">:</span> <span class="lit">10px</span><span class="pun">;</span></code> <code><span class="pln">  text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span></code> <code><span class="pln">  background</span><span class="pun">:</span><span class="pln"> white</span><span class="pun">;</span></code> <code><span class="pln">  margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:</span> <span class="lit">10px</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="com">/* Bố cục linh hoạt: các cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình </span></code> <code><span class="com">có chiều rộng dưới 600px */</span></code> <code><span class="lit">@media</span><span class="pln"> screen </span><span class="kwd">and</span> <span class="pun">(</span><span class="pln">max</span><span class="pun">-</span><span class="pln">width</span><span class="pun">:</span> <span class="lit">600px</span><span class="pun">)</span> <span class="pun">{</span></code> <code>  <span class="pun">.</span><span class="pln">row</span><span class="pun">,</span> <span class="pun">.</span><span class="pln">navbar </span><span class="pun">{</span></code> <code><span class="pln">    flex</span><span class="pun">-</span><span class="pln">direction</span><span class="pun">:</span><span class="pln"> column</span><span class="pun">;</span></code> <code><span class="pun">}</span></code> <code><span class="pun">}</span></code> <code><span class="tag">&lt;/style&gt;</span></code> <code><span class="tag">&lt;/head&gt;</span></code> <code><span class="tag">&lt;body&gt;</span></code> <code><span class="com">&lt;!-- Header --&gt;</span></code> <code><span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"header"</span><span class="tag">&gt;</span></code> <code>  <span class="tag">&lt;h1&gt;</span><span class="pln">Website Quản Trị Mạng</span><span class="tag">&lt;/h1&gt;</span></code> <code>  <span class="tag">&lt;p&gt;</span><span class="pln">Kiến thức - Kinh nghiệm - Hỏi đáp</span><span class="tag">&lt;/p&gt;</span></code> <code>  <span class="tag">&lt;p&gt;</span><span class="pln">Sử dụng </span><span class="tag">&lt;b&gt;</span><span class="pln">flexible</span><span class="tag">&lt;/b&gt;</span><span class="pln"> layout.</span><span class="tag">&lt;/p&gt;</span></code> <code><span class="tag">&lt;/div&gt;</span></code> <code><span class="com">&lt;!-- Navigation Bar --&gt;</span></code> <code><span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"navbar"</span><span class="tag">&gt;</span></code> <code>  <span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Làng Công nghệ</span><span class="tag">&lt;/a&gt;</span></code> <code>  <span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Công nghệ</span><span class="tag">&lt;/a&gt;</span></code> <code>  <span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Khoa học</span><span class="tag">&lt;/a&gt;</span></code> <code>  <span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">Cuộc sống</span><span class="tag">&lt;/a&gt;</span></code> <code><span class="tag">&lt;/div&gt;</span></code> <code><span class="com">&lt;!-- Nội dung --&gt;</span></code> <code><span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></code> <code>  <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"side"</span><span class="tag">&gt;</span></code> <code>    <span class="tag">&lt;h2&gt;</span><span class="pln">Giới thiệu</span><span class="tag">&lt;/h2&gt;</span></code> <code>    <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"fakeimg"</span> <span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">height</span><span class="pun">:</span><span class="lit">200px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Ảnh</span><span class="tag">&lt;/div&gt;</span></code> <code>    <span class="tag">&lt;p&gt;</span><span class="pln">Quantrimang.com là mạng xã hội về khoa học công nghệ.</span><span class="tag">&lt;/p&gt;</span></code> <code>    <span class="tag">&lt;h3&gt;</span><span class="pln">Nổi bật</span><span class="tag">&lt;/h3&gt;</span></code> <code>      <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"fakeimg"</span> <span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">height</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Ảnh</span><span class="tag">&lt;/div&gt;&lt;br&gt;</span></code> <code>      <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"fakeimg"</span> <span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">height</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Ảnh</span><span class="tag">&lt;/div&gt;&lt;br&gt;</span></code> <code>   <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"fakeimg"</span> <span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">height</span><span class="pun">:</span><span class="lit">60px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Ảnh</span><span class="tag">&lt;/div&gt;</span></code> <code>    <span class="tag">&lt;h3&gt;</span><span class="pln">Follow Me</span><span class="tag">&lt;/h3&gt;</span></code> <code>    <span class="tag">&lt;p&gt;</span><span class="pln">Facebook</span><span class="tag">&lt;/p&gt;</span></code> <code>    <span class="tag">&lt;p&gt;</span><span class="pln">YouTube</span><span class="tag">&lt;/p&gt;</span></code> <code>  <span class="tag">&lt;/div&gt;</span></code> <code>  <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"main"</span><span class="tag">&gt;</span></code> <code>    <span class="tag">&lt;h2&gt;</span><span class="pln">Form - Biểu mẫu trong CSS</span><span class="tag">&lt;/h2&gt;</span></code> <code>    <span class="tag">&lt;h5&gt;</span><span class="pln">Quách Tỉnh, 14/02/2019</span><span class="tag">&lt;/h5&gt;</span></code> <code>    <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"fakeimg"</span> <span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">height</span><span class="pun">:</span><span class="lit">200px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Ảnh</span><span class="tag">&lt;/div&gt;</span></code> <code>    <span class="tag">&lt;p&gt;</span><span class="pln">Form là một phần không thể thiếu trong bất kì loại website nào.</span><span class="tag">&lt;/p&gt;</span></code> <code> <span class="tag">&lt;p&gt;</span><span class="pln">Ở bài viết này, Quantrimang.com sẽ hướng dẫn bạn cách xây dựng phần </span>
+<span class="pln"> giao diện hiển thị của một biểu mẫu cơ bản. Giao diện này có thể được làm </span>
+<span class="pln">    khá đẹp mắt với CSS</span><span class="tag">&lt;/p&gt;</span></code> <code>    <span class="tag">&lt;br&gt;</span></code> <code>    <span class="tag">&lt;h2&gt;</span><span class="pln">Attribute Selector trong CSS</span><span class="tag">&lt;/h2&gt;</span></code> <code>    <span class="tag">&lt;h5&gt;</span><span class="pln">Quách Tỉnh, 14/02/2019</span><span class="tag">&lt;/h5&gt;</span></code> <code>    <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"fakeimg"</span> <span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">height</span><span class="pun">:</span><span class="lit">200px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">Ảnh</span><span class="tag">&lt;/div&gt;</span></code> <code> <span class="tag">&lt;p&gt;</span><span class="pln">Attribute selector là cách chọn các phần tử bạn muốn định kiểu trong </span>
+<span class="pln">    tài liệu HTML dựa vào thuộc tính của một hay nhiều thẻ HTML nào đó.</span><span class="tag">&lt;/p&gt;</span></code> <code> <span class="tag">&lt;p&gt;</span><span class="pln">Attribute selector có thể chọn được các đối tượng mà không cần phải </span>
+<span class="pln"> khai báo thêm các Class hoặc ID vào trong thẻ HTML và vẫn có thể hướng </span>
+<span class="pln">    được đến các thành phần đó, giúp code gọn gàng hơn và mạch lạc hơn.</span><span class="tag">&lt;/p&gt;</span></code> <code>  <span class="tag">&lt;/div&gt;</span></code> <code><span class="tag">&lt;/div&gt;</span></code> <code><span class="com">&lt;!-- Footer --&gt;</span></code> <code><span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"footer"</span><span class="tag">&gt;</span></code> <code>  <span class="tag">&lt;h4&gt;</span><span class="pln">Giấy phép số 362/GP-BTTTT. Bộ TT&amp;TT cấp ngày 30/06/2016.</span><span class="tag">&lt;/h4&gt;</span></code> <code><span class="tag">&lt;/div&gt;</span></code> <code><span class="tag">&lt;/body&gt;</span></code> <code><span class="tag">&lt;/html&gt;</span></code></pre>
+                <p><strong>Bài viết gốc được đăng tải tại <a
+                            href="https://quantrimang.com/su-dung-bo-cuc-trang-flexbox-trong-css-163636">quantrimang.com</a></strong>
+                </p>
+                <p><strong>Có thể bạn quan tâm:</strong></p>
+                <ul>
+                    <li class="entry-title"><a href="https://topdev.vn/blog/lam-chu-css-flexbox-trong-5-phut/">Làm
+                            chủ CSS Flexbox trong 5 phút</a></li>
+                    <li class="entry-title"><a
+                            href="https://topdev.vn/blog/css-framework-co-that-su-can-thiet-nhu-chung-ta-nghi/">CSS
+                            Framework có thật sự cần thiết như chúng ta nghĩ?</a></li>
+                    <li class="entry-title"><a href="https://topdev.vn/blog/su-dung-ellipsis-text-voi-flexbox/">Sử
+                            dụng ellipsis text với flexbox</a></li>
+                </ul>
+                <p><strong>Xem thêm <a href="https://topdev.vn/viec-lam-it">việc làm IT
+                        </a>hấp dẫn tại&nbsp;<a href="https://topdev.vn/" target="_self" rel="noopener noreferrer"
+                            data-wpel-link="exclude">TopDev</a></strong></p>
+                <div class="box-rcm">
+                    <div class="j-orange tagged x-rcm rcm-jobs-multi" id="rcm-hireme" style="height: 579px;"><a
+                            class="header-top" href="https://topdev.vn" target="_blank"><span>Những việc làm hấp
+                                dẫn</span></a>
+                        <div class="ljobs-rcm">
+                            <ul class="jobs">
+                                <li class="item-job"><img
+                                        src="https://topdev.vn/tr/image.gif?job_id=2027776&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                        style="width: 1px !important; display: none !important;">
+                                    <div class="job-wrap"><a class="thumbnail"
+                                            href="https://topdev.vn/partners/detail-jobs/mobile-developer-ios-android-all-levels-topdev-s-client-2027776?src=topdev.vn&amp;medium=jrec&amp;term=Mobile+Developer+%28iOS%2FAndroid+-+All+Levels%29&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="><img
+                                                class="item-logo"
+                                                src="https://assets.topdev.vn/images/2023/02/08/TopDev-rYP6qBcMycHidS0N-1675821869.png"></a><a
+                                            class="job" title="Mobile Developer (iOS/Android - All Levels)"
+                                            href="https://topdev.vn/partners/detail-jobs/mobile-developer-ios-android-all-levels-topdev-s-client-2027776?src=topdev.vn&amp;medium=jrec&amp;term=Mobile+Developer+%28iOS%2FAndroid+-+All+Levels%29&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                            target="_blank">
+                                            <div class="title">Mobile Developer (iOS/Android - All Levels)</div>
+                                            <div><span class="company">TopDev's Client</span><span class="location"><svg
+                                                        viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z">
+                                                        </path>
+                                                    </svg><span>Thành phố Hồ Chí Minh</span></span><span
+                                                    class="j-salary"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z">
+                                                        </path>
+                                                    </svg><span>Negotiable</span></span></div><span
+                                                class="post-tag">Swift</span><span class="post-tag">Android</span><span
+                                                class="post-tag">iOS</span><span class="post-tag">Java</span><span
+                                                class="post-tag">Mobile</span>
+                                        </a></div>
+                                </li>
+                                <li class="item-job"><img
+                                        src="https://topdev.vn/tr/image.gif?job_id=2029429&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                        style="width: 1px !important; display: none !important;">
+                                    <div class="job-wrap"><a class="thumbnail"
+                                            href="https://topdev.vn/partners/detail-jobs/lap-trinh-vien-php-voip24h-2029429?src=topdev.vn&amp;medium=jrec&amp;term=L%E1%BA%ADp+Tr%C3%ACnh+Vi%C3%AAn+PHP&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="><img
+                                                class="item-logo"
+                                                src="https://assets.topdev.vn/images/2021/03/12/VOIP24H-Logo-2EArR.jpg"></a><a
+                                            class="job" title="Lập Trình Viên PHP"
+                                            href="https://topdev.vn/partners/detail-jobs/lap-trinh-vien-php-voip24h-2029429?src=topdev.vn&amp;medium=jrec&amp;term=L%E1%BA%ADp+Tr%C3%ACnh+Vi%C3%AAn+PHP&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                            target="_blank">
+                                            <div class="title">Lập Trình Viên PHP</div>
+                                            <div><span class="company">VOIP24H</span><span class="location"><svg
+                                                        viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z">
+                                                        </path>
+                                                    </svg><span>Thành phố Hồ Chí Minh</span></span><span
+                                                    class="j-salary"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z">
+                                                        </path>
+                                                    </svg><span>500 USD to 1.200 USD</span></span></div><span
+                                                class="post-tag">PHP</span><span class="post-tag">Laravel</span><span
+                                                class="post-tag">CodeIgniter</span><span
+                                                class="post-tag">Back-End</span>
+                                        </a></div>
+                                </li>
+                                <li class="item-job"><img
+                                        src="https://topdev.vn/tr/image.gif?job_id=2029552&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                        style="width: 1px !important; display: none !important;">
+                                    <div class="job-wrap"><a class="thumbnail"
+                                            href="https://topdev.vn/partners/detail-jobs/middle-senior-software-frontend-angular-globaltech-2029552?src=topdev.vn&amp;medium=jrec&amp;term=Middle%2FSenior+Software+Frontend+%28Angular%29&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="><img
+                                                class="item-logo"
+                                                src="https://assets.topdev.vn/images/2022/03/11/TopDev-GlobalTech-Logo-1646984495.png"></a><a
+                                            class="job" title="Middle/Senior Software Frontend (Angular)"
+                                            href="https://topdev.vn/partners/detail-jobs/middle-senior-software-frontend-angular-globaltech-2029552?src=topdev.vn&amp;medium=jrec&amp;term=Middle%2FSenior+Software+Frontend+%28Angular%29&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                            target="_blank">
+                                            <div class="title">Middle/Senior Software Frontend (Angular)</div>
+                                            <div><span class="company">GlobalTech</span><span class="location"><svg
+                                                        viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z">
+                                                        </path>
+                                                    </svg><span>Thành phố Hồ Chí Minh</span></span><span
+                                                    class="j-salary"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z">
+                                                        </path>
+                                                    </svg><span>Negotiable</span></span></div><span
+                                                class="post-tag">CSS</span><span class="post-tag">Front-End</span><span
+                                                class="post-tag">Angular</span><span class="post-tag">SASS</span><span
+                                                class="post-tag">Angular 8+</span>
+                                        </a></div>
+                                </li>
+                                <li class="item-job"><img
+                                        src="https://topdev.vn/tr/image.gif?job_id=2029252&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                        style="width: 1px !important; display: none !important;">
+                                    <div class="job-wrap"><a class="thumbnail"
+                                            href="https://topdev.vn/partners/detail-jobs/fullstack-net-developer-azure-sql-net-angular-restaff-house-of-norway-2029252?src=topdev.vn&amp;medium=jrec&amp;term=Fullstack+.NET+Developer+%28Azure%2C+SQL%2C+.NET%2C+Angular%29&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="><img
+                                                class="item-logo"
+                                                src="https://assets.topdev.vn/images/2022/12/28/TopDev-xBz2vq8J2cbClu5Q-1672199779.jpg"></a><a
+                                            class="job" title="Fullstack .NET Developer (Azure, SQL, .NET, Angular)"
+                                            href="https://topdev.vn/partners/detail-jobs/fullstack-net-developer-azure-sql-net-angular-restaff-house-of-norway-2029252?src=topdev.vn&amp;medium=jrec&amp;term=Fullstack+.NET+Developer+%28Azure%2C+SQL%2C+.NET%2C+Angular%29&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                            target="_blank">
+                                            <div class="title">Fullstack .NET Developer (Azure, SQL, .NET, Angular)
+                                            </div>
+                                            <div><span class="company">Restaff - House of Norway</span><span
+                                                    class="location"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z">
+                                                        </path>
+                                                    </svg><span>Thành phố Hồ Chí Minh</span></span><span
+                                                    class="j-salary"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z">
+                                                        </path>
+                                                    </svg><span>Negotiable</span></span></div><span
+                                                class="post-tag">ASP.NET</span><span class="post-tag">MS
+                                                SQL</span><span class="post-tag">Full-Stack</span><span
+                                                class="post-tag">English - Good</span><span
+                                                class="post-tag">Angular</span>
+                                        </a></div>
+                                </li>
+                                <li class="item-job"><img
+                                        src="https://topdev.vn/tr/image.gif?job_id=2029528&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                        style="width: 1px !important; display: none !important;">
+                                    <div class="job-wrap"><a class="thumbnail"
+                                            href="https://topdev.vn/partners/detail-jobs/officer-digital-department-bidv-securities-company-bsc-2029528?src=topdev.vn&amp;medium=jrec&amp;term=Officer+%E2%80%93+Digital+Department&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="><img
+                                                class="item-logo"
+                                                src="https://assets.topdev.vn/images/2023/02/15/TopDev-198576aaba8633a45f8d25853a3ffedb-1676451431.png"></a><a
+                                            class="job" title="Officer – Digital Department"
+                                            href="https://topdev.vn/partners/detail-jobs/officer-digital-department-bidv-securities-company-bsc-2029528?src=topdev.vn&amp;medium=jrec&amp;term=Officer+%E2%80%93+Digital+Department&amp;token=RIBPOSVJgL+kR9V78tC1PePVkAR8STLmwYHXhY4o2z+8Jg6rR09xCNe2Zk2K/rcY1dv3kOtiRmtj5J4rtFRYiw=="
+                                            target="_blank">
+                                            <div class="title">Officer – Digital Department</div>
+                                            <div><span class="company">BIDV Securities Company (BSC)</span><span
+                                                    class="location"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 5.7c.4 0 .7-.1.9-.4.3-.3.4-.6.4-.9 0-.4-.1-.7-.4-.9-.2-.3-.5-.4-.9-.4s-.7.1-.9.4c-.3.2-.4.5-.4.9s.1.7.4.9c.2.3.5.4.9.4zm0-5c1 0 1.9.4 2.6 1.1.7.7 1.1 1.6 1.1 2.6 0 .5-.1 1.1-.4 1.8s-.5 1.3-.9 1.9c-.4.5-.7 1.1-1.1 1.6-.4.5-.7.9-.9 1.2l-.4.4c-.1-.1-.2-.3-.4-.5s-.5-.6-.9-1.2c-.4-.5-.8-1-1.1-1.6s-.7-1.1-.9-1.8c-.3-.7-.4-1.3-.4-1.8 0-1 .4-1.9 1.1-2.6S5 .7 6 .7z">
+                                                        </path>
+                                                    </svg><span>Thành phố Hà Nội</span></span><span
+                                                    class="j-salary"><svg viewBox="0 0 12 12">
+                                                        <path
+                                                            d="M6 9.8L3.9 7.7c1.3-.9 3-.9 4.2 0L6 9.8zm3-3a4.81 4.81 0 0 0-6 0L2.2 6c2.2-1.8 5.5-1.8 7.7 0l-.9.8zm1.7-1.7a7.27 7.27 0 0 0-9.4 0l-.9-.8c3.2-2.8 7.9-2.8 11.1 0l-.8.8z">
+                                                        </path>
+                                                    </svg><span>Negotiable</span></span></div><span class="post-tag">Web
+                                                Service</span><span class="post-tag">UI/UX</span><span
+                                                class="post-tag">Digital
+                                                Design</span><span class="post-tag">Digital Operation
+                                                Specialist</span>
+                                        </a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wraper">
+            <h2>Nhóm 3</h2>
+        </div>
+    </footer>
+</body>
+
+</html>
