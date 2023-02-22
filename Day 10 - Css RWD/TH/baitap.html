@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh tức</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f3f5f6;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .blog-list,
+        .left-content,
+        .recent-new {
+            background-color: #fff;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 0.2em;
+            border: 1px solid #ccc;
+        }
+
+        .thumbnail {
+            flex: 0 0 30%;
+            padding-top: 20%;
+            margin-right: 20px;
+            background-size: cover;
+        }
+
+        .thumb1 {
+            background-image: url(img/hinh1.webp);
+        }
+
+        .thumb2 {
+            background-image: url(img/hinh2.webp);
+        }
+
+        .thumb3 {
+            background-image: url(img/hinh3.webp);
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 1em 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        .flex {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        h2,h3 {
+            color: #8cc4fb;
+        }
+
+        .left-content {
+            flex-grow: 1;   
+        }
+
+        .news-item {
+            margin: 2em 0;
+        }
+
+        .time {
+            color: #ccc;
+            margin: 0.5em 0;
+        }
+        
+        .right-content {
+            flex: 0 0 30%;
+        }
+
+        .right-content h2 {
+            border-bottom: 3px solid black;
+            padding-bottom: 0.5em;
+            text-align: center;
+        }
+
+        .recent-new-item {
+            margin: 1em 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .recent-new-item:last-child {
+            border-bottom: none;
+        }
+
+        @media only screen and (max-width : 1024px) {
+            .right-content {
+            flex: 0 0 40%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .right-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="flex">
+        <div class="left-content">
+            <h2>Tin Tức</h2>
+            <div class="news-item flex">
+                <div class="thumbnail thumb1"></div>
+                <div class="news_item-text">
+                    <h3>Apple Watch Đã Cứu Mạng Một Người Đàn Ông Ở Long Island Như Thế Nào?</h3>
+                    <p class="time">Th 5 12/08/2021</p>
+                    <p class="text">Đây không phải lần đầu tiên Apple Watch giúp cứu sống người dùng. Gần đây một người đàn ông ở Long Island đã ghi công Apple... </p>
+                </div>
+            </div>
+            <div class="news-item flex">
+                <div class="thumbnail thumb2"></div>
+                <div class="news_item-text">
+                    <h3>Facebook Vẫn Đạt Doanh Thu Cao Kỷ Lục Dù Bị IOS 14 "Làm Khó"</h3>
+                    <p class="time">Th 6 30/07/2021</p>
+                    <p class="text">Mặc dù Apple đã ra mắt tính năng quyền riêng tư mới trên iOS từ tháng 4 nhưng Facebook vẫn đạt kỷ lục doanh thu mới.</p>
+                </div>
+            </div>
+            <div class="news-item flex">
+                <div class="thumbnail thumb3"></div>
+                <div class="news_item-text">
+                    <h3>Có Nên Mua Apple Watch Series 3 Ở Thời Điểm Hiện Tại Hay Không?</h3>
+                    <p class="time">Th 3 06/07/2021</p>
+                    <p class="text">Hiện nay Apple đã cho ra mắt đến dòng Apple Watch series 6 với nhiều tính năng hỗ trợ cực độc đáo. Vậy liệu đến thời... </p>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="recent-new">
+                <h2>Bài viết mới nhất</h2>
+                <div class="recent-new-item flex">
+                    <div class="thumbnail thumb1"></div>
+                    <div class="recent-new-text">
+                        <h3>Apple Watch Đã Cứu Mạng Một Người Đàn Ông Ở Long Island Như Thế Nào?</h3>
+                        <p class="time">Th 5 12/08/2021</p>
+                    </div>
+                </div>
+                <div class="recent-new-item flex">
+                    <div class="thumbnail thumb2"></div>
+                    <div class="recent-new-text">
+                        <h3>Facebook Vẫn Đạt Doanh Thu Cao Kỷ Lục Dù Bị IOS 14 "Làm Khó"</h3>
+                        <p class="time">Th 6 30/07/2021</p>
+                    </div>
+                </div>
+                <div class="recent-new-item flex">
+                    <div class="thumbnail thumb3"></div>
+                    <div class="recent-new-text">
+                        <h3>Có Nên Mua Apple Watch Series 3 Ở Thời Điểm Hiện Tại Hay Không?</h3>
+                        <p class="time">Th 3 06/07/2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-list">
+                <h2>Danh mục blog</h2>
+                <ul>
+                    <li>Trang chủ</li>
+                    <li>Sản phẩm</li>
+                    <li>Product view</li>
+                    <li>Blog</li>
+                    <li>Giới thiệu</li>
+                    <li>Liên hệ</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
