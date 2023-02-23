@@ -17,6 +17,8 @@ header .menu-icon {
 
 #menu-control:checked ~.sidebar {
     display: block;
+    /* animation: sideInRight ease 0.5s forwards;
+    -webkit-animation: sideInRight ease 0.5s forwards; */
 }
 
 #menu-control:checked ~.modal {
@@ -38,7 +40,6 @@ header .modal {
 }
 
 header .sidebar {
-    display: none;
     position: fixed;
     right: 0;
     top: 0;
@@ -52,6 +53,8 @@ header .sidebar {
     animation: sideInRight ease 0.5s;
     -webkit-animation: sideInRight ease 0.5s;
     z-index: 2;
+    transition: all ease 1s;
+    display: none;
 }
 
 header .sidebar ul li {
@@ -64,8 +67,29 @@ header .sidebar label {
     top: 1em;
 }
 
-
 /* ----------------------Sidebar END---------------------- */
+
+main .title {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+main .title p {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    text-transform: uppercase;
+    background-image: url(../img/bg-leaf.png);
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-top: 1em;
+    width: fit-content;
+    margin: auto;
+}
+
+main .title h2 {
+    font-size: 3em;
+    font-weight: 300;
+}
 
 /* ----------------------Banner START---------------------- */
 
@@ -121,17 +145,152 @@ header .sidebar label {
 /* ----------------------Banner END---------------------- */
 
 #features {
+    background-color: #fff;
+}
 
+#features .features__des {
+    width: 60%;
+    text-align: justify;
+}
+
+#features .des-item {
+    margin-bottom: 2em;
+}
+
+#features .des-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+#features .des-item .des-text i {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-right: 0.8em;
+}
+
+
+#features .features__img {
+    width: 36%;
+    overflow: hidden;
+    border-radius: 0.5em;
 }
 
 #services {
-
+    background-color: #efefef;
 }
 
-#testimonial {
+#services .body .item {
+    width: 48%;
+    position: relative;
+    padding-top: 30%;
+    background-size: cover;
+    margin-bottom: 4%;
+    border-radius: 0.5em;
+}
 
+
+#services .body .item .content {
+    position: absolute;
+    bottom: 50%; left: 0; right: 0;
+    color: var(--white-color);
+    text-align: center;
+    transform: translateY(50%);
+    margin: 0 2em;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+#services .body .item:hover > .content {
+    opacity: 1;
+}
+
+#services .body .item .content h3 {
+    border-bottom: 1px solid var(--white-color);
+    padding-bottom: 1em;
+}
+
+#services .body .item .content p {
+    padding-top: 1em;
+}
+
+#services .body .item:nth-child(1) {
+    background-image: url(../img/blog-1.jpg)
+}
+
+#services .body .item:nth-child(2) {
+    background-image: url(../img/blog-2.jpg)
+}
+
+#services .body .item:nth-child(3) {
+    background-image: url(../img/blog-3.jpg)
+}
+
+#services .body .item:nth-child(4) {
+    background-image: url(../img/blog-6.jpg)
+}
+
+#testimonial .body .item {
+    width: 30%;
+    text-align: justify;
+    border-radius: 0.4em;
+    box-shadow: 5px 5px 16px 5px #bfd9d7;
+    padding: 0.6em;
+}
+
+#testimonial .body .item .user {
+    margin-bottom: 1em;
+}
+
+#testimonial .body .item .user__img{
+    width: 20%;
+    border-radius: 0.2em;
+    margin-right: 1em;
+}
+
+#testimonial .body .item .user__info p {
+    color: #306e70;
+}
+
+#testimonial .body .item .user__info i {
+    font-size: 1.5em;
+    color: #3e9387;
+    background-color: #efefef;
 }
 
 #meet-us {
+    background-color: #efefef;
+    position: relative;
+    z-index: 0;
+}
 
+#meet-us::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-image: url(../img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 50% 50%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#meet-us .body .item {
+    width: 50%;
+}
+
+#meet-us .body .item:last-child {
+    text-align: end;
+}
+
+#meet-us .body .item li {
+    margin: 1em;
+}
+
+#meet-us .body .item li i {
+    color: var(--primary-color);
+    font-size: 1.3em;
+    display: inline-block;
+    width: 1.3em;;
 }

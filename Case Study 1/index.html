@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/brands.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
 </head>
 <body>
     <header>
@@ -33,7 +34,7 @@
         </div>
     </header>
     <main>
-        <section id="banner" class="overlay-effect">
+        <section id="banner" class="overlay-effect-not-round">
             <div class="wraper">
                 <img src="./assets/img/logo.png" alt="Logo" class="banner__logo">
                 <div class="banner-text__wraper">
@@ -47,54 +48,148 @@
             </div>
         </section>
         <section id="features">
-            <div class="features__title">
-                <p>Feature</p>
-                <h2>Why Choose Us</h2>
-            </div>
-            <div class="features__body">
-                <div class="features__des">
-                    <div class="des-item">
-                        <h3>Experienced Staff</h3>
-                        <div class="des-text">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque perferendis porro qui quidem aliquid labore repellendus ratione impedit cupiditate.</p>
+            <div class="wraper">
+                <div class="title">
+                    <p>Feature</p>
+                    <h2>Why Choose Us</h2>
+                </div>
+                <div class="body flex-between-start">
+                    <div class="features__des">
+                        <div class="des-item">
+                            <h3>Experienced Staff</h3>
+                            <div class="des-text flex-between-center">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque perferendis porro qui quidem aliquid labore repellendus ratione impedit cupiditate.</p>
+                            </div>
+                        </div>
+                        <div class="des-item">
+                            <h3>Pre Booking Online</h3>
+                            <div class="des-text flex-between-center">
+                                <i class="fa-regular fa-square-check"></i>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque perferendis porro qui quidem aliquid labore repellendus ratione impedit cupiditate.</p>
+                            </div>
+                        </div>
+                        <div class="des-item">
+                            <h3>Affordable Cost</h3>
+                            <div class="des-text flex-between-center">
+                                <i class="fa-solid fa-euro-sign"></i>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque perferendis porro qui quidem aliquid labore repellendus ratione impedit cupiditate.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="des-item">
-                        <h3>Pre Booking Online</h3>
-                        <div class="des-text">
-                            <i class="fa-regular fa-square-check"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque perferendis porro qui quidem aliquid labore repellendus ratione impedit cupiditate.</p>
-                        </div>
-                    </div>
-                    <div class="des-item">
-                        <h3>Affordable Cost</h3>
-                        <div class="des-text">
-                            <i class="fa-solid fa-euro-sign"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod atque perferendis porro qui quidem aliquid labore repellendus ratione impedit cupiditate.</p>
-                        </div>
+                    <div class="features__img overlay-effect">
+                        <img src="./assets/img/about2.jpg" alt="Feature" >
                     </div>
                 </div>
-                <img src="" alt="">
             </div>
             
         </section>
 
         <section id="services">
-
+            <div class="wraper">
+                <div class="title">
+                    <p>Services</p>
+                    <h2>We Provider Better</h2>
+                </div>
+                <div class="body flex-between-center">
+                    <div class="item hover-effect">
+                        <div class="content">
+                            <h3>Beard Trim</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel?</p>
+                        </div>
+                    </div>
+                    <div class="item hover-effect">
+                        <div class="content">
+                            <h3>Beard Trim</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel?</p>
+                        </div>
+                    </div>
+                    <div class="item hover-effect">
+                        <div class="content">
+                            <h3>Beard Trim</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel?</p>
+                        </div>
+                    </div>
+                    <div class="item hover-effect">
+                        <div class="content">
+                            <h3>Beard Trim</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vel?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="testimonial">
-
+            <div class="wraper">
+                <div class="title">
+                    <p>Testimonial</p>
+                    <h2>What Client Says</h2>
+                </div>
+                <div class="body flex-between-center">
+                    <div class="item">
+                        <div class="user flex-start-center">
+                            <img src="./assets/img/price-1.jpg" alt="User1" class="user__img">
+                            <div class="user__info">
+                                <h4>KEN NORMAN <i class="fa-brands fa-twitter"></i></h4>
+                                <P>@kennorman</P>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem harum omnis vero libero eum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="user flex-start-center">
+                            <img src="./assets/img/price-4.jpg" alt="User1" class="user__img">
+                            <div class="user__info">
+                                <h4>KARIAN NICK <i class="fa-brands fa-twitter"></i></h4>
+                                <P>@kanriannick</P>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem harum omnis vero libero eum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="user flex-start-center">
+                            <img src="./assets/img/price-5.jpg" alt="User1" class="user__img">
+                            <div class="user__info">
+                                <h4>DIARA JAMES <i class="fa-brands fa-twitter"></i></h4>
+                                <P>@diarajames</P>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium autem harum omnis vero libero eum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="meet-us">
-
+            <div class="wraper">
+                <div class="title">
+                    <p>Contact</p>
+                    <h2>Vist Shop today</h2>
+                </div>
+                <div class="body flex-between-start">
+                    <div class="item">
+                        <h3>Openning Hours</h3>
+                        <ul>
+                            <li><i class="fa-regular fa-clock"></i> Monday to Friday 9am to 9pm</li>
+                            <li><i class="fa-regular fa-clock"></i> Saturday to Sunday 8am to 11pm</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Get In Touch</h3>
+                        <ul>
+                            <li>#30 abc Colony, xyz City In <i class="fa-solid fa-location-dot"></i></li>
+                            <li>abc@xyz.com <i class="fa-solid fa-envelope"></i></li>
+                            <li>+0123456789 <i class="fa-solid fa-mobile-screen-button"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
-        
     </main>
-    <footer>
-        <div class="wraper">
-
-        </div>
-    </footer>
 </body>
 </html>
