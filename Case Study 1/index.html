@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 1 - Hair Studio</title>
+    <link rel="stylesheet" href="./assets/css/animation.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./assets/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/css/regular.css">
     <link rel="stylesheet" href="./assets/css/solid.css">
@@ -13,9 +15,12 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        <div>
+            <label for="menu-control" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="menu-control" hidden>
+            <label for="menu-control" class="modal"></label>
             <nav class="sidebar">
+                <label for="menu-control"><i class="fa-solid fa-xmark"></i></label>
                 <ul>
                     <li><a href="#banner">Home</a></li>
                     <li><a href="#features">Features</a></li>
@@ -27,27 +32,36 @@
         </div>
     </header>
     <main>
-        <div class="wraper">
-            <article id="banner">
+        <section id="banner">
+            <div class="wraper">
+                <img src="./assets/img/logo.png" alt="Logo" class="banner__logo">
+                <div class="banner-text__wraper">
+                    <h1 class="banner-text__title">Hair Studio</h1>
+                    <p class="banner-text__des">Style Your Hair Is Style Your Life</p>
+                    <div class="banner-text__buttons">
+                        <a href="#" class="btn">Find Out</a>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="features">
 
-            </article>
-            <article id="features">
+        </section>
 
-            </article>
+        <section id="services">
 
-            <article id="services">
+        </section>
+        <section id="testimonial">
 
-            </article>
-            <article id="testimonial">
+        </section>
+        <section id="meet-us">
 
-            </article>
-            <article id="meet-us">
-
-            </article>
-        </div>
+        </section>
+        
     </main>
     <footer>
-        <div class="footer">
+        <div class="wraper">
 
         </div>
     </footer>
