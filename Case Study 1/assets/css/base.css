@@ -107,7 +107,7 @@ img {
 .overlay-effect::after {
     height: 100%;
     opacity: 1;
-    z-index: 0;
+    z-index: -1;
 }
 
 .overlay-effect-not-round::after {

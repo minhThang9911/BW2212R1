@@ -171,8 +171,9 @@ main .title h2 {
 
 #features .features__img {
     width: 36%;
-    overflow: hidden;
     border-radius: 0.5em;
+    background-image: url(./assets/img/about2.jpg);
+    padding-top: 100%;
 }
 
 #services {
