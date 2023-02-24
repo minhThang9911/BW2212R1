@@ -125,15 +125,12 @@ main .title h2 {
     position: absolute;
     top: 0;
     width: 100%;
-}
-
-#banner .banner-text__wraper {
-    width: 80%;
-    margin: auto;
+    height: 100%;
+    padding: 4vw 0;
 }
 
 #banner .banner__logo {
-    width: 6em;
+    width: 7vw;
     filter: invert();
     -webkit-filter: invert();
     position: absolute;
@@ -147,19 +144,21 @@ main .title h2 {
     text-shadow: 0 0 3px var(--black-color);
 }
 
-#banner .banner-text__title {
+#banner .banner-text__wraper h1 {
     font-weight: 200;
-    font-size: 8em;
+    font-size: 10vw;
 }
 
-#banner .banner-text__des {
+#banner .banner-text__wraper p {
     font-style: italic;
     font-weight: 200;
     font-size: 1.5em;
 }
 
-#banner .banner-text__buttons {
-    margin-top: 6em;
+#banner .banner-text__wraper .buttons {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 6vw;
 }
 /* ----------------------Banner END---------------------- */
 

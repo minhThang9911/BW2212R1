@@ -1,19 +1,39 @@
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    
+
+/* Mobile */
+@media (max-width: 46.188em) {
+    #features .body {
+        flex-wrap: wrap-reverse;
+    }
+
+    #features .features__des {
+        width: 100%;
+    }
+
+    #features .features__img {
+        width: 80%;
+        margin: auto;
+        padding-top: 96.88%;
+        margin-bottom: 2em;
+    }
+
+    #services .body .item {
+        width: 100%;
+        padding-top: 62.5%;
+    }
+
+    #testimonial .body .item {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    header .sidebar {
+        width: 90%;
+    }
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-    
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-    
-}
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) { 
-    
+/* Tablets */
+@media (min-width: 46.25em) and (max-width: 63.938em) { 
+    header .sidebar {
+        width: 40%;
+    }
 }
