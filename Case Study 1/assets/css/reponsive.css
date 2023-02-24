@@ -1,6 +1,10 @@
 
 /* Mobile */
 @media (max-width: 46.188em) {
+    #banner .banner-text__wraper h1 {
+        font-size: 12vh;
+    }
+
     #features .body {
         flex-wrap: wrap-reverse;
     }
