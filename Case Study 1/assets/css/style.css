@@ -15,14 +15,30 @@ header .menu-icon {
     z-index: 1;
 }
 
-#menu-control:checked ~.sidebar {
-    display: block;
-    /* animation: sideInRight ease 0.5s forwards;
-    -webkit-animation: sideInRight ease 0.5s forwards; */
+#menu-control-open:checked ~ .sidebar {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
 }
 
-#menu-control:checked ~.modal {
+#menu-control-close:checked ~ .sidebar {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    opacity: 0;
+}
+
+#menu-control-open:checked ~ .modal {
     display: block;
+}
+
+#menu-control-close:checked ~ .modal {
+    display: none;
 }
 
 header .modal {
@@ -33,10 +49,10 @@ header .modal {
     bottom: 0;
     background-color: rgba(0,0,0,0.3);
     display: none;
-    animation: fadeIn ease 0.5s;
-    -webkit-animation: fadeIn ease 0.5s;
     will-change: opacity;
     z-index: 1;
+    animation: fadeIn ease 0.8s;
+    -webkit-animation: fadeIn ease 0.8s;
 }
 
 header .sidebar {
@@ -50,11 +66,12 @@ header .sidebar {
     color: var(--white-color);
     width: 30%;
     max-width: 16em;
-    animation: sideInRight ease 0.5s;
-    -webkit-animation: sideInRight ease 0.5s;
     z-index: 2;
-    transition: all ease 1s;
-    display: none;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
 }
 
 header .sidebar ul li {
@@ -63,8 +80,10 @@ header .sidebar ul li {
 
 header .sidebar label {
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 0;
+    top: 0;
+    padding: 1em 1em 0;
+    font-size: 1.5em;
 }
 
 /* ----------------------Sidebar END---------------------- */
@@ -96,14 +115,14 @@ main .title h2 {
 #banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url(../img/single.jpg);
     width: 100%;
-    height: 100vh;
+    padding-top: 43.9%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
 #banner .wraper {
-    /* position: absolute; */
+    position: absolute;
     top: 0;
     width: 100%;
 }
@@ -162,18 +181,26 @@ main .title h2 {
     margin-bottom: 0.5em;
 }
 
+#features .des-item .des-text {
+    flex-wrap: nowrap;
+}
+
 #features .des-item .des-text i {
     color: var(--primary-color);
     font-size: 1.5em;
     margin-right: 0.8em;
 }
 
+#features .des-item .des-text p {
+    flex-grow: 1;
+}
 
 #features .features__img {
     width: 36%;
     border-radius: 0.5em;
-    background-image: url(./assets/img/about2.jpg);
-    padding-top: 100%;
+    background-image: url(../img/about2.jpg);
+    padding-top: 43.6%;
+    background-size: contain;
 }
 
 #services {
@@ -187,12 +214,13 @@ main .title h2 {
     background-size: cover;
     margin-bottom: 4%;
     border-radius: 0.5em;
+    cursor: pointer;
 }
 
 
 #services .body .item .content {
     position: absolute;
-    bottom: 50%; left: 0; right: 0;
+    bottom: 0; left: 0; right: 0;
     color: var(--white-color);
     text-align: center;
     transform: translateY(50%);
@@ -203,6 +231,7 @@ main .title h2 {
 
 #services .body .item:hover > .content {
     opacity: 1;
+    bottom: 50%
 }
 
 #services .body .item .content h3 {
@@ -236,6 +265,20 @@ main .title h2 {
     border-radius: 0.4em;
     box-shadow: 5px 5px 16px 5px #bfd9d7;
     padding: 0.6em;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+#testimonial .body .item:hover {
+    transform: translateY(5%);
+    -webkit-transform: translateY(5%);
+    -moz-transform: translateY(5%);
+    -ms-transform: translateY(5%);
+    -o-transform: translateY(5%);
 }
 
 #testimonial .body .item .user {
@@ -258,10 +301,14 @@ main .title h2 {
     background-color: #efefef;
 }
 
-#meet-us {
+#meet-us{
     background-color: #efefef;
     position: relative;
     z-index: 0;
+}
+
+#meet-us .wraper {
+    padding-bottom: 0;
 }
 
 #meet-us::after {
@@ -274,7 +321,7 @@ main .title h2 {
     background-size: 40%;
     background-position: 50% 50%;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 #meet-us .body .item {
@@ -294,4 +341,30 @@ main .title h2 {
     font-size: 1.3em;
     display: inline-block;
     width: 1.3em;;
+}
+
+#meet-us .social-link {
+    margin-top: 5em;
+}
+
+#meet-us .social-link .icon {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2em;
+}
+
+#meet-us .social-link .icon i {
+    transition: color ease 0.2s;
+    -webkit-transition: color ease 0.2s;
+    -moz-transition: color ease 0.2s;
+    -ms-transition: color ease 0.2s;
+    -o-transition: color ease 0.2s;
+}
+
+#meet-us .social-link .icon i:hover {
+    color: coral;
+}
+
+#meet-us .social-link p {
+    text-align: center;
 }

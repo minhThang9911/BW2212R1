@@ -18,11 +18,12 @@
 <body>
     <header>
         <div>
-            <label for="menu-control" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-            <input type="checkbox" id="menu-control" hidden>
-            <label for="menu-control" class="modal"></label>
+            <label for="menu-control-open" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+            <input type="radio" name="menu-control" id="menu-control-open" hidden>
+            <input type="radio" name="menu-control" id="menu-control-close" hidden checked>
+            <label for="menu-control-close" class="modal"></label>
             <nav class="sidebar">
-                <label for="menu-control"><i class="fa-solid fa-xmark"></i></label>
+                <label for="menu-control-close"><i class="fa-solid fa-xmark"></i></label>
                 <ul>
                     <li><a href="#banner">Home</a></li>
                     <li><a href="#features">Features</a></li>
@@ -186,6 +187,15 @@
                             <li>+0123456789 <i class="fa-solid fa-mobile-screen-button"></i></li>
                         </ul>
                     </div>
+                </div>
+                <div class="social-link">
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <p>Copyright Easy Tutorials Youtube Chanel</p>
                 </div>
             </div>
         </section>
