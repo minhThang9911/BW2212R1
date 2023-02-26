@@ -1,0 +1,7 @@
+.banner {
+    background-color: #f54447;
+}
+
+header .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}

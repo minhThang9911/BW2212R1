@@ -6,15 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case study Bootstrap 1</title>
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/css/regular.css">
+    <link rel="stylesheet" href="./assets/css/solid.css">
+    <link rel="stylesheet" href="./assets/css/brands.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header>
-
+        <div class="container">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" class="img-fluid" alt="Book"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navbar-dark ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FACT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PRICE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">COURSE</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    PAGES
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Generic</a></li>
+                                    <li><a class="dropdown-item" href="#">Element</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
-
+        <section class="banner">
+            <div class="container">
+                <div class="row justify-content-md-center align-items-center pt-5">
+                    <div class="col-12 col-md-7">
+                        <div class="text-center text-white">
+                            <h4>Author: Travor James</h4>
+                            <h1>New Adventure</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp
+                                or incididunt ut labore et dolore magna aliqua. Ut enim ad minim. </p>
+                            <button type="button" class="btn rounded-pill px-4 btn-light">BUY NOW FOR $ 9.99</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <img src="./assets/img/header-img.png" class="img-fluid" alt="Header Img">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
