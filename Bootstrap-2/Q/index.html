@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,132 @@
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <header>
+    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 
+    <style>
+        .dropdown:hover .dropdown-menu{
+            display: block;
+            animation: fadeIn ease 0.8s;
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="referent-link">https://themes.haravan.com/pages/demo?id=tech-store.myharavan.com&pro=tech-store</div>
+    <header class="fixed-top">
+        <div class="header container d-flex">
+            <a href="" class="navbar-brand"><img src="./assets/imgs/logo.png" alt="Teck Store"></a>
+            <form class="input-group" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                TIVI
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item" href="/collections/tivi-sony">Tivi Sony</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-samsung">Tivi Samsung</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-tcl">Tivi TCL</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-lg">Tivi LG</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-toshiba">Tivi Toshiba</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-skyworth">Tivi SkyWorth</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-panasonic">Tivi Panasonic</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-vtb">Tivi VTB</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-sharp">Tivi Sharp</a></li>
+                                <li><a class="dropdown-item" href="/collections/tivi-asanzo">Tivi Asanzo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                TỦ LẠNH
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item" href="/collections/tu-lanh-sanyo">Tủ lạnh Sanyo</a></li>
+                                <li><a class="dropdown-item" href="/collections/tu-lanh-panasonic">Tủ lạnh Panasonic</a></li>
+                                <li><a class="dropdown-item" href="/collections/tu-lanh-sharp">Tủ lạnh Sharp</a></li>
+                                <li><a class="dropdown-item" href="/collections/tu-lanh-toshiba">Tủ lạnh Toshiba</a></li>
+                                <li><a class="dropdown-item" href="/collections/tu-lanh-hitachi">Tủ lạnh Hitachi</a></li>
+                                <li><a class="dropdown-item" href="/collections/tu-lanh-mitsubishi-electric">Tủ lạnh MITSUBISHI ELECTRIC</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                MÁY LẠNH
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item" href="/collections/may-lanh-panasonic">Máy lạnh Panasonic</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-lanh-daikin">Máy lạnh Daikin</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-lanh-lg">Máy lạnh LG</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-lanh-sharp">Máy lạnh Sharp</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-lanh-mitsubishi-heavy">Máy lạnh MITSUBISHI</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-lanh-samsung">Máy lạnh Samsung</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-lanh-sanyo">Máy lạnh Sanyo</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                GIA DỤNG
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item" href="/collections/ban-ui">Bàn ủi</a></li>
+                                <li><a class="dropdown-item" href="/collections/bep-dien">Bếp điện</a></li>
+                                <li><a class="dropdown-item" href="/collections/bep-gas">Bếp gas</a></li>
+                                <li><a class="dropdown-item" href="/collections/binh-dun-sieu-toc">Bình đun siêu tốc</a></li>
+                                <li><a class="dropdown-item" href="/collections/binh-thuy-dien">Bình thủy điện</a></li>
+                                <li><a class="dropdown-item" href="/collections/bo-noi">Bộ nồi</a></li>
+                                <li><a class="dropdown-item" href="/collections/lau-dien">Lẩu điện</a></li>
+                                <li><a class="dropdown-item" href="/collections/lo-nuong">Lò nướng</a></li>
+                                <li><a class="dropdown-item" href="/collections/lo-vi-song">Lò vi sóng</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-danh-trung">Máy đánh trứng</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                                MÁY GIẶT
+                            </a>
+                            <ul class="dropdown-menu rounded-0">
+                                <li><a class="dropdown-item" href="/collections/may-giat-sanyo">Máy giặt Sanyo</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-giat-toshiba">Máy giặt Toshiba</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-giat-lg">Máy giặt LG</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-giat-panasonic">Máy giặt Panasonic</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-giat-samsung">Máy giặt Samsung</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-giat-electrolux">Máy giặt Electrolux</a></li>
+                                <li><a class="dropdown-item" href="/collections/may-giat-sharp">Máy giặt Sharp</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">MÁY NƯỚC NÓNG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ĐIỆN THOẠI</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
 
@@ -20,6 +143,7 @@
 
     </footer>
 
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+
 </body>
+
 </html>
