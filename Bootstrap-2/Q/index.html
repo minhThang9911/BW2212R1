@@ -6,144 +6,2093 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case study Bootstrap 2</title>
+    <link rel="stylesheet" href="./assets/icon/fontawesome.css">
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-
     <style>
-        .dropdown:hover .dropdown-menu{
-            display: block;
-            animation: fadeIn ease 0.8s;
+        body {
+            font-size: 80%;
         }
-
+        .btn-offcavas {
+            transform: translate(120%, 50%);
+        }
         @keyframes fadeIn {
             0% {opacity: 0;}
             100% {opacity: 1;}
+        }
+        @media (min-width: 992px) {
+            .product:hover .product-overlay {
+                display: block !important;
+            }
+            .dropdown:hover .dropdown-menu {
+            display: block;
+            animation: fadeIn ease 0.8s;
+            }
+            .dropdown-toggle {
+                pointer-events: none;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="referent-link">https://themes.haravan.com/pages/demo?id=tech-store.myharavan.com&pro=tech-store</div>
-    <header class="fixed-top">
-        <div class="header container d-flex">
-            <a href="" class="navbar-brand"><img src="./assets/imgs/logo.png" alt="Teck Store"></a>
-            <form class="input-group" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <div class="m-auto">
+        <div class="fixed-bottom"><a target="_blank"
+                href="https://themes.haravan.com/pages/demo?id=tech-store.myharavan.com&pro=tech-store">
+                https://themes.haravan.com/pages/demo?id=tech-store.myharavan.com&pro=tech-store</a>
         </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                TIVI
-                            </a>
-                            <ul class="dropdown-menu rounded-0">
-                                <li><a class="dropdown-item" href="/collections/tivi-sony">Tivi Sony</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-samsung">Tivi Samsung</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-tcl">Tivi TCL</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-lg">Tivi LG</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-toshiba">Tivi Toshiba</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-skyworth">Tivi SkyWorth</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-panasonic">Tivi Panasonic</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-vtb">Tivi VTB</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-sharp">Tivi Sharp</a></li>
-                                <li><a class="dropdown-item" href="/collections/tivi-asanzo">Tivi Asanzo</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                TỦ LẠNH
-                            </a>
-                            <ul class="dropdown-menu rounded-0">
-                                <li><a class="dropdown-item" href="/collections/tu-lanh-sanyo">Tủ lạnh Sanyo</a></li>
-                                <li><a class="dropdown-item" href="/collections/tu-lanh-panasonic">Tủ lạnh Panasonic</a></li>
-                                <li><a class="dropdown-item" href="/collections/tu-lanh-sharp">Tủ lạnh Sharp</a></li>
-                                <li><a class="dropdown-item" href="/collections/tu-lanh-toshiba">Tủ lạnh Toshiba</a></li>
-                                <li><a class="dropdown-item" href="/collections/tu-lanh-hitachi">Tủ lạnh Hitachi</a></li>
-                                <li><a class="dropdown-item" href="/collections/tu-lanh-mitsubishi-electric">Tủ lạnh MITSUBISHI ELECTRIC</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                MÁY LẠNH
-                            </a>
-                            <ul class="dropdown-menu rounded-0">
-                                <li><a class="dropdown-item" href="/collections/may-lanh-panasonic">Máy lạnh Panasonic</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-lanh-daikin">Máy lạnh Daikin</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-lanh-lg">Máy lạnh LG</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-lanh-sharp">Máy lạnh Sharp</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-lanh-mitsubishi-heavy">Máy lạnh MITSUBISHI</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-lanh-samsung">Máy lạnh Samsung</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-lanh-sanyo">Máy lạnh Sanyo</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                GIA DỤNG
-                            </a>
-                            <ul class="dropdown-menu rounded-0">
-                                <li><a class="dropdown-item" href="/collections/ban-ui">Bàn ủi</a></li>
-                                <li><a class="dropdown-item" href="/collections/bep-dien">Bếp điện</a></li>
-                                <li><a class="dropdown-item" href="/collections/bep-gas">Bếp gas</a></li>
-                                <li><a class="dropdown-item" href="/collections/binh-dun-sieu-toc">Bình đun siêu tốc</a></li>
-                                <li><a class="dropdown-item" href="/collections/binh-thuy-dien">Bình thủy điện</a></li>
-                                <li><a class="dropdown-item" href="/collections/bo-noi">Bộ nồi</a></li>
-                                <li><a class="dropdown-item" href="/collections/lau-dien">Lẩu điện</a></li>
-                                <li><a class="dropdown-item" href="/collections/lo-nuong">Lò nướng</a></li>
-                                <li><a class="dropdown-item" href="/collections/lo-vi-song">Lò vi sóng</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-danh-trung">Máy đánh trứng</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                                MÁY GIẶT
-                            </a>
-                            <ul class="dropdown-menu rounded-0">
-                                <li><a class="dropdown-item" href="/collections/may-giat-sanyo">Máy giặt Sanyo</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-giat-toshiba">Máy giặt Toshiba</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-giat-lg">Máy giặt LG</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-giat-panasonic">Máy giặt Panasonic</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-giat-samsung">Máy giặt Samsung</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-giat-electrolux">Máy giặt Electrolux</a></li>
-                                <li><a class="dropdown-item" href="/collections/may-giat-sharp">Máy giặt Sharp</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">MÁY NƯỚC NÓNG</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ĐIỆN THOẠI</a>
-                        </li>
-
-                    </ul>
-
+        <header class="sticky-top bg-white">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark p-0">
+                <div class="container">
+                    <a class="navbar-brand p-0" href="#"></a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sản phẩm
+                                </a>
+                                <ul class="dropdown-menu rounded-0">
+                                    <li><a class="dropdown-item" href="/collections/tivi">TIVI</a></li>
+                                    <li><a class="dropdown-item" href="/collections/tu-lanh">TỦ LẠNH</a></li>
+                                    <li><a class="dropdown-item" href="/collections/may-lanh">MÁY LẠNH</a></li>
+                                    <li><a class="dropdown-item" href="/collections/gia-dung">GIA DỤNG</a></li>
+                                    <li><a class="dropdown-item" href="/collections/may-giat">MÁY GIẶT</a></li>
+                                    <li><a class="dropdown-item" href="/collections/may-nuoc-nong">MÁY NƯỚC NÓNG</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/collections/dien-thoai">ĐIỆN THOẠI</a></li>
+                                    <li><a class="dropdown-item" href="/collections/may-tinh-bang">MÁY TÍNH BẢNG</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/collections/laptop">LAPTOP</a> </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Đăng nhập/Đăng ký</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-8 col-lg-3 position-relative">
+                        <a href="/" class="navbar-brand"><img src="./assets/imgs/logo.png" alt="Teck Store"></a>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-2">
+                        <a href="tel:19001267" class="text-reset text-decoration-none row align-items-center">
+                            <div class="col-3">
+                                <p class="m-0 fs-3"><i class="fa-solid fa-phone"></i></p>
+                            </div>
+                            <div class="col-9">
+                                <p class="m-0 text-nowrap">Điện thoại</p>
+                                <p class="text-primary m-0">09001267</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-2">
+                        <a href="mailto:hello@egany.com"
+                            class="text-reset text-decoration-none row g-0 align-items-center">
+                            <div class="col-3">
+                                <p class="m-0 fs-3"><i class="fa-regular fa-envelope"></i></p>
+                            </div>
+                            <div class="col-9">
+                                <p class="m-0">Email</p>
+                                <p class="text-primary m-0">hello@egany.com</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3 col-lg-3 order-lg-1">
+                        <div class="row g-0 text-center">
+                            <div class="col-6">
+                                <p class="fs-2 text-primary mb-0 mt-2">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p
+                                    class="position-relative rounded-circle d-inline-block fs-5 text-bg-primary mb-0 mt-3">
+                                    <i class="fa-brands fa-opencart"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle bg-black text-white rounded-circle fs-6 px-2">
+                                        0
+                                        <span class="visually-hidden">Item</span>
+                                    </span>
+                                </p>
+                            </div>
+                            <p class="m-0 col-6 d-none d-lg-block text-nowrap">CHI NHÁNH</p>
+                            <p class="m-0 col-6 d-none d-lg-block text-nowrap">GIỎ HÀNG</p>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler col-1 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-2x fa-ellipsis-vertical mt-3"></i>
+                    </button>
+                    <div class="col-lg-2">
+                        <div class="input-group my-4 rounded-0" role="search">
+                            <input class="form-control border-end-0 rounded-0" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn border border-start-0 rounded-0" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-
-
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcavas-nav">
+                        <div class="offcanvas-header position-relative">
+                            <button
+                                class="btn-offcavas navbar-toggler bg-primary border-0 rounded-0 position-absolute p-2 end-0 top-0 visible"
+                                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcavas-nav"
+                                aria-controls="offcavas-nav" aria-expanded="false" aria-label="Toggle offcanvas">
+                                <span class="text-white"><i class="fa-solid fa-bars"></i></span>
+                            </button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        TIVI
+                                    </a>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="/collections/tivi-sony">Tivi Sony</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-samsung">Tivi Samsung</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-tcl">Tivi TCL</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-lg">Tivi LG</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-toshiba">Tivi Toshiba</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-skyworth">Tivi SkyWorth</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-panasonic">Tivi
+                                                Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-vtb">Tivi VTB</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-sharp">Tivi Sharp</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tivi-asanzo">Tivi Asanzo</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        TỦ LẠNH
+                                    </a>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="/collections/tu-lanh-sanyo">Tủ lạnh Sanyo</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/tu-lanh-panasonic">Tủ lạnh
+                                                Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tu-lanh-sharp">Tủ lạnh Sharp</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/tu-lanh-toshiba">Tủ lạnh
+                                                Toshiba</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tu-lanh-hitachi">Tủ lạnh
+                                                Hitachi</a></li>
+                                        <li><a class="dropdown-item" href="/collections/tu-lanh-mitsubishi-electric">Tủ
+                                                lạnh MITSUBISHI ELECTRIC</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        MÁY LẠNH
+                                    </a>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-panasonic">Máy lạnh
+                                                Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-daikin">Máy lạnh
+                                                Daikin</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-lg">Máy lạnh LG</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-sharp">Máy lạnh
+                                                Sharp</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-mitsubishi-heavy">Máy
+                                                lạnh
+                                                MITSUBISHI</a></li>
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-samsung">Máy lạnh
+                                                Samsung</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-lanh-sanyo">Máy lạnh
+                                                Sanyo</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        GIA DỤNG
+                                    </a>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="/collections/ban-ui">Bàn ủi</a></li>
+                                        <li><a class="dropdown-item" href="/collections/bep-dien">Bếp điện</a></li>
+                                        <li><a class="dropdown-item" href="/collections/bep-gas">Bếp gas</a></li>
+                                        <li><a class="dropdown-item" href="/collections/binh-dun-sieu-toc">Bình đun siêu
+                                                tốc</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/binh-thuy-dien">Bình thủy
+                                                điện</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/bo-noi">Bộ nồi</a></li>
+                                        <li><a class="dropdown-item" href="/collections/lau-dien">Lẩu điện</a></li>
+                                        <li><a class="dropdown-item" href="/collections/lo-nuong">Lò nướng</a></li>
+                                        <li><a class="dropdown-item" href="/collections/lo-vi-song">Lò vi sóng</a></li>
+                                        <li><a class="dropdown-item" href="/collections/may-danh-trung">Máy đánh
+                                                trứng</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        MÁY GIẶT
+                                    </a>
+                                    <ul class="dropdown-menu rounded-0">
+                                        <li><a class="dropdown-item" href="/collections/may-giat-sanyo">Máy giặt
+                                                Sanyo</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-giat-toshiba">Máy giặt
+                                                Toshiba</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-giat-lg">Máy giặt LG</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-giat-panasonic">Máy giặt
+                                                Panasonic</a></li>
+                                        <li><a class="dropdown-item" href="/collections/may-giat-samsung">Máy giặt
+                                                Samsung</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/collections/may-giat-electrolux">Máy giặt
+                                                Electrolux</a></li>
+                                        <li><a class="dropdown-item" href="/collections/may-giat-sharp">Máy giặt
+                                                Sharp</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">MÁY NƯỚC NÓNG</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">ĐIỆN THOẠI</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="row g-0">
+                <div class="col-lg-8">
+                    <div id="carouselBannerIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselBannerIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselBannerIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselBannerIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselBannerIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/imgs/slideshow_1.jpg" class="d-block w-100" alt="1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/imgs/slideshow_2.jpg" class="d-block w-100" alt="2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/imgs/slideshow_3.jpg" class="d-block w-100" alt="3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/imgs/slideshow_4.jpg" class="d-block w-100" alt="4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBannerIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBannerIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img class="img-fluid w-100" src="./assets/imgs/banner_top_1.jpg" alt="Ads">
+                </div>
+            </section>
+            <section class="tivi my-2">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="w-100">
+                        <button
+                            class="border-0 w-100 bg-primary text-white py-2 d-flex justify-content-between align-items-center d-lg-none"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#tvNav" aria-controls="tvNav"
+                            aria-expanded="false" aria-label="Toggle Tv">
+                            <h5 class="m-0 ps-1">Tivi</h5>
+                            <i class="fa-solid fa-caret-down text-white d-block pe-2"></i>
+                        </button>
+                        <div class="collapse navbar-collapse nav-tabs border-primary" id="tvNav">
+                            <ul class="navbar-nav flex-nowrap ps-3">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-bg-primary"
+                                        aria-current="page" href="/collections/tivi-sony">Tivi</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-sony">Tivi Sony</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-samsung">Tivi
+                                        Samsung</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-tcl">Tivi TCL</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-lg">Tivi LG</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-toshiba">Tivi
+                                        Toshiba</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-skyworth">Tivi
+                                        SkyWorth</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tivi-panasonic">Tivi
+                                        Panasonic</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-4">
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -4%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tivi-led-samsung-ua40j5100-1-550x340-550x340_58ef3c44-d671-.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Android Tivi Sony 43 inch KDL-43W800C</h5>
+                                <p class="card-text">EGA-SKU-27
+                                    <span class="text-danger"> 13,900,000₫ </span>
+                                    <del>14,500,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay card z-1 rounded-0 border-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Android Tivi Sony 43
+                                            inch KDL-43W800C</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger"> 13,900,000₫ </span>
+                                        <del>14,500,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Màn hình: </strong><span>32 inch</span></li>
+                                        <li><strong>Chuẩn kết nối: </strong><span>HTMI</span></li>
+                                        <li><strong>Độ phân giải: </strong><span>HD</span></li>
+                                        <li><strong>Loại TV: </strong><span>TV LED</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="tulanh my-2">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="w-100">
+                        <button
+                            class="border-0 w-100 bg-primary text-white py-2 d-flex justify-content-between align-items-center d-lg-none"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#tlNav" aria-controls="tlNav"
+                            aria-expanded="false" aria-label="Toggle Tủ lạnh">
+                            <h5 class="m-0 ps-1">Tủ lạnh</h5>
+                            <i class="fa-solid fa-caret-down text-white d-block pe-2"></i>
+                        </button>
+                        <div class="collapse navbar-collapse nav-tabs border-success" id="tlNav">
+                            <ul class="navbar-nav flex-nowrap ps-3">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-bg-success"
+                                        aria-current="page" href="/collections/tivi-sony">Tủ lạnh</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tu-lanh-sanyo">Tủ lạnh
+                                        Sanyo</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tu-lanh-panasonic">Tủ lạnh
+                                        Panasonic</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tu-lanh-sharp">Tủ lạnh
+                                        Sharp</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/tu-lanh-toshiba">Tủ lạnh
+                                        Toshiba</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-4 mt-1">
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -10%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/tu-lanh-samsung-rt29k5532s8-sv-300x300_compact.png"
+                                class="card-img-top" alt="TiVi">
+                            <div class="card-body">
+                                <h5 class="card-title">Tủ lạnh Samsung 299 lít RT29K5532S8/SV</h5>
+                                <p class="card-text">EGA-SKU-011
+                                    <span class="text-danger">9,000,000₫</span>
+                                    <del>10,000,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none"
+                                            href="/products/android-tivi-sony-43-inch-kdl-43w800c">Tủ lạnh Samsung 299
+                                            lít RT29K5532S8/SV</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-27
+                                        <span class="text-danger">9,000,000₫</span>
+                                        <del>10,000,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Loại tủ: </strong><span>Tủ lạnh Inverter</span></li>
+                                        <li><strong>Sản xuất tại: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Tiện ích: </strong><span>Hai dàn lạnh</span></li>
+                                        <li><strong>Dung tích: </strong><span>299 lít</span></li>
+                                        <li><strong>Điện năng: </strong><span>~ 1.14 kW/ngày</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="giadung my-2">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="w-100">
+                        <button
+                            class="border-0 w-100 bg-primary text-white py-2 d-flex justify-content-between align-items-center d-lg-none"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#gdNav" aria-controls="gdNav"
+                            aria-expanded="false" aria-label="Toggle Tủ lạnh">
+                            <h5 class="m-0 ps-1">Gia dụng</h5>
+                            <i class="fa-solid fa-caret-down text-white d-block pe-2"></i>
+                        </button>
+                        <div class="collapse navbar-collapse nav-tabs border-warning" id="gdNav">
+                            <ul class="navbar-nav flex-nowrap ps-3">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-bg-warning"
+                                        aria-current="page" href="/collections/tivi-sony">Gia dụng</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/ban-ui">Bàn ủi</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/bep-dien">Bếp điện</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/bep-gas">Bếp gas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/binh-dun-sieu-toc">Bình đun
+                                        siêu
+                                        tốc</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/binh-thuy-dien">Bình thủy
+                                        điện</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/bo-noi">Bộ nồi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-4 mt-1">
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -29%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/ban-ui-hoi-nuoc-braun-ts755_compact.png" class="card-img-top"
+                                alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bàn ủi hơi nước BRAUN TS755</h5>
+                                <p class="card-text">EGA-SKU-035
+                                    <span class="text-danger">2,000,000₫</span>
+                                    <del>2,800,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bàn ủi
+                                            hơi nước BRAUN TS755</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-035
+                                        <span class="text-danger">2,000,000₫</span>
+                                        <del>2,800,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Mặt đế: </strong><span>Silicon</span></li>
+                                        <li><strong>Công suất: </strong><span>1600 W</span></li>
+                                        <li><strong>Loại: </strong><span>Bàn ủi hơi nước</span></li>
+                                        <li><strong>Thương hiệu: </strong><span>Hà Lan</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="nhabep my-2">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="w-100">
+                        <button
+                            class="border-0 w-100 bg-primary text-white py-2 d-flex justify-content-between align-items-center d-lg-none"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#nbNav" aria-controls="nbNav"
+                            aria-expanded="false" aria-label="Toggle Tủ lạnh">
+                            <h5 class="m-0 ps-1">Nhà bếp</h5>
+                            <i class="fa-solid fa-caret-down text-white d-block pe-2"></i>
+                        </button>
+                        <div class="collapse navbar-collapse nav-tabs border-info" id="nbNav">
+                            <ul class="navbar-nav flex-nowrap ps-3">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link text-bg-info"
+                                        aria-current="page" href="/collections/tivi-sony">Nhà bếp</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/ban-ui">Bàn ủi</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/bep-dien">Bếp điện</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/bep-gas">Bếp gas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/binh-dun-sieu-toc">Bình đun
+                                        siêu
+                                        tốc</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/binh-thuy-dien">Bình thủy
+                                        điện</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="/collections/bo-noi">Bộ nồi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 gy-4 mt-1">
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="product card border-0 position-relative">
+                            <span class="position-absolute top-0 start-0 py-1 badge rounded-0 bg-primary">
+                                -25%
+                                <span class="visually-hidden">Sale off</span>
+                            </span>
+                            <img src="./assets/imgs/bep-doi-hong-ngoai-sanaky-snk-202hgw_adc308ef-ec44-4e9b-712.png"
+                                class="card-img-top" alt="Bàn ủi">
+                            <div class="card-body">
+                                <h5 class="card-title">Bếp Đôi Hồng Ngoại Sanaky</h5>
+                                <p class="card-text">EGA-SKU-023
+                                    <span class="text-danger">2,350,000₫</span>
+                                    <del>3,250,000₫</del>
+                                </p>
+                                <a href="#" class="btn btn-success w-100 mb-1 rounded-0 d-lg-none">Thêm vào giỏ</a>
+                            </div>
+                            <div
+                                class="product-overlay z-1 card border-0 rounded-0 d-none position-absolute top-0 start-0 w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="text-reset text-decoration-none" href="#">Bếp Đôi
+                                            Hồng Ngoại Sanaky</a></h5>
+                                    <p class="card-text m-0">EGA-SKU-023
+                                        <span class="text-danger">2,350,000₫</span>
+                                        <del>3,250,000₫</del>
+                                    </p>
+                                    <hr class="m-0">
+                                    <ul class="list-unstyled">
+                                        <li><strong>Công suất: </strong><span>500W</span></li>
+                                        <li><strong>Xuất xứ: </strong><span>Hàn Quốc</span></li>
+                                        <li><strong>Bảo hành: </strong><span>24 tháng</span></li>
+                                    </ul>
+                                    <a href="#" class="btn btn-success w-100 mb-1 rounded-0">Thêm vào giỏ</a>
+                                    <a href="#" class="btn btn-danger w-100 rounded-0">Xem nhanh</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="brands">
+                <div class="row">
+                    <div class="col">
+                        <img src="./assets/imgs/popular_brand_img_1.png" class="img-fluid w-100">
+                    </div>
+                    <div class="col">
+                        <img src="./assets/imgs/popular_brand_img_2.png" class="img-fluid w-100">
+                    </div>
+                    <div class="col">
+                        <img src="./assets/imgs/popular_brand_img_3.png" class="img-fluid w-100">
+                    </div>
+                    <div class="col">
+                        <img src="./assets/imgs/popular_brand_img_4.png" class="img-fluid w-100">
+                    </div>
+                    <div class="col">
+                        <img src="./assets/imgs/popular_brand_img_5.png" class="img-fluid w-100">
+                    </div>
+                    <div class="col">
+                        <img src="./assets/imgs/popular_brand_img_6.png" class="img-fluid w-100">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container-fluid bg-secondary">
+                <div class="container">
+                    <div class="row align-items-center py-2 mt-3">
+                        <div class="col-lg-4 text-center mb-3">
+                            <p class="m-0 fw-bold fs-6 text-white"><i class="fa-regular fa-envelope fa-2x"></i> ĐĂNG KÝ
+                                EMAIL ĐỂ NHẬN NGAY VOUCHER</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Nhập email của bạn">
+                                <input type="button" class="btn btn-dark" value="Đăng ký">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center mt-3">
+                            <a href="#" class="d-inline-block bg-primary px-2 text-white"><i
+                                    class="fa-brands fa-facebook-f fa-3x"></i></a>
+                            <a href="#" class="d-inline-block bg-danger text-white"><i
+                                    class="fa-brands fa-google-plus-g fa-3x"></i></a>
+                            <a href="#" class="d-inline-block bg-info px-1 text-white"><i
+                                    class="fa-brands fa-twitter fa-3x"></i></a>
+                            <a href="#" class="d-inline-block bg-danger-subtle px-1 text-white"><i
+                                    class="fa-brands fa-yahoo fa-3x"></i></a>
+                            <a href="#" class="d-inline-block bg-info px-2 text-white"><i
+                                    class="fa-brands fa-pinterest-p fa-3x"></i></a>
+                            <a href="#" class="d-inline-block bg-primary px-1 text-white"><i
+                                    class="fa-solid fa-rss fa-3x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid text-white-50 bg-black py-3">
+                <div class="container">
+                    <div class="row row-cols-lg-5">
+                        <div class="col-12 mb-2 text-center text-lg-start col-lg">
+                            <img src="./assets/imgs/logo.png" alt="Logo" class="img-fluid">
+                            <p class="text-white-50">Chúng tôi tin chất lượng là dịch vụ tốt nhất.</p>
+                        </div>
+                        <div class="col-6 col-lg mb-2">
+                            <h6>Giới thiệu</h6>
+                            <ul>
+                                <li>Trang chủ</li>
+                                <li>Sản phẩm</li>
+                                <li>Giới thiệu</li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg mb-2">
+                            <h6>Hỗ trợ khách hàng</h6>
+                            <ul>
+                                <li>Tìm kiếm</li>
+                                <li>Giới thiệu</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg mb-2">
+                            <h6>Liên hệ</h6>
+                            <p>Kênh mua sắm trực tuyến giá tốt hàng đầu Việt Nam</p>
+                            <p><i class="fa-solid fa-location-dot"></i> 61/2 Quang Trung, P.10 Q. Gò Vấp, TP. HCM</p>
+                            <p><i class="fa-solid fa-phone"></i> (91) 8547 632521</p>
+                            <p><i class="fa-solid fa-envelope"></i> hello@egany.com</p>
+                        </div>
+                        <div class="col-6 col-lg mb-2">
+                            <h6>Được chứng nhận</h6>
+                            <img class="img-fluid" src="./assets/imgs/register_img.png" alt="register">
+                            <h6>Hình thức thanh toán</h6>
+                            <img class="img-fluid" src="./assets/imgs/payment_img.png" alt="payment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="contaner sticky-bottom d-lg-none text-center text-bg-success py-2">
+        <i class="fa-solid fa-phone"></i> Hotline 19000000
+    </div>
+    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 </body>
-
 </html>
