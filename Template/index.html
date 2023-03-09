@@ -32,6 +32,14 @@
         font-weight: bold;
     }
 
+    .navbar-brand span.fa-stack {
+        margin-left: -6px;
+    }
+
+    span.logo.fa-stack {
+        margin-left: -5px;
+    }
+
     @media (min-width: 992px) {
         .top-lg-50 {
             top: 50% !important;
@@ -39,6 +47,10 @@
 
         .translate-lg-n10 {
             transform: translate(-10%, -10%) !important;
+        }
+
+        .position-lg-absolute {
+            position: absolute !important;
         }
 
         .carousel-inner .carousel-item-end.active,
@@ -94,24 +106,23 @@
 
     .banner-footer {
         background: #348aff;
-        background: -moz-linear-gradient(-45deg,  #348aff 0%, #338aff 70%, #388dff 70%, #4896ff 70%, #4b98ff 70%, #4997ff 74%, #5fa3ff 74%, #5ea2ff 78%, #71adff 78%, #70acff 100%);
-        background: -webkit-linear-gradient(-45deg,  #348aff 0%,#338aff 70%,#388dff 70%,#4896ff 70%,#4b98ff 70%,#4997ff 74%,#5fa3ff 74%,#5ea2ff 78%,#71adff 78%,#70acff 100%);
-        background: linear-gradient(135deg,  #348aff 0%,#338aff 70%,#388dff 70%,#4896ff 70%,#4b98ff 70%,#4997ff 74%,#5fa3ff 74%,#5ea2ff 78%,#71adff 78%,#70acff 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348aff', endColorstr='#70acff',GradientType=1 );
+        background: -moz-linear-gradient(-45deg, #348aff 0%, #338aff 70%, #388dff 70%, #4896ff 70%, #4b98ff 70%, #4997ff 74%, #5fa3ff 74%, #5ea2ff 78%, #71adff 78%, #70acff 100%);
+        background: -webkit-linear-gradient(-45deg, #348aff 0%, #338aff 70%, #388dff 70%, #4896ff 70%, #4b98ff 70%, #4997ff 74%, #5fa3ff 74%, #5ea2ff 78%, #71adff 78%, #70acff 100%);
+        background: linear-gradient(135deg, #348aff 0%, #338aff 70%, #388dff 70%, #4896ff 70%, #4b98ff 70%, #4997ff 74%, #5fa3ff 74%, #5ea2ff 78%, #71adff 78%, #70acff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#348aff', endColorstr='#70acff', GradientType=1);
     }
-    
 </style>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#topNav">
     <header class="bg-page sticky-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container align-items-baseline">
                 <a class="navbar-brand" href="#">
-                    <span class="fa-stack">
+                    <span class="logo fa-stack text-primary">
                         <i class="fa-solid fa-square fa-stack-2x"></i>
                         <i class="fa-solid fa-book-open fa-stack-1x fa-inverse"></i>
                     </span>
-                    <span class="text-uppercase fw-bold">Learning</span>
+                    <span class="text-uppercase fw-bold align-middle">Learning</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav"
                     aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,7 +156,7 @@
             </div>
         </nav>
     </header>
-    <main class="container mt-5">
+    <main class="container">
         <section id="home" class="py-5">
             <div class="row mb-5">
                 <div class="col-12 col-lg-7">
@@ -181,142 +192,193 @@
             </div>
         </section>
         <section id="course" class="py-5">
-            <div class="row text-center">
+            <div class="row text-center mb-3">
                 <h1 class="banner-title fs-3">
                     Our Featured Courses
                 </h1>
                 <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, earum sequi
                     quidem fuga minus quia.</p>
             </div>
-            <div class="row row-cols-1 row-cols-lg-3 gy-4">
+            <div class="row row-cols-1 row-cols-lg-3 gy-4 align-items-stretch">
                 <div class="col">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4 h-100">
                         <img src="./assets/imgs/feature1.png" alt="Feature 1" class="img-fluid rounded-4 m-2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="hstack justify-content-between">
                                 <p class="rounded-2 bg-primary-subtle py-2 px-4">Development</p>
                                 <p class="text-primary fw-bold">$225</p>
                             </div>
-                            <p class="card-title fw-bold fs-5 mb-3">Become a professional designer be with passion &
-                                dignity</p>
-                            <div class="hstack justify-content-between">
-                                <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
-                                <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
-                            </div>
-                            <div class="hstack justify-content-between align-items-center">
-                                <p class="text-secondary m-0">5.0 <span
-                                        class="text-primary fs-3 align-middle">🟊🟊🟊🟊🟊</span> (2,5899)</p>
-                                <a class="btn btn-primary rounded-circle fs-5 px-2">🡢</a>
+                            <div class="vstack flex-grow-1">
+                                <p class="card-title fw-bold fs-5 mb-auto">Become a professional designer be with
+                                    passion &
+                                    dignity</p>
+                                <div class="hstack justify-content-between mt-3">
+                                    <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
+                                    <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
+                                </div>
+                                <div class="hstack justify-content-between align-items-center">
+                                    <p class="text-secondary m-0">5.0 <span class="text-primary align-middle">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i></span> (2,5899)</p>
+                                    <a class="btn btn-primary rounded-circle"><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4 h-100">
                         <img src="./assets/imgs/feature2.png" alt="Feature 2" class="img-fluid rounded-4 m-2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="hstack justify-content-between">
                                 <p class="rounded-2 bg-primary-subtle py-2 px-4">UI/UX Design</p>
                                 <p class="text-primary fw-bold">$180</p>
                             </div>
-                            <p class="card-title fw-bold fs-5 mb-3">Java programming A-Z fully classes with full task
-                            </p>
-                            <div class="hstack justify-content-between">
-                                <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
-                                <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
-                            </div>
-                            <div class="hstack justify-content-between align-items-center">
-                                <p class="text-secondary m-0">5.0 <span
-                                        class="text-primary fs-3 align-middle">🟊🟊🟊🟊🟊</span> (1,5559)</p>
-                                <a class="btn btn-primary rounded-circle fs-5 px-2">🡢</a>
+                            <div class="vstack flex-grow-1">
+                                <p class="card-title fw-bold fs-5 mb-auto">Java programming A-Z fully classes with full
+                                    task
+                                </p>
+                                <div class="hstack justify-content-between mt-3">
+                                    <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
+                                    <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
+                                </div>
+                                <div class="hstack justify-content-between align-items-center">
+                                    <p class="text-secondary m-0">5.0 <span class="text-primary align-middle">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i></span> (1,5559)</p>
+                                    <a class="btn btn-primary rounded-circle"><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4 h-100">
                         <img src="./assets/imgs/feature3.png" alt="Feature 3" class="img-fluid rounded-4 m-2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="hstack justify-content-between">
                                 <p class="rounded-2 bg-primary-subtle py-2 px-4">Art & Craft</p>
                                 <p class="text-primary fw-bold">$225</p>
                             </div>
-                            <p class="card-title fw-bold fs-5 mb-3">You will fell in love with this mustly if you have
-                                desire</p>
-                            <div class="hstack justify-content-between">
-                                <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
-                                <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
-                            </div>
-                            <div class="hstack justify-content-between align-items-center">
-                                <p class="text-secondary m-0">5.0 <span
-                                        class="text-primary fs-3 align-middle">🟊🟊🟊🟊🟊</span> (4,4000)</p>
-                                <a class="btn btn-primary rounded-circle fs-5 px-2">🡢</a>
+                            <div class="vstack flex-grow-1">
+                                <p class="card-title fw-bold fs-5 mb-auto">You will fell in love with this mustly if you
+                                    have
+                                    desire</p>
+                                <div class="hstack justify-content-between mt-3">
+                                    <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
+                                    <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
+                                </div>
+                                <div class="hstack justify-content-between align-items-center">
+                                    <p class="text-secondary m-0">5.0 <span class="text-primary align-middle">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i></span> (4,4000)</p>
+                                    <a class="btn btn-primary rounded-circle"><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4 h-100">
                         <img src="./assets/imgs/feature4.png" alt="Feature 4" class="img-fluid rounded-4 m-2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="hstack justify-content-between">
                                 <p class="rounded-2 bg-primary-subtle py-2 px-4">Lifestyle</p>
                                 <p class="text-primary fw-bold">$228</p>
                             </div>
-                            <p class="card-title fw-bold fs-5 mb-3">Be passionated with your regularly exercise and sty
-                                fit</p>
-                            <div class="hstack justify-content-between">
-                                <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
-                                <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
-                            </div>
-                            <div class="hstack justify-content-between align-items-center">
-                                <p class="text-secondary m-0">5.0 <span
-                                        class="text-primary fs-3 align-middle">🟊🟊🟊🟊🟊</span> (2,539)</p>
-                                <a class="btn btn-primary rounded-circle fs-5 px-2">🡢</a>
+                            <div class="vstack flex-grow-1">
+                                <p class="card-title fw-bold fs-5 mb-auto">Be passionated with your regularly exercise
+                                    and sty
+                                    fit</p>
+                                <div class="hstack justify-content-between mt-3">
+                                    <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
+                                    <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
+                                </div>
+                                <div class="hstack justify-content-between align-items-center">
+                                    <p class="text-secondary m-0">5.0 <span class="text-primary align-middle">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i></span> (2,539)</p>
+                                    <a class="btn btn-primary rounded-circle"><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4 h-100">
                         <img src="./assets/imgs/feature5.png" alt="Feature 5" class="img-fluid rounded-4 m-2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="hstack justify-content-between">
                                 <p class="rounded-2 bg-primary-subtle py-2 px-4">Business</p>
                                 <p class="text-primary fw-bold">$320</p>
                             </div>
-                            <p class="card-title fw-bold fs-5 mb-3">Grow your business by mastered in some technique</p>
-                            <div class="hstack justify-content-between">
-                                <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
-                                <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
-                            </div>
-                            <div class="hstack justify-content-between align-items-center">
-                                <p class="text-secondary m-0">5.0 <span
-                                        class="text-primary fs-3 align-middle">🟊🟊🟊🟊🟊</span> (2,3399)</p>
-                                <a class="btn btn-primary rounded-circle fs-5 px-2">🡢</a>
+                            <div class="vstack flex-grow-1">
+                                <p class="card-title fw-bold fs-5 mb-auto">Grow your business by mastered in some
+                                    technique</p>
+                                <div class="hstack justify-content-between mt-3">
+                                    <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
+                                    <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
+                                </div>
+                                <div class="hstack justify-content-between align-items-center">
+                                    <p class="text-secondary m-0">5.0 <span class="text-primary align-middle">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i></span> (2,3399)</p>
+                                    <a class="btn btn-primary rounded-circle"><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card rounded-4">
+                    <div class="card rounded-4 h-100">
                         <img src="./assets/imgs/feature6.png" alt="Feature 6" class="img-fluid rounded-4 m-2">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="hstack justify-content-between">
                                 <p class="rounded-2 bg-primary-subtle py-2 px-4">Marketing</p>
                                 <p class="text-primary fw-bold">$225</p>
                             </div>
-                            <p class="card-title fw-bold fs-5 mb-3">Top 10 tips to grow up audience to progress business
-                            </p>
-                            <div class="hstack justify-content-between">
-                                <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
-                                <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
-                            </div>
-                            <div class="hstack justify-content-between align-items-center">
-                                <p class="text-secondary m-0">5.0 <span
-                                        class="text-primary fs-3 align-middle">🟊🟊🟊🟊🟊</span> (5,45609)</p>
-                                <a class="btn btn-primary rounded-circle fs-5 px-2">🡢</a>
+                            <div class="vstack flex-grow-1">
+                                <p class="card-title fw-bold fs-5 mb-auto">Top 10 tips to grow up audience to progress
+                                    business
+                                </p>
+                                <div class="hstack justify-content-between mt-3">
+                                    <p class="text-secondary"><i class="fa-solid fa-book-open"></i> 20 lessons</p>
+                                    <p class="text-secondary"><i class="fa-solid fa-users"></i> 237 Students</p>
+                                </div>
+                                <div class="hstack justify-content-between align-items-center">
+                                    <p class="text-secondary m-0">5.0
+                                        <span class="text-primary align-middle">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span> (5,45609)
+                                    </p>
+                                    <a class="btn btn-primary rounded-circle"><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -353,36 +415,42 @@
                 </div>
                 <div class="col">
                     <div class="vstack">
-                        <div class="row align-items-center">
-                            <span class="col-auto flex-shrink-0 fa-stack fa-2x text-warning">
-                                <i class="fa-solid fa-square fa-stack-2x"></i>
-                                <i class="fa-solid fa-video fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h6 class="col-auto flex-grow-1 banner-title fs-6 m-0">Over 5.8k<br>Video Courses</h6>
+                        <div class="d-inline-block mx-auto mb-3 mt-5 mt-lg-0 mx-lg-0 mb-lg-0">
+                            <div class="row align-items-center">
+                                <span class="col-auto fa-stack fa-2x text-warning">
+                                    <i class="fa-solid fa-square fa-stack-2x"></i>
+                                    <i class="fa-solid fa-video fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h6 class="col-auto banner-title fs-6 m-0">Over 5.8k<br>Video Courses</h6>
+                            </div>
                         </div>
                         <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis itaque
                             asperiores officiis accusantium blanditiis eos aperiam aliquam laboriosam consequuntur
                             facere?</p>
                     </div>
                     <div class="vstack">
-                        <div class="row align-items-center">
-                            <span class="col-auto flex-shrink-0 fa-stack fa-2x text-success">
-                                <i class="fa-solid fa-square fa-stack-2x"></i>
-                                <i class="fa-solid fa-medal fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h6 class="col-auto flex-grow-1 banner-title fs-6 m-0">Over 5.8k<br>Video Courses</h6>
+                        <div class="d-inline-block mx-auto mb-3 mt-5 mt-lg-0 mx-lg-0 mb-lg-0">
+                            <div class="row align-items-center">
+                                <span class="col-auto fa-stack fa-2x text-success">
+                                    <i class="fa-solid fa-square fa-stack-2x"></i>
+                                    <i class="fa-solid fa-medal fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h6 class="col-auto banner-title fs-6 m-0">Over 5.8k<br>Video Courses</h6>
+                            </div>
                         </div>
                         <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis itaque
                             asperiores officiis accusantium blanditiis eos aperiam aliquam laboriosam consequuntur
                             facere?</p>
                     </div>
                     <div class="vstack">
-                        <div class="row align-items-center">
-                            <span class="col-auto flex-shrink-0 fa-stack fa-2x text-info">
-                                <i class="fa-solid fa-square fa-stack-2x"></i>
-                                <i class="fa-solid fa-check fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h6 class="col-auto flex-grow-1 banner-title fs-6 m-0">Over 5.8k<br>Video Courses</h6>
+                        <div class="d-inline-block mx-auto mb-3 mt-5 mt-lg-0 mx-lg-0 mb-lg-0">
+                            <div class="row align-items-center">
+                                <span class="col-auto fa-stack fa-2x text-info">
+                                    <i class="fa-solid fa-square fa-stack-2x"></i>
+                                    <i class="fa-solid fa-check fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h6 class="col-auto banner-title fs-6 m-0">Over 5.8k<br>Video Courses</h6>
+                            </div>
                         </div>
                         <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis itaque
                             asperiores officiis accusantium blanditiis eos aperiam aliquam laboriosam consequuntur
@@ -403,10 +471,14 @@
                 <div class="row mx-auto my-auto justify-content-center" data-bs-ride="carousel">
                     <div id="multi-carousel" class="carousel slide">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="0" class="indicator active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="1" class="indicator" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="2" class="indicator" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="3" class="indicator" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="0"
+                                class="indicator active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="1"
+                                class="indicator" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="2"
+                                class="indicator" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="3"
+                                class="indicator" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner" role="listbox">
                             <div class="carousel-item active">
@@ -467,54 +539,95 @@
                 <div class="col position-relative mt-5 mt-lg-0">
                     <img src="./assets/imgs/learn1.png" alt="Learn" class="img-fluid rounded-5">
                     <img src="./assets/imgs/learn2.png" alt="Learn"
-                        class="img-fluid mt-4 rounded-5 border border-5 position-absolute start-0 col-12 col-lg-6 top-100 top-lg-50 translate-lg-n10">
+                        class="img-fluid mt-4 rounded-5 border border-5 position-lg-absolute start-0 col-12 col-lg-6 top-100 top-lg-50 translate-lg-n10">
                 </div>
             </div>
         </section>
         <section id="contact" class="py-5">
-            <div class="banner-footer row row-cols-1 row-cols-lg-2 p-5 rounded-4 align-items-center">
-                <div class="col text-white">
-                    <h1 class="fw-bold">Ready to join...</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde.</p>
-                </div>
-                <div class="col text-center">
-                    <button class="btn btn-light px-5 py-2">Register Now</button>
+            <div class="container">
+                <div class="banner-footer row row-cols-1 row-cols-lg-2 p-5 rounded-4 align-items-center border-2">
+                    <div class="col text-white">
+                        <h1 class="fw-bold">Ready to join...</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde.</p>
+                    </div>
+                    <div class="col text-center">
+                        <button class="btn btn-light px-5 py-2">Register Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-lg-4">
-                <div class="col">
-                    <span class="fa-stack">
+            <div class="row row-cols-1 row-cols-lg-4 text-center text-lg-start">
+                <div class="col mt-5">
+                    <span class="logo fa-stack text-primary">
                         <i class="fa-solid fa-square fa-stack-2x"></i>
                         <i class="fa-solid fa-book-open fa-stack-1x fa-inverse"></i>
                     </span>
-                    <span class="text-uppercase fw-bold">Learning</span>
-                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, expedita! Lorem ipsum dolor sit amet.</p>
-                    <p class="">
-                        <a href="" class=""><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="" class=""><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="" class=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href="" class=""><i class="fa-brands fa-pinterest-p"></i></a>
+                    <span class="text-uppercase fw-bold align-middle">Learning</span>
+                    <p class="text-secondary mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
+                        expedita!
+                        Lorem ipsum dolor sit amet.</p>
+                    <p class="fs-4">
+                        <a href="" class="link-dark"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" class="link-primary ms-3"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="" class="link-dark ms-3"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="link-dark ms-3"><i class="fa-brands fa-pinterest-p"></i></a>
                     </p>
+                </div>
+                <div class="col mt-5">
+                    <p class="fw-bold">Category</p>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Privacy & Poilicy</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Terms & Condition</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Customer Support</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">For Business</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Support</a>
+                </div>
+                <div class="col mt-5">
+                    <p class="fw-bold">Useful Links</p>
+                    <a href="#" class="link-secondary text-decoration-none d-block">About Us</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Refer A Friend</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Scolarship</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Marketing</a>
+                    <a href="#" class="link-secondary text-decoration-none d-block">Free Courses</a>
+                </div>
+                <div class="col mt-5">
+                    <p class="fw-bold">Contact US</p>
+                    <div class="d-inline-block">
+                        <a href="#" class="link-secondary text-decoration-none row align-items-center">
+                            <i class="fa-solid fa-phone col-1"></i>
+                            <span class="col-auto">01719534287</span>
+                        </a>
+                        <a href="#" class="link-secondary text-decoration-none row align-items-center">
+                            <i class="fa-solid fa-location-dot col-1"></i>
+                            <span class="col-auto">Ranfpur, Bangladesh</span>
+                        </a>
+                        <a href="#" class="link-secondary text-decoration-none row align-items-center">
+                            <i class="fa-solid fa-envelope col-1"></i>
+                            <span class="col-auto">wpd565@gmail.com</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <p class="text-center text-secondary border-top p-3 m-0">&copy; Copyright 2021 Softfounder</p>
+    </footer>
     <script src="./assets/js/bootstrap.bundle.js"></script>
     <script>
-        let items = document.querySelectorAll('.carousel .carousel-item')
-        items.forEach((el) => {
-            const minPerSlide = 4
-            let next = el.nextElementSibling
-            for (var i = 1; i < minPerSlide; i++) {
-                if (!next) {
-                    next = items[0]
+        (() => {
+            let items = document.querySelectorAll('.carousel .carousel-item')
+            items.forEach((el) => {
+                const minPerSlide = 4
+                let next = el.nextElementSibling
+                for (var i = 1; i < minPerSlide; i++) {
+                    if (!next) {
+                        next = items[0]
+                    }
+                    let cloneChild = next.cloneNode(true)
+                    el.appendChild(cloneChild.children[0])
+                    next = next.nextElementSibling
                 }
-                let cloneChild = next.cloneNode(true)
-                el.appendChild(cloneChild.children[0])
-                next = next.nextElementSibling
-            }
-        })
-
+            })
+        })()
     </script>
 </body>
 
