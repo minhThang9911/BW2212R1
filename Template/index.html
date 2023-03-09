@@ -32,27 +32,6 @@
         font-weight: bold;
     }
 
-    .carousel-inner .carousel-item.active,
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev {
-        display: flex;
-    }
-
-
-    .carousel-inner .carousel-item>div {
-        display: none;
-    }
-
-    .carousel-inner .carousel-item>div:first-child {
-        display: block;
-    }
-
-
-    .carousel-inner .carousel-item-end,
-    .carousel-inner .carousel-item-start {
-        transform: translateX(0);
-    }
-
     @media (min-width: 992px) {
         .top-lg-50 {
             top: 50% !important;
@@ -73,6 +52,53 @@
         }
     }
 
+    @media (max-width: 991px) {
+        .carousel-inner .carousel-item>div {
+            display: none;
+        }
+
+        .carousel-inner .carousel-item>div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start {
+        transform: translateX(0);
+    }
+
+    #multi-carousel .indicator {
+        width: 0.5em;
+        height: 0.5em;
+        background-color: #9ECAF9;
+        border-radius: 50%;
+        transition: all ease 0.8s;
+    }
+
+    #multi-carousel .indicator.active {
+        width: 2em;
+        height: 0.5em;
+        background-color: #348AFF;
+        border-radius: 45%;
+    }
+
+    #multi-carousel .carousel-indicators {
+        transform: translateY(200%);
+    }
+
+    .banner-footer {
+        background: #348aff;
+        background: -moz-linear-gradient(-45deg,  #348aff 0%, #338aff 70%, #388dff 70%, #4896ff 70%, #4b98ff 70%, #4997ff 74%, #5fa3ff 74%, #5ea2ff 78%, #71adff 78%, #70acff 100%);
+        background: -webkit-linear-gradient(-45deg,  #348aff 0%,#338aff 70%,#388dff 70%,#4896ff 70%,#4b98ff 70%,#4997ff 74%,#5fa3ff 74%,#5ea2ff 78%,#71adff 78%,#70acff 100%);
+        background: linear-gradient(135deg,  #348aff 0%,#338aff 70%,#388dff 70%,#4896ff 70%,#4b98ff 70%,#4997ff 74%,#5fa3ff 74%,#5ea2ff 78%,#71adff 78%,#70acff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348aff', endColorstr='#70acff',GradientType=1 );
+    }
     
 </style>
 
@@ -373,85 +399,50 @@
                 <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, earum sequi
                     quidem fuga minus quia.</p>
             </div>
-
-
-            <div class="row mx-auto my-auto justify-content-center">
-                <div id="multi-carousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
+            <div class="my-5">
+                <div class="row mx-auto my-auto justify-content-center" data-bs-ride="carousel">
+                    <div id="multi-carousel" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="0" class="indicator active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="1" class="indicator" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="2" class="indicator" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#multi-carousel" data-bs-slide-to="3" class="indicator" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="col-lg-3">
+                                    <div class="card mx-3 rounded-3 border-5 border-white">
+                                        <img src="./assets/imgs/best1.png" class="img-fluid rounded-3">
                                     </div>
-                                    <div class="card-img-overlay">Slide 1</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
+                            <div class="carousel-item">
+                                <div class="col-lg-3">
+                                    <div class="card mx-3 rounded-3 border-5 border-white">
+                                        <img src="./assets/imgs/best2.png" class="img-fluid rounded-3">
                                     </div>
-                                    <div class="card-img-overlay">Slide 2</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
+                            <div class="carousel-item">
+                                <div class="col-lg-3">
+                                    <div class="card mx-3 rounded-3 border-5 border-white">
+                                        <img src="./assets/imgs/best3.png" class="img-fluid rounded-3">
                                     </div>
-                                    <div class="card-img-overlay">Slide 3</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">
+                            <div class="carousel-item">
+                                <div class="col-lg-3">
+                                    <div class="card mx-3 rounded-3 border-5 border-white">
+                                        <img src="./assets/imgs/best4.png" class="img-fluid rounded-3">
                                     </div>
-                                    <div class="card-img-overlay">Slide 4</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">
-                                    </div>
-                                    <div class="card-img-overlay">Slide 5</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-img">
-                                        <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
-                                    </div>
-                                    <div class="card-img-overlay">Slide 6</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev bg-transparent w-aut" href="#multi-carousel" role="button"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </a>
-                    <a class="carousel-control-next bg-transparent w-aut" href="#multi-carousel" role="button"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </a>
                 </div>
+
             </div>
-
-
-            <div class="row row-cols-1 row-cols-lg-2">
+            <div class="row row-cols-1 row-cols-lg-2 pt-5">
                 <div class="col">
                     <div class="">
                         <h1 class="banner-title fs-3">
@@ -479,10 +470,33 @@
                         class="img-fluid mt-4 rounded-5 border border-5 position-absolute start-0 col-12 col-lg-6 top-100 top-lg-50 translate-lg-n10">
                 </div>
             </div>
-
         </section>
         <section id="contact" class="py-5">
-
+            <div class="banner-footer row row-cols-1 row-cols-lg-2 p-5 rounded-4 align-items-center">
+                <div class="col text-white">
+                    <h1 class="fw-bold">Ready to join...</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, unde.</p>
+                </div>
+                <div class="col text-center">
+                    <button class="btn btn-light px-5 py-2">Register Now</button>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-4">
+                <div class="col">
+                    <span class="fa-stack">
+                        <i class="fa-solid fa-square fa-stack-2x"></i>
+                        <i class="fa-solid fa-book-open fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="text-uppercase fw-bold">Learning</span>
+                    <p class="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, expedita! Lorem ipsum dolor sit amet.</p>
+                    <p class="">
+                        <a href="" class=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" class=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="" class=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class=""><i class="fa-brands fa-pinterest-p"></i></a>
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
     <script src="./assets/js/bootstrap.bundle.js"></script>
