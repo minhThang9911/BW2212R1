@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "sass": "^1.58.3"
+  },
+  "name": "sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startdev": "sass --watch --embed-source-map src/scss:public/styles",
+    "startprod": "sass --no-source-map --style compressed src/scss:public/styles",
+    "q1": "sass --watch --embed-source-map Q1/assets/scss:Q1/assets/css",
+    "q2": "sass --watch --embed-source-map Q2/assets/scss:Q2/assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

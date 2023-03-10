@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html,
+body,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: tomato;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../src/scss/_base.scss%22,%22../../src/scss/main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;EAGI;;;AAGJ;AAAA;AAAA;AAAA;AAAA;AAAA;EAMI;;;AAGJ;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EASI;EACA;;;ACvBJ;EACI;EACA;EACA%22,%22file%22:%22main.css%22%7D */

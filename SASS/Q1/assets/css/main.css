@@ -1,0 +1,98 @@
+body > div:last-child > div, body > div:first-child > div:last-child(2), body > div:first-child > div:nth-child(2), body > div:first-child > div:first-child {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+}
+
+body > div:last-child > div > div, body > div:last-child > div > div:first-child, body > div:first-child > div:last-child(2) > div, body > div:first-child > div:nth-child(2) > div:last-child, body > div:first-child > div:nth-child(2) > div, body > div:first-child > div:nth-child(2) > div:first-child, body > div:first-child > div:first-child > div {
+  width: 8.33%;
+  margin: 0;
+  border-right: 1px solid grey;
+  height: 100%;
+  float: left;
+  background-color: #84c754;
+  background-color: #f1f1f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body > div:first-child {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+}
+body > div:first-child > div:first-child {
+  height: 90px;
+}
+body > div:first-child > div:first-child > div {
+  width: 100%;
+  background: #9933cc;
+  border-right-color: transparent;
+}
+body > div:first-child > div:nth-child(2) {
+  height: 230px;
+}
+body > div:first-child > div:nth-child(2) > div:first-child {
+  background-color: #ffffff;
+  border: none;
+  width: 25%;
+  padding-top: 15px;
+}
+body > div:first-child > div:nth-child(2) > div:first-child > div {
+  background-color: #33b5e5;
+  border: none;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+}
+body > div:first-child > div:nth-child(2) > div:first-child > div:last-child {
+  background-color: #33b5e5;
+  border: none;
+  width: 100%;
+  height: 15%;
+}
+body > div:first-child > div:nth-child(2) > div {
+  background-color: #ffffff;
+  border: none;
+}
+body > div:first-child > div:nth-child(2) > div:last-child {
+  background-color: #ffffff;
+  border: none;
+  width: 25%;
+  padding-top: 15px;
+}
+body > div:first-child > div:nth-child(2) > div:last-child > div {
+  background-color: #33b5e5;
+  border: none;
+  width: 100%;
+  height: 92%;
+}
+body > div:first-child > div:last-child(2) {
+  height: 50px;
+}
+body > div:first-child > div:last-child(2) > div {
+  width: 100%;
+  background: #0099cc;
+  border-right-color: transparent;
+}
+body > div:last-child {
+  opacity: 0.1;
+}
+body > div:last-child > div {
+  height: 370px;
+}
+body > div:last-child > div > div:first-child {
+  background-color: #ffffff;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+}
+body > div:last-child > div > div {
+  background-color: #ffffff;
+  border-right: 1px solid #000000;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AACA;EACI;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAUA;EACI;EACA;EACA;EACA;EACA;;AAEA;EAEI;;AAEA;EAEI;EACA;EACA;;AAIR;EAEI;;AAEA;EAEI;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;;AAIR;EAEI;EACA;;AAGJ;EAEI;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;AAKZ;EAEI;;AAEA;EAEI;EACA;EACA;;AAIZ;EACI;;AACA;EAEI;;AAEA;EAEI;EACA;EACA;;AAGJ;EAEI;EACA%22,%22file%22:%22main.css%22%7D */
