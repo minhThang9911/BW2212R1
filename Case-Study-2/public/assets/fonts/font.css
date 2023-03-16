@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "SFD";
+    src: url("sfd-bold.woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "SFD";
+    src: url("sfd-medium.woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "SFPD";
+    src: url("sfpd-bold.otf");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "SFPD";
+    src: url("sfpd-medium.otf");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "SFPD";
+    src: url("sfpd-regular.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "SFPD";
+    src: url("sfpd-semibold.otf");
+    font-style: normal;
+    font-weight: 600;
+}

@@ -1,30 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case study 2</title>
-    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./assets/libs/icon/fontawesome.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+
 </head>
-<body>
 
-    <header>
+<body class="">
+    <div class="container-fluid p-0">
+        <header>
+            <div class="p-1 d-none d-md-block sfd-medium top-menu">
+                <ul class="container list-group list-group-horizontal list-unstyled m-0">
+                    <li class="ms-3">
+                        <a class="text-decoration-none text-secondary text-uppercase" href="http://gamek.vn/">Gamek</a>
+                    </li>
+                    <li class="ms-3">
+                        <a class="text-decoration-none text-secondary text-uppercase"
+                            href="http://kenh14.vn/">Kenh14</a>
+                    </li>
+                    <li class="ms-3">
+                        <a class="text-decoration-none text-secondary text-uppercase"
+                            href="http://cafebiz.vn/">Cafebiz</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hstack menu-bar">
+                <nav class="navbar navbar-expand-md sfd-medium me-auto p-0 flex-fill pc-menu">
+                    <div class="container-fluid">
+                        <a class="navbar-brand flex-fill" href="#">
+                            <img class="d-none d-md-block logo" src="./assets/imgs/logogenk.svg" alt="Logo">
+                            <img class="d-md-none logo" src="./assets/imgs/logogenk_mob.svg" alt="Logo">
+                        </a>
+                        <div class="collapse navbar-collapse text-white text-uppercase">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
+                                <li class="nav-item">
+                                    <a class="nav-link text-reset" href="/mobile.chn" title="mobile">Mobile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-reset" href="/tin-ict.chn" title="Tin ICT">Tin ICT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-reset" href="/internet.chn" title="internet">Internet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-reset" href="/kham-pha.chn" title="Khám phá">Khám phá</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-reset" href="/xem-mua-luon.chn" title="Xem - Mua - Luôn">Xem
+                                        -
+                                        Mua -
+                                        Luôn</a>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="btn text-white" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#nav-menu" aria-controls="nav-menu">
+                                        <i class="fa-solid fa-bars fa-2x"></i>
+                                    </button>
+                                </li>
+                                <li class="nav-item search-box">
+                                    <form class="btn-group" role="search">
+                                        <input class="search-input" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                        <button class="btn btn-light search-btn" type="submit"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="mobile-menu-bar hstack d-md-none">
+                    <div class="vr"></div>
+                    <div class="btn text-white">
+                        <i class="fa-regular fa-file-lines fa-2x"></i>
+                        <p class="m-0">Mới</p>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="btn text-white">
+                        <i class="fa-solid fa-fire fa-2x"></i>
+                        <p class="m-0">Hot</p>
+                    </div>
+                    <div class="vr"></div>
+                    <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-menu"
+                        aria-controls="nav-menu">
+                        <i class="fa-solid fa-bars fa-2x"></i>
+                        <p class="m-0">Mở rộng</p>
+                    </button>
+                </nav>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="nav-menu" aria-labelledby="nav-menu">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <ul class="menu-expand-list">
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/mobile.chn" title="mobile">Mobile</a>
+                                </li>
+                                <li class="submenu-expand-item"><a href="/mobile/dien-thoai.chn" title="điện thoại">Điện
+                                        thoại</a></li>
+                                <li class="submenu-expand-item"><a href="/mobile/may-tinh-bang.chn"
+                                        title="máy tính bảng">Máy tính bảng</a></li>
+                            </ul>
+                            <a href="#" class="app-ios"></a>
+                        </li>
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/internet.chn"
+                                        title="internet">INTERNET</a></li>
+                                <li class="submenu-expand-item"><a href="/internet/digital-marketing.chn"
+                                        title="digital marketing">Digital Marketing</a></li>
+                                <li class="submenu-expand-item"><a href="/internet/media.chn" title="media">Media</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="app-android"></a>
+                        </li>
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/kham-pha.chn" title="khám phá">KHÁM
+                                        PHÁ</a></li>
+                                <li class="submenu-expand-item"><a href="/kham-pha/lich-su.chn" title="lịch sử">Lịch
+                                        sử</a></li>
+                                <li class="submenu-expand-item"><a href="/kham-pha/tri-thuc.chn" title="tri thức">Tri
+                                        thức</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/tra-da-cong-nghe.chn"
+                                        title="trà đá công nghệ">TRÀ ĐÁ CÔNG NGHỆ</a></li>
+                                <li class="submenu-expand-item"><a href="/tra-da-cong-nghe/tan-man.chn"
+                                        title="tản mạn">Tản mạn</a></li>
+                                <li class="submenu-expand-item"><a href="/tra-da-cong-nghe/y-tuong-sang-tao.chn"
+                                        title="ý tưởng sáng tạo">Ý tưởng sáng tạo</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/blockchain.chn"
+                                        title="Blockchain">Blockchain</a></li>
+                                <li class="submenu-expand-item"><a href="/blockchain/xu-huong.chn" title="Xu hướng">Xu
+                                        hướng</a></li>
+                                <li class="submenu-expand-item"><a href="/blockchain/cong-nghe.chn"
+                                        title="Công nghệ">Công nghệ</a></li>
+                                <li class="submenu-expand-item"><a href="/blockchain/nhan-vat.chn" title="Nhân vật">Nhân
+                                        vật</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/tin-ict.chn" title="tin ict">TIN
+                                        ICT</a></li>
+                                <li class="submenu-expand-item cate"><a href="/thu-thuat.chn" title="thủ thuật">THỦ
+                                        THUẬT</a></li>
+                                <li class="submenu-expand-item cate"><a href="/song.chn" title="sống">Sống</a>
+                                </li>
+                                <li class="submenu-expand-item cate"><a href="/nhom-chu-de/emagazine.chn"
+                                        class="emgz">EMAGAZINE</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-expand-item">
+                            <ul class="submenu-expand-list">
+                                <li class="submenu-expand-item cate"><a href="/apps-games.chn" title="app - games">APPS
+                                        - GAMES</a></li>
+                                <li class="submenu-expand-item cate"><a href="/do-choi-so.chn" title="đồ chơi số">ĐỒ
+                                        CHƠI SỐ</a></li>
+                                <li class="submenu-expand-item cate"><a href="/gia-dung.chn" title="Gia dụng">GIA
+                                        DỤNG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-    </header>
-
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
-
-    
+        </header>
+    </div>
     <script src="./assets/libs/bootstrap/bootstrap.bundle.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
+
 </html>
