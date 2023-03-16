@@ -7,99 +7,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case study 2</title>
     <link rel="stylesheet" href="./assets/css/main.css">
-
+    <script src="./assets/libs/jquery/jquery-3.6.4.min.js"></script>
 </head>
 
 <body class="">
     <div class="container-fluid p-0">
         <header>
-            <div class="p-1 d-none d-md-block sfd-medium top-menu">
-                <ul class="container list-group list-group-horizontal list-unstyled m-0">
-                    <li class="ms-3">
-                        <a class="text-decoration-none text-secondary text-uppercase" href="http://gamek.vn/">Gamek</a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-decoration-none text-secondary text-uppercase"
-                            href="http://kenh14.vn/">Kenh14</a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-decoration-none text-secondary text-uppercase"
-                            href="http://cafebiz.vn/">Cafebiz</a>
-                    </li>
-                </ul>
+            <div class="p-1 d-none d-lg-block sfd-medium top-menu">
+                <div class="container">
+                    <ul class="list-group list-group-horizontal list-unstyled m-0">
+                        <li class="ms-3">
+                            <a class="text-decoration-none text-secondary text-uppercase"
+                                href="http://gamek.vn/">Gamek</a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="text-decoration-none text-secondary text-uppercase"
+                                href="http://kenh14.vn/">Kenh14</a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="text-decoration-none text-secondary text-uppercase"
+                                href="http://cafebiz.vn/">Cafebiz</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="hstack menu-bar">
-                <nav class="navbar navbar-expand-md sfd-medium me-auto p-0 flex-fill pc-menu">
-                    <div class="container-fluid">
-                        <a class="navbar-brand flex-fill" href="#">
-                            <img class="d-none d-md-block logo" src="./assets/imgs/logogenk.svg" alt="Logo">
-                            <img class="d-md-none logo" src="./assets/imgs/logogenk_mob.svg" alt="Logo">
-                        </a>
-                        <div class="collapse navbar-collapse text-white text-uppercase">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
-                                <li class="nav-item">
-                                    <a class="nav-link text-reset" href="/mobile.chn" title="mobile">Mobile</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-reset" href="/tin-ict.chn" title="Tin ICT">Tin ICT</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-reset" href="/internet.chn" title="internet">Internet</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-reset" href="/kham-pha.chn" title="Khám phá">Khám phá</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-reset" href="/xem-mua-luon.chn" title="Xem - Mua - Luôn">Xem
-                                        -
-                                        Mua -
-                                        Luôn</a>
-                                </li>
-                                <li class="nav-item">
-                                    <button class="btn text-white" type="button" data-bs-toggle="offcanvas"
-                                        data-bs-target="#nav-menu" aria-controls="nav-menu">
-                                        <i class="fa-solid fa-bars fa-2x"></i>
-                                    </button>
-                                </li>
-                                <li class="nav-item search-box">
-                                    <form class="btn-group" role="search">
-                                        <input class="search-input" type="search" placeholder="Search"
-                                            aria-label="Search">
-                                        <button class="btn btn-light search-btn" type="submit"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
+            <div class="menu-bar">
+                <div class="container py-lg-3">
+                    <div class="hstack flex-nowrap">
+                            <a class="navbar-brand flex-fill" href="#">
+                                <img class="d-none d-lg-block logo" src="./assets/imgs/logogenk.svg" alt="Logo">
+                                <img class="d-lg-none logo" src="./assets/imgs/logogenk_mob.svg" alt="Logo">
+                            </a>
+                            <nav class="navbar navbar-expand-lg sfd-medium me-auto p-0 flex-fill pc-menu">
+                                <div class="collapse navbar-collapse text-white text-uppercase">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-nowrap">
+                                        <li class="nav-item">
+                                            <a class="nav-link text-reset" href="/mobile.chn" title="mobile">Mobile</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-reset" href="/tin-ict.chn" title="Tin ICT">Tin ICT</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-reset" href="/internet.chn" title="internet">Internet</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-reset" href="/kham-pha.chn" title="Khám phá">Khám phá</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-reset" href="/xem-mua-luon.chn" title="Xem - Mua - Luôn">Xem
+                                                -
+                                                Mua -
+                                                Luôn</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="btn text-white" type="button" data-bs-toggle="offcanvas"
+                                                data-bs-target="#nav-menu" aria-controls="nav-menu">
+                                                <i class="fa-solid fa-bars fa-2x"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="nav-item search-box ms-auto text-end d-none d-lg-block">
+                                        <form class="btn-group justify-content-end" role="search">
+                                            <input class="search-input form-control btn-light rounded-end-0" type="search"
+                                                placeholder="Search" aria-label="Search">
+                                            <button class="search-btn rounded-end" type="submit"><i
+                                                    class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </nav>
+                            <nav class="mobile-menu-bar hstack d-lg-none">
+                                <div class="vr"></div>
+                                <div class="btn text-white">
+                                    <i class="fa-regular fa-file-lines fa-2x"></i>
+                                    <p class="m-0">Mới</p>
+                                </div>
+                                <div class="vr"></div>
+                                <div class="btn text-white">
+                                    <i class="fa-solid fa-fire fa-2x"></i>
+                                    <p class="m-0">Hot</p>
+                                </div>
+                                <div class="vr"></div>
+                                <button class="btn text-white" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#nav-menu" aria-controls="nav-menu">
+                                    <i class="fa-solid fa-bars fa-2x"></i>
+                                    <p class="m-0">Mở rộng</p>
+                                </button>
+                            </nav>
                     </div>
-                </nav>
-                <nav class="mobile-menu-bar hstack d-md-none">
-                    <div class="vr"></div>
-                    <div class="btn text-white">
-                        <i class="fa-regular fa-file-lines fa-2x"></i>
-                        <p class="m-0">Mới</p>
-                    </div>
-                    <div class="vr"></div>
-                    <div class="btn text-white">
-                        <i class="fa-solid fa-fire fa-2x"></i>
-                        <p class="m-0">Hot</p>
-                    </div>
-                    <div class="vr"></div>
-                    <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-menu"
-                        aria-controls="nav-menu">
-                        <i class="fa-solid fa-bars fa-2x"></i>
-                        <p class="m-0">Mở rộng</p>
-                    </button>
-                </nav>
+                </div>
             </div>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="nav-menu" aria-labelledby="nav-menu">
+            <div class="side-menu" tabindex="-1" id="nav-menu" aria-labelledby="nav-menu">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="btn-group justify-content-end" role="search">
+                        <input class="form-control rounded-end-0 border-end-0" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn border border-start-0" type="submit"><i
+                                class="fa-solid fa-magnifying-glass fa-2x"></i></button>
                     </form>
                     <ul class="menu-expand-list">
                         <li class="menu-expand-item">

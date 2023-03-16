@@ -5,6 +5,17 @@
 @import "../fonts/font.css";
 @import "../libs/icon/fontawesome.css";
 
+@keyframes sideInRight {
+    0% {
+        transform: translateX(2000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .sfd-boid {
     font-family: SFD, SFPD, Helvetica, sans-serif;
     font-weight: 700;
@@ -26,7 +37,7 @@ header {
     }
     .menu-bar {
         background-color: b.$nav-lg-color;
-        height: b.$nav-height;
+        // height: b.$nav-height;
 
         .logo {
             height: calc(b.$nav-height - 2em);
@@ -34,26 +45,50 @@ header {
 
         .pc-menu {
             .search-box {
+                width: inherit;
                 .search-input {
-                    width: 0;
+                    opacity: 0;
+                    transition: all 0.3s;
+                    border: none !important;
                 }
-                &:hover .search-input {
-                    @extend .form-control;
-                    @extend .btn-light;
-                    @extend .rounded-end-0;
-                }
+
                 .search-btn {
                     color: $white;
                     background-color: transparent;
-                    border: none;
+                    border: none !important;
+                    flex-grow: 0;
+                    transition: all 0.3s;
+                }
+
+                &:hover .search-input {
+                    opacity: 1;
+                }
+                &:hover .search-btn {
+                    background-color: $white;
+                    color: $black;
                 }
             }
-
         }
 
-        @include media-breakpoint-down(md) {
+        @include media-breakpoint-down(lg) {
             background-color: b.$nav-color;
-            
+        }
+    }
+    .side-menu {
+        @include media-breakpoint-down(lg) {
+            position: fixed;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            z-index: 1045;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            visibility: hidden;
+            background-clip: padding-box;
+            outline: 0;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
         }
     }
 }
