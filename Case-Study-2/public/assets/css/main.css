@@ -12345,6 +12345,24 @@ textarea.form-control-lg {
     opacity: 1;
   }
 }
+@keyframes sideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .sfd-boid {
   font-family: SFD, SFPD, Helvetica, sans-serif;
   font-weight: 700;
@@ -12369,48 +12387,134 @@ header .menu-bar {
 header .menu-bar .logo {
   height: 3em;
 }
-header .menu-bar .pc-menu .search-box {
+header .menu-bar .search-box {
   width: inherit;
 }
-header .menu-bar .pc-menu .search-box .search-input {
+header .menu-bar .search-box .search-input {
   opacity: 0;
   transition: all 0.3s;
   border: none !important;
 }
-header .menu-bar .pc-menu .search-box .search-btn {
+header .menu-bar .search-box .search-btn {
   color: #fff;
   background-color: transparent;
   border: none !important;
   flex-grow: 0;
   transition: all 0.3s;
+  padding-right: 1em;
 }
-header .menu-bar .pc-menu .search-box:hover .search-input {
+header .menu-bar .search-box:hover .search-input {
   opacity: 1;
 }
-header .menu-bar .pc-menu .search-box:hover .search-btn {
+header .menu-bar .search-box:hover .search-btn {
   background-color: #fff;
   color: #000;
+}
+@media (min-width: 992px) {
+  header .menu-bar .btn-offcavas:hover > .side-menu {
+    display: block;
+  }
+  header .menu-bar .btn-offcavas:hover .fa-bars::before {
+    color: #dc3545 !important;
+    content: "\f00d";
+    transition: all 0.5s;
+  }
+  header .menu-bar .btn-offcavas .btn-menu {
+    position: relative;
+  }
+  header .menu-bar .btn-offcavas .btn-menu::after {
+    content: "";
+    position: absolute;
+    width: 3em;
+    height: 2em;
+    top: 100%;
+    left: 0;
+  }
 }
 @media (max-width: 991.98px) {
   header .menu-bar {
     background-color: #CF1218;
   }
+  header .menu-bar .fa-bars {
+    font-size: 2em;
+  }
+}
+@media (min-width: 992px) {
+  header .side-menu {
+    display: none;
+    position: absolute;
+    top: 5em;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    padding: 2em 2em;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn ease-in 0.2s;
+  }
+  header .side-menu .side-menu__body {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  header .side-menu .side-menu__body a {
+    text-decoration: none;
+    color: #000;
+  }
+  header .side-menu .side-menu__item .side-menu__item--header {
+    position: relative;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1em;
+  }
+  header .side-menu .side-menu__item .side-menu__item--header::after {
+    content: "\f105";
+    display: block;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #dc3545;
+    position: absolute;
+    top: 0;
+    right: -0.8em;
+  }
 }
 @media (max-width: 991.98px) {
   header .side-menu {
-    position: fixed;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    z-index: 1045;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    visibility: hidden;
-    background-clip: padding-box;
-    outline: 0;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
+    width: 100% !important;
+    top: 5em !important;
+    padding: 0 2em 1em;
+    text-transform: uppercase;
+  }
+  header .side-menu a {
+    text-decoration: none;
+    color: inherit;
+  }
+  header .side-menu .side-menu-mobile .tab-chuyen-muc li {
+    background-color: #f0f0f0;
+    width: 40%;
+    padding: 1em 0;
+    border-radius: 1em;
+    margin: 0.5em;
+  }
+  header .side-menu .side-menu-mobile .tab-khac .avatar-channel {
+    background-image: url(../imgs/xgenk_sprite.png);
+    background-repeat: no-repeat;
+    height: 46px;
+    width: 46px;
+  }
+  header .side-menu .side-menu-mobile .tab-khac .linkhay {
+    background-position: 0 -47px;
+  }
+  header .side-menu .side-menu-mobile .tab-khac .soha {
+    background-position: 0 -91px;
+  }
+  header .side-menu .side-menu-mobile .tab-khac .afamily {
+    background-position: 0 -230px;
+  }
+  header .side-menu .side-menu-mobile .tab-khac .biz {
+    background-position: 0 -277px;
+  }
+  header .side-menu .side-menu-mobile .tab-khac .cafef {
+    background-position: 0 -327px;
   }
 }
 

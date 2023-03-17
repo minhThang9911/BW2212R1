@@ -16,6 +16,26 @@
     }
 }
 
+@keyframes sideInTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .sfd-boid {
     font-family: SFD, SFPD, Helvetica, sans-serif;
     font-weight: 700;
@@ -37,47 +57,152 @@ header {
     }
     .menu-bar {
         background-color: b.$nav-lg-color;
-        // height: b.$nav-height;
-
         .logo {
             height: calc(b.$nav-height - 2em);
         }
 
-        .pc-menu {
-            .search-box {
-                width: inherit;
-                .search-input {
-                    opacity: 0;
-                    transition: all 0.3s;
-                    border: none !important;
-                }
+        .search-box {
+            width: inherit;
+            .search-input {
+                opacity: 0;
+                transition: all 0.3s;
+                border: none !important;
+            }
 
-                .search-btn {
-                    color: $white;
-                    background-color: transparent;
-                    border: none !important;
-                    flex-grow: 0;
-                    transition: all 0.3s;
-                }
+            .search-btn {
+                color: $white;
+                background-color: transparent;
+                border: none !important;
+                flex-grow: 0;
+                transition: all 0.3s;
+                padding-right: 1em;
+            }
 
-                &:hover .search-input {
-                    opacity: 1;
+            &:hover .search-input {
+                opacity: 1;
+            }
+            &:hover .search-btn {
+                background-color: $white;
+                color: $black;
+            }
+        }
+
+        .btn-offcavas {
+            @include media-breakpoint-up(lg) {
+                &:hover > .side-menu {
+                    display: block;
                 }
-                &:hover .search-btn {
-                    background-color: $white;
+                &:hover .fa-bars::before {
+                    color: $red !important;
+                    content: "\f00d";
+                    transition: all 0.5s;
+                }
+                .btn-menu {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 3em;
+                        height: 2em;
+                        top: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(lg) {
+            background-color: b.$nav-color;
+            .fa-bars {
+                font-size: 2em;
+            }
+        }
+    }
+    .side-menu {
+        @include media-breakpoint-up(lg) {
+            display: none;
+            position: absolute;
+            top: b.$nav-height;
+            left: 0;
+            right: 0;
+            background-color: b.$offcavas-bg;
+            padding: 2em 2em;
+            box-shadow: 1px 1px 20px 5px rgba($black, 0.5);
+            animation: fadeIn ease-in 0.2s;
+            .side-menu__body {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                a {
+                    text-decoration: none;
                     color: $black;
+                }
+            }
+            .side-menu__item {
+                .side-menu__item--header {
+                    position: relative;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid $black;
+                    margin-bottom: 1em;
+
+                    &::after {
+                        content: "\f105";
+                        display: block;
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        color: $red;
+                        position: absolute;
+                        top: 0;
+                        right: -0.8em;
+                    }
                 }
             }
         }
 
         @include media-breakpoint-down(lg) {
-            background-color: b.$nav-color;
+            width: 100% !important;
+            top: b.$nav-height !important;
+            padding: 0 2em 1em;
+            text-transform: uppercase;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .side-menu-mobile {
+                .tab-chuyen-muc {
+                    li {
+                        background-color: b.$mobile-nav-bg-color;
+                        width: 40%;
+                        padding: 1em 0;
+                        border-radius: 1em;
+                        margin: 0.5em;
+                    }
+                }
+                .tab-khac {
+                    .avatar-channel {
+                        background-image: url(../imgs/xgenk_sprite.png);
+                        background-repeat: no-repeat;
+                        height: 46px;
+                        width: 46px;
+                    }
+                    .linkhay {
+                        background-position: 0 -47px;
+                    }
+                    .soha {
+                        background-position: 0 -91px;
+                    }
+                    .afamily {
+                        background-position: 0 -230px;
+                    }
+                    .biz {
+                        background-position: 0 -277px;
+                    }
+                    .cafef {
+                        background-position: 0 -327px;
+                    }
+                }
+            }
         }
-    }
-    .side-menu {
-        @include media-breakpoint-down(lg) {
-            
-        }
-        
     }
 }
