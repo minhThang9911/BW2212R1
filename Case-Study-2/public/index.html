@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case study 2</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
@@ -30,7 +31,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="menu-bar position-relative">
+            <div class="menu-bar sticky-top">
                 <div class="container py-lg-3">
                     <div class="hstack flex-nowrap">
                         <a class="navbar-brand flex-fill me-3" href="#">
@@ -38,7 +39,7 @@
                             <img class="d-lg-none logo" src="./assets/imgs/logogenk_mob.svg" alt="Logo">
                         </a>
                         <nav class="hstack sfd-medium me-auto p-0 flex-fill ">
-                            <div class="hstack text-white">
+                            <div class="hstack text-white ms-auto">
                                 <ul class="hstack list-unstyled me-auto mb-2 mb-lg-0 text-nowrap">
                                     <li class="pc-menu d-none d-lg-block text-uppercase">
                                         <ul class="hstack list-unstyled ">
@@ -81,7 +82,7 @@
                                         </div>
                                         <div class="vr"></div>
                                     </li>
-                                    <li class="me-3">
+                                    <li class="">
                                         <div class="btn-offcavas">
                                             <button class="btn text-white btn-menu" type="button"
                                                 data-bs-toggle="offcanvas" data-bs-target="#nav-menu"
@@ -89,8 +90,8 @@
                                                 <i class="fa-solid fa-bars"></i>
                                                 <p class="m-0 d-lg-none">Mở rộng</p>
                                             </button>
-                                            <div class="side-menu show" tabindex="-1" id="nav-menu"
-                                                data-bs-backdrop="false" aria-labelledby="nav-menu">
+                                            <div class="side-menu" tabindex="-1" id="nav-menu" data-bs-backdrop="false"
+                                                aria-labelledby="nav-menu">
                                                 <div class="offcanvas-header d-lg-none">
                                                     <form class="btn-group mx-auto" role="search">
                                                         <input class="form-control rounded-end-0 border-end-0"
@@ -188,8 +189,8 @@
                                                                 <li class="side-menu__item--header"><a
                                                                         href="/thu-thuat.chn" title="thủ thuật">THỦ
                                                                         THUẬT</a></li>
-                                                                <li class="side-menu__item--header"><a href="/song.chn"
-                                                                        title="sống">Sống</a>
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/song.chn">Sống</a>
                                                                 </li>
                                                                 <li class="side-menu__item--header"><a
                                                                         href="/nhom-chu-de/emagazine.chn"
@@ -221,17 +222,17 @@
                                                 </div>
                                                 <div class="side-menu-mobile d-lg-none">
                                                     <ul class="tab-menu nav nav-tabs">
-                                                        <li class="nav-item">
+                                                        <li class="nav-item menu-chuyenmuc">
                                                             <a class="nav-link active" aria-current="page"
                                                                 href="#">Chuyên mục</a>
                                                         </li>
-                                                        <li class="nav-item">
+                                                        <li class="nav-item menu-khac">
                                                             <a class="nav-link" href="#">Khác</a>
                                                         </li>
                                                     </ul>
                                                     <div class="tab-contents">
                                                         <ul
-                                                            class="tab-chuyen-muc list-unstyled row text-center justify-content-center mt-1">
+                                                            class="tab-chuyen-muc active list-unstyled row text-center justify-content-center mt-1">
                                                             <li><a href="/mobile.chn">Mobile</a></li>
                                                             <li><a href="/internet.chn">Internet</a></li>
                                                             <li><a href="/tin-ict.chn">Tin ICT</a> </li>
@@ -258,7 +259,8 @@
                                                             <li><a class="row" href="http://linkhay.com"><span
                                                                         class="avatar-channel linkhay"></span>
                                                                     <div class="col-8">
-                                                                        <p>LinkHay.com</p><p class="des">Cộng
+                                                                        <p>LinkHay.com</p>
+                                                                        <p class="des">Cộng
                                                                             đồng chia sẻ tin tức</p>
                                                                     </div>
                                                                 </a></li>
@@ -296,6 +298,31 @@
                                                                 </a></li>
                                                         </ul>
                                                     </div>
+                                                    <div class="w-100 mt-2 text-wrap">
+                                                        <div class="hstack justify-content-between">
+                                                            <h1 class="fw-bold">GenK</h1>
+                                                            <a href="https://www.vccorp.vn/"
+                                                                title="Vận hành bởi VCCorp">
+                                                                <img class="img-fluid"
+                                                                    src="./assets/imgs/vccorp-m.png"></a>
+                                                        </div>
+
+                                                        <br>
+                                                        <div>Chịu trách nhiệm quản lý nội dung:<br>Bà Nguyễn Bích Minh
+                                                        </div>
+                                                        <div>© Copyright 2010 - 2023 - Công ty Cổ phần VCCorp</div>
+                                                        <p>
+                                                            Tầng 17, 19, 20, 21 Toà nhà Center Building - Hapulico
+                                                            Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.<br>
+                                                            Điện thoại: 024.39743410, máy lẻ 300. Email: info@genk.vn
+                                                        </p>
+                                                        <p>Hỗ trợ quảng cáo: <a href="tel:0794463333">0794463333</a> -
+                                                            <a href="tel:0961984388">0961984388</a>
+                                                        </p>
+                                                        <p>Giấy phép thiết lập trang thông tin điện tử tổng hợp trên
+                                                            mạng số 460/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội
+                                                            cấp ngày 03/02/2016</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -311,35 +338,1293 @@
                                 </div>
                             </div>
                         </nav>
-
                     </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container pt-5">
+                <div class="page-content text-wrap">
+                    <div class="row g-4">
+                        <div class="col col-12 col-lg-8">
+                            <a href="./new1.html" class="vstack">
+                                <img class="w-100 rounded-1"
+                                    src="./assets/imgs/avatar1679046388307-16790463898641379911213.jpg">
+                                <h2>Bổ nhiệm AI làm 'nữ sếp tổng'
+                                    được nửa năm, công ty game ăn nên làm ra, tăng trưởng đột phá trên sàn chứng
+                                    khoán</h2>
+                            </a>
+                            <div class="row row-cols-1 row-cols-lg-2">
+                                <div class="col">
+                                    <a href="./new1.html" class="vstack">
+                                        <img class="w-100 rounded-1"
+                                            src="./assets/imgs/avatar1679025923882-16790259243602139907987.jpeg">
+                                        <h4>Nước mắt nhân viên Meta: Trống rỗng đọc email sa
+                                            thải lúc 5h sáng, quản lý lương 550.000 USD/ năm cũng không thoát khỏi liên
+                                            luỵ</h4>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="./new1.html" class="vstack">
+                                        <img class="w-100 rounded-1"
+                                            src="./assets/imgs/avatar1679047529135-16790475299091052255927.jpg">
+                                        <h4>Lạm phát khiến nhiều chủ sở hữu xe điện ngày
+                                            càng thất vọng với việc sạc tại nhà</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4">
+                            <a href="./new1.html" class="vstack">
+                                <img class="w-100 rounded-1"
+                                    src="./assets/imgs/avatar1679036250427-1679036255461461322180.png">
+                                <h4>Một con chip của Intel 'ngốn' tới gần 2 Kilowatt
+                                    điện khi hoạt động, làm được điều mà không CPU nào đạt được</h4>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679036975122-16790369755281617158479.jpg">
+                                </div>
+                                <h4 class="col-7 p-0 text-wrap text-truncate fs-lg-6">Google phát hiện 18 lỗ hổng trong
+                                    chip
+                                    modem Exynos của Samsung, hàng chục điện thoại và thiết bị đeo bị
+                                    ảnh hưởng</h4>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/img6251-1678954919904382084453-56-0-1306-2000-crop-1678954935074743094981.jpg">
+                                </div>
+                                <h4 class="col-7 p-0 text-wrap text-truncate fs-lg-6">Đây là Samsung Galaxy A 2023:
+                                    thiết kế
+                                    theo chuẩn dòng S, camera "xịn" đi kèm cấu hình chuyên chơi game</h4>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679019836336-16790198421982059549766.jpg">
+                                </div>
+                                <h4 class="col-7 p-0 text-wrap text-truncate fs-lg-6">Realme C55 ra mắt đi kèm đầy đủ
+                                    trang bị
+                                    cho người mua làm tài xế công nghệ, giá chưa tới 5 triệu</h4>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1678938408288-1678938408692124612903.png">
+                                </div>
+                                <h4 class="col-7 p-0 text-wrap text-truncate fs-lg-6">Điều gì khiến cho Đảo rắn trở
+                                    thành nơi
+                                    đáng sợ nhất trên Trái đất?</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <h5 class="d-inline-block text-uppercase fw-bold border-2 border-bottom border-danger my-0">đáng
+                            chú ý</h5>
+                        <div class="row row-cols-1 row-cols-lg-4 py-3 border-top border-bottom">
+                            <div class="col">
+                                <a href="./new1.html" class="vstack">
+                                    <img class="w-100 rounded-1"
+                                        src="./assets/imgs/dave-farrow-against-a-yellow-background-with-his-name-above-his-head-book-art-1678705210381225569214-0-43-675-1123-crop-16787052223871406478184.jpg">
+                                    <a href="/song.chn" class="d-block my-1">Sống</a>
+                                    <h4>Tăng hiệu suất học và làm việc của não bộ lên gấp 3 lần,
+                                        nhờ phương pháp này của kỷ lục gia Guinness</h4>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="./new1.html" class="vstack">
+                                    <img class="w-100 rounded-1"
+                                        src="./assets/imgs/utbrq245rh-1678163441979353182696-1678164111083-1678164111213227572861-122-0-1372-2000-crop-16781641346971620637791.jpg">
+                                    <a href="/song.chn" class="d-block my-1">Xem - Mua -
+                                        Luôn</a>
+                                    <h4>Cáp quang đứt gần hết nhưng đây là lý do mạng 4G, 5G vẫn
+                                        nhanh như bình thường</h4>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="./new1.html" class="vstack">
+                                    <img class="w-100 rounded-1"
+                                        src="./assets/imgs/avatar1678369996323-1678369996916935421247.jpg">
+                                    <a href="/song.chn" class="d-block my-1">Đồ chơi số</a>
+                                    <h4>Trang bị 8 nhân nhưng CPU laptop mới của AMD vẫn 'đấu'
+                                        ngang ngửa CPU 16 nhân của Intel, tiêu thụ điện lại ít hơn đáng kể</h4>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="./new1.html" class="vstack">
+                                    <img class="w-100 rounded-1"
+                                        src="./assets/imgs/avatar1678249386157-16782493863771704637587-0-46-675-1126-crop-16782496389251378687483.jpg">
+                                    <a href="/song.chn" class="d-block my-1">Trà đá công
+                                        nghệ</a>
+                                    <h4>Sa vào “cuộc hôn nhân bất hạnh nhất thế giới” với Samsung,
+                                        Apple vùng vẫy "ly hôn" trong vô vọng</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col">
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679115435835-16791154359461648082265.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Cha
+                                        mẹ đứng tên thuê bao cho con thì SIM có bị khóa sau ngày 31/3 hay không?</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Từ nay đến 31/3, nhà
+                                        mạng sẽ nhắn tin nhiều lần cho các
+                                        thuê bao chưa đúng thông tin trong Cơ sở dữ liệu quốc gia về dân cư. Nếu không
+                                        cập nhật, người dùng có thể bị khóa liên lạc.</p>
+                                    <p class="text-secondary m-0"> 23 phút trước </p>
+                                </div>
+                            </a>
+
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679115428985-1679115429150128470939.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Hàng
+                                        loạt lãnh đạo cấp cao nghỉ việc, chuyện gì đang xảy ra ở Apple?</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Bloomberg nhận định,
+                                        Apple đang phải đối mặt với một làn
+                                        sóng các nhân sự điều hành cấp cao nghỉ việc nhiều chưa từng thấy.</p>
+                                    <p class="text-secondary m-0">1 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679114760411-167911476117071301290.jpeg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">TikToker
+                                        chê các ngành học 'vô dụng': Hành vi trái đạo đức, cần xử phạt nặng</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Chuyên gia cho rằng,
+                                        việc các TikToker tuyên truyền thông
+                                        tin tư vấn, định hướng nghề nghiệp sai lệch, gây sốc là hành vi trái đạo đức,
+                                        cần có hướng xử lý ngay.</p>
+                                    <p class="text-secondary m-0">1 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/photo1679048398582-16790483986731882209815-16791148633182020421095.jpeg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Trà đá công nghệ</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Tính
+                                        toán bán xe điện giá rẻ từ 2006, Elon Musk rơi vào thế "trên đe dưới búa"
+                                        sau 17 năm: Vừa không ra nổi dòng xe rẻ nào, lại phải đấu tay bo với BMW và
+                                        Mercedes</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Với giá bán trung bình
+                                        hơn 65.000 USD, Tesla được cho là
+                                        sẽ phải cạnh tranh với BMW và Mercedes thay vì Honda hay Ford.</p>
+                                    <p class="text-secondary m-0">2 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679110086366-167911008700579134829.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Không
+                                        yêu cầu doanh nghiệp phải cập nhật thông tin Căn cước công dân</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Tổng cục Thuế cho biết
+                                        thông báo "doanh nghiệp phải hoàn
+                                        thành thủ tục cập nhật CCCD gắn chip cho người đại diện theo pháp luật trên Đăng
+                                        ký kinh doanh" là giả mạo.</p>
+                                    <p class="text-secondary m-0">2 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679109276711-16791092769151514912144.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Apps/Games</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Xuất
+                                        hiện vật phẩm game được mua với giá siêu đắt, gần 4 tỷ đồng vì lý do bất
+                                        ngờ</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Có lẽ ít người trong
+                                        số chúng ta tưởng tượng được việc một
+                                        game thủ có thể bỏ ra số tiền lớn như vậy cho vật phẩm trong trò chơi.</p>
+                                    <p class="text-secondary m-0">2 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679109969216-16791099693711538135410.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Cảnh
+                                        giác trước các số điện thoại lạ "mời" chuẩn hóa thông tin thuê bao</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">VinaPhone cho biết,
+                                        nhà mạng chỉ thực hiện thông báo đến
+                                        các khách hàng nằm trong diện cần phải kiểm tra, chuẩn hóa thông tin thuê bao
+                                        thông qua một số kênh chính thức.</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679109113632-16791091139001054839690.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0"><img class="w-50"
+                                            src="./assets/imgs/ai-1-16733483554931072076210.png"
+                                            alt="Trí tuệ nhân tạo">Apps/Games</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">AI
+                                        biến loạt mỹ nhân anime thành người thật khiến ai thấy cũng mê</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Khả năng tạo ảnh minh
+                                        họa từ văn bản của AI ngày càng
+                                        khiến mọi người kinh ngạc.</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679048828164-16790488289971953888991.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Xem
+                                        - Mua - Luôn</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Những
+                                        ưu điểm nổi bật của Redroad G10 so với robot hút bụi khác</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Redroad G10 là sản
+                                        phẩm robot hút bụi mới nhất đến từ
+                                        thương hiệu Redroad. Đây là mẫu robot được tích hợp nhiều công nghệ thông minh,
+                                        nhằm mang đến cho người sử dụng một cuộc sống tiện nghi vượt trội.</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679108871364-167910887154114900526.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Sống</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Nữ
+                                        triệu phú sở hữu khối tài sản 2.000 tỷ đồng, vừa vượt mốc 400 triệu follower
+                                        trên Instagram để “sánh vai” với Ronaldo, Messi là ai?</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Không chỉ sở hữu khối
+                                        tài sản ấn tượng với hàng loạt biệt
+                                        thự, siêu xe hạng sang, nữ triệu phú này còn ghi dấu ấn khi trở thành người phụ
+                                        nữ sở hữu lượt follow khủng nhất Instagram.</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679110205426-1679110205643235918781.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Sống</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Nông
+                                        dân nuôi vịt kiếm tiền tỷ mỗi tháng nhờ chuyển đổi số</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Đổi mới tư duy từ nuôi
+                                        vịt theo phương thức truyền thống
+                                        sang mô hình nuôi vịt công nghệ cao khép kín đang là hướng đi mới nhằm giải
+                                        quyết bài toán về dịch bệnh trong chăn nuôi, mang lại hiệu quả kinh tế vượt trội
+                                        tại thị xã Quảng Yên, tỉnh Quảng Ninh.</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679109856496-1679109856979630863465.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Người
+                                        dùng chỉ nên chuẩn hoá thuê bao nếu nhận được tin nhắn này, cẩn thận mất
+                                        tiền mất luôn cả SIM</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Những ngày qua, nhà
+                                        mạng di động ở Việt Nam đã bắt đầu gửi
+                                        tin nhắn, triển khai cuộc gọi thông báo tới các thuê bao di động trong diện cần
+                                        phải chuẩn hoá thuê bao. Tuy nhiên, người dùng di động cần cẩn trọng trước các
+                                        cuộc gọi lừa đảo về việc cung cấp thông tin cá nhân phục vụ chuẩn hoá thông tin
+                                        thuê bao.</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679109678920-16791096791751098885848.jpeg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Sống</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Chiêm
+                                        ngưỡng loạt ảnh hiếm thời nhà Thanh: Nhan sắc đệ nhất kỹ nữ cũng không gây
+                                        hiếu kỳ bằng đôi chân "cực phẩm"</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Là thời kỳ thường được
+                                        tái hiện trong nhiều bộ phim nổi
+                                        tiếng, liệu cuộc sống của người dân thời nhà Thanh có thực sự giống với phim
+                                        ảnh?</p>
+                                    <p class="text-secondary m-0">3 giờ trước</p>
+                                </div>
+                            </a>
+
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679108780585-16791087808741168092738.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Trà đá công nghệ</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Bitcoin
+                                        vượt mốc 27.000 USD, cao nhất trong vòng 9 tháng qua</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Bitcoin và nhiều đồng
+                                        tiền số khác đều xanh rực rỡ.</p>
+                                    <p class="text-secondary m-0">4 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679102616182-16791026165171715564642.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Trà đá công nghệ</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Trung
+                                        Quốc và những tấm pin 'lênh đênh' ngoài khơi: Đủ để cung cấp điện cho cả New
+                                        Zealand, trở thành niềm hy vọng cho nhiều người</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Sở hữu trang trại pin
+                                        năng lượng mặt trời nổi lớn nhất thế
+                                        giới, Trung Quốc "nuôi" kế hoạch sản xuất lượng điện đủ để cung cấp cho quốc gia
+                                        châu Úc.</p>
+                                    <p class="text-secondary m-0">4 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679101692270-16791016925242135655283.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0"><img class="w-50"
+                                            src="./assets/imgs/ai-1-16733483554931072076210.png"
+                                            alt="Trí tuệ nhân tạo">Trà đá công nghệ</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">ChatGPT
+                                        ngày càng khó bảo: Viết bài sai sự thật lại còn "cãi tay đôi" với người dùng
+                                        - Khăng khăng cho rằng mình đúng!</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Súng đạn vô hại với
+                                        trẻ em</p>
+                                    <p class="text-secondary m-0">4 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679105679826-16791056804751691918247.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Internet</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Báo
+                                        Mỹ: Người trẻ vẫn chưa ‘bắt được sự rung cảm’ với điện thoại gập</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">(Tổ Quốc) - Một người
+                                        trẻ cho biết điện thoại nắp gập có
+                                        giá quá cao, trong khi một người khác đang sở hữu điện thoại gập cho biết đó
+                                        "chỉ là một chiếc điện thoại thông minh.</p>
+                                    <p class="text-secondary m-0">4 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679098556574-16790985567831996556027.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0"><img class="w-50"
+                                            src="./assets/imgs/brand-content-1672285939096811455697.png"
+                                            alt="Trí tuệ nhân tạo">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Cảnh
+                                        báo giả mạo lừa đảo: Bộ Thông tin và Truyền thông khẳng định không thực hiện
+                                        việc gọi điện dọa khóa thuê bao của người dân</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Sau khi các nhà mạng
+                                        đưa ra thông báo yêu cầu chuẩn hóa
+                                        thông tin thuê bao theo dữ liệu quốc gia về dân cư, đã có nhiều người dân nhận
+                                        được cuộc gọi lạ từ các số điện thoại mạo danh cơ quan quản lý hoặc nhà mạng yêu
+                                        cầu cung cấp thông tin cá nhân. Những cuộc gọi mạo danh này đang là một vấn đề
+                                        nghiêm trọng, khiến nhiều người dân lo lắng.</p>
+                                    <p class="text-secondary m-0">4 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679105580803-16791055827071393375267.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Internet</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">'Giật
+                                        mình' với sự phát triển của thị trường xe Trung Quốc: Cứ 4 chiếc bán ra có
+                                        một là xe điện</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">(Tổ Quốc) - BYD đang
+                                        là thương hiệu dẫn đầu trên thị
+                                        trường xe điện tại quốc gia này.</p>
+                                    <p class="text-secondary m-0">5 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679101154480-1679101154722177018278.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Vì
+                                        sao Độ Mixi bị đánh bản quyền hình ảnh của chính mình trên Facebook?</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Độ Mixi đã bị xóa ảnh
+                                        đại diện Facebook cùng hàng loạt
+                                        hình ảnh của mình và gia đình trên Facebook cá nhân hơn 2,3 triệu người theo dõi
+                                        vì "vi phạm bản quyền".</p>
+                                    <p class="text-secondary m-0">5 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679102055780-1679102055991990015943.jpeg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Trà đá công nghệ</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Nói
+                                        là làm – công ty taxi điện của ông Phạm Nhật Vượng bắt đầu đào tạo tài xế
+                                        ngay từ ngày mai</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Việc đào tạo, sát hạch
+                                        tài xế sẽ được tiến hành qua 7 bước
+                                        vào sáng ngày 18/3. Dịch vụ của công ty dự kiến bắt đầu hoạt động từ tháng
+                                        4.</p>
+                                    <p class="text-secondary m-0">5 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679100781901-1679100782590152462718.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Microsoft
+                                        công bố bản nâng cấp phần mềm văn phòng ứng dụng AI</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Ngày 17/3, tập đoàn
+                                        công nghệ Microsoft của Mỹ đã công bố
+                                        kế hoạch mới nhất nhằm mở rộng cơ hội cho đông đảo người dùng tiếp cận với trí
+                                        tuệ nhân tạo (AI), với việc đưa ra bản nâng cấp phần mềm văn phòng trong cuộc
+                                        cạnh tranh với đối thủ Google.</p>
+                                    <p class="text-secondary m-0">5 giờ trước</p>
+                                </div>
+                            </a>
+
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/ezgifcom-crop-16790352663551813678720-1679037329947-16790373301311929911518-0-10-442-717-crop-1679037470474834874490.gif">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0"><img class="w-50"
+                                            src="./assets/imgs/smartbuyngang-1675764424308762282867.png"
+                                            alt="Trí tuệ nhân tạo">Xem
+                                        - Mua - Luôn</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Đánh
+                                        giá nhanh các loại dán cường lực iPhone: Tự dán, phủ nhám hay chống nhìn
+                                        trộm dùng tốt nhất?</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">(Tổ Quốc) - Dán cường
+                                        lực cho iPhone loại nào giờ cũng phổ
+                                        biến, dễ mua, giá rẻ và chất lượng không hề tệ, nhưng nên mua đúng kiểu thì dùng
+                                        mới “sướng”.</p>
+                                    <p class="text-secondary m-0">5 giờ trước</p>
+                                </div>
+                            </a>
+
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679098347534-16790983495691324577725.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Tin ICT</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Cảnh
+                                        báo chiêu lừa đảo mới lợi dụng việc chuẩn hoá thông tin thuê bao điện thoại
+                                        di động</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">(Tổ Quốc) - Lợi dụng
+                                        các nhà mạng đang triển khai chuẩn
+                                        hoá thông tin cá nhân, các đối tượng xấu đã thực hiện các cuộc gọi mạo danh nhằm
+                                        thực hiện ý đồ xấu.</p>
+                                    <p class="text-secondary m-0">5 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1678957011638-1678957012278749313163.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Đồ chơi
+                                        số</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Máy
+                                        hút đệm diệt khuẩn cầm tay Smarock S10 Pro sạch siêu sâu</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Máy hút đệm diệt khuẩn
+                                        thông minh Smarock S10 Pro mạnh mẽ
+                                        với khả năng hút bụi mịn và sạch khuẩn.</p>
+                                    <p class="text-secondary m-0">6 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679063325091-1679063327536598184844.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Mobile</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Samsung
+                                        khẳng định thông tin chuyển dây chuyền sản xuất smartphone từ Việt Nam sang
+                                        Ấn Độ là không đúng sự thật</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Ông Choi Joo Ho, Tổng
+                                        Giám đốc Tổ hợp Samsung Việt Nam cho
+                                        biết tại buổi làm việc với lãnh đạo tỉnh Thái Nguyên: “Những sản phẩm được sản
+                                        xuất ở Ấn Độ chủ yếu phục vụ thị trường nội địa và một phần nhỏ xuất khẩu sang
+                                        các quốc gia châu Phi, còn tại Việt Nam thì xuất khẩu sang 128 quốc gia trên thế
+                                        giới”.</p>
+                                    <p class="text-secondary m-0">16 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/brainalcoholistock-5822806761920x1080-16788805196861027206619-0-162-1080-1890-crop-16788805297981558961580.png">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Sống</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Đây
+                                        sẽ là một cơn say kéo dài 20 tiếng, nếu bạn uống tới 15 chén rượu 40 độ</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Những phân tử rượu đầu
+                                        tiên chỉ mất 90 giây để đi qua hệ
+                                        tuần hoàn của bạn. Và những phân tử cuối cùng sẽ không chịu rời khỏi cơ thể bạn
+                                        sau tận 90 ngày.</p>
+                                    <p class="text-secondary m-0">17 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679047529135-16790475299091052255927.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Internet</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Lạm
+                                        phát khiến nhiều chủ sở hữu xe điện ngày càng thất vọng với việc sạc tại
+                                        nhà</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">(Tổ Quốc) - Và điều
+                                        này sẽ khiến mọi nhà sản xuất ô tô
+                                        điện lo lắng.</p>
+                                    <p class="text-secondary m-0">20 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679046678712-16790466798071908807247.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0"><img class="w-50"
+                                            src="./assets/imgs/ai-1-16733483554931072076210.png">Trà đá công nghệ</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Bản
+                                        quyền tranh do AI tạo ra thuộc về ai, chính phủ Mỹ vừa ra phán quyết</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Thế nhưng vẫn còn một
+                                        khả năng khác để các tác phẩm do AI
+                                        tạo ra có thể được bảo hộ bản quyền.</p>
+                                    <p class="text-secondary m-0">20 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679041994150-1679041994846916938973.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Mobile</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">OPPO
+                                        ấn định ngày ra mắt Find X6 và Pad 2, sẽ có bất ngờ lớn</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">OPPO Find X6 sẽ có 2
+                                        phiên bản, trong đó phiên bản cao cấp
+                                        nhất sẽ không bán ở bất cứ đâu ngoài thị trường Trung Quốc.</p>
+                                    <p class="text-secondary m-0">22 giờ trước</p>
+                                </div>
+                            </a>
+                            <a href="./new1.html"
+                                class="row g-2 align-items-start border-top border-bottom py-3 my-0 border-dash border-y-0">
+                                <div class="col-5">
+                                    <img class="w-100 mt-2 rounded-1"
+                                        src="./assets/imgs/avatar1679040933931-16790409347111916762712.jpg">
+                                </div>
+                                <div class="col-7">
+                                    <p class="text-secondary m-0">Đồ chơi
+                                        số</p>
+                                    <h4 class="p-0 text-wrap fs-lg-6">Tưởng
+                                        là chiếc nhẫn sang chảnh, hóa ra đây là "đồ chơi" cực hay cho máy tính!</h4>
+                                    <p class="m-0 text-secondary d-none d-lg-block text-truncate">Kể từ khi việc làm
+                                        việc tại nhà trở nên phổ biến, có những
+                                        món đồ công nghệ đã nhận được nhiều sự chú ý hơn.</p>
+                                    <p class="text-secondary m-0">22 giờ trước</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col d-none d-lg-block">
+                            <div class="rounded-1 border">
+                                <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Mobile</h5>
+                                <a href="./new1.html" class="row g-2 align-items-start py-2 my-0 mx-3">
+                                    <div class="col-3">
+                                        <img class="w-100 mt-2 rounded-1"
+                                            src="./assets/imgs/avatar1679063325091-1679063327536598184844.jpg">
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="p-0 text-wrap fs-lg-6">Samsung
+                                            khẳng định thông tin chuyển dây chuyền sản xuất smartphone từ Việt Nam sang
+                                            Ấn
+                                            Độ là không đúng sự thật</h4>
+                                        <p class="m-0 text-secondary d-none d-lg-block">Ông Choi Joo Ho, Tổng Giám đốc
+                                            Tổ hợp Samsung Việt Nam cho biết tại buổi làm việc
+                                            với lãnh đạo tỉnh Thái Nguyên: “Những sản phẩm được sản xuất ở Ấn Độ chủ yếu
+                                            phục vụ
+                                            thị trường nội địa và một phần nhỏ xuất khẩu sang các quốc gia châu Phi, còn
+                                            tại
+                                            Việt Nam thì xuất khẩu sang 128 quốc gia trên thế giới”.</p>
+                                        <p class="text-secondary m-0">22 giờ trước</p>
+                                    </div>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">OPPO
+                                        ấn định ngày ra mắt Find X6 và Pad 2, sẽ có bất ngờ lớn</h4>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">1 chiếc "iPhone trong két" lại vừa
+                                        được bán, liệu
+                                        có phá kỷ lục 100 lần giá trị ban đầu?</h4>
+                                </a>
+                                <a href="./new1.html" class="d-block py-3 my-0 mx-3">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Google phát hiện 18 lỗ hổng trong
+                                        chip modem Exynos
+                                        của Samsung, hàng chục điện thoại và thiết bị đeo bị ảnh hưởng</h4>
+                                </a>
+                            </div>
+                            <div class="row row-cols-2 mt-3 gx-3">
+                                <div class="col">
+                                    <div class="rounded-1 bg-secondary-subtle h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Đừng bỏ
+                                            lỡ</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/avatar1678869164492-16788691656582114026581.jpg">
+                                            <p class="mt-1 mb-0">Những
+                                                quả cầu 2,8 tỷ năm tuổi tại Nam Phi khiến các nhà khoa học đau đầu tìm
+                                                cách
+                                                lý giải</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Một
+                                                con chip của Intel 'ngốn' tới gần 2 Kilowatt điện khi hoạt động, làm
+                                                được
+                                                điều mà không CPU nào đạt được</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Thu
+                                                cũ đổi mới, lên đời iPhone tại Viettablet: iPhone 11 Pro Max, 12 Pro Max
+                                                giá
+                                                quá tốt</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Giảm
+                                                giá thấp chưa từng thấy, đây là mẫu MacBook đáng mua nhất lúc này</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="rounded-1 bg-secondary-subtle h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">eMagazine</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/ngang-1678103457330343890399.jpg">
+                                            <p class="mt-1 mb-0">Những yếu tố khiến Xiaomi 13 không cần “Pro”
+                                                cũng có sức cuốn hút</p>
+                                        </a>
+
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Đánh giá OPPO Reno8 T 5G - Không mạnh mẽ
+                                                nhất thì cũng phải đẹp đẽ nhất</p>
+                                            <div class="col-4">
+                                                <img class="w-100" src="./assets/imgs/ngang-1676265919441286812609.jpg">
+                                            </div>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Trò chuyện với Chủ tịch trẻ nhất của Samsung
+                                                về Chat GPT, những chiếc Galaxy S23 làm từ lưới đánh cá và sứ mệnh
+                                                mới của tập đoàn</p>
+                                            <div class="col-4">
+                                                <img class="w-100" src="./assets/imgs/ngang-1676125030466806871909.jpg">
+                                            </div>
+                                        </a>
+
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Cảm nhận đầu tiên về OPPO Reno 8T:
+                                                smartphone tầm trung mang dáng hình cao cấp</p>
+                                            <div class="col-4">
+                                                <img class="w-100"
+                                                    src="./assets/imgs/ngang-16752409321961598989153.jpg">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-1 border mt-3">
+                                <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Tin ICT</h5>
+                                <a href="./new1.html" class="row g-2 align-items-start py-2 my-0 mx-3">
+                                    <div class="col-3">
+                                        <img class="w-100 mt-2 rounded-1"
+                                            src="./assets/imgs/avatar1679115435835-16791154359461648082265.jpg">
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="p-0 text-wrap fs-lg-6">Cha
+                                            mẹ đứng tên thuê bao cho con thì SIM có bị khóa sau ngày 31/3 hay không?
+                                        </h4>
+                                        <p class="m-0 text-secondary text-truncate-multiline-3">Từ nay đến 31/3, nhà
+                                            mạng sẽ nhắn tin nhiều lần cho các thuê bao chưa đúng thông tin
+                                            trong Cơ sở dữ liệu quốc gia về dân cư. Nếu không cập nhật, người dùng có
+                                            thể bị
+                                            khóa liên lạc.</p>
+
+                                    </div>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Hàng loạt lãnh đạo cấp cao nghỉ
+                                        việc, chuyện gì
+                                        đang xảy ra ở Apple?</h4>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">TikToker chê các ngành học 'vô
+                                        dụng': Hành vi trái
+                                        đạo đức, cần xử phạt nặng</h4>
+                                </a>
+                                <a href="./new1.html" class="d-block py-3 my-0 mx-3">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Không yêu cầu doanh nghiệp phải cập
+                                        nhật thông tin
+                                        Căn cước công dân</h4>
+                                </a>
+                            </div>
+                            <div class="row row-cols-2 mt-3 align-items-stretch gx-4">
+                                <div class="col">
+                                    <div class="rounded-1 bg-secondary-subtle h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">My
+                                            GenK</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/avatar1679101154480-1679101154722177018278.jpg">
+                                            <p class="mt-1 mb-0">Vì sao Độ Mixi bị đánh bản quyền
+                                                hình ảnh của chính mình trên Facebook?</p>
+                                        </a>
+
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                AI biến loạt mỹ nhân anime thành
+                                                người thật khiến ai thấy cũng mê</p>
+                                            <div class="col-4">
+                                                <img class="w-100"
+                                                    src="./assets/imgs/avatar1679109113632-16791091139001054839690.png">
+                                            </div>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Chiêm ngưỡng loạt
+                                                ảnh hiếm thời nhà Thanh: Nhan sắc đệ nhất kỹ nữ cũng không
+                                                gây hiếu kỳ bằng đôi chân "cực phẩm"</p>
+                                            <div class="col-4">
+                                                <img class="w-100"
+                                                    src="./assets/imgs/avatar1679109678920-16791096791751098885848.jpeg">
+                                            </div>
+                                        </a>
+
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Nói là làm – công ty taxi điện của
+                                                ông Phạm Nhật Vượng bắt đầu đào tạo tài xế ngay từ ngày
+                                                mai</p>
+                                            <div class="col-4">
+                                                <img class="w-100"
+                                                    src="./assets/imgs/avatar1679102055780-1679102055991990015943.jpeg">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="rounded-1 bg-secondary-subtle h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Cũ mà hay</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/photo1614484590811-16144845914871800663516.jpg">
+                                            <p class="mt-1 mb-0">Ứng dụng trí
+                                                tuệ nhân tạo ở người cao tuổi như thế nào?</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Tesla
+                                                Mafia: Nhóm nhân viên, đồng nghiệp cũ của Elon Musk nghỉ việc, mở công
+                                                ty
+                                                riêng, tạo ra thế lực 30 tỷ USD cạnh tranh trực tiếp với Tesla</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Apple thắng kỷ lục ở Trung Quốc</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                iPhone màn hình
+                                                gập có thể sẽ ra mắt vào năm 2023</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rounded-1 border mt-3">
+                                <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Khám phá</h5>
+                                <a href="./new1.html" class="row g-2 align-items-start py-2 my-0 mx-3">
+                                    <div class="col-3">
+                                        <img class="w-100 mt-2 rounded-1"
+                                            src="./assets/imgs/brainalcoholistock-5822806761920x1080-16788805196861027206619-0-162-1080-1890-crop-16788805297981558961580.png">
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="p-0 text-wrap fs-lg-6">Đây
+                                            sẽ là một cơn say kéo dài 20 tiếng, nếu bạn uống tới 15 chén rượu 40 độ</h4>
+                                        <p class="m-0 text-secondary d-none d-lg-block">Những phân tử rượu đầu tiên chỉ
+                                            mất 90 giây để đi qua hệ tuần hoàn của bạn. Và những
+                                            phân tử cuối cùng sẽ không chịu rời khỏi cơ thể bạn sau tận 90 ngày.</p>
+
+                                    </div>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Điều gì khiến cho Đảo rắn trở thành
+                                        nơi đáng sợ
+                                        nhất trên Trái đất?</h4>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Bí ẩn của Buffa di Perrero - “Ngôi
+                                        nhà cô đơn nhất
+                                        thế giới”</h4>
+                                </a>
+                                <a href="./new1.html" class="d-block py-3 my-0 mx-3">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Tăng hiệu suất học và làm việc của
+                                        não bộ lên gấp 3
+                                        lần, nhờ phương pháp này của kỷ lục gia Guinness</h4>
+                                </a>
+                            </div>
+                            <div class="rounded-1 border mt-3">
+                                <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Internet</h5>
+                                <a href="./new1.html" class="row g-2 align-items-start py-2 my-0 mx-3">
+                                    <div class="col-3">
+                                        <img class="w-100 mt-2 rounded-1"
+                                            src="./assets/imgs/avatar1679105679826-16791056804751691918247.jpg">
+                                    </div>
+                                    <div class="col-9">
+                                        <h4 class="p-0 text-wrap fs-lg-6">Báo
+                                            Mỹ: Người trẻ vẫn chưa ‘bắt được sự rung cảm’ với điện thoại gập</h4>
+                                        <p class="m-0 text-secondary d-none d-lg-block">(Tổ Quốc) - Một người trẻ cho
+                                            biết điện thoại nắp gập có giá quá cao, trong khi một
+                                            người khác đang sở hữu điện thoại gập cho biết đó "chỉ là một chiếc điện
+                                            thoại thông
+                                            minh..</p>
+
+                                    </div>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">'Giật mình' với sự phát triển của
+                                        thị trường xe
+                                        Trung Quốc: Cứ 4 chiếc bán ra có một là xe điện</h4>
+                                </a>
+                                <a href="./new1.html"
+                                    class="d-block border-top border-bottom py-3 my-0 mx-3 border-dash border-y-0">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Lạm phát khiến nhiều chủ sở hữu xe
+                                        điện ngày càng
+                                        thất vọng với việc sạc tại nhà</h4>
+                                </a>
+                                <a href="./new1.html" class="d-block py-3 my-0 mx-3">
+                                    <h4 class="p-0 text-wrap fs-lg-6 text-secondary">Bán 1.300 cái áo trong 2 phút, kiếm
+                                        8,2 tỷ đồng chỉ
+                                        trong 2 ngày - Livestream chốt đơn có sức mạnh khủng khiếp đến thế
+                                        nào?</h4>
+                                </a>
+                            </div>
+
+                            <div class="row row-cols-2 mt-3 align-items-stretch gx-4">
+                                <div class="col">
+                                    <div class="h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Cũ mà hay</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/ezgifcom-crop-16790352663551813678720-1679037329947-16790373301311929911518-0-10-442-717-crop-1679037470474834874490.gif">
+                                            <p class="mt-1 mb-0">Đánh
+                                                giá nhanh các loại dán cường lực iPhone: Tự dán, phủ nhám hay chống nhìn
+                                                trộm dùng tốt nhất?</p>
+                                            <p class="text-secondary m-0">(Tổ Quốc) - Dán cường lực cho iPhone loại nào
+                                                giờ cũng phổ biến, dễ mua, giá
+                                                rẻ và chất lượng không hề tệ, nhưng nên mua đúng kiểu thì dùng mới
+                                                “sướng”.</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Đánh giá Xiaomi 13 Pro: Khi điện thoại
+                                                Xiaomi "chung mâm" với Apple và Samsung</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Đánh giá Redmi 12C: Giá chỉ hơn 2 triệu
+                                                nhưng có ưu điểm nhiều hơn nhược điểm!</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Dùng thử loa xe đạp JBL Wind 3S: Nhỏ mà
+                                                “hát” to, 2 chế độ âm thanh, thêm ngàm kẹp siêu tiện</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Trà đá công
+                                            nghệ</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/photo1679048398582-16790483986731882209815-16791148633182020421095.jpeg">
+                                            <p class="mt-1 mb-0">Tính
+                                                toán bán xe điện giá rẻ từ 2006, Elon Musk rơi vào thế "trên đe dưới
+                                                búa" sau 17 năm: Vừa không ra nổi dòng xe rẻ nào, lại phải đấu tay bo
+                                                với BMW và Mercedes</p>
+                                            <p class="m-0 text-secondary">Với giá bán trung bình hơn 65.000 USD, Tesla
+                                                được cho là sẽ phải cạnh tranh
+                                                với BMW và Mercedes thay vì Honda hay Ford.</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Bitcoin vượt mốc 27.000 USD, cao nhất trong
+                                                vòng 9 tháng qua</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Trung Quốc và những tấm pin 'lênh đênh'
+                                                ngoài khơi: Đủ để cung cấp điện cho cả New Zealand, trở thành
+                                                niềm hy vọng cho nhiều người</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                ChatGPT ngày càng khó bảo: Viết bài sai sự
+                                                thật lại còn "cãi tay đôi" với người dùng - Khăng khăng cho rằng
+                                                mình đúng!</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row-cols-2 mt-3 align-items-stretch gx-4">
+                                <div class="col">
+                                    <div class="h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Thủ thuật</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/avatar1678956965496-16789569656481666637993-0-164-628-1169-crop-1678956988919855337695.jpg">
+                                            <p class="mt-1 mb-0">Quên
+                                                súng in 3D đi, người ta đang thử in... vũ khí chống tăng!</p>
+                                            <p class="text-secondary m-0">Trong những năm gần đây, súng in 3D đã gây
+                                                nhiều tranh cãi và giờ đây một số
+                                                nhóm nghiên cứu đang thiết kế các loại vũ khí in 3D khác.</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Nhìn từ khả năng “Space Zoom” chụp trăng
+                                                của Galaxy S23 Ultra, câu chuyện thật - giả giữa AI và nhiếp
+                                                ảnh</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Cách xử lý khi điện thoại bị rơi vào
+                                                nước</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">4
+                                                loại phích cắm là "cỗ máy ngốn điện" ngay
+                                                cả khi đã tắt: Dùng xong không rút chẳng khác nào ném tiền qua
+                                                cửa sổ</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Đồ chơi số</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/avatar1678957011638-1678957012278749313163.png">
+                                            <p class="mt-1 mb-0">Máy
+                                                hút đệm diệt khuẩn cầm tay Smarock S10 Pro sạch siêu sâu</p>
+                                            <p class="m-0 text-secondary">Máy hút đệm diệt khuẩn thông minh Smarock S10
+                                                Pro mạnh mẽ với khả năng hút
+                                                bụi mịn và sạch khuẩn.</p>
+                                        </a>
+
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Tưởng là chiếc nhẫn sang chảnh, hóa ra đây
+                                                là "đồ chơi" cực hay cho máy tính!</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Một con chip của Intel 'ngốn' tới gần 2
+                                                Kilowatt điện khi hoạt động, làm được điều mà không CPU nào đạt
+                                                được</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="d-block border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p class="m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Mẫu card mở rộng lắp được tận 21 ổ SSD cho
+                                                168TB dung lượng lưu trữ siêu nhanh, tuy nhiên chi phí bỏ ra
+                                                không hề rẻ</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-cols-2 mt-3 align-items-stretch gx-4 sticky-top">
+                                <div class="col">
+                                    <div class="h-100">
+                                        <h5 class="py-2 my-0 mx-3 text-uppercase border-bottom border-2">Đọc
+                                            nhiều</h5>
+                                        <a href="./new1.html" class="vstack py-2 my-0 mx-3">
+                                            <img class="w-100 rounded-1"
+                                                src="./assets/imgs/avatar1678249386157-16782493863771704637587-0-46-675-1126-crop-16782496389251378687483.jpg">
+                                            <p class="mt-1 mb-0">Sa
+                                                vào “cuộc hôn nhân bất hạnh nhất thế giới” với Samsung, Apple vùng vẫy
+                                                "ly hôn" trong vô vọng</p>
+                                            <p class="text-secondary m-0">Lệ thuộc vào nguồn cung cấp màn hình chất
+                                                lượng cao cho
+                                                các sản phẩm của mình, không ít lần người khổng lồ Apple phải nhún
+                                                nhường,
+                                                chịu thiệt trước đối thủ Samsung.</p>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                6 lý do camera an ninh nên lưu trữ đám
+                                                mây</p>
+                                            <div class="col-4">
+                                                <img class="w-100"
+                                                    src="./assets/imgs/avatar1675305506508-1675305507225905265363.jpg">
+                                            </div>
+                                        </a>
+                                        <a href="./new1.html"
+                                            class="row g-1 border-top border-bottom py-2 my-0 mx-3 border-dash border-y-0">
+                                            <p
+                                                class="col-8 m-0 text-wrap fs-lg-6 text-secondary text-truncate-multiline-3">
+                                                Một con chip của Intel 'ngốn' tới gần 2
+                                                Kilowatt điện khi hoạt động, làm được điều mà không CPU nào đạt
+                                                được</p>
+                                            <div class="col-4">
+                                                <img class="w-100"
+                                                    src="./assets/imgs/avatar1679036250427-1679036255461461322180.png">
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
+        </main>
+
+        <footer class="bg-lg-secondary">
+            <div class="container-fluid text-white border-bottom border-danger border-1 mt-3 d-none d-lg-block">
+                <div class="container">
+                        <div class="w-100 pt-3 pb-1 border-bottom border-white">
+                            <img class="img-fluid" src="./assets/imgs/logogenk.svg">
+                        </div>
+                        <ul class="footer-menu list-unstyled hstack justify-content-between text-uppercase py-2">
+                            <li><a href="/mobile.chn" title="mobile">Mobile</a></li>
+                            <li><a href="/tin-ict.chn" title="tin ict">Tin ICT</a></li>
+                            <li><a href="/internet.chn" title="internet">Internet</a></li>
+                            <li><a href="/kham-pha.chn" title="khám phá">Khám phá</a></li>
+                            <li><a href="/tra-da-cong-nghe.chn" title="trà đá công nghệ">Trà đá công nghệ</a></li>
+                            <li><a href="/thu-thuat.chn" title="thủ thuật">Thủ thuật</a></li>
+                            <li><a href="/apps-games.chn" title="apps - games">Apps - Game</a></li>
+                            <li><a href="/do-choi-so.chn" title="đồ chơi số">Đồ chơi số</a></li>
+                        </ul>
+                    
+                </div>
+            </div>
+            <div class="container-fluid border-bottom mt-3">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col">
+                            <div class="w-100 text-wrap text-lg-secondary">
+                                <div class="hstack justify-content-between d-lg-none">
+                                    <h1 class="fw-bold">GenK</h1>
+                                    <a href="https://www.vccorp.vn/" title="Vận hành bởi VCCorp">
+                                        <img class="img-fluid" src="./assets/imgs/vccorp-m.png"></a>
+                                        <br>
+                                </div>
+                                
+                                <div>Chịu trách nhiệm quản lý nội dung: Bà Nguyễn Bích Minh
+                                </div>
+                                <div class="d-none d-lg-block mb-2">
+                                    <p class="m-0">Hà Nội: Tầng 20, Tòa nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.</p>
+                                    <p class="m-0">Email: <span class="text-danger"> info@genk.vn</span></p>
+                                    <p class="m-0">Điện thoại: 024.73095555, máy lẻ 62374</p>
+                                    <p class="m-0">VPĐD tại TP.HCM: Tầng 4, Tòa nhà 123 </p>
+                                    <p class="m-0">Võ Văn Tần, Phường 6, Quận 3, Tp. Hồ Chí Minh </p>
+                                </div>
+                                <p class="m-0">© Copyright 2010 - 2023 - Công ty Cổ phần VCCorp</p>
+                                <p class="m-0">
+                                    Tầng 17, 19, 20, 21 Toà nhà Center Building - Hapulico
+                                    Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.
+                                    
+                                </p>
+                                <div class="d-lg-none mb-2">
+                                    <p class="m-0">Điện thoại: 024.39743410, máy lẻ 300. Email: info@genk.vn</p>
+                                    <p class="m-0">Hỗ trợ quảng cáo: <a href="tel:0794463333">0794463333</a> -
+                                        <a href="tel:0961984388">0961984388</a>
+                                    </p>
+                                </div>
+                                <p>Giấy phép thiết lập trang thông tin điện tử tổng hợp trên
+                                    mạng số 460/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội
+                                    cấp ngày 03/02/2016</p>
+                            </div> 
+                        </div>
+                        <div class="col d-none d-lg-block text-secondary">
+                            <a href="https://www.vccorp.vn/" title="Vận hành bởi VCCorp">
+                                <img class="img-fluid" src="./assets/imgs/vccorp-m.png"></a>
+                                <h3 class="text-white text-uppercase mt-2">Liên hệ quảng cáo</h3>
+                                <p class="m-0">Hotline hỗ trợ quảng cáo: 0794463333 - 0961984388 </p>
+                                <p class="m-0">Email: giaitrixahoi@admicro.vn</p>
+                                <p class="m-0">Hỗ trợ & CSKH: Admicro </p>
+                                <p class="m-0">Address: Tầng 20, Tòa nhà Center Building - Hapulico Complex, Số </p>
+                                <p class="">1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.</p>
+                                <a class="btn btn-primary" href="#"><i class="fa-brands fa-facebook-messenger"></i> Chat với tư vấn viên</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </footer>
 
 
-        </header>
     </div>
     <script src="./assets/libs/jquery/jquery-3.6.4.min.js"></script>
     <script src="./assets/libs/bootstrap/bootstrap.bundle.js"></script>
-    <script>
-        $(document).ready(function () {
-            if (window.innerWidth < 992) {
-                $('.side-menu').addClass('offcanvas offcanvas-end');
-            } else {
-                $('.btn-offcavas').unbind('click')
-            }
-        });
-        $(window).resize(function () {
-            if (window.innerWidth < 992) {
-                $('.side-menu').addClass('offcanvas offcanvas-end');
-                $('.btn-offcavas').bind('click')
-            } else {
-                $('.side-menu').removeClass('offcanvas offcanvas-end');
-                $('.btn-offcavas').unbind('click')
-            }
-        });
-    </script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

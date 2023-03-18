@@ -1,7 +1,5 @@
 @use "base" as b;
-@use "../vendor/bootstrap/bootstrap.scss" as * with (
-    $enable-negative-margins: true
-);
+// @use "../vendor/bootstrap/bootstrap-variables.scss" as *;
 @import "../fonts/font.css";
 @import "../libs/icon/fontawesome.css";
 
@@ -50,6 +48,45 @@ body {
     font-family: SFPD, Arial, Helvetica, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-truncate-multiline-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-truncate-multiline-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-truncate-multiline-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@include b.media-breakpoint-up(lg){
+    .bg-lg-secondary {
+        background-color: b.$bottom-nav-bg-color;
+    }
+    .text-lg-white {
+        color: b.$white;
+    }
+    .text-lg-secondary {
+        color: b.$secondary;
+    }
+}
+
+
 header {
     .top-menu {
         background-color: b.$nav-top-color;
@@ -70,7 +107,7 @@ header {
             }
 
             .search-btn {
-                color: $white;
+                color: b.$white;
                 background-color: transparent;
                 border: none !important;
                 flex-grow: 0;
@@ -82,18 +119,18 @@ header {
                 opacity: 1;
             }
             &:hover .search-btn {
-                background-color: $white;
-                color: $black;
+                background-color: b.$white;
+                color: b.$black;
             }
         }
 
         .btn-offcavas {
-            @include media-breakpoint-up(lg) {
+            @include b.media-breakpoint-up(lg) {
                 &:hover > .side-menu {
                     display: block;
                 }
                 &:hover .fa-bars::before {
-                    color: $red !important;
+                    color: b.$red !important;
                     content: "\f00d";
                     transition: all 0.5s;
                 }
@@ -110,7 +147,7 @@ header {
                 }
             }
         }
-        @include media-breakpoint-down(lg) {
+        @include b.media-breakpoint-down(lg) {
             background-color: b.$nav-color;
             .fa-bars {
                 font-size: 2em;
@@ -118,7 +155,7 @@ header {
         }
     }
     .side-menu {
-        @include media-breakpoint-up(lg) {
+        @include b.media-breakpoint-up(lg) {
             display: none;
             position: absolute;
             top: b.$nav-height;
@@ -126,7 +163,7 @@ header {
             right: 0;
             background-color: b.$offcavas-bg;
             padding: 2em 2em;
-            box-shadow: 1px 1px 20px 5px rgba($black, 0.5);
+            box-shadow: 1px 1px 20px 5px rgba(b.$black, 0.5);
             animation: fadeIn ease-in 0.2s;
             .side-menu__body {
                 display: flex;
@@ -134,14 +171,14 @@ header {
                 flex-wrap: wrap;
                 a {
                     text-decoration: none;
-                    color: $black;
+                    color: b.$black;
                 }
             }
             .side-menu__item {
                 .side-menu__item--header {
                     position: relative;
                     text-transform: uppercase;
-                    border-bottom: 1px solid $black;
+                    border-bottom: 1px solid b.$black;
                     margin-bottom: 1em;
 
                     &::after {
@@ -149,7 +186,7 @@ header {
                         display: block;
                         font-family: "Font Awesome 6 Free";
                         font-weight: 900;
-                        color: $red;
+                        color: b.$red;
                         position: absolute;
                         top: 0;
                         right: -0.8em;
@@ -158,28 +195,36 @@ header {
             }
         }
 
-        @include media-breakpoint-down(lg) {
+        @include b.media-breakpoint-down(lg) {
             width: 100% !important;
             top: b.$nav-height !important;
             padding: 0 2em 1em;
-            text-transform: uppercase;
-
-            a {
-                text-decoration: none;
-                color: inherit;
-            }
+            overflow-y: scroll;
+           
 
             .side-menu-mobile {
                 .tab-chuyen-muc {
+                    display: none;
                     li {
                         background-color: b.$mobile-nav-bg-color;
                         width: 40%;
-                        padding: 1em 0;
+                        padding: 0.5em 0;
                         border-radius: 1em;
-                        margin: 0.5em;
+                        margin: 0.2em;
                     }
                 }
+                
                 .tab-khac {
+                    display: none;
+
+                    li {
+                        border-bottom: 1px solid b.$black;
+                        padding: 0.5em 1em;
+                        p {
+                            margin: 0;
+                        }
+                    }
+
                     .avatar-channel {
                         background-image: url(../imgs/xgenk_sprite.png);
                         background-repeat: no-repeat;
@@ -202,7 +247,37 @@ header {
                         background-position: 0 -327px;
                     }
                 }
+
+                .tab-chuyen-muc.active {
+                    display: flex;
+                }
+                .tab-khac.active{
+                    display: block;
+                }
             }
+        }
+    }
+}
+
+.page-content {
+    .border-dash {
+        border-style: dashed !important;
+    }
+    .border-y-0 {
+        border-left: none !important;
+        border-right: none !important;
+    }
+    @include b.media-breakpoint-up(lg) {
+        .fs-lg-6 {
+            font-size: 1rem !important;
+        }
+    }
+}
+
+footer {
+    .footer-menu {
+        li:hover {
+            color: red !important;
         }
     }
 }
