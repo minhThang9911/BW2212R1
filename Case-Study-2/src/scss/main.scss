@@ -74,6 +74,10 @@ a {
     overflow: hidden;
 }
 
+.text-justify {
+    text-align: justify !important;
+}
+
 @include b.media-breakpoint-up(lg){
     .bg-lg-secondary {
         background-color: b.$bottom-nav-bg-color;

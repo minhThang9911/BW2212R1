@@ -4648,6 +4648,7 @@ textarea.form-control-lg {
 }
 
 .breadcrumb {
+  --bs-breadcrumb-divider: '>';
   --bs-breadcrumb-padding-x: 0;
   --bs-breadcrumb-padding-y: 0;
   --bs-breadcrumb-margin-bottom: 1rem;

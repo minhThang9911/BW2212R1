@@ -68,6 +68,10 @@ a {
   overflow: hidden;
 }
 
+.text-justify {
+  text-align: justify !important;
+}
+
 @media (min-width: 992px) {
   .bg-lg-secondary {
     background-color: #191919;
