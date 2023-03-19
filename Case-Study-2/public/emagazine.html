@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case study 2</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0 bg-emagazine">
+        <header>
+            <div class="p-1 d-none d-lg-block sfd-medium top-menu">
+                <div class="container">
+                    <ul class="list-group list-group-horizontal list-unstyled m-0">
+                        <li class="ms-3">
+                            <a class="text-decoration-none text-secondary text-uppercase"
+                                href="http://gamek.vn/">Gamek</a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="text-decoration-none text-secondary text-uppercase"
+                                href="http://kenh14.vn/">Kenh14</a>
+                        </li>
+                        <li class="ms-3">
+                            <a class="text-decoration-none text-secondary text-uppercase"
+                                href="http://cafebiz.vn/">Cafebiz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-bar sticky-top">
+                <div class="container py-lg-3">
+                    <div class="hstack flex-nowrap">
+                        <a class="navbar-brand flex-fill me-3" href="#">
+                            <img class="d-none d-lg-block logo" src="./assets/imgs/logogenk.svg" alt="Logo">
+                            <img class="d-lg-none logo" src="./assets/imgs/logogenk_mob.svg" alt="Logo">
+                        </a>
+                        <nav class="hstack sfd-medium me-auto p-0 flex-fill ">
+                            <div class="hstack text-white ms-auto">
+                                <ul class="hstack list-unstyled me-auto mb-2 mb-lg-0 text-nowrap">
+                                    <li class="pc-menu d-none d-lg-block text-uppercase">
+                                        <ul class="hstack list-unstyled ">
+                                            <li class="me-3">
+                                                <a class="nav-link text-reset" href="/mobile.chn"
+                                                    title="mobile">Mobile</a>
+                                            </li>
+                                            <li class="me-3">
+                                                <a class="nav-link text-reset" href="/tin-ict.chn" title="Tin ICT">Tin
+                                                    ICT</a>
+                                            </li>
+                                            <li class="me-3">
+                                                <a class="nav-link text-reset" href="/internet.chn"
+                                                    title="internet">Internet</a>
+                                            </li>
+                                            <li class="me-3">
+                                                <a class="nav-link text-reset" href="/kham-pha.chn"
+                                                    title="Khám phá">Khám
+                                                    phá</a>
+                                            </li>
+                                            <li class="me-3">
+                                                <a class="nav-link text-reset" href="/xem-mua-luon.chn"
+                                                    title="Xem - Mua - Luôn">Xem
+                                                    -
+                                                    Mua -
+                                                    Luôn</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="mobile-menu-bar hstack d-lg-none">
+                                        <div class="vr"></div>
+                                        <div class="btn text-white">
+                                            <i class="fa-regular fa-file-lines fa-2x"></i>
+                                            <p class="m-0">Mới</p>
+                                        </div>
+                                        <div class="vr"></div>
+                                        <div class="btn text-white">
+                                            <i class="fa-solid fa-fire fa-2x"></i>
+                                            <p class="m-0">Hot</p>
+                                        </div>
+                                        <div class="vr"></div>
+                                    </li>
+                                    <li class="">
+                                        <div class="btn-offcavas">
+                                            <button class="btn text-white btn-menu" type="button"
+                                                data-bs-toggle="offcanvas" data-bs-target="#nav-menu"
+                                                aria-controls="nav-menu">
+                                                <i class="fa-solid fa-bars"></i>
+                                                <p class="m-0 d-lg-none">Mở rộng</p>
+                                            </button>
+                                            <div class="side-menu" tabindex="-1" id="nav-menu" data-bs-backdrop="false"
+                                                aria-labelledby="nav-menu">
+                                                <div class="offcanvas-header d-lg-none">
+                                                    <form class="btn-group mx-auto" role="search">
+                                                        <input class="form-control rounded-end-0 border-end-0"
+                                                            type="search" placeholder="Search" aria-label="Search">
+                                                        <button class="btn border border-start-0" type="submit"><i
+                                                                class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+                                                    </form>
+                                                </div>
+                                                <div class="side-menu-pc d-none d-lg-block">
+                                                    <ul class="list-unstyled side-menu__body">
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/mobile.chn" title="mobile">Mobile</a>
+                                                                </li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/mobile/dien-thoai.chn"
+                                                                        title="điện thoại">Điện
+                                                                        thoại</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/mobile/may-tinh-bang.chn"
+                                                                        title="máy tính bảng">Máy tính bảng</a></li>
+                                                            </ul>
+                                                            <a href="#" class="app-ios"></a>
+                                                        </li>
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/internet.chn"
+                                                                        title="internet">INTERNET</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/internet/digital-marketing.chn"
+                                                                        title="digital marketing">Digital Marketing</a>
+                                                                </li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/internet/media.chn"
+                                                                        title="media">Media</a>
+                                                                </li>
+                                                            </ul>
+                                                            <a href="#" class="app-android"></a>
+                                                        </li>
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/kham-pha.chn" title="khám phá">KHÁM
+                                                                        PHÁ</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/kham-pha/lich-su.chn"
+                                                                        title="lịch sử">Lịch
+                                                                        sử</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/kham-pha/tri-thuc.chn"
+                                                                        title="tri thức">Tri
+                                                                        thức</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/tra-da-cong-nghe.chn"
+                                                                        title="trà đá công nghệ">TRÀ ĐÁ CÔNG NGHỆ</a>
+                                                                </li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/tra-da-cong-nghe/tan-man.chn"
+                                                                        title="tản mạn">Tản mạn</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/tra-da-cong-nghe/y-tuong-sang-tao.chn"
+                                                                        title="ý tưởng sáng tạo">Ý tưởng sáng tạo</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/blockchain.chn"
+                                                                        title="Blockchain">Blockchain</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/blockchain/xu-huong.chn"
+                                                                        title="Xu hướng">Xu
+                                                                        hướng</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/blockchain/cong-nghe.chn"
+                                                                        title="Công nghệ">Công nghệ</a></li>
+                                                                <li class="d-none d-lg-block"><a
+                                                                        href="/blockchain/nhan-vat.chn"
+                                                                        title="Nhân vật">Nhân
+                                                                        vật</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/tin-ict.chn" title="tin ict">TIN
+                                                                        ICT</a></li>
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/thu-thuat.chn" title="thủ thuật">THỦ
+                                                                        THUẬT</a></li>
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/song.chn">Sống</a>
+                                                                </li>
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/nhom-chu-de/emagazine.chn"
+                                                                        class="emgz">EMAGAZINE</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="side-menu__item">
+                                                            <ul class="list-unstyled">
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/apps-games.chn" title="app - games">APPS
+                                                                        - GAMES</a></li>
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/do-choi-so.chn" title="đồ chơi số">ĐỒ
+                                                                        CHƠI SỐ</a></li>
+                                                                <li class="side-menu__item--header"><a
+                                                                        href="/gia-dung.chn" title="Gia dụng">GIA
+                                                                        DỤNG</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="ms-3">
+                                                        <a href="#" class="">
+                                                            <img src="./assets/imgs/app-ios.jpg" alt="iOS">
+                                                        </a>
+                                                        <a href="#" class="">
+                                                            <img src="./assets/imgs/app-ios.jpg" alt="iOS">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="side-menu-mobile d-lg-none">
+                                                    <ul class="tab-menu nav nav-tabs">
+                                                        <li class="nav-item menu-chuyenmuc">
+                                                            <a class="nav-link active" aria-current="page"
+                                                                href="#">Chuyên mục</a>
+                                                        </li>
+                                                        <li class="nav-item menu-khac">
+                                                            <a class="nav-link" href="#">Khác</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-contents">
+                                                        <ul
+                                                            class="tab-chuyen-muc active list-unstyled row text-center justify-content-center mt-1">
+                                                            <li><a href="/mobile.chn">Mobile</a></li>
+                                                            <li><a href="/internet.chn">Internet</a></li>
+                                                            <li><a href="/tin-ict.chn">Tin ICT</a> </li>
+                                                            <li><a href="/kham-pha.chn">Khám phá</a></li>
+                                                            <li><a href="/xem-mua-luon.chn">Xem - Mua - Luôn</a></li>
+                                                            <li><a href="/gia-dung.chn">Gia dụng</a></li>
+                                                            <li><a href="/thu-thuat.chn">Thủ thuật</a></li>
+                                                            <li><a href="/apps-games.chn">Apps - Games</a></li>
+                                                            <li><a href="/do-choi-so.chn">Đồ chơi số</a></li>
+                                                            <li><a href="/song.chn">Sống</a></li>
+                                                            <li><a href="/blockchain.chn">Blockchain</a></li>
+                                                            <li><a href="/tra-da-cong-nghe.chn">Trà đá công nghệ</a>
+                                                            </li>
+                                                            <li><a href="/nhom-chu-de/emagazine.chn">eMagazine</a></li>
+                                                        </ul>
+                                                        <ul class="tab-khac list-unstyled">
+                                                            <li><a class="row" href="http://m.kenh14.vn"><span
+                                                                        class="avatar-channel k14"></span>
+                                                                    <div class="col-8">
+                                                                        <p>Kenh14.vn</p>
+                                                                        <p class="des">Tin tức
+                                                                            dành cho giới trẻ</p>
+                                                                    </div>
+                                                            <li><a class="row" href="http://linkhay.com"><span
+                                                                        class="avatar-channel linkhay"></span>
+                                                                    <div class="col-8">
+                                                                        <p>LinkHay.com</p>
+                                                                        <p class="des">Cộng
+                                                                            đồng chia sẻ tin tức</p>
+                                                                    </div>
+                                                                </a></li>
+                                                            <li><a class="row" href="http://m.soha.vn"><span
+                                                                        class="avatar-channel soha"></span>
+                                                                    <div class="col-8">
+                                                                        <p>Soha.vn</p>
+                                                                        <p class="des">Tổng hợp
+                                                                            tin</p>
+                                                                    </div>
+                                                                </a></li>
+                                                            <li><a class="row" href="http://m.afamily.vn"><span
+                                                                        class="avatar-channel afamily"></span>
+                                                                    <div class="col-8">
+                                                                        <p>Afamily.vn</p>
+                                                                        <p class="des">Chuyên trang gia đình </p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li><a class="row" href="http://m.cafebiz.vn/"><span
+                                                                        class="avatar-channel biz"></span>
+                                                                    <div class="col-8">
+                                                                        <p>Cafebiz.vn</p>
+                                                                        <p class="des">Thông
+                                                                            tin kinh doanh - Doanh nhân</p>
+                                                                    </div>
+                                                                </a></li>
+                                                            <li><a class="row" href="http://m.cafef.vn"><span
+                                                                        class="avatar-channel cafef"></span>
+                                                                    <div class="col-8">
+                                                                        <p>CafeF.vn</p>
+                                                                        <p class="des">Thông
+                                                                            tin kinh tế - tài chính</p>
+                                                                    </div>
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="w-100 mt-2 text-wrap">
+                                                        <div class="hstack justify-content-between">
+                                                            <h1 class="fw-bold">GenK</h1>
+                                                            <a href="https://www.vccorp.vn/"
+                                                                title="Vận hành bởi VCCorp">
+                                                                <img class="img-fluid"
+                                                                    src="./assets/imgs/vccorp-m.png"></a>
+                                                        </div>
+
+                                                        <br>
+                                                        <div>Chịu trách nhiệm quản lý nội dung:<br>Bà Nguyễn Bích Minh
+                                                        </div>
+                                                        <div>© Copyright 2010 - 2023 - Công ty Cổ phần VCCorp</div>
+                                                        <p>
+                                                            Tầng 17, 19, 20, 21 Toà nhà Center Building - Hapulico
+                                                            Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.<br>
+                                                            Điện thoại: 024.39743410, máy lẻ 300. Email: info@genk.vn
+                                                        </p>
+                                                        <p>Hỗ trợ quảng cáo: <a href="tel:0794463333">0794463333</a> -
+                                                            <a href="tel:0961984388">0961984388</a>
+                                                        </p>
+                                                        <p>Giấy phép thiết lập trang thông tin điện tử tổng hợp trên
+                                                            mạng số 460/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội
+                                                            cấp ngày 03/02/2016</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="nav-item search-box ms-auto text-end d-none d-lg-block">
+                                    <form class="btn-group justify-content-end" role="search">
+                                        <input class="search-input form-control btn-light rounded-end-0" type="search"
+                                            placeholder="Search" aria-label="Search">
+                                        <button class="search-btn rounded-end" type="submit"><i
+                                                class="fa-solid fa-magnifying-glass"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row my-3">
+                    <div class="col col-12 col-lg-4">
+                        <div class="card border-0 bg-transparent py-3">
+                            <p class="text-secondary text-uppercase">Nhóm chủ đề</p>
+                            <h4 class="card-title"><span class="text-danger">e</span>Magazine</h4>
+                            <p>Nơi đây tổng hợp các bài viết được đầu tư công sức ở mức cao nhất, đề cập đến những vấn
+                                đề
+                                thú vị trong thế giới công nghệ, khoa học mà có thể bạn chưa biết.</p>
+                            <a class="btn btn-primary w-25 btn-sm"><i class="fa-brands fa-facebook-f"></i> Chia sẻ</a>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-8">
+                        <div class="card border-0">
+                            <img src="./assets/imgs/ngang-1678103457330343890399.jpg" class="card-img">
+                            <div class="card-img-overlay bg-overlay-black-gradient"></div>
+                            <div class="card-img-overlay top-reset text-white">
+                                <h5 class="card-title">Những yếu tố khiến Xiaomi 13 không cần “Pro” cũng có sức cuốn hút
+                                </h5>
+                                <p class="card-text"><small>12 ngày trước <i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                            class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3 gy-3 mb-3">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-1676265919441286812609.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Đánh giá OPPO Reno8 T 5G - Không mạnh mẽ nhất thì cũng phải đẹp
+                                    đẽ nhất </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">1 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Được OPPO “đặt ngồi” ở phân khúc tầm trung nên em út trong gia đình
+                                    Reno8 Series không có cấu hình cao cấp, nhưng vẻ ngoài lại là một câu chuyện khác.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-1676125030466806871909.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Trò chuyện với Chủ tịch trẻ nhất của Samsung về Chat GPT, những chiếc Galaxy S23 làm từ lưới đánh cá và sứ mệnh mới của tập đoàn </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">1 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">(Tổ Quốc) - Buổi trò chuyện của chúng tôi với ngài TM Roh không xoay quanh nhiều tới tính năng hay những gì mới mẻ trên Galaxy S23 series mà tập trung nhiều hơn vào xu hướng mới nổi của thị trường công nghệ, cũng như slogan mới của tập đoàn. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-16752409321961598989153.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cảm nhận đầu tiên về OPPO Reno 8T: smartphone tầm trung mang dáng hình cao cấp </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Bạn nghĩ rằng OPPO đã hết ý tưởng khi ra mắt tới 4 smartphone trong dòng Reno 8? Thành viên thứ 5 mang tên Reno 8T đã được ra mắt để phá tan đi sự hoài nghi này. Hãy cùng tôi trên tay nhanh để xem dòng máy này có gì đáng mong chờ! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-16751374396172072607505.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Tesla không còn "vô đối", đây là gương mặt mới hoàn toàn đủ khả năng vượt mặt công ty của Elon Musk </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">BYD đã công bố số liệu bán hàng vào tháng 12 năm 2022, theo đó nhà sản xuất pin và xe hơi Trung Quốc này đã bán được 911.140 xe BEV (ô tô thuần điện) trong năm vừa qua. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-16666089754491885301741-0-1-1042-1668-crop-16666090129882007735803-1675067318430658752109.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Thế giới trong mắt người "mù mặt": Khi bạn không phân biệt được bất cứ ai, kể cả chồng của mình</h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Mắc hội chứng mù khuôn mặt nghĩa là bạn phải sống trong một thế giới toàn những người xa lạ. Bạn giả vờ biết họ, bạn nói chuyện, cười đùa, tâm sự với họ, nhưng trong thâm tâm bạn đang thực sự không biết họ là ai. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ava-ngang-1674246533515498356884-0-0-500-800-crop-16742465427601549052896-16746371837512146967897.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cận cảnh màn hình chấm lượng tử mỏng như tờ giấy, có thể biến tương lai khoa học viễn tưởng thành sự thật </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Tại CES, tôi đã thấy công nghệ màn hình tuyệt mật sẽ sớm xuất hiện trên điện thoại, TV và nhiều hơn nữa. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ava-ngang-1674372718761595741679.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin tốt là bệnh của con cô có thuốc chữa, tin xấu đó là loại thuốc đắt nhất hành tinh </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Còn gì nghiệt ngã hơn hi vọng được gieo lên và dập tắt cùng lúc: Tại sao trên đời lại có những loại thuốc giá 86 tỷ một liều? 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-16741481379851438527474-16744077912761496707789.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Tân niên gặp Tân 1 Cú: "Có 100 tỷ mình sẽ mua xe container, không phải ô tô sang" </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Trong những ngày cuối năm háo hức chờ đón năm mới,Tân 1 Cú đã dành cho chúng tôi một buổi nói chuyện để tâm sự về những chuyện đã qua, thành công, tiếc nuối và cả những dự định dài hơi cho nhiều năm sắp tới. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/avatar1674324666312-1674324666615451385351.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Smartphone of the Year 2022: Nhìn lại Galaxy S22 Ultra và cùng chào đón Galaxy S 2023! </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">1 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Qua một năm đầy biến động, Galaxy S22 Ultra giữ vững tinh thần và định hướng kể từ khi ra mắt: trở thành chiếc smartphone tốt nhất trong năm 2022 mà người dùng Việt có thể sở hữu! 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-16738886992251901320879-0-0-500-800-crop-1673888720376354599426-16742280023021889096876.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Chào Tết Quý Mão 2023: Chia tay năm cũ để chào đón Galaxy Z Fold5 </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">4 năm không phải một chặng đường quá dài nhưng cũng là đủ để Samsung từng bước hoàn thiện sản phẩm đồng thời khẳng định vị thế số 1 của Galaxy Fold trong dòng điện thoại màn hình gập nói chung. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ava-ngangpng-16738574528031649812864.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Được coi là hiện đại và "xanh" hơn cả xe dùng pin lithium, xe nhiên liệu hydro giờ đang ở đâu? </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Trong những năm gần đây, thị trường xe ô tô điện liên tục phát triển không ngừng, khi các hãng sản xuất và người tiêu dùng vẫn muốn những chiếc xe trên thị trường được cải thiện tốt hơn. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ava-ngang-16734357772392135727670.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Từ YouTube sang TikTok: Sự sụp đổ của những giá trị mạng xã hội kiểu mẫu </h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">2 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Cởi bỏ lớp áo mạng xã hội mà nó khoác lên mình, TikTok trở về với bản chất là một dạng TV thế hệ mới. Nó hạn chế sự thảo luận, giới hạn góc nhìn đa chiều, nó đóng lại các diễn đàn, thiết lập chương trình nghị sự, nó đưa chúng ta trở về thời đại hấp thụ thông tin thụ động và giải trí hời hợt. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-1673168568071870854773-1673258274478262980873.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">17 xe chiến thắng Car Choice Awards 2022: Phủ rộng phân khúc, hướng tới nhu cầu số đông người Việt</h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">1 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Car Choice Awards 2022 vừa khép lại và tìm ra 17 mẫu xe phù hợp với nhu cầu của số đông người dung tại Việt Nam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ngang-16725412971411431345722.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Headphone of the Year 2022: Apple và sự trở lại hoành tráng của AirPods Pro 2</h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">1 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Sau 3 năm chờ đợi, cuối cùng Apple đã mang đến bản nâng cấp AirPods Pro 2 khiến nhiều non-fan cũng phải gật gù khen ngợi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="./assets/imgs/ava-ngang-16654798410971212178678-0-0-501-801-crop-166548097987322862603-16718657967791793709380.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">"Gã lang băm" ở Harvard và hiệu ứng giả dược: Khi nào thì niềm tin thực sự có thể chữa bệnh?</h5>
+                                <div class="hstack justify-content-between">
+                                    <p class="card-subtitle">1 tháng trước</p>
+                                    <p><small><i class="ms-3 fa-regular fa-thumbs-up"></i><sup>0</sup> <i
+                                        class="ms-1 fa-solid fa-share"></i><sup>0</sup></small></p>
+                                </div>
+                                <p class="card-text">Có những ghi chép cổ trong Đông Y xác nhận hiện tượng một đơn thuốc phát huy tác dụng trước cả khi nó được sắc uống.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-lg-secondary overflow-hidden">
+            <div class="container-fluid text-white border-bottom border-danger border-1 mt-3 d-none d-lg-block">
+                <div class="container">
+                    <div class="w-100 pt-3 pb-1 border-bottom border-white">
+                        <img class="img-fluid" src="./assets/imgs/logogenk.svg">
+                    </div>
+                    <ul class="footer-menu list-unstyled hstack justify-content-between text-uppercase py-2">
+                        <li><a href="/mobile.chn" title="mobile">Mobile</a></li>
+                        <li><a href="/tin-ict.chn" title="tin ict">Tin ICT</a></li>
+                        <li><a href="/internet.chn" title="internet">Internet</a></li>
+                        <li><a href="/kham-pha.chn" title="khám phá">Khám phá</a></li>
+                        <li><a href="/tra-da-cong-nghe.chn" title="trà đá công nghệ">Trà đá công nghệ</a></li>
+                        <li><a href="/thu-thuat.chn" title="thủ thuật">Thủ thuật</a></li>
+                        <li><a href="/apps-games.chn" title="apps - games">Apps - Game</a></li>
+                        <li><a href="/do-choi-so.chn" title="đồ chơi số">Đồ chơi số</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="container-fluid border-bottom mt-3">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col">
+                            <div class="w-100 text-wrap text-lg-secondary">
+                                <div class="hstack justify-content-between d-lg-none">
+                                    <h1 class="fw-bold">GenK</h1>
+                                    <a href="https://www.vccorp.vn/" title="Vận hành bởi VCCorp">
+                                        <img class="img-fluid" src="./assets/imgs/vccorp-m.png"></a>
+                                    <br>
+                                </div>
+
+                                <div>Chịu trách nhiệm quản lý nội dung: Bà Nguyễn Bích Minh
+                                </div>
+                                <div class="d-none d-lg-block mb-2">
+                                    <p class="m-0">Hà Nội: Tầng 20, Tòa nhà Center Building - Hapulico Complex, Số 1
+                                        Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.</p>
+                                    <p class="m-0">Email: <span class="text-danger"> info@genk.vn</span></p>
+                                    <p class="m-0">Điện thoại: 024.73095555, máy lẻ 62374</p>
+                                    <p class="m-0">VPĐD tại TP.HCM: Tầng 4, Tòa nhà 123 </p>
+                                    <p class="m-0">Võ Văn Tần, Phường 6, Quận 3, Tp. Hồ Chí Minh </p>
+                                </div>
+                                <p class="m-0">© Copyright 2010 - 2023 - Công ty Cổ phần VCCorp</p>
+                                <p class="m-0">
+                                    Tầng 17, 19, 20, 21 Toà nhà Center Building - Hapulico
+                                    Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.
+
+                                </p>
+                                <div class="d-lg-none mb-2">
+                                    <p class="m-0">Điện thoại: 024.39743410, máy lẻ 300. Email: info@genk.vn</p>
+                                    <p class="m-0">Hỗ trợ quảng cáo: <a href="tel:0794463333">0794463333</a> -
+                                        <a href="tel:0961984388">0961984388</a>
+                                    </p>
+                                </div>
+                                <p>Giấy phép thiết lập trang thông tin điện tử tổng hợp trên
+                                    mạng số 460/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội
+                                    cấp ngày 03/02/2016</p>
+                            </div>
+                        </div>
+                        <div class="col d-none d-lg-block text-secondary">
+                            <a href="https://www.vccorp.vn/" title="Vận hành bởi VCCorp">
+                                <img class="img-fluid" src="./assets/imgs/vccorp-m.png"></a>
+                            <h3 class="text-white text-uppercase mt-2">Liên hệ quảng cáo</h3>
+                            <p class="m-0">Hotline hỗ trợ quảng cáo: 0794463333 - 0961984388 </p>
+                            <p class="m-0">Email: giaitrixahoi@admicro.vn</p>
+                            <p class="m-0">Hỗ trợ & CSKH: Admicro </p>
+                            <p class="m-0">Address: Tầng 20, Tòa nhà Center Building - Hapulico Complex, Số </p>
+                            <p class="">1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội.</p>
+                            <a class="btn btn-primary" href="#"><i class="fa-brands fa-facebook-messenger"></i> Chat với
+                                tư vấn viên</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <script src="./assets/libs/jquery/jquery-3.6.4.min.js"></script>
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

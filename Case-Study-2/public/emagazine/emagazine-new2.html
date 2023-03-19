@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case study 2</title>
+    <link rel="stylesheet" href="../assets/libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        @keyframes img-show-1 {
+            0% {
+                background-image: url("../assets/imgs/gallery-thumb-1-167621814379131848313.jpg");
+            }
+            20% {
+                background-image: url("../assets/imgs/gallery-thumb-2-1676218143824852477380.jpg");
+            }
+            40% {
+                background-image: url("../assets/imgs/gallery-thumb-3-16762181438461832919049.jpg");
+            }
+            60% {
+                background-image: url("../assets/imgs/gallery-thumb-4-16762181438851029096803.jpg");
+            }
+            80% {
+                background-image: url("../assets/imgs/gallery-thumb-5-16762181439024151826.jpg");
+            }
+            100% {
+                background-image: url("../assets/imgs/gallery-thumb-3-16762181438461832919049.jpg");
+            }
+        }
+        @keyframes img-show-2 {
+            0% {
+                background-image: url("../assets/imgs/gallery-thumb-6-1676218143973363369451.jpg");
+            }
+            20% {
+                background-image: url("../assets/imgs/gallery-thumb-7-1676218143990523469600.jpg");
+            }
+            40% {
+                background-image: url("../assets/imgs/gallery-thumb-8-16762181440111699530101.jpg");
+            }
+            60% {
+                background-image: url("../assets/imgs/gallery-thumb-9-16762181440521282775514.jpg");
+            }
+            80% {
+                background-image: url("../assets/imgs/gallery-thumb-6-1676218143973363369451.jpg");
+            }
+            100% {
+                background-image: url("../assets/imgs/gallery-thumb-7-1676218143990523469600.jpg");
+            }
+        }
+        .img-show2,
+        .img-show1 {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            transition: bacground-image 1s;
+            background-size: cover;
+            background-position: center center;
+        }
+        .img-show1 {
+            animation: img-show-1 ease-in-out 12s infinite;
+        }
+        .img-show2 {
+            animation: img-show-2 ease-in-out 12s infinite;
+        }
+        .bg-1 {
+            background-color: #cecdda;
+        }
+        .bg-2 {
+            background-color: #1b1b1b;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid p-0 bg-emagazine">
+        <header>
+            <div class="container-fluid sticky-top bg-dark hstack justify-content-between align-items-stretch">
+                <a class="hstack align-items-stretch" href="/">
+                    <p class="text-white d-inline-block fs-1 bg-danger m-0 py-2 px-4"><i
+                            class="fa-solid fa-left-long"></i></p><img class="img-fluid p-2"
+                        src="../assets/imgs/logogenk.svg">
+                </a>
+                <a href="/" class="d-flex align-items-center"><img class="img-fluid p-2"
+                        src="../assets/imgs/logo-emgz-genk.png">
+                </a>
+                <a class="btn btn-primary w-auto btn-sm align-self-center"><i class="fa-brands fa-facebook-f"></i>Chia
+                    sẻ</a>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid">
+                <div class="p-5 m-5 text-center img-fluid">
+                    <svg width="100%" height="100%" viewBox="0 0 1378 150" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M568.252 2.03563V147.653H595.297V88.7953H612.582L650.609 147.653H679.892L639.018 84.722C657.117 80.0378 671.351 68.4292 671.351 45.6191V44.8045C671.351 15.0699 648.983 2.03563 617.056 2.03563H568.252ZM617.056 69.4475H595.297V23.0127H617.056C634.341 23.0127 644.712 28.7152 644.712 45.4154V46.2301C644.712 61.7083 635.155 69.4475 617.056 69.4475Z"
+                            fill="black"></path>
+                        <path
+                            d="M728.034 149.69C755.284 149.69 773.382 137.47 776.839 115.068H753.047C751.217 125.454 743.489 131.36 728.644 131.36C710.343 131.36 700.175 119.955 699.362 99.793H777.246V92.6648C777.246 54.5802 753.453 38.8983 727.018 38.8983C696.718 38.8983 674.146 60.8937 674.146 93.8868V95.5161C674.146 129.12 696.718 149.69 728.034 149.69ZM752.843 83.2964H699.768C702.208 66.7999 712.173 56.8205 727.018 56.8205C742.269 56.8205 751.623 64.9669 752.843 83.2964Z"
+                            fill="black"></path>
+                        <path
+                            d="M784.989 41.1386V147.653H809.595V84.9257C809.595 68.0218 820.779 59.4681 834.607 59.4681C849.249 59.4681 855.756 66.7999 855.756 82.8891V147.653H880.362V80.6488C880.362 51.3216 865.314 38.8983 843.961 38.8983C826.473 38.8983 814.679 47.6557 809.595 58.0424V41.1386H784.989Z"
+                            fill="black"></path>
+                        <path
+                            d="M941.855 149.69C973.171 149.69 996.557 128.102 996.557 94.9051V93.2758C996.557 60.69 973.171 38.8983 942.058 38.8983C910.742 38.8983 887.357 60.8937 887.357 93.8868V95.5161C887.357 127.898 910.539 149.69 941.855 149.69ZM942.058 130.546C923.35 130.546 912.572 116.9 912.572 95.1088V93.4795C912.572 71.4841 923.757 58.2461 942.058 58.2461C960.36 58.2461 971.341 71.6877 971.341 93.6831V95.1088C971.341 116.9 960.36 130.546 942.058 130.546Z"
+                            fill="black"></path>
+                        <path
+                            d="M1053.77 149.69C1083.05 149.69 1107.86 134.415 1107.86 105.699C1107.86 87.9806 1097.89 75.3536 1080.81 69.2438C1093.83 63.5413 1102.37 53.5619 1102.37 38.6946C1102.37 14.6626 1079.8 -0.000976562 1053.77 -0.000976562C1028.55 -0.000976562 1004.96 14.459 1004.96 39.102C1004.96 53.5619 1013.1 64.1523 1026.52 69.4475C1010.25 75.15 999.267 87.9806 999.267 106.514C999.267 135.026 1024.89 149.69 1053.77 149.69ZM1054.17 61.5047C1041.56 61.5047 1030.79 53.7656 1030.79 40.5276C1030.79 27.4933 1040.95 19.5505 1053.77 19.5505C1066.78 19.5505 1076.74 27.9006 1076.74 40.3239C1076.74 53.5619 1067.39 61.5047 1054.17 61.5047ZM1053.77 129.324C1039.12 129.324 1026.52 120.566 1026.52 104.274C1026.52 87.9806 1039.12 79.2232 1053.97 79.2232C1069.02 79.2232 1080.81 87.9806 1080.81 104.07C1080.81 120.363 1069.22 129.324 1053.77 129.324Z"
+                            fill="black"></path>
+                        <path d="M1183.15 23.4201V147.653H1210.4V23.4201H1250.86V2.03563H1142.68V23.4201H1183.15Z"
+                            fill="black"></path>
+                        <path
+                            d="M1308.62 62.2573C1316.93 62.2573 1322.8 57.1259 1322.8 48.9698C1322.8 40.8677 1317.9 36.0064 1310.94 36.0064C1306.84 36.0064 1304.14 37.5188 1302.63 39.2472L1302.69 28.7685H1320.59V23.097H1297.19L1296.86 44.5946H1300.53C1302.26 42.5961 1304.63 41.2458 1308.57 41.2458C1312.83 41.2458 1315.52 44.2165 1315.52 48.8618C1315.52 53.615 1312.99 56.6938 1308.57 56.6938C1303.6 56.6938 1302.15 54.2092 1301.56 50.6442H1294.87C1295.3 57.288 1299.56 62.2573 1308.62 62.2573Z"
+                            fill="black"></path>
+                        <path
+                            d="M1343.43 62.2573C1354.33 62.2573 1361.02 55.7756 1361.02 45.0808V41.5158H1344.24V46.9173H1353.95C1353.74 52.2646 1350.77 56.6398 1343.54 56.6398C1335.45 56.6398 1331.62 50.9683 1331.62 42.7041V42.272C1331.62 33.7918 1335.99 28.1744 1343.54 28.1744C1348.56 28.1744 1352.01 30.3889 1352.87 35.5203H1360.05C1359.02 26.2839 1351.69 22.5029 1343.43 22.5029C1332.16 22.5029 1324.18 30.713 1324.18 42.218V42.6501C1324.18 54.0471 1331.08 62.2573 1343.43 62.2573Z"
+                            fill="black"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1286.69 2.51143H1365.77C1372.29 2.51143 1377.58 7.8097 1377.58 14.3454V70.0749C1377.58 76.6106 1372.29 81.9089 1365.77 81.9089H1286.69C1280.17 81.9089 1274.88 76.6106 1274.88 70.0749V14.3454C1274.88 7.8097 1280.17 2.51143 1286.69 2.51143ZM1286.69 7.01261C1282.65 7.01261 1279.37 10.2956 1279.37 14.3454V70.0749C1279.37 74.1247 1282.65 77.4077 1286.69 77.4077H1365.77C1369.81 77.4077 1373.09 74.1247 1373.09 70.0749V14.3454C1373.09 10.2956 1369.81 7.01261 1365.77 7.01261H1286.69Z"
+                            fill="black"></path>
+                        <path
+                            d="M74.0297 149.691C118.157 149.691 147.237 117.716 147.237 75.1509V73.5216C147.237 30.7528 117.344 -3.90625e-05 74.0297 -3.90625e-05C30.9189 -3.90625e-05 0.416016 31.5674 0.416016 74.1326V75.7619C0.416016 117.716 29.4955 149.691 74.0297 149.691ZM74.4364 127.899C48.0006 127.899 28.6821 107.329 28.6821 75.5582V73.9289C28.6821 42.5651 45.5603 21.588 74.0297 21.588C102.499 21.588 119.174 43.7871 119.174 73.7253V75.3546C119.174 106.922 101.889 127.899 74.4364 127.899Z"
+                            fill="black"></path>
+                        <path
+                            d="M159.123 2.03657V147.654H186.169V92.2584H206.505C237.618 92.2584 259.783 78.6132 259.783 47.8603V47.0457C259.783 16.4965 238.431 2.03657 205.894 2.03657H159.123ZM205.894 72.707H186.169V23.0137H205.894C223.179 23.0137 233.347 29.7345 233.347 47.0457V47.8603C233.347 63.9496 223.79 72.707 205.894 72.707Z"
+                            fill="black"></path>
+                        <path
+                            d="M268.807 2.03657V147.654H295.853V92.2584H316.188C347.301 92.2584 369.466 78.6132 369.466 47.8603V47.0457C369.466 16.4965 348.114 2.03657 315.578 2.03657H268.807ZM315.578 72.707H295.853V23.0137H315.578C332.863 23.0137 343.031 29.7345 343.031 47.0457V47.8603C343.031 63.9496 333.473 72.707 315.578 72.707Z"
+                            fill="black"></path>
+                        <path
+                            d="M445.776 149.691C489.904 149.691 518.983 117.716 518.983 75.1509V73.5216C518.983 30.7528 489.09 -3.90625e-05 445.776 -3.90625e-05C402.665 -3.90625e-05 372.162 31.5674 372.162 74.1326V75.7619C372.162 117.716 401.242 149.691 445.776 149.691ZM446.183 127.899C419.747 127.899 400.428 107.329 400.428 75.5582V73.9289C400.428 42.5651 417.307 21.588 445.776 21.588C474.246 21.588 490.92 43.7871 490.92 73.7253V75.3546C490.92 106.922 473.635 127.899 446.183 127.899Z"
+                            fill="black"></path>
+                    </svg>
+                </div>
+                <div class="row row-cols-2 px-5">
+                    <div class="col">
+                        <h1>Không mạnh mẽ nhất</h1>
+                        <h1>thì cũng phải đẹp đẽ nhất</h1>
+                    </div>
+                    <div class="col">
+                        <h3 class="text-wrap">
+                            Được OPPO “đặt ngồi” ở phân khúc tầm trung nên em út trong gia đình Reno8 Series không có
+                            cấu hình cao cấp, nhưng vẻ ngoài lại là một câu chuyện khác.
+                        </h3>
+                    </div>
+                </div>
+                <img class="d-block img-fluid w-100" src="../assets/imgs/cover-thumb-web-1676218143464572448019.png">
+                <div class="p-5 m-5 text-wrap">Ngó lên bàn làm việc thấy 4 chiếc Reno8 Series được ra mắt cuối 2022, tôi
+                    tưởng rằng OPPO đã hoàn tất việc ra mắt dòng sản phẩm này rồi. Nhưng điều bất ngờ xảy tới khi hãng
+                    tiếp tục gửi tới Reno8 T - chiếc Reno8 thứ 5 và cũng được ra mắt cách khá xa 4 chiếc còn lại. Thị
+                    trường hiếm khi có nhà sản xuất nào ra mắt tới 5 sản phẩm trong cùng 1 dòng, nhưng OPPO đã không
+                    ngần ngại làm điều đó. Trở lại với sản phẩm để đỡ lan man, chữ “T” trong Reno8 T đại diện cho
+                    “Tuyệt” hay “Tệ”? Hãy cùng tôi tìm hiểu ngay nào!
+                </div>
+                <img class="d-block img-fluid p-5" src="../assets/imgs/section-thumb-1-1676218144867298321139.jpg">
+                <div class="row p-5">
+                    <div class="col-12 col-lg-5 p-5">
+                        <h1 class="px-5">Vẫn là Reno8 nhưng thiết kế “lạ lắm” </h1>
+                        <p class="text-wrap text-justify px-5">
+                            Thị trường smartphone hiện nay dường như là sự cạnh tranh của 2 kiểu thiết kế cạnh viền,
+                            hoặc “Vuông vức” hoặc “Bo tròn”. Toàn bộ những sản phẩm Reno8 Series được ra mắt trước đó
+                            bao gồm Reno8 Z, Reno8 4G, Reno8 5G và Reno8 Pro 5G đều thống nhất chung một thiết kế viền
+                            thẳng, cạnh bo tròn ít và màn hình phẳng.
+                        </p>
+                        <p class="text-wrap text-justify px-5">
+                            Reno8 T không thích giống những đàn anh đi trước, chọn mẫu thiết kế tròn trịa từ trước ra
+                            sau. Mặt lưng máy được bo cong 2 bên, kết hợp với màn hình cũng được làm cong ở phía trước
+                            để “ép” phần viền trở nên mỏng manh. Và tất nhiên đây là OPPO, một hãng không bao giờ làm
+                            mặt lưng nhàm chán cả. Reno8 T sở hữu thiết kế “OPPO Glow”, nhìn dưới ánh sáng đèn thì có
+                            màu xanh dương, đem ra nắng thì lại ửng hồng, dưới ánh sáng chói gắt lại thấy cả chấm óng
+                            ánh. Để hỏi Reno8 T là màu sắc gì, thì tôi cũng “chả biết đường nào mà trả lời”!
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <div class="h-100 img-show1">
+                            <img class="img-fluid d-lg-none"
+                                src="../assets/imgs/gallery-thumb-1-167621814379131848313.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="py-1 bg-1 pt-5">
+                    <div class="p-5">
+                        <svg data-wow-duration="2s" width="100%" height="100%" viewBox="0 0 1378 150" fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="visibility: visible; animation-duration: 2s; animation-name: zoomIn;">
+                            <path
+                                d="M568.252 2.03563V147.653H595.297V88.7953H612.582L650.609 147.653H679.892L639.018 84.722C657.117 80.0378 671.351 68.4292 671.351 45.6191V44.8045C671.351 15.0699 648.983 2.03563 617.056 2.03563H568.252ZM617.056 69.4475H595.297V23.0127H617.056C634.341 23.0127 644.712 28.7152 644.712 45.4154V46.2301C644.712 61.7083 635.155 69.4475 617.056 69.4475Z"
+                                fill="black"></path>
+                            <path
+                                d="M728.034 149.69C755.284 149.69 773.382 137.47 776.839 115.068H753.047C751.217 125.454 743.489 131.36 728.644 131.36C710.343 131.36 700.175 119.955 699.362 99.793H777.246V92.6648C777.246 54.5802 753.453 38.8983 727.018 38.8983C696.718 38.8983 674.146 60.8937 674.146 93.8868V95.5161C674.146 129.12 696.718 149.69 728.034 149.69ZM752.843 83.2964H699.768C702.208 66.7999 712.173 56.8205 727.018 56.8205C742.269 56.8205 751.623 64.9669 752.843 83.2964Z"
+                                fill="black"></path>
+                            <path
+                                d="M784.989 41.1386V147.653H809.595V84.9257C809.595 68.0218 820.779 59.4681 834.607 59.4681C849.249 59.4681 855.756 66.7999 855.756 82.8891V147.653H880.362V80.6488C880.362 51.3216 865.314 38.8983 843.961 38.8983C826.473 38.8983 814.679 47.6557 809.595 58.0424V41.1386H784.989Z"
+                                fill="black"></path>
+                            <path
+                                d="M941.855 149.69C973.171 149.69 996.557 128.102 996.557 94.9051V93.2758C996.557 60.69 973.171 38.8983 942.058 38.8983C910.742 38.8983 887.357 60.8937 887.357 93.8868V95.5161C887.357 127.898 910.539 149.69 941.855 149.69ZM942.058 130.546C923.35 130.546 912.572 116.9 912.572 95.1088V93.4795C912.572 71.4841 923.757 58.2461 942.058 58.2461C960.36 58.2461 971.341 71.6877 971.341 93.6831V95.1088C971.341 116.9 960.36 130.546 942.058 130.546Z"
+                                fill="black"></path>
+                            <path
+                                d="M1053.77 149.69C1083.05 149.69 1107.86 134.415 1107.86 105.699C1107.86 87.9806 1097.89 75.3536 1080.81 69.2438C1093.83 63.5413 1102.37 53.5619 1102.37 38.6946C1102.37 14.6626 1079.8 -0.000976562 1053.77 -0.000976562C1028.55 -0.000976562 1004.96 14.459 1004.96 39.102C1004.96 53.5619 1013.1 64.1523 1026.52 69.4475C1010.25 75.15 999.267 87.9806 999.267 106.514C999.267 135.026 1024.89 149.69 1053.77 149.69ZM1054.17 61.5047C1041.56 61.5047 1030.79 53.7656 1030.79 40.5276C1030.79 27.4933 1040.95 19.5505 1053.77 19.5505C1066.78 19.5505 1076.74 27.9006 1076.74 40.3239C1076.74 53.5619 1067.39 61.5047 1054.17 61.5047ZM1053.77 129.324C1039.12 129.324 1026.52 120.566 1026.52 104.274C1026.52 87.9806 1039.12 79.2232 1053.97 79.2232C1069.02 79.2232 1080.81 87.9806 1080.81 104.07C1080.81 120.363 1069.22 129.324 1053.77 129.324Z"
+                                fill="black"></path>
+                            <path d="M1183.15 23.4201V147.653H1210.4V23.4201H1250.86V2.03563H1142.68V23.4201H1183.15Z"
+                                fill="black"></path>
+                            <path
+                                d="M1308.62 62.2573C1316.93 62.2573 1322.8 57.1259 1322.8 48.9698C1322.8 40.8677 1317.9 36.0064 1310.94 36.0064C1306.84 36.0064 1304.14 37.5188 1302.63 39.2472L1302.69 28.7685H1320.59V23.097H1297.19L1296.86 44.5946H1300.53C1302.26 42.5961 1304.63 41.2458 1308.57 41.2458C1312.83 41.2458 1315.52 44.2165 1315.52 48.8618C1315.52 53.615 1312.99 56.6938 1308.57 56.6938C1303.6 56.6938 1302.15 54.2092 1301.56 50.6442H1294.87C1295.3 57.288 1299.56 62.2573 1308.62 62.2573Z"
+                                fill="black"></path>
+                            <path
+                                d="M1343.43 62.2573C1354.33 62.2573 1361.02 55.7756 1361.02 45.0808V41.5158H1344.24V46.9173H1353.95C1353.74 52.2646 1350.77 56.6398 1343.54 56.6398C1335.45 56.6398 1331.62 50.9683 1331.62 42.7041V42.272C1331.62 33.7918 1335.99 28.1744 1343.54 28.1744C1348.56 28.1744 1352.01 30.3889 1352.87 35.5203H1360.05C1359.02 26.2839 1351.69 22.5029 1343.43 22.5029C1332.16 22.5029 1324.18 30.713 1324.18 42.218V42.6501C1324.18 54.0471 1331.08 62.2573 1343.43 62.2573Z"
+                                fill="black"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1286.69 2.51143H1365.77C1372.29 2.51143 1377.58 7.8097 1377.58 14.3454V70.0749C1377.58 76.6106 1372.29 81.9089 1365.77 81.9089H1286.69C1280.17 81.9089 1274.88 76.6106 1274.88 70.0749V14.3454C1274.88 7.8097 1280.17 2.51143 1286.69 2.51143ZM1286.69 7.01261C1282.65 7.01261 1279.37 10.2956 1279.37 14.3454V70.0749C1279.37 74.1247 1282.65 77.4077 1286.69 77.4077H1365.77C1369.81 77.4077 1373.09 74.1247 1373.09 70.0749V14.3454C1373.09 10.2956 1369.81 7.01261 1365.77 7.01261H1286.69Z"
+                                fill="black"></path>
+                            <path
+                                d="M74.0297 149.691C118.157 149.691 147.237 117.716 147.237 75.1509V73.5216C147.237 30.7528 117.344 -3.90625e-05 74.0297 -3.90625e-05C30.9189 -3.90625e-05 0.416016 31.5674 0.416016 74.1326V75.7619C0.416016 117.716 29.4955 149.691 74.0297 149.691ZM74.4364 127.899C48.0006 127.899 28.6821 107.329 28.6821 75.5582V73.9289C28.6821 42.5651 45.5603 21.588 74.0297 21.588C102.499 21.588 119.174 43.7871 119.174 73.7253V75.3546C119.174 106.922 101.889 127.899 74.4364 127.899Z"
+                                fill="black"></path>
+                            <path
+                                d="M159.123 2.03657V147.654H186.169V92.2584H206.505C237.618 92.2584 259.783 78.6132 259.783 47.8603V47.0457C259.783 16.4965 238.431 2.03657 205.894 2.03657H159.123ZM205.894 72.707H186.169V23.0137H205.894C223.179 23.0137 233.347 29.7345 233.347 47.0457V47.8603C233.347 63.9496 223.79 72.707 205.894 72.707Z"
+                                fill="black"></path>
+                            <path
+                                d="M268.807 2.03657V147.654H295.853V92.2584H316.188C347.301 92.2584 369.466 78.6132 369.466 47.8603V47.0457C369.466 16.4965 348.114 2.03657 315.578 2.03657H268.807ZM315.578 72.707H295.853V23.0137H315.578C332.863 23.0137 343.031 29.7345 343.031 47.0457V47.8603C343.031 63.9496 333.473 72.707 315.578 72.707Z"
+                                fill="black"></path>
+                            <path
+                                d="M445.776 149.691C489.904 149.691 518.983 117.716 518.983 75.1509V73.5216C518.983 30.7528 489.09 -3.90625e-05 445.776 -3.90625e-05C402.665 -3.90625e-05 372.162 31.5674 372.162 74.1326V75.7619C372.162 117.716 401.242 149.691 445.776 149.691ZM446.183 127.899C419.747 127.899 400.428 107.329 400.428 75.5582V73.9289C400.428 42.5651 417.307 21.588 445.776 21.588C474.246 21.588 490.92 43.7871 490.92 73.7253V75.3546C490.92 106.922 473.635 127.899 446.183 127.899Z"
+                                fill="black"></path>
+                        </svg>
+                    </div>
+                    <img class="d-block img-fluid w-100"
+                        src="../assets/imgs/section-thumb-2-16762181451221627664956.png">
+                </div>
+                <div class="p-5 m-5 text-wrap">Như đã đề cập trong những bài viết khác, mỗi kiểu thiết kế dù là tròn hay
+                    vuông cũng đều có ưu nhược điểm riêng. Smartphone bo cong, tròn trịa như Reno8 T đối với tôi vẫn
+                    luôn “ăn điểm” về tính công thái học, máy cầm lọt vào lòng bàn tay cũng như không có các điểm sắc để
+                    bị cấn gây khó chịu. Máy cũng thực sự mỏng (7.7mm) và nhẹ (170g), đều là những yếu tố “cộng điểm”
+                    cho sự thoải mái khi cầm trên tay cũng như để trong túi quần.
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h4 class="p-5">Những yếu tố “cộng điểm” cho sự thoải mái khi cầm trên tay cũng như để trong túi
+                            quần.</h4>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <h1 class="fw-bold">170g</h1>
+                        <p class="">Siêu nhẹ</p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <h1 class="fw-bold">17.7mm</h1>
+                        <p class="">Siêu mỏng</p>
+                    </div>
+                </div>
+                <img class="d-block img-fluid w-100" src="../assets/imgs/section-thumb-9-16762181455542057517504.png">
+                <div class="row p-5">
+                    <div class="col-12 col-lg-5 p-5">
+                        <h1 class="px-5">
+                            Màn hình
+                            là điểm tỏa sáng
+                        </h1>
+                        <p class="text-wrap text-justify px-5">
+                            Điểm làm tôi cảm thấy thích nhất ở Reno8 T không nằm ở mặt sau mà là ở “mặt tiền” của máy.
+                            Ngồi đọc cấu hình màn hình của chiếc máy này, sẽ ít người nói rằng đó là màn hình của
+                            smartphone tầm trung: OLED 6.7 inch độ phân giải FullHD, với khả năng hiển thị 1 tỷ màu và
+                            tần số làm tươi cao 120Hz. Thứ màn hình này thiếu có lẽ là độ phân giải cao hơn (QHD) và độ
+                            sáng vượt trội (theo công bố thì vẫn đạt 950 nits).
+                        </p>
+                        <p class="text-wrap text-justify px-5">
+                            Trải nghiệm thực tế với màn hình cũng hoàn toàn tích cực! 2 phần viền 2 bên được làm cong
+                            nhẹ, vẫn có khả năng làm người dùng bị bấm nhầm bằng lòng bàn tay nhưng tạo hiệu ứng thị
+                            giác rất đã, mọi thứ như “lồi” lên gần với tôi hơn so với khi dùng các màn hình dạng phẳng.
+                        </p>
+                        <p class="text-wrap text-justify px-5">
+                            Các yếu tố như cân bằng trắng, độ đậm màu, tương phản, độ mượt đều được Reno8 T làm tốt,
+                            không có gì phải phàn nàn cả. Thậm chí không “soi” các cấu hình khác, nhiều người nhìn vào
+                            màn hình của Reno 8T sẽ tưởng đây là flagship, không tệ chút nào!
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <div class="h-100 img-show2">
+                            <img class="img-fluid d-lg-none"
+                                src="../assets/imgs/gallery-thumb-1-167621814379131848313.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center px-5">
+                    <div class="col-12 col-lg-3">
+                        <div class="my-2">
+                            <h1 class="fw-bold">6.7"</h1>
+                            <h4 class="">Màn hình AMOLED</h4>
+                        </div>
+                        <div class="my-2">
+                            <h1 class="fw-bold">950nits</h1>
+                            <h4 class="">Độ sáng màn hình</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <img class="d-block img-fluid w-100"
+                            src="../assets/imgs/section-thumb-3-16762181452031209288260.png">
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="my-2">
+                            <h1 class="fw-bold">120Hz</h1>
+                            <h4 class="">Tần số quét</h4>
+                        </div>
+                        <div class="my-2">
+                            <h1 class="fw-bold">2.32mm</h1>
+                            <h4 class="">Viền dưới siêu mỏng</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-black">
+                    <div class="row row-cols-1 row-cols-lg-2 text-white p-5 align-items-center">
+                        <div class="col">
+                            <div class="p-3">
+                                <h1 class="text-secondary">Camera dùng để soi nhưng lại zoom <span
+                                        class="text-white">“bằng chân”</span></h1>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3">
+                                <p class="text-wrap text-justify">Như đã nói, nếu không soi xét kỹ thì bạn sẽ tưởng đây
+                                    là máy flagship, nhưng rõ ràng đây là dòng máy tầm trung với giá bán chỉ loanh quanh
+                                    10 triệu (chưa trừ quà) thì việc nó tồn tại những điểm cần cải thiện là điều đương
+                                    nhiên mà thôi. Mặc dù có tới 3 camera nhưng Reno8 T không có những camera dạng “thay
+                                    đổi tiêu cự” như góc siêu rộng hoặc zoom 2x, 3x, muốn thay đổi góc nhìn thì bạn sẽ
+                                    phải tự di chuyển bản thân ra chỗ khác!</p>
+                                <p class="text-wrap text-justify">Thay vào đó, hệ thống camera này mang tính chuyên dụng
+                                    nhiều hơn, cụ thể là để đi “soi”! Muốn soi chi tiết của một bức ảnh phong cảnh?
+                                    Chuyển qua chế độ chụp độ phân giải cao 108MP. Bạn muốn soi một vật gì đó nhỏ đến
+                                    mức mắt người không thấy được? Có ngay camera siêu cận cảnh dạng hiển vi 2MP. Bạn
+                                    muốn “soi” độ xinh trai đẹp gái của những người bạn và bản thân? Máy có thêm cảm
+                                    biến 2MP đo chiều sâu để phục vụ chụp chân dung. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative">
+                        <img class="d-block img-fluid col-7 m-auto"
+                            src="../assets/imgs/section-thumb-4-16762181452241007994459.png">
+                        <div class="row row-cols-2 position-absolute top-0 pt-5">
+                            <div class="col">
+                                <div class="px-5">
+                                    <img class="d-block img-fluid w-100"
+                                        src="../assets/imgs/element-thumb-1-16762181434921430263431.png">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="px-5">
+                                    <img class="d-block img-fluid w-100 mt-2 mb-5"
+                                        src="../assets/imgs/element-thumb-2-1676218143524358694980.png">
+                                    <img class="d-block img-fluid w-100 my-5"
+                                        src="../assets/imgs/element-thumb-3-16762181435401495455602.png">
+                                    <img class="d-block img-fluid w-100 mt-5"
+                                        src="../assets/imgs/element-thumb-4-16762181435801305295303.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-3 g-1 mt-5">
+                        <div class="col">
+                            <div class="">
+                                <img class="d-block img-fluid w-100"
+                                    src="../assets/imgs/item-image-1-16762181441001814474713.jpg">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="">
+                                <img class="d-block img-fluid w-100"
+                                    src="../assets/imgs/item-image-2-1676218144189266124746.jpg">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="">
+                                <img class="d-block img-fluid w-100"
+                                    src="../assets/imgs/item-image-3-16762181442451997189838.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-lg-2 bg-2 py-5 g-2">
+                    <div class="col">
+                        <div class="px-5">
+                            <h1 class="text-white">Ảnh từ camera chính</h1>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <p class="text-white">Một vấn đề với Reno8 T đó là ảnh chụp từ camera chính thường có xu
+                                hướng cân bằng trắng ngả sang màu xanh dương, độ tương phản cũng không quá cao nên ảnh
+                                có cảm giác bị nhạt màu. Hiện tượng này không phải ảnh nào cũng bị, nhưng mỗi khi xảy ra
+                                thì ta sẽ nhận ra ngay vì màu sắc bị khác so với thực tế. Vấn đề này có thể sửa được
+                                bằng phần mềm, nên rất mong OPPO có sự điều chỉnh trong các phiên bản ColorOS sắp tới.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-1-1676218144270328997950.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-2-16762181444701939342341.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-3-16762181445671194739355.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-4-1676218144598886697847.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-5-16762181446511056916738.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-6-1676218144668448698503.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-lg-2 bg-2 py-5 g-2">
+                    <div class="col">
+                        <div class="px-5">
+                            <h1 class="text-white"> Ảnh từ camera hiển vi </h1>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <p class="text-white">Điểm khác biệt trong hệ thống camera của Reno8 T nằm ở camera dạng
+                                hiển vi 2MP, là loại có thể “soi” được những sự vật siêu nhỏ thay vì chỉ chụp gần dạng
+                                “macro” như đại đa số các smartphone khác. Tôi có thể chụp được nhụy hoa siêu nhỏ, những
+                                sợi chỉ trên chiếc áo khoác, trứng cá hồi nhỏ li ti hay số trên mặt đồng hồ đeo tay, quả
+                                thật là “ảo diệu”.
+                            </p>
+                            <p class="text-white">Tuy vậy cách sử dụng camera hiển vi cũng không phải là dễ! Ta phải đưa
+                                máy gần như là chạm tới vật cần chụp luôn, nên hãy quên đi việc chụp côn trùng hay động
+                                vật có thể di chuyển được. Độ sâu trường ảnh (khoảng nét) cũng cực kỳ mỏng, nên bạn phải
+                                giữ thật chắc tay và chụp nhiều ảnh mới có được một bức ưng ý. </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-7-16762181447331419778336.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-8-16762181447701222566622.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-9-1676218144810797175963.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-10-16762181443651880460437.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-11-16762181443881702840791.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/scroll-thumb-12-16762181444291768002469.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col col-12 col-lg-5">
+                        <div class="px-5">
+                            <h1 class="text-wrap"> Cấu hình không mạnh nhưng đủ dùng </h1>
+                            <p class="text-wrap">
+                                Cũng giống với hệ thống camera, cấu hình xử lý của Reno8 T chỉ vừa đủ để phù hợp với
+                                phân
+                                khúc của máy. Điều khiển các hoạt động của Reno8 T là chip Snapdragon 695 5G với các
+                                thành
+                                phần bao gồm 4 nhân hiệu năng cao Kyro 660 Gold và 4 nhân tiết kiệm điện Kyro 660 Silver
+                                và
+                                GPU Adreno 619.
+                            </p>
+                            <div class="text-wrap">
+                                Đây thực chất vẫn là một SoC mới trong thế hệ chip Snapdragon, có hiệu năng tăng lên khá
+                                nhiều so với các dòng Snapdragon 6 Series trước đó bên cạnh việc có thêm mạng 5G mới
+                                nhất.
+                                Nhưng để nói đây là một chip “mạnh” hay “chiến mọi game” thì không phải. Hệ điều hành
+                                ColorOS 13 được tối ưu đủ tốt để mọi thao tác trên màn hình chính, lướt web đều rất mượt
+                                mà.
+                                Nhưng khi chuyển tới game như Liên Quân Mobile, Liên Minh Huyền thoại: Tốc Chiến thì tôi
+                                vẫn
+                                sẽ để thanh độ họa thấp hơn 1 nấc so với mức cao nhất để đảm bảo mọi thứ đều trở nên
+                                mượt
+                                mà.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-7">
+                        <div class="hstack align-items-center">
+                            <div class="w-50 z-3">
+                                <img class="d-block img-fluid w-100 object-fit-cover"
+                                    src="../assets/imgs/smooth-thumb-1-16762181456131673924038.png">
+                            </div>
+                            <div class="w-45 ms-n-7vw z-2">
+                                <img class="d-block img-fluid w-100 object-fit-cover"
+                                    src="../assets/imgs/smooth-thumb-2-167621814564099321776.png">
+                            </div>
+                            <div class="w-40 ms-n-7vw z-1">
+                                <img class="d-block img-fluid w-100 object-fit-cover"
+                                    src="../assets/imgs/smooth-thumb-3-1676218145698736059384.png">
+                            </div>
+
+                            <div class="w-35 ms-n-7vw z-0">
+                                <img class="d-block img-fluid w-100 object-fit-cover"
+                                    src="../assets/imgs/smooth-thumb-4-1676218145782753599365.png">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+                    <div class="col">
+                        <div class="px-5">
+                            <h1 class="fw-bold"> Pin dùng mãi không hết, sạc thì không quá lâu </h1>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="px-5">
+                            <p class="">Vẫn mãi là ưu điểm của các sản phẩm từ OPPO: Chất lượng về pin - sạc luôn đạt
+                                đỉnh! Dù đó là máy flagship là Find X5 Pro hay tầm trung như Reno8 T, người dùng vẫn sẽ
+                                luôn yên tâm là pin sẽ sử dụng được lâu, còn sạc thì SuperVOOC vẫn chưa có đối thủ trên
+                                thị trường về cả tốc độ lẫn độ ổn định.</p>
+                            <p class="">Trong 2 ngày sử dụng máy nhiều, bao gồm một ngày giải trí tại nhà với hơn 4
+                                tiếng Youtube và một ngày ra đường chụp ảnh từ 2 giờ chiều tới tận tối muộn, chiếc Reno8
+                                T tôi sử dụng vẫn còn khoảng 50%. Tất nhiên đây không phải là chiếc máy duy nhất tôi sử
+                                dụng nên thời lượng pin này cũng chỉ mang tính tham khảo, nhưng một điều chắc chắn là để
+                                làm viên pin 4800mAH cạn kiệt cũng là một quá trình “dài hơi”! </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-lg-3">
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid object-fit-cover"
+                                src="../assets/imgs/section-thumb-10-16762181448921684518293.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="h-100">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/section-thumb-11-16762181449671861933331.jpg">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <img class="d-block img-fluid w-100"
+                                src="../assets/imgs/section-thumb-12-1676218145053641002139.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-lg-2 py-5">
+                    <div class="col">
+                        <div class="text-end">
+                            <h1 class="fw-bold">44 phút</h1>
+                            <p>Sạc đầy pin 100%</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="">
+                            <h1 class="fw-bold">67W</h1>
+                            <p>Sạc nhanh SUPERVOOC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hstack">
+                    <div class="">
+                        <img class="d-block img-fluid w-100"
+                            src="../assets/imgs/section-thumb-5-16762181452651715025974.png">
+                    </div>
+                    <div class="">
+                        <img class="d-block img-fluid w-100 ms-n-7vw"
+                            src="../assets/imgs/section-thumb-6-1676218145358444267873.png">
+                    </div>
+                </div>
+                <div class="p-5">
+                    <p class="text-wrap text-justify">
+                        Để máy hết sạch pin và bắt đầu cắm sạc bằng củ SuperVOOC 67W, máy đạt 43% trong 15 phút, lên 77%
+                        trong 30 phút và khoảng 43 phút sẽ đầy pin. Đây không phải là tốc độ nhanh nhất, vì thị trường
+                        không thiếu các dòng máy flagship có thể sạc đầy pin từ trạng thái hết sạch pin trong dưới 30
+                        phút, nhưng Reno8 T vẫn hoàn toàn có thể gọi là nhanh, tôi không phải lo nghĩ về việc sạc lại
+                        máy quá nhiều.
+                    </p>
+                </div>
+
+                <div class="card overflow-hidden border-0">
+                    <img class="card-img object-fit-cover" src="../assets/imgs/bg-thumb-1676218642587972794089.png">
+                    <div class="card-img-overlay top-20">
+                        <div class="row row-cols-1 row-cols-lg-2 pt-4 pb-2 align-items-center">
+                            <div class="col">
+                                <h1 class="fw-bold ps-3"> Smartphone của người “mộ điệu”? </h1>
+                            </div>
+                            <div class="col text-justify">
+                                <p class="pe-3">Reno8 T là “em út” trong gia đình Reno8 Series, và nó cũng thật là giống
+                                    với một đứa con út trong gia đình đời thật. Nó có vẻ ngoài thật bóng bẩy, tinh tế và
+                                    có khả năng thu hút ánh nhìn của những người xung quanh, có những “tài lẻ” như khả
+                                    năng chụp 108MP, chụp ảnh hiển vi và một trải nghiệm pin - sạc tuyệt vời.</p>
+                                <p class="pe-3">Nhưng ngược lại, “người em út” này vẫn còn những thiếu sót riêng như khả
+                                    năng thay đổi tiêu cự khi chụp hình còn giới hạn, cấu hình cũng không có nhiều điều
+                                    đáng để nói. Điều này những người anh như Reno8 5G hay Reno8 Pro 5G đều làm tốt hơn,
+                                    tất nhiên là với mức giá cao hơn tương xứng. Dường như đây là smartphone dành cho
+                                    người “mộ điệu”, không quá quan tâm đến cấu hình? </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-12 col-lg-7">
+                                <img class="d-block img-fluid w-100"
+                                    src="../assets/imgs/section-thumb-7-16762181454281167312329.png">
+                            </div>
+                            <div class="col col-12 col-lg-5">
+                                <img class="d-block img-fluid w-100"
+                                    src="../assets/imgs/section-thumb-8-16762181454872028771173.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-50 mx-auto text-center pt-5">
+                    <h1 class="fw-bold"> Tham khảo thông tin sản phẩm Reno8 T 5G phiên bản 256GB </h1>
+                    <h4 class="text-uppercase">độc quyền trên hệ thống Thế Giới Di Động</h4>
+                    <a href="#" class="btn btn-dark rounded-5">Tại đây <i
+                            class="fa-solid fa-circle-arrow-right"></i></a>
+                    <img class="d-block img-fluid w-100 mt-5"
+                        src="../assets/imgs/footer-thumb-1676218143681750067503.png">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./assets/libs/jquery/jquery-3.6.4.min.js"></script>
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -78,7 +78,105 @@ a {
     text-align: justify !important;
 }
 
+.bg-secondarys {
+    background-color: b.$nav-lg-color !important;
+}
+
+.modal {
+    --bs-modal-width: 90vw;
+}
+
+.top-reset {
+    top: initial !important;
+}
+
+.bg-overlay-black-gradient {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+}
+
+.bg-emagazine {
+    background-color: #f7f7f7;
+}
+
+.h-90 {
+    height: 90% !important;
+}
+.h-80 {
+    height: 80% !important;
+}
+.h-70 {
+    height: 70% !important;
+}
+.h-60 {
+    height: 60% !important;
+}
+
+.top-5 {
+    top:5% !important;
+}
+
+.top-10 {
+    top:10% !important;
+}
+.top-15 {
+    top:15% !important;
+}
+
+.top-20 {
+    top:20% !important;
+}
+.top-30 {
+    top:30% !important;
+}
+.top-40 {
+    top:40% !important;
+}
+.start-20 {
+    left: 20%;
+}
+.start-30 {
+    left: 30%;
+}
+
+.start-40 {
+    left: 40%;
+}
+.start-60 {
+    left: 60%;
+}
+.start-70 {
+    left: 70%;
+}
+.start-80 {
+    left: 80%;
+}
+
+.w-45 {
+    width: 45% !important;
+}
+.w-40 {
+    width: 40% !important;
+}
+.w-35 {
+    width: 35% !important;
+}
+.w-30 {
+    width: 30% !important;
+}
+
+.ms-n-7vw {
+    margin-left: -7vw !important;
+}
+
 @include b.media-breakpoint-up(lg){
+    .modal {
+        --bs-modal-width: 70vw;
+    }
+    
+    .bg-lg-secondarys {
+        background-color: b.$nav-lg-color !important;
+    }
+
     .bg-lg-secondary {
         background-color: b.$bottom-nav-bg-color;
     }
