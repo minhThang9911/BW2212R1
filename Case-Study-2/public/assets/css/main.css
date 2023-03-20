@@ -176,6 +176,10 @@ a {
   margin-left: -7vw !important;
 }
 
+.vw-50 {
+  width: 50vw !important;
+}
+
 @media (min-width: 992px) {
   .modal {
     --bs-modal-width: 70vw;

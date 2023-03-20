@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang không tồn tại</title>
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.css">
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container text-center vstack justify-content-between vh-100">
+        <h1 class="fw-bold mt-5">Nội dung này đã bị gỡ hoặc không tồn tại</h1>
+        <div id="holder-img" class="p-2 w-50 mx-auto">
+            <img src="./assets/imgs/4042.png" class="img-fluid">
+        </div>
+        <div class="pb-5">
+            <a href="/Case-Study-2/public/" title="Trang chủ" class="btn btn-warning">Quay về trang chủ</a>
+        </div>
+    </div>
+    <script>
+        var pic = new Array(
+            '<img src="./assets/imgs/404.png" class="img-fluid">',
+            '<img src="./assets/imgs/4041.gif" class="img-fluid">',
+            '<img src="./assets/imgs/4042.png" class="img-fluid">',
+            '<img src="./assets/imgs/4043.png" class="img-fluid">',
+        );
+        var n = Math.floor(Math.random() * 4);
+        var classImg = document.getElementById("holder-img");
+        if (classImg != null) {
+            classImg.innerHTML = pic[n];
+        }
+        setTimeout(function () {
+            window.location.href = "/Case-Study-2/public/";
+        }, 10 * 1000);
+    </script>
+</body>
+
+</html>

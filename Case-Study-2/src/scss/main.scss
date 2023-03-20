@@ -168,6 +168,10 @@ a {
     margin-left: -7vw !important;
 }
 
+.vw-50 {
+    width: 50vw !important;
+}
+
 @include b.media-breakpoint-up(lg){
     .modal {
         --bs-modal-width: 70vw;
