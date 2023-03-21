@@ -13,42 +13,54 @@
             0% {
                 background-image: url("../assets/imgs/gallery-thumb-1-167621814379131848313.jpg");
             }
+
             20% {
                 background-image: url("../assets/imgs/gallery-thumb-2-1676218143824852477380.jpg");
             }
+
             40% {
                 background-image: url("../assets/imgs/gallery-thumb-3-16762181438461832919049.jpg");
             }
+
             60% {
                 background-image: url("../assets/imgs/gallery-thumb-4-16762181438851029096803.jpg");
             }
+
             80% {
                 background-image: url("../assets/imgs/gallery-thumb-5-16762181439024151826.jpg");
             }
+
             100% {
                 background-image: url("../assets/imgs/gallery-thumb-3-16762181438461832919049.jpg");
             }
         }
+
         @keyframes img-show-2 {
             0% {
                 background-image: url("../assets/imgs/gallery-thumb-6-1676218143973363369451.jpg");
             }
+
             20% {
                 background-image: url("../assets/imgs/gallery-thumb-7-1676218143990523469600.jpg");
             }
+
             40% {
                 background-image: url("../assets/imgs/gallery-thumb-8-16762181440111699530101.jpg");
             }
+
             60% {
                 background-image: url("../assets/imgs/gallery-thumb-9-16762181440521282775514.jpg");
             }
+
             80% {
                 background-image: url("../assets/imgs/gallery-thumb-6-1676218143973363369451.jpg");
             }
+
             100% {
                 background-image: url("../assets/imgs/gallery-thumb-7-1676218143990523469600.jpg");
             }
         }
+
         .img-show2,
         .img-show1 {
             width: 100%;
@@ -58,15 +70,19 @@
             background-size: cover;
             background-position: center center;
         }
+
         .img-show1 {
             animation: img-show-1 ease-in-out 12s infinite;
         }
+
         .img-show2 {
             animation: img-show-2 ease-in-out 12s infinite;
         }
+
         .bg-1 {
             background-color: #cecdda;
         }
+
         .bg-2 {
             background-color: #1b1b1b;
         }
@@ -76,17 +92,19 @@
 
 <body>
     <div class="container-fluid p-0 bg-emagazine">
-        <header>
-            <div class="container-fluid sticky-top bg-dark hstack justify-content-between align-items-stretch">
-                <a class="hstack align-items-stretch" href="/">
+        <header class="sticky-top">
+            <div
+                class="container-fluid bg-dark hstack justify-content-between align-items-stretch px-0 h-4-7em position-relative">
+                <a class="hstack align-items-stretch" href="../index.html">
                     <p class="text-white d-inline-block fs-1 bg-danger m-0 py-2 px-4"><i
-                            class="fa-solid fa-left-long"></i></p><img class="img-fluid p-2"
+                            class="fa-solid fa-left-long"></i></p><img class="img-fluid p-2 d-none d-lg-block"
                         src="../assets/imgs/logogenk.svg">
                 </a>
-                <a href="/" class="d-flex align-items-center"><img class="img-fluid p-2"
-                        src="../assets/imgs/logo-emgz-genk.png">
+                <a href="../emagazine.html" class="d-block position-absolute top-50 start-50 translate-middle"><img
+                        class="img-fluid p-2" src="../assets/imgs/logo-emgz-genk.png">
                 </a>
-                <a class="btn btn-primary w-auto btn-sm align-self-center"><i class="fa-brands fa-facebook-f"></i>Chia
+                <a class="btn btn-primary w-auto btn-sm align-self-center me-5"><i
+                        class="fa-brands fa-facebook-f"></i>Chia
                     sẻ</a>
             </div>
         </header>
@@ -617,10 +635,8 @@
                         máy quá nhiều.
                     </p>
                 </div>
-
-                <div class="card overflow-hidden border-0">
-                    <img class="card-img object-fit-cover" src="../assets/imgs/bg-thumb-1676218642587972794089.png">
-                    <div class="card-img-overlay top-20">
+                <div class="card border-0">
+                    <div class="">
                         <div class="row row-cols-1 row-cols-lg-2 pt-4 pb-2 align-items-center">
                             <div class="col">
                                 <h1 class="fw-bold ps-3"> Smartphone của người “mộ điệu”? </h1>
@@ -637,15 +653,9 @@
                                     người “mộ điệu”, không quá quan tâm đến cấu hình? </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col col-12 col-lg-7">
-                                <img class="d-block img-fluid w-100"
-                                    src="../assets/imgs/section-thumb-7-16762181454281167312329.png">
-                            </div>
-                            <div class="col col-12 col-lg-5">
-                                <img class="d-block img-fluid w-100"
-                                    src="../assets/imgs/section-thumb-8-16762181454872028771173.png">
-                            </div>
+                        <div class="">
+                            <img class="img-fluid w-75 mx-auto d-block"
+                                src="../assets/imgs/section-thumb-7-16762181454281167312329.png">
                         </div>
                     </div>
                 </div>
