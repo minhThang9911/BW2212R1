@@ -25,7 +25,3 @@ function tabcontrol () {
 $('.menu-chuyenmuc').click(tabcontrol)
 
 $('.menu-khac').click(tabcontrol)
-
-
-
-console.log("ssssssssssssss")
