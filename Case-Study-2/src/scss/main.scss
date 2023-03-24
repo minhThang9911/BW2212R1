@@ -91,7 +91,11 @@ a {
 }
 
 .bg-overlay-black-gradient {
-    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0)
+    );
 }
 
 .bg-emagazine {
@@ -115,24 +119,24 @@ a {
 }
 
 .top-5 {
-    top:5% !important;
+    top: 5% !important;
 }
 
 .top-10 {
-    top:10% !important;
+    top: 10% !important;
 }
 .top-15 {
-    top:15% !important;
+    top: 15% !important;
 }
 
 .top-20 {
-    top:20% !important;
+    top: 20% !important;
 }
 .top-30 {
-    top:30% !important;
+    top: 30% !important;
 }
 .top-40 {
-    top:40% !important;
+    top: 40% !important;
 }
 .start-20 {
     left: 20%;
@@ -175,11 +179,11 @@ a {
     width: 50vw !important;
 }
 
-@include b.media-breakpoint-up(lg){
+@include b.media-breakpoint-up(lg) {
     .modal {
         --bs-modal-width: 70vw;
     }
-    
+
     .bg-lg-secondarys {
         background-color: b.$nav-lg-color !important;
     }
@@ -193,8 +197,10 @@ a {
     .text-lg-secondary {
         color: b.$secondary;
     }
+    .fs-lg-6 {
+        font-size: 1rem !important;
+    }
 }
-
 
 header {
     .top-menu {
@@ -309,7 +315,6 @@ header {
             top: b.$nav-height !important;
             padding: 0 2em 1em;
             overflow-y: scroll;
-           
 
             .side-menu-mobile {
                 .tab-chuyen-muc {
@@ -322,7 +327,7 @@ header {
                         margin: 0.2em;
                     }
                 }
-                
+
                 .tab-khac {
                     display: none;
 
@@ -360,7 +365,7 @@ header {
                 .tab-chuyen-muc.active {
                     display: flex;
                 }
-                .tab-khac.active{
+                .tab-khac.active {
                     display: block;
                 }
             }
@@ -375,11 +380,6 @@ header {
     .border-y-0 {
         border-left: none !important;
         border-right: none !important;
-    }
-    @include b.media-breakpoint-up(lg) {
-        .fs-lg-6 {
-            font-size: 1rem !important;
-        }
     }
 }
 

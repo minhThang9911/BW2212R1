@@ -200,6 +200,9 @@ a {
   .text-lg-secondary {
     color: #6c757d;
   }
+  .fs-lg-6 {
+    font-size: 1rem !important;
+  }
 }
 header .top-menu {
   background-color: #2e2e2e;
@@ -363,11 +366,6 @@ header .menu-bar .search-box:hover .search-btn {
 .page-content .border-y-0 {
   border-left: none !important;
   border-right: none !important;
-}
-@media (min-width: 992px) {
-  .page-content .fs-lg-6 {
-    font-size: 1rem !important;
-  }
 }
 
 footer .footer-menu li:hover {
